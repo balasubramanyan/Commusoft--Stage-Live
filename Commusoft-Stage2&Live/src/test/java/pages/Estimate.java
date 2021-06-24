@@ -44,7 +44,9 @@ public class Estimate extends Wrapper {
 	}
 	public void Estimate_Price_NoBreakdown_PartsTotal() throws InterruptedException
 	{
+		Thread.sleep(3000);
 		dclick("//td[contains(@class,'afterHiddenColumn firstVisibleColumn')]");
+		Thread.sleep(3000);
 		clear("//textarea[@class='handsontableInput']");
 		type("//textarea[@class='handsontableInput']", "600");
 		Thread.sleep(2000);

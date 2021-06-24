@@ -187,6 +187,7 @@ public class Smoketest extends Baseclass {
 		Diary diary = new Diary(driver);
 		diary.Diary_Daily();
 		diary.Diary_Today();
+		diary.Diary_Timing3();
 		diary.Diary_EventFromJob();
 	}
 	@Test(priority = 10)

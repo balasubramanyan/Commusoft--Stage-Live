@@ -42,12 +42,14 @@ public class Diary extends Wrapper {
 			click("//a[text()='Today']");
 			Thread.sleep(3000);
 			click("(//div[@class='fc-row fc-week fc-widget-content'])[2]");
+			Thread.sleep(3000);
 		}catch(Exception e)
 		{
 			Thread.sleep(3000);
 			click("(//a[@class='icon ss-navigateright'])[1]");
 			Thread.sleep(3000);
 			click("//a[text()='Today']");
+			Thread.sleep(3000);
 		}
 	}
 	public void Diary_PM() throws InterruptedException
@@ -56,8 +58,10 @@ public class Diary extends Wrapper {
 	}
 	public void Diary_EventFromJob() throws InterruptedException
 	{
+		Thread.sleep(3000);
 		click("//button[@ng-click='saveDiaryEvent()']");
 	}
+	
 	public void Diary_Timing()
 	{
 		click("(//td[@class=\"fc-widget-content\"])[10]");
@@ -68,7 +72,11 @@ public class Diary extends Wrapper {
 	}
 	public void Diary_Timing2()
 	{
-		click("(//td[@class=\"fc-widget-content\"])[12]");
+		click("(//td[@class=\"fc-widget-content\"])[13]");
+	}
+	public void Diary_Timing3()
+	{
+		click("(//td[@class=\"fc-widget-content\"])[15]");
 	}
 	public void Diary_Normal_EvenDescription()
 	{

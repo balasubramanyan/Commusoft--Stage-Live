@@ -396,11 +396,7 @@ public class Smoketest extends Baseclass {
 		search.parts_deliverymethod("Delivery to office");
 		CreateJob Job = new CreateJob(driver);
 		Job.save_po();
-		/* Assertion */
-	//	Job.assert_Supplierparttoal();
-		Job.assert_Suppliersubtotal();
-		Job.assert_Suppliervat();
-		Job.assert_suppliereditgrand();	
+	
 	}
 	@Test(priority=22)
 	public void Supplier_Invoice() throws InterruptedException
@@ -521,7 +517,7 @@ public class Smoketest extends Baseclass {
 		System.out.println("Status:- " +a);
 		Assert.assertEquals(a, 200);
 	}
-	@Test(priority = 30)
+//	@Test(priority = 30)
 	void get_InvoiceNumber_API()
 	{
 		RestAssured.baseURI="https://stage2.commusoft.net/webservice_dev.php/api/v1";

@@ -56,6 +56,16 @@ public class Smoketest extends Baseclass {
 		customerpage = driver.getCurrentUrl();
 	}
 	@Test(priority = 2)
+	public void Edit_Customer() throws InterruptedException
+	{
+		Customer customer = new Customer(driver);
+		customer.Edit_Customer();
+		customer.Customer_AddressLine2();
+		customer.Edit_Customer_Save();
+		Thread.sleep(20000);
+		customerpage = driver.getCurrentUrl();
+	}
+	@Test(priority = 3)
 	public void Add_job_Prefinal() throws InterruptedException
 	{
 		Thread.sleep(4000);
@@ -64,7 +74,7 @@ public class Smoketest extends Baseclass {
 		job.JobDescription("PreFinal");
 		job.createjob();
 	}
-	@Test(priority = 3)
+	@Test(priority = 4)
 	public void Add_job_Final_Complete() throws InterruptedException
 	{
 		driver.get(customerpage);

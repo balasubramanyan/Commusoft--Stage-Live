@@ -16,7 +16,7 @@ public class Customer extends Wrapper {
 	public HashMap<String,String> customername()
 	{
 		HashMap<String,String> customer = new HashMap<String,String>();
-		customer.put("Ranjit", "Ranjit_Aravind_ranjit@commusoft.com_8965326598_Madurai");
+		customer.put("Ranjit", "Ranjit_Aravind_ranjit@commusoft.com_8965326598_Madurai_TamilNadu");
 		customer.put("Bala", "Ranjit_Aravind_ranjit@commusoft.com_8965326598_Madurai");
 		customer.put("Karna", "Ranjit_Aravind_ranjit@commusoft.com_8965326598_Madurai");
 		customer.put("Ezhil", "Ranjit_Aravind_ranjit@commusoft.com_8965326598_Madurai");
@@ -29,7 +29,6 @@ public class Customer extends Wrapper {
 	
 	public void Customer_create()
 	{
-		
 		click("#customertypecustomer");
 	}
 	public void Customer_title()
@@ -59,6 +58,18 @@ public class Customer extends Wrapper {
 	public void Customer_AddressLine1()
 	{
 		type("#customertype_addressline1", Ranjit[4]);
+	}
+	public void Customer_AddressLine2()
+	{
+		type("//*[@id=\"main\"]/div[2]/div/ng-container/div[2]/span[1]/div/div[1]/div/div/form/fieldset[2]/div[2]/div[2]/div[3]/div/input", Ranjit[5]);
+	}
+	public void Edit_Customer()
+	{
+		click("#editcustomer");
+	}
+	public void Edit_Customer_Save()
+	{
+		click("//*[@id=\"main\"]/div[2]/div/ng-container/div[2]/span[1]/div/div[1]/div/div/form/div[2]/button/span[1]");
 	}
 	public void Customer_Save()
 	{

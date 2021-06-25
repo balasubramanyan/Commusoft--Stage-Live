@@ -95,6 +95,14 @@ String homepage;
 		Job.assert_finalinvoicetotal();
 		
 	}
+	@Test(priority = 5)
+	public void test() throws InterruptedException
+	{
+	}
+	@Test(priority = 6)
+	public void test1() throws InterruptedException
+	{
+	}
 
 	
 }

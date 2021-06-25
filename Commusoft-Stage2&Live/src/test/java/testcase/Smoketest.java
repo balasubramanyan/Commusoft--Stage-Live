@@ -540,6 +540,7 @@ public class Smoketest extends Baseclass {
 		int statuscode = resp.getStatusCode();
 		System.out.println("Status:- " +statuscode);
 		Assert.assertEquals(statuscode, 200);
+		
 	}
 	
 

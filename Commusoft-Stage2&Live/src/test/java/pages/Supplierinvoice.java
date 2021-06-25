@@ -31,9 +31,10 @@ public class Supplierinvoice<webElement> extends Wrapper {
 	}
 
 
-	public void Supplierinvoaddbutton()
+	public void Supplierinvoaddbutton() throws InterruptedException
 	{
 		click("//*[@id=\"supplierinvoice\"]/section/div[1]/span[2]/a");
+		Thread.sleep(2000);
 	}
 
 	public void Invoiceno() throws InterruptedException, IOException

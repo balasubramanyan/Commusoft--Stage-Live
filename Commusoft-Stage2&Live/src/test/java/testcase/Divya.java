@@ -60,20 +60,20 @@ String homepage;
 	public void Add_job() throws InterruptedException
 	{
 		Thread.sleep(4000);
-		CreateJob job = new CreateJob(driver);
-		job.addjob();
-		job.JobDescription("PreFinal");
+		CreateJob createjob = new CreateJob(driver);
+		createjob.addjob();
+		createjob.JobDescription("PreFinal");
 
 	}
 	
 	@Test(priority=3)
 	public void Invoice_process() throws InterruptedException {
-		Invoice in = new Invoice(driver);
-		in.InvoiceTab();
-		in.addinvoice();
-		in.invoice_description();
-		in.sub_total("500");
-		in.save_invoice();
+		Invoice invoice = new Invoice(driver);
+		invoice.InvoiceTab();
+		invoice.addinvoice();
+		invoice.invoice_description();
+		invoice.sub_total("500");
+		invoice.save_invoice();
 		Thread.sleep(3000);
 		NotesandCommunication communication = new NotesandCommunication(driver);
 		//communication.emailinvoice();
@@ -84,18 +84,18 @@ String homepage;
   @Test(priority=4 ) 
   public void Contact_details() throws InterruptedException{
    driver.get(customerpage); 
-   Contact c = new Contact(driver);
-    c.Click_contacttab();
-    c.Add_contact();
-    c.Con_title(); 
-    c.name();
-    c.Surname();
-    c.Email();
-    c.Click(); 
-    c.Click_mobile();
-    c.Phone_number(); 
-    c.click_addphone();
-    c.click_addcontact(); 
+   Contact contact = new Contact(driver);
+    contact.Click_contacttab();
+    contact.Add_contact();
+    contact.Con_title(); 
+    contact.name();
+    contact.Surname();
+    contact.Email();
+    contact.Click(); 
+    contact.Click_mobile();
+    contact.Phone_number(); 
+    contact.click_addphone();
+    contact.click_addcontact(); 
     Thread.sleep(3000); 
     Customer customer = new Customer(driver); 
     customer.workaddress_tab();

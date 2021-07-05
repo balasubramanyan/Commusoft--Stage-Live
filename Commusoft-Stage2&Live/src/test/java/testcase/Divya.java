@@ -26,7 +26,8 @@ import pages.CreateJob;
 
 public class Divya extends Baseclass {
 String homepage;
-   
+
+
 	
 	
 	@Test(priority = 0)
@@ -59,14 +60,16 @@ String homepage;
 	@Test(priority = 2)
 	public void Add_job() throws InterruptedException
 	{
+		
 		Thread.sleep(4000);
 		CreateJob createjob = new CreateJob(driver);
 		createjob.addjob();
 		createjob.JobDescription("PreFinal");
+		
 
 	}
 	
-	@Test(priority=3)
+	@Test(priority=3  )
 	public void Invoice_process() throws InterruptedException {
 		Invoice invoice = new Invoice(driver);
 		invoice.InvoiceTab();
@@ -81,20 +84,18 @@ String homepage;
 		}
 
 
-  @Test(priority=4 ) 
+  @Test(priority=4  ) 
   public void Contact_details() throws InterruptedException{
    driver.get(customerpage); 
    Contact contact = new Contact(driver);
     contact.Click_contacttab();
     contact.Add_contact();
-    contact.Con_title(); 
+    contact.Contact_title(); 
     contact.name();
     contact.Surname();
     contact.Email();
     contact.Click(); 
-    contact.Click_mobile();
-    contact.Phone_number(); 
-    contact.click_addphone();
+    contact.Click_addphone();
     contact.click_addcontact(); 
     Thread.sleep(3000); 
     Customer customer = new Customer(driver); 

@@ -19,7 +19,7 @@ public class Contact extends Wrapper {
 		
 		click("//a[text()='Add new contact']");
 	}
-	public void Con_title()
+	public void Contact_title()
 	{
 		selectdropdownvalue("//*[@id=\"contact_settingsTitlesid\"]", "1");
 	}
@@ -39,20 +39,14 @@ public class Contact extends Wrapper {
 	{
 		click("//span[@class='number-type-toggle ng-binding']");
 	}
-	public void Click_mobile()
+	public void Click_addphone()
 	{	
 		
 		click("//li[text()='Mobile']");
-	}
-	public void Phone_number()
-	{
 		type("$contact[contactstelephone][0][telephonenumber]", "368057898");
-	}
-	public void click_addphone()
-	{
-	
 		click("//span[text()='Add phone number']");
 	}
+	
 	public void click_addcontact()
 	{
 		

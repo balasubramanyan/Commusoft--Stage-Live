@@ -19,7 +19,15 @@ public class CreateJob extends Wrapper {
 	{
 		searchengine search = new searchengine(driver);
 		search.searchbox_jobDescription(a);
+		//selectdropdownvalue("$servicereminderinstance", "3");
+				type("$quotedamount", "5000");
+				type("$ponumber", "Customer reference");
+				selectdropdown("$job[priority]", "Important");
+				selectdropdownvalue("$job[usergroupsid]","1");
+				selectdropdownvalue("$job[invoicecategoryid]", "1");
+				click("//button[@type='submit']");
 		Thread.sleep(3000);
+		
 	}
 	public void createjob()
 	{

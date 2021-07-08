@@ -61,6 +61,7 @@ public class Smoketest extends Baseclass {
 	@Test(priority = 2)
 	public void Edit_Customer() throws InterruptedException
 	{
+
 		driver.get(customerpage);
 		Thread.sleep(3000);
 		Editcustomer_workaddress editcustomer = new Editcustomer_workaddress(driver);
@@ -73,8 +74,6 @@ public class Smoketest extends Baseclass {
 		editcustomer.Editcustomer_AddressLine1();
 		editcustomer.Editcustomer_Save();
 	}
-
-
 
 	@Test(priority = 3)
 	public void Add_job_Prefinal() throws InterruptedException
@@ -579,6 +578,7 @@ public class Smoketest extends Baseclass {
 		int statuscode = resp.getStatusCode();
 		System.out.println("Status:- " +statuscode);
 		Assert.assertEquals(statuscode, 200);
+		
 	}
 
 

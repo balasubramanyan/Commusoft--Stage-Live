@@ -23,7 +23,7 @@ public class Editcustomermodule extends Baseclass {
 		homepage = driver.getCurrentUrl();
 	}
 	@Test(priority = 1)
-	public void editcustomer() throws InterruptedException
+	public void Edit_customer() throws InterruptedException
 	{
 		driver.get(customer);
 		Thread.sleep(3000);

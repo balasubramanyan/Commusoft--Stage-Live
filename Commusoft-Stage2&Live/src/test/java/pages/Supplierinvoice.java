@@ -28,7 +28,7 @@ public class Supplierinvoice extends Wrapper {
 	{
 
 	
-	type("//*[@id='main']/div[2]/div[3]/section/div/div/div/form/fieldset/div[2]/div[1]/div[2]/div/input", "521");
+	type("//*[@id='main']/div[2]/div[3]/section/div/div/div/form/fieldset/div[2]/div[1]/div[2]/div/input", "532");
 	
 	Thread.sleep(2000);
 	

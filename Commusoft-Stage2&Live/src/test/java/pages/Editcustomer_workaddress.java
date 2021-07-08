@@ -39,13 +39,14 @@ public class Editcustomer_workaddress extends Wrapper {
 	}
 	public void Editcustomer_Name()
 	{
-		type("//input [@id='name']", "Customer edit1");
+		clear("//input [@id='name']");
+		type("//input [@id='name']", "Ezhil ");
 	}
 
 	public void Editcustomer_SurName()
 	{
 		clear("//input [@name='customerDetails.surname']");
-		type("//input [@name='customerDetails.surname']", "Surnamecs Edit");
+		type("//input [@name='customerDetails.surname']", "Raja");
 	}
 	public void Editcustomer_Mobile()
 	{
@@ -55,11 +56,11 @@ public class Editcustomer_workaddress extends Wrapper {
 	public void Editcustomer_email()
 	{
 		clear("//input [@name='customerEmail']");
-		type("//input [@name='customerEmail']", "Ezhilraja21@commusoft.com");
+		type("//input [@name='customerEmail']", "eezhilraja@commusoft.com");
 	}
 	public void Editcustomer_AddressLine1()
 	{
-		type("//input [@name='addressline1']", "Thirumazhisai6");
+		type("//input [@name='addressline1']", "Thirumazhisai");
 	}
 	public void Editcustomer_Save()
 	{
@@ -88,13 +89,14 @@ public class Editcustomer_workaddress extends Wrapper {
 
 	public void Edit_waname()
 	{
-		type("#name", "Edit221");
+		click("#name");
+		type("#name", "WA ezhilraja");
 
 	}
 	public void Edit_wasurname()
 	{
 		clear ("$customerDetails.surname");
-		type("$customerDetails.surname","ezhil1");
+		type("$customerDetails.surname","elango");
 
 	}
 
@@ -102,7 +104,7 @@ public class Editcustomer_workaddress extends Wrapper {
 	{
 
 		clear("$customerLandlineNumber");
-		type("$customerLandlineNumber","9562235569");
+		type("$customerLandlineNumber","04426120526");
 
 	}
 
@@ -118,12 +120,13 @@ public class Editcustomer_workaddress extends Wrapper {
 
 	{
 		clear ("$customerEmail");
-		type  ("$customerEmail","Ezhilraja1@commusoft.com");
+		type  ("$customerEmail","eezhilraja@commusoft.com");
 
 	}
 
 	public void Edit_waaddress1()
 	{
+		clear("$addressline1");
 		type("$addressline1","Demo1");
 	}
 

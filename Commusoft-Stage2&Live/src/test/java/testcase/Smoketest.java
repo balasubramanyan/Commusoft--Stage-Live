@@ -14,26 +14,24 @@ import io.restassured.specification.RequestSpecification;
 import pages.CreateJob;
 import pages.Customer;
 import pages.Diary;
-import pages.Editcustomer_workaddress;
 import pages.Estimate;
 import pages.Invoice;
 import pages.LoginPage;
 import pages.NotesandCommunication;
 import pages.Reporting;
 import pages.Supplier;
-import pages.Supplierinvoice;
 import pages.searchengine;
 import utility.PageloadResponse;
 
 public class Smoketest extends Baseclass {
-
+	
 	public String homepage;
 	public String jobURL;
 	public String WA;
 	public String Supplierhomepage;
-
-
-
+   
+	
+	
 	@Test(priority = 0)
 	public void login() throws InterruptedException
 	{
@@ -57,24 +55,16 @@ public class Smoketest extends Baseclass {
 		Thread.sleep(20000);
 		customerpage = driver.getCurrentUrl();
 	}
-
 	@Test(priority = 2)
 	public void Edit_Customer() throws InterruptedException
 	{
-
-		driver.get(customerpage);
-		Thread.sleep(3000);
-		Editcustomer_workaddress editcustomer = new Editcustomer_workaddress(driver);
-		editcustomer.Editcustomer_link();
-		editcustomer.Editcustomer_title();
-		editcustomer.Editcustomer_Name();
-		editcustomer.Editcustomer_SurName();
-		editcustomer.Editcustomer_Mobile();
-		editcustomer.Editcustomer_email();
-		editcustomer.Editcustomer_AddressLine1();
-		editcustomer.Editcustomer_Save();
+		Customer customer = new Customer(driver);
+		customer.Edit_Customer();
+		customer.Customer_AddressLine2();
+		customer.Edit_Customer_Save();
+		Thread.sleep(20000);
+		customerpage = driver.getCurrentUrl();
 	}
-
 	@Test(priority = 3)
 	public void Add_job_Prefinal() throws InterruptedException
 	{
@@ -251,29 +241,9 @@ public class Smoketest extends Baseclass {
 		customer.Workaddress_create();
 		Thread.sleep(6000);
 		WA = driver.getCurrentUrl();
-
+		
 	}
-
-	@Test(priority = 12)	
-	public void  Work_Address_Edit() throws InterruptedException
-	{
-		driver.get(WA);
-		Thread.sleep(4000);
-		Editcustomer_workaddress editworkaddress = new Editcustomer_workaddress(driver);
-		//editworkaddress.EditWorkaddress_view();
-		editworkaddress.Edit_workaddress();
-		editworkaddress.Edit_WAtitle();
-		editworkaddress.Edit_waname();
-		editworkaddress.Edit_wasurname();
-		editworkaddress.Edit_walandline();
-		editworkaddress.Edit_wamobile();
-		editworkaddress.Edit_waemail();
-		editworkaddress.Edit_waaddress1();
-		editworkaddress.Edit_wasavebutton();
-
-	}
-
-	@Test(priority = 13)
+	@Test(priority = 12)
 	public void WA_Add_job_Prefinal() throws InterruptedException
 	{
 		driver.get(WA);
@@ -283,7 +253,7 @@ public class Smoketest extends Baseclass {
 		job.JobDescription("PreFinal");
 		job.createjob();
 	}
-	@Test(priority = 14)
+	@Test(priority = 13)
 	public void WA_Addpayment_job() throws InterruptedException
 	{
 		driver.get(WA);
@@ -313,7 +283,7 @@ public class Smoketest extends Baseclass {
 		invoice.invoice_payment_amount();
 		invoice.invoice_paymeny_save();
 	}
-	@Test(priority = 15)
+	@Test(priority = 14)
 	public void WA_Estimate_Accept() throws InterruptedException
 	{
 		driver.get(WA);
@@ -338,7 +308,7 @@ public class Smoketest extends Baseclass {
 		estimate.Estimate_Accept();
 		Thread.sleep(6000);
 	}
-	@Test(priority = 16)
+	@Test(priority = 15)
 	public void Diary_Estimate() throws InterruptedException
 	{
 		Thread.sleep(6000);
@@ -353,7 +323,7 @@ public class Smoketest extends Baseclass {
 		diary.Diary_Estimate_EventDescription();
 		diary.Diary_Save();
 	}
-	@Test(priority = 17)
+	@Test(priority = 16)
 	public void Diary_Job() throws InterruptedException
 	{
 		Thread.sleep(6000);
@@ -368,7 +338,7 @@ public class Smoketest extends Baseclass {
 		diary.Diary_Job_EventDescription();
 		diary.Diary_Save();
 	}
-	@Test(priority = 18)
+	@Test(priority = 17)
 	public void Diary_Normal() throws InterruptedException
 	{
 		Thread.sleep(6000);
@@ -380,29 +350,29 @@ public class Smoketest extends Baseclass {
 		diary.Diary_Normal_EvenDescription();
 		diary.Diary_Save();
 	}
-	@Test(priority = 19)
+	@Test(priority = 18)
 	public void Addcustomer_job() throws InterruptedException
 	{
-		Thread.sleep(6000);
-		Diary diary = new Diary(driver);
-		diary.Diary_Module();
-		diary.Diary_Daily();
-		diary.Diary_Today();
-		diary.Diary_Timing2();
-		diary.Diary_job();
-		diary.Diary_job_AddProperty();
-		diary.Diary_TypesOfProperty();
-		diary.Diary_TypesOfCustomer();
-		diary.Diary_AddProperty_CustomerName();
-		diary.Diary_AddProperty_CustomerSurName();
-		diary.Diary_AddProperty_CustomerEmail();
-		diary.Diary_AddProperty_CustomerAdd1();
-		diary.Diary_AddProperty_CustomerSave();
-		//	diary.Diary_currentdate_datepicker();
-		diary.Diary_Job_EventDescription();
-		diary.Diary_Save();
+	Thread.sleep(6000);
+	Diary diary = new Diary(driver);
+	diary.Diary_Module();
+	diary.Diary_Daily();
+	diary.Diary_Today();
+	diary.Diary_Timing2();
+	diary.Diary_job();
+	diary.Diary_job_AddProperty();
+	diary.Diary_TypesOfProperty();
+	diary.Diary_TypesOfCustomer();
+	diary.Diary_AddProperty_CustomerName();
+	diary.Diary_AddProperty_CustomerSurName();
+	diary.Diary_AddProperty_CustomerEmail();
+	diary.Diary_AddProperty_CustomerAdd1();
+	diary.Diary_AddProperty_CustomerSave();
+//	diary.Diary_currentdate_datepicker();
+	diary.Diary_Job_EventDescription();
+	diary.Diary_Save();
 	}
-	@Test(priority =20)
+	@Test(priority =19)
 	public void diaryutility() throws InterruptedException
 	{
 		Thread.sleep(6000);
@@ -411,7 +381,7 @@ public class Smoketest extends Baseclass {
 		diary.Diary_PrintJobSheet();
 		diary.Diary_PrintSummarySheet();
 	}
-	@Test(priority =21)
+	@Test(priority =20)
 	public void Supplier_Create() throws InterruptedException
 	{
 		Supplier supplier = new Supplier(driver);
@@ -426,7 +396,7 @@ public class Smoketest extends Baseclass {
 		Supplierhomepage = driver.getCurrentUrl();
 	}
 
-	@Test(priority=22)
+	@Test(priority=21)
 	public void Supplier_PO() throws InterruptedException
 	{
 		click("//a[text()='Add new purchase order']");
@@ -437,58 +407,50 @@ public class Smoketest extends Baseclass {
 		search.parts_deliverymethod("Delivery to office");
 		CreateJob Job = new CreateJob(driver);
 		Job.save_po();
-
+	
 	}
-	@Test(priority=23)
-	public void Supplier_Invoice() throws InterruptedException, IOException
+	@Test(priority=22)
+	public void Supplier_Invoice() throws InterruptedException
 	{
 		driver.get(Supplierhomepage);
 		Thread.sleep(4000);
-		Supplierinvoice supplierinv = new Supplierinvoice(driver);
-		supplierinv.Supplierinvoaddbutton();		
-		supplierinv.Invoiceno();
-		supplierinv.supplirinvpart();
-		supplierinv.quantity();
-		supplierinv.unitcost("300");
-		supplierinv.vat("5.00");
-		supplierinv.nominalcode();
-		supplierinv.item("Demo");
-		supplierinv.itemquantity();
-		supplierinv.itemunitcost("200");
-		supplierinv.itemscale("400");
-		supplierinv.itemvat("5.00");
-		supplierinv.itemnominalcode();		
-		supplierinv.savesupplierbutton();
+		click("//a[text()='Add new invoice']");
+		Thread.sleep(3000);
+		type("//input[@check-exists='invoiceNumber']","55");
+		searchengine search = new searchengine(driver);
+		search.searchbox_supplier_parts("Parts");
+		search.searchbox_supplier_parts_nominalcode("Parts");
+		click("//span[@ng-hide='saving']");
 	}
-	@Test(priority = 24)
+	@Test(priority = 23)
 	public  void Customer_Createcontact() throws InterruptedException
 	{
 		driver.get(customerpage);
 		Thread.sleep(3000);
-
+		
 		click("//span[text()='Contacts']");
 		Thread.sleep(2000);
-
+		
 		click("//a[text()='Add new contact']");
-
+		
 		type("#contact_name", "Aravind");
 		type("#contact_surname", "Reigns");
 		type("#contact_contactsemail_emailaddress","rara@yopmail.com");
-
+		
 		Thread.sleep(1000);
 		click("//span[@class='number-type-toggle ng-binding']");
-
+		
 		click("//li[text()='Mobile']");
 		type("$contact[contactstelephone][0][telephonenumber]", "9856325698");
 		click("//span[text()='Add phone number']");
-
+		
 		click("//span[text()='Add contact']");
-
+			
 	}
-	@Test (priority=25)
+	@Test (priority=24)
 	public void CustomerReports() throws InterruptedException
 	{
-
+		
 		driver.get(homepage);
 		//customer report - 1
 		Reporting Report = new Reporting(driver); 
@@ -498,10 +460,10 @@ public class Smoketest extends Baseclass {
 		Report.Customers_Report();
 		Report.First_Plus_button();
 		Report.Customer1_Assertion("View Customer");
-
-
+			
+		
 	}
-	@Test (priority=26)
+	@Test (priority=25)
 	public void ServiceRemindersReports() throws InterruptedException
 	{
 		driver.get(homepage);
@@ -512,9 +474,9 @@ public class Smoketest extends Baseclass {
 		Report.Service_Reminder_Report();
 		Report.Service_Reminders_Report();
 		Report.ServiceReminder1_Assertion();
-
+			
 	}
-	@Test (priority = 27)
+	@Test (priority = 26)
 	public void SupplierReports() throws InterruptedException
 	{
 		driver.get(homepage);
@@ -525,9 +487,9 @@ public class Smoketest extends Baseclass {
 		Report.Supplier_Report();
 		Report.Suppliers_Report();
 		Report.Supplier1_Assertion();
-
+				
 	}
-	@Test (priority=28)
+	@Test (priority=27)
 	public void EstimateReport() throws InterruptedException
 	{
 		driver.get(homepage);
@@ -539,7 +501,7 @@ public class Smoketest extends Baseclass {
 		Report.Estimates_Report();
 		Report.Estimate1_Assertion();
 	}
-	@Test(priority=29)
+	@Test(priority=28)
 	public void JobReport() throws InterruptedException
 	{
 		driver.get(homepage);
@@ -550,10 +512,10 @@ public class Smoketest extends Baseclass {
 		Report.Job_Report();
 		Report.Jobs_Report();
 		Report.Job1_Assertion();
-
-
+				
+		
 	}
-	@Test(priority = 30)
+	@Test(priority = 29)
 	public  void SolarSearch_pageresponse() throws InterruptedException, IOException
 	{
 		type("#search-input","ranjit");
@@ -566,7 +528,7 @@ public class Smoketest extends Baseclass {
 		System.out.println("Status:- " +a);
 		Assert.assertEquals(a, 200);
 	}
-	//	@Test(priority = 30)
+//	@Test(priority = 30)
 	void get_InvoiceNumber_API()
 	{
 		RestAssured.baseURI="https://stage2.commusoft.net/webservice_dev.php/api/v1";
@@ -580,6 +542,6 @@ public class Smoketest extends Baseclass {
 		Assert.assertEquals(statuscode, 200);
 		
 	}
-
+	
 
 }

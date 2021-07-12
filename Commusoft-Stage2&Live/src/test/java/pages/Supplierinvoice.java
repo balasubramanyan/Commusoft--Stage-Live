@@ -1,25 +1,12 @@
 package pages;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
 
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 import action.Wrapper;
 
-public class Supplierinvoice<webElement> extends Wrapper {
+public class Supplierinvoice extends Wrapper {
 //
 //	@FindBy(xpath = "//*[@id='main']/div[2]/div[3]/section/div/div/div/form/fieldset/div[2]/div[1]/div[2]/div/input") WebElement invoicefid;
 //
@@ -41,7 +28,7 @@ public class Supplierinvoice<webElement> extends Wrapper {
 	{
 
 	
-	type("//*[@id='main']/div[2]/div[3]/section/div/div/div/form/fieldset/div[2]/div[1]/div[2]/div/input", "521");
+	type("//*[@id='main']/div[2]/div[3]/section/div/div/div/form/fieldset/div[2]/div[1]/div[2]/div/input", "532");
 	
 	Thread.sleep(2000);
 	

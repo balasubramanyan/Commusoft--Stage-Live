@@ -30,12 +30,34 @@ public class Reporting extends Wrapper {
 	public void Customers_Report() throws InterruptedException
 	{
 		click("(//a[@has-permission=\"Basiccustomerreports,readaccess\"])[1]"); //click first customer report
+		//click("//input[@class=\"filter-search-field ng-pristine ng-valid left-padding ui-autocomplete-input\"]");
 		Thread.sleep(3000);
+	}
+	public void click_filter() throws InterruptedException 
+	{
+		click("//input[@class=\"filter-search-field ng-pristine ng-valid left-padding ui-autocomplete-input\"]");// click filter option
+	}
+	public void click_dateoption() throws InterruptedException 
+	{
+		click("//a[text()='Date created']");
+		
+	}
+	public void click_todaydate() throws InterruptedException 
+	{
+		click("//*[@id=\"daterange\"]/li[1]/span/a");//click today date
+	}
+	public void apply_filter() throws InterruptedException
+	{
+		click("//*[@id=\"main\"]/div[2]/div/ng-container/section/div[1]/div/section/div/div/div/div/div/div/div/tag-input/div[2]/div[3]/a[2]");//apply filter
 	}
 	public void First_Plus_button() throws InterruptedException
 	{
 		click("(//span[@class=\"preview-file-link actions-toggle ng-scope ss-plus\"])[1]"); //click first + button
 		Thread.sleep(3000);
+		
+	}
+	public void View_customer() throws InterruptedException {
+		click("//*[@id=\"actions-dropdown\"]/ng-include/div/span/span/a");//click view customer 
 	}
 	public void Customer1_Assertion(String ER)
 	{

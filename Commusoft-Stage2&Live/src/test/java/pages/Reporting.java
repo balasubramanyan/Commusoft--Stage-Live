@@ -72,7 +72,7 @@ public class Reporting extends Wrapper {
 	}
 	public void Click_View_workaddres()  throws InterruptedException
 	{
-		click("//*[@id=\"actions-dropdown\"]/ng-include/div/span/span[1]/a");	
+		click("//*[@id=\"actions-dropdown\"]/ng-include/div/span/span[1]/a");// click the view workaddress	
 		
 	}
 	public void Customer2_Assertion(String ER)
@@ -317,6 +317,10 @@ public class Reporting extends Wrapper {
 	{
 		click("(//a[@has-permission=\"Basicestimatereports,readaccess\"])[1]");//click estimates report
 		Thread.sleep(6000);
+	}
+	public void click_viewestimate () throws InterruptedException
+	{
+		click("//*[@id=\"actions-dropdown\"]/ng-include/div/span/span/a");
 	}
 	public void Estimate1_Assertion()
 	{

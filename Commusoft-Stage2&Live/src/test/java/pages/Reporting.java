@@ -56,7 +56,7 @@ public class Reporting extends Wrapper {
 		Thread.sleep(3000);
 		
 	}
-	public void View_customer() throws InterruptedException {
+	public void Click_View_customer() throws InterruptedException {
 		click("//*[@id=\"actions-dropdown\"]/ng-include/div/span/span/a");//click view customer 
 	}
 	public void Customer1_Assertion(String ER)
@@ -69,6 +69,11 @@ public class Reporting extends Wrapper {
 	{
 		click("(//a[@has-permission=\"Basiccustomerreports,readaccess\"])[2]"); //click 2nd customer report
 		Thread.sleep(3000);
+	}
+	public void Click_View_workaddres()  throws InterruptedException
+	{
+		click("//*[@id=\"actions-dropdown\"]/ng-include/div/span/span[1]/a");	
+		
 	}
 	public void Customer2_Assertion(String ER)
 	{

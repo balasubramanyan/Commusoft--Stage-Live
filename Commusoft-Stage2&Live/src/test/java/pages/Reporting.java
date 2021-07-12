@@ -388,6 +388,10 @@ public class Reporting extends Wrapper {
 		click("//a[@has-permission=\"Basicjobreports,readaccess\" and contains(text(), 'Jobs')]");//click jobs report
 		Thread.sleep(6000);
 	}
+	public void Click_viewjob() throws InterruptedException
+	{
+		click("//*[@id=\"actions-dropdown\"]/ng-include/div/span/span[1]/a");//click view job
+	}
 	public void Job1_Assertion()
 	{
 		try

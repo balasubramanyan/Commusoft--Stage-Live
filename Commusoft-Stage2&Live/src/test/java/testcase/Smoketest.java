@@ -465,27 +465,39 @@ public class Smoketest extends Baseclass {
 	{
 		driver.get(customerpage);
 		Thread.sleep(3000);
-
 		click("//span[text()='Contacts']");
 		Thread.sleep(2000);
-
 		click("//a[text()='Add new contact']");
-
 		type("#contact_name", "Aravind");
 		type("#contact_surname", "Reigns");
 		type("#contact_contactsemail_emailaddress","rara@yopmail.com");
-
 		Thread.sleep(1000);
 		click("//span[@class='number-type-toggle ng-binding']");
-
 		click("//li[text()='Mobile']");
 		type("$contact[contactstelephone][0][telephonenumber]", "9856325698");
 		click("//span[text()='Add phone number']");
-
 		click("//span[text()='Add contact']");
-
 	}
+	
 	@Test (priority=25)
+	public void CustomerReports() throws InterruptedException
+	{
+		
+		//driver.get(homepage);
+		Reporting Report = new Reporting(driver); 
+		Report.Reporttab();
+		Report.Report_Sidemenu();
+		Report.Customer_Report();
+		Report.Customers_Report();
+		Report.click_filter();
+		Report.click_dateoption();
+		Report.click_todaydate();
+		Report.apply_filter();
+		Report.First_Plus_button();
+		Report.Click_View_customer();
+		Report.Customer1_Assertion("View Customer");	
+	}
+	/*@Test (priority=26)
 	public void CustomerReports() throws InterruptedException
 	{
 
@@ -500,7 +512,7 @@ public class Smoketest extends Baseclass {
 		Report.Customer1_Assertion("View Customer");
 
 
-	}
+	}*/
 	@Test (priority=26)
 	public void ServiceRemindersReports() throws InterruptedException
 	{

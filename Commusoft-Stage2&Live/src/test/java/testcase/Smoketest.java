@@ -82,7 +82,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("PreFinal");
-		//job.createjob();
+		job.createjob();
 	}
 	@Test(priority = 4)
 	public void Add_job_Final_Complete() throws InterruptedException
@@ -92,7 +92,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("AutoFinal");
-		//job.createjob();
+		job.createjob();
 		Thread.sleep(6000);
 		job.edit_job();
 		Thread.sleep(3000);
@@ -106,7 +106,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		//job.createjob();
+		job.createjob();
 		Thread.sleep(3000);
 		Invoice invoice = new Invoice(driver);
 		invoice.InvoiceTab();
@@ -126,7 +126,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		//job.createjob();
+		job.createjob();
 		Thread.sleep(3000);
 		Invoice invoice = new Invoice(driver);
 		invoice.InvoiceTab();
@@ -201,7 +201,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		//job.createjob();
+		job.createjob();
 		Thread.sleep(4000);
 		job.Add_new_diaryEvent();
 		Diary diary = new Diary(driver);
@@ -218,7 +218,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		//job.createjob();
+		job.createjob();
 		Thread.sleep(4000);
 		Invoice invoice = new Invoice(driver);
 		invoice.InvoiceTab();
@@ -281,7 +281,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("PreFinal");
-		//job.createjob();
+		job.createjob();
 	}
 	@Test(priority = 14)
 	public void WA_Addpayment_job() throws InterruptedException
@@ -291,7 +291,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		//job.createjob();
+		job.createjob();
 		Thread.sleep(4000);
 		Invoice invoice = new Invoice(driver);
 		invoice.InvoiceTab();
@@ -488,18 +488,19 @@ public class Smoketest extends Baseclass {
 	@Test (priority=25)
 	public void CustomerReports() throws InterruptedException
 	{
-
-		driver.get(homepage);
-		//customer report - 1
-		Reporting Report = new Reporting(driver); 
-		Report.Reporttab();
-		Report.Report_Sidemenu();
-		Report.Customer_Report();
-		Report.Customers_Report();
-		Report.First_Plus_button();
-		Report.Customer1_Assertion("View Customer");
-
-
+		//driver.get(homepage);
+				Reporting Report = new Reporting(driver); 
+				Report.Reporttab();
+				Report.Report_Sidemenu();
+				Report.Customer_Report();
+				Report.Customers_Report();
+				Report.click_filter();
+				Report.click_dateoption();
+				Report.click_todaydate();
+				Report.apply_filter();
+				Report.First_Plus_button();
+				Report.View_customer();
+		
 	}
 	@Test (priority=26)
 	public void ServiceRemindersReports() throws InterruptedException
@@ -512,7 +513,6 @@ public class Smoketest extends Baseclass {
 		Report.Service_Reminder_Report();
 		Report.Service_Reminders_Report();
 		Report.ServiceReminder1_Assertion();
-
 	}
 	@Test (priority = 27)
 	public void SupplierReports() throws InterruptedException
@@ -525,35 +525,53 @@ public class Smoketest extends Baseclass {
 		Report.Supplier_Report();
 		Report.Suppliers_Report();
 		Report.Supplier1_Assertion();
-
 	}
 	@Test (priority=28)
 	public void EstimateReport() throws InterruptedException
 	{
-		driver.get(homepage);
-		//Estimate Report = 1
-		Reporting Report = new Reporting(driver);
+		Reporting Report = new Reporting(driver); 
 		Report.Reporttab();
 		Report.Report_Sidemenu();
 		Report.Estimate_Report();
 		Report.Estimates_Report();
-		Report.Estimate1_Assertion();
+		Report.click_filter();
+		Report.click_dateoption();
+		Report.click_todaydate();
+		Report.apply_filter();
+		Report.First_Plus_button();
+		Report.click_viewestimate();
 	}
 	@Test(priority=29)
 	public void JobReport() throws InterruptedException
 	{
-		driver.get(homepage);
-		//Job Report = 1
-		Reporting Report = new Reporting(driver);
+		Reporting Report = new Reporting(driver); 
 		Report.Reporttab();
 		Report.Report_Sidemenu();
-		Report.Job_Report();
-		Report.Jobs_Report();
-		Report.Job1_Assertion();
-
-
+		Report.Estimate_Report();
+		Report.Estimates_Report();
+		Report.click_filter();
+		Report.click_dateoption();
+		Report.click_todaydate();
+		Report.apply_filter();
+		Report.First_Plus_button();
+		Report.click_viewestimate();
 	}
-	@Test(priority = 30)
+	@Test (priority=30)
+	public void Work_address_Reports() throws InterruptedException
+	{
+		Reporting Report = new Reporting(driver); 
+		Report.Reporttab();
+		Report.Report_Sidemenu();
+		Report.Customer_Report();
+		Report.WA_Report();
+		Report.click_filter();
+		Report.click_dateoption();
+		Report.click_todaydate();
+		Report.apply_filter();
+		Report.First_Plus_button();
+		Report.Click_View_workaddres();
+	}
+	@Test(priority = 31)
 	public  void SolarSearch_pageresponse() throws InterruptedException, IOException
 	{
 		type("#search-input","ranjit");

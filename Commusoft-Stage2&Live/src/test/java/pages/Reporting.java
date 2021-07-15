@@ -56,8 +56,10 @@ public class Reporting extends Wrapper {
 		Thread.sleep(3000);
 		
 	}
-	public void Click_View_customer() throws InterruptedException {
+	public void View_customer() throws InterruptedException {
 		click("//*[@id=\"actions-dropdown\"]/ng-include/div/span/span/a");//click view customer 
+		Thread.sleep(2000);
+		tab(Location);
 	}
 	public void Customer1_Assertion(String ER)
 	{
@@ -73,6 +75,8 @@ public class Reporting extends Wrapper {
 	public void Click_View_workaddres()  throws InterruptedException
 	{
 		click("//*[@id=\"actions-dropdown\"]/ng-include/div/span/span[1]/a");// click the view workaddress	
+		Thread.sleep(6000);
+		tab(Location);
 		
 	}
 	public void Customer2_Assertion(String ER)
@@ -321,6 +325,8 @@ public class Reporting extends Wrapper {
 	public void click_viewestimate () throws InterruptedException
 	{
 		click("//*[@id=\"actions-dropdown\"]/ng-include/div/span/span/a");
+		Thread.sleep(6000);
+		tab(Location);
 	}
 	public void Estimate1_Assertion()
 	{
@@ -391,6 +397,8 @@ public class Reporting extends Wrapper {
 	public void Click_viewjob() throws InterruptedException
 	{
 		click("//*[@id=\"actions-dropdown\"]/ng-include/div/span/span[1]/a");//click view job
+		Thread.sleep(6000);
+		tab(Location);
 	}
 	public void Job1_Assertion()
 	{

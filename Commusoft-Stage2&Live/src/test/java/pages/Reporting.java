@@ -56,7 +56,7 @@ public class Reporting extends Wrapper {
 		Thread.sleep(3000);
 		
 	}
-	public void Click_View_customer() throws InterruptedException {
+	public void View_customer() throws InterruptedException {
 		click("//*[@id=\"actions-dropdown\"]/ng-include/div/span/span/a");//click view customer 
 	}
 	public void Customer1_Assertion(String ER)

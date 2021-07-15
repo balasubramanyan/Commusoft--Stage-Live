@@ -82,7 +82,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("PreFinal");
-		job.createjob();
+		//job.createjob();
 	}
 	@Test(priority = 4)
 	public void Add_job_Final_Complete() throws InterruptedException
@@ -92,7 +92,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("AutoFinal");
-		job.createjob();
+		//job.createjob();
 		Thread.sleep(6000);
 		job.edit_job();
 		Thread.sleep(3000);
@@ -106,7 +106,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		job.createjob();
+		//job.createjob();
 		Thread.sleep(3000);
 		Invoice invoice = new Invoice(driver);
 		invoice.InvoiceTab();
@@ -126,7 +126,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		job.createjob();
+		//job.createjob();
 		Thread.sleep(3000);
 		Invoice invoice = new Invoice(driver);
 		invoice.InvoiceTab();
@@ -201,7 +201,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		job.createjob();
+		//job.createjob();
 		Thread.sleep(4000);
 		job.Add_new_diaryEvent();
 		Diary diary = new Diary(driver);
@@ -218,7 +218,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		job.createjob();
+		//job.createjob();
 		Thread.sleep(4000);
 		Invoice invoice = new Invoice(driver);
 		invoice.InvoiceTab();
@@ -281,7 +281,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("PreFinal");
-		job.createjob();
+		//job.createjob();
 	}
 	@Test(priority = 14)
 	public void WA_Addpayment_job() throws InterruptedException
@@ -291,7 +291,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		job.createjob();
+		//job.createjob();
 		Thread.sleep(4000);
 		Invoice invoice = new Invoice(driver);
 		invoice.InvoiceTab();
@@ -465,39 +465,27 @@ public class Smoketest extends Baseclass {
 	{
 		driver.get(customerpage);
 		Thread.sleep(3000);
+
 		click("//span[text()='Contacts']");
 		Thread.sleep(2000);
+
 		click("//a[text()='Add new contact']");
+
 		type("#contact_name", "Aravind");
 		type("#contact_surname", "Reigns");
 		type("#contact_contactsemail_emailaddress","rara@yopmail.com");
+
 		Thread.sleep(1000);
 		click("//span[@class='number-type-toggle ng-binding']");
+
 		click("//li[text()='Mobile']");
 		type("$contact[contactstelephone][0][telephonenumber]", "9856325698");
 		click("//span[text()='Add phone number']");
+
 		click("//span[text()='Add contact']");
+
 	}
-	
 	@Test (priority=25)
-	public void CustomerReports() throws InterruptedException
-	{
-		
-		//driver.get(homepage);
-		Reporting Report = new Reporting(driver); 
-		Report.Reporttab();
-		Report.Report_Sidemenu();
-		Report.Customer_Report();
-		Report.Customers_Report();
-		Report.click_filter();
-		Report.click_dateoption();
-		Report.click_todaydate();
-		Report.apply_filter();
-		Report.First_Plus_button();
-		Report.Click_View_customer();
-		Report.Customer1_Assertion("View Customer");	
-	}
-	/*@Test (priority=26)
 	public void CustomerReports() throws InterruptedException
 	{
 
@@ -512,7 +500,7 @@ public class Smoketest extends Baseclass {
 		Report.Customer1_Assertion("View Customer");
 
 
-	}*/
+	}
 	@Test (priority=26)
 	public void ServiceRemindersReports() throws InterruptedException
 	{

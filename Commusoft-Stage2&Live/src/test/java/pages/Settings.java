@@ -128,7 +128,7 @@ public class Settings extends Wrapper {
 	public void free_chargereason(String reason) throws InterruptedException {
 		int a=0;
 		click("//a[text()=\"Free of charge reasons\"]");
-		type("//input[@id=\"freeofchargereason_description\"]",reason + a+"");
+		type("//input[@id=\"freeofchargereason_description\"]",reason + a+" ");
 		WebElement text = driver.findElement(By.xpath("//span[text()=\"This reason already exists\"]"));
 		if(text.isDisplayed())
 		{

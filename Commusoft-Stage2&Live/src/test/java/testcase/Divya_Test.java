@@ -14,7 +14,7 @@ import pages.LoginPage;
 import pages.Settings;
 import pages.searchengine;
 
-public class DivyaModule extends Baseclass{
+public class Divya_Test extends Baseclass{
 	public String homepage;
 	
 	@Test(priority = 0)

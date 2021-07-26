@@ -174,7 +174,8 @@ public class Diary extends Wrapper {
 	
 	public void Diary_job_AddProperty()
 	{
-		click("//a[@ng-click='addNewProperty(event_type)']");
+		click("//*[@id=\"page-panel-main\"]/div[2]/div/section[1]/section[2]/div/div/div[2]/a");
+		//click("//a[@ng-click='addNewProperty(event_type)']");
 	}
 	public void Diary_TypesOfProperty()
 	{

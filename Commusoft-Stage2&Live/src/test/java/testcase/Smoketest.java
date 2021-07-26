@@ -82,7 +82,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("PreFinal");
-		job.createjob();
+		//job.createjob();
 	}
 	@Test(priority = 4)
 	public void Add_job_Final_Complete() throws InterruptedException
@@ -92,7 +92,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("AutoFinal");
-		job.createjob();
+		//job.createjob();
 		Thread.sleep(6000);
 		job.edit_job();
 		Thread.sleep(3000);
@@ -106,7 +106,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		job.createjob();
+		//job.createjob();
 		Thread.sleep(3000);
 		Invoice invoice = new Invoice(driver);
 		invoice.InvoiceTab();
@@ -126,7 +126,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		job.createjob();
+		//job.createjob();
 		Thread.sleep(3000);
 		Invoice invoice = new Invoice(driver);
 		invoice.InvoiceTab();
@@ -201,7 +201,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		job.createjob();
+		//job.createjob();
 		Thread.sleep(4000);
 		job.Add_new_diaryEvent();
 		Diary diary = new Diary(driver);
@@ -218,7 +218,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		job.createjob();
+		//job.createjob();
 		Thread.sleep(4000);
 		Invoice invoice = new Invoice(driver);
 		invoice.InvoiceTab();
@@ -281,7 +281,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("PreFinal");
-		job.createjob();
+		//job.createjob();
 	}
 	@Test(priority = 14)
 	public void WA_Addpayment_job() throws InterruptedException
@@ -291,7 +291,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		job.createjob();
+		//job.createjob();
 		Thread.sleep(4000);
 		Invoice invoice = new Invoice(driver);
 		invoice.InvoiceTab();
@@ -405,9 +405,10 @@ public class Smoketest extends Baseclass {
 	@Test(priority =20)
 	public void diaryutility() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(3000);
 		Diary diary = new Diary(driver);
 		diary.Diary_Module();
+		Thread.sleep(6000);
 		diary.Diary_PrintJobSheet();
 		diary.Diary_PrintSummarySheet();
 	}

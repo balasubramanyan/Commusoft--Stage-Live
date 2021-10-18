@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="testcase.Smoketest">
+        <methods>
+          <include name="Diary_Estimate"/>
+          <include name="Diary_Job"/>
+          <include name="initial"/>
+          <include name="Supplier_PO"/>
+          <include name="Diary_Normal"/>
+          <include name="Supplier_Invoice"/>
+          <include name="Addcustomer_job"/>
+          <include name="diaryutility"/>
+          <include name="teardown"/>
+          <include name="tearDown"/>
+          <include name="Supplier_Create"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.Smoketest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

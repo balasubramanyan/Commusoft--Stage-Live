@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="32" passed="24" failed="8" skipped="0">
+<testng-results ignored="0" total="32" passed="30" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-08T18:54:32 IST" name="Default suite" finished-at="2021-10-08T19:08:04 IST" duration-ms="811709">
+  <suite started-at="2021-10-18T18:01:25 IST" name="Default suite" finished-at="2021-10-18T18:17:32 IST" duration-ms="966207">
     <groups>
     </groups>
-    <test started-at="2021-10-08T18:54:32 IST" name="Default test" finished-at="2021-10-08T19:08:04 IST" duration-ms="811709">
+    <test started-at="2021-10-18T18:01:25 IST" name="Default test" finished-at="2021-10-18T18:17:32 IST" duration-ms="966207">
       <class name="testcase.Smoketest">
-        <test-method is-config="true" signature="initial()[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:54:32 IST" name="initial" finished-at="2021-10-08T18:54:32 IST" duration-ms="853" status="PASS">
+        <test-method is-config="true" signature="initial()[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:01:25 IST" name="initial" finished-at="2021-10-18T18:01:25 IST" duration-ms="870" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initial -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:54:32 IST" name="setup" finished-at="2021-10-08T18:54:49 IST" duration-ms="16206" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:01:25 IST" name="setup" finished-at="2021-10-18T18:01:37 IST" duration-ms="11390" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login()[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:54:49 IST" name="login" finished-at="2021-10-08T18:55:07 IST" duration-ms="18542" status="PASS">
+        <test-method signature="login()[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:01:37 IST" name="login" finished-at="2021-10-18T18:01:55 IST" duration-ms="18553" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:55:07 IST" name="teardown" finished-at="2021-10-08T18:55:07 IST" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:01:55 IST" name="teardown" finished-at="2021-10-18T18:01:55 IST" duration-ms="11" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -30,11 +30,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Add_Customer()[pri:1, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:55:07 IST" name="Add_Customer" finished-at="2021-10-08T18:55:30 IST" duration-ms="22953" status="PASS">
+        <test-method signature="Add_Customer()[pri:1, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:01:55 IST" name="Add_Customer" finished-at="2021-10-18T18:02:18 IST" duration-ms="23024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Add_Customer -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:55:30 IST" name="teardown" finished-at="2021-10-08T18:55:30 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:02:18 IST" name="teardown" finished-at="2021-10-18T18:02:18 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -45,11 +45,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Edit_Customer()[pri:2, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:55:30 IST" name="Edit_Customer" finished-at="2021-10-08T18:55:44 IST" duration-ms="14175" status="PASS">
+        <test-method signature="Edit_Customer()[pri:2, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:02:18 IST" name="Edit_Customer" finished-at="2021-10-18T18:02:32 IST" duration-ms="13551" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Edit_Customer -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:55:44 IST" name="teardown" finished-at="2021-10-08T18:55:44 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:02:32 IST" name="teardown" finished-at="2021-10-18T18:02:32 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -60,11 +60,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Add_job_Prefinal()[pri:3, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:55:44 IST" name="Add_job_Prefinal" finished-at="2021-10-08T18:55:54 IST" duration-ms="10083" status="PASS">
+        <test-method signature="Add_job_Prefinal()[pri:3, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:02:32 IST" name="Add_job_Prefinal" finished-at="2021-10-18T18:02:43 IST" duration-ms="10634" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Add_job_Prefinal -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:55:54 IST" name="teardown" finished-at="2021-10-08T18:55:54 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:02:43 IST" name="teardown" finished-at="2021-10-18T18:02:43 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -75,11 +75,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Add_job_Final_Complete()[pri:4, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:55:54 IST" name="Add_job_Final_Complete" finished-at="2021-10-08T18:56:20 IST" duration-ms="25319" status="PASS">
+        <test-method signature="Add_job_Final_Complete()[pri:4, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:02:43 IST" name="Add_job_Final_Complete" finished-at="2021-10-18T18:03:08 IST" duration-ms="25488" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Add_job_Final_Complete -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:56:20 IST" name="teardown" finished-at="2021-10-08T18:56:20 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:03:08 IST" name="teardown" finished-at="2021-10-18T18:03:08 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -90,11 +90,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Addjob_NoRules()[pri:5, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:56:20 IST" name="Addjob_NoRules" finished-at="2021-10-08T18:56:38 IST" duration-ms="18002" status="PASS">
+        <test-method signature="Addjob_NoRules()[pri:5, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:03:08 IST" name="Addjob_NoRules" finished-at="2021-10-18T18:03:27 IST" duration-ms="18444" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Addjob_NoRules -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:56:38 IST" name="teardown" finished-at="2021-10-08T18:56:38 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:03:27 IST" name="teardown" finished-at="2021-10-18T18:03:27 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -105,11 +105,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Addjob_NoRules_Adddtional()[pri:6, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:56:38 IST" name="Addjob_NoRules_Adddtional" finished-at="2021-10-08T18:57:05 IST" duration-ms="26847" status="PASS">
+        <test-method signature="Addjob_NoRules_Adddtional()[pri:6, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:03:27 IST" name="Addjob_NoRules_Adddtional" finished-at="2021-10-18T18:03:54 IST" duration-ms="27032" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Addjob_NoRules_Adddtional -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:57:05 IST" name="teardown" finished-at="2021-10-08T18:57:05 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:03:54 IST" name="teardown" finished-at="2021-10-18T18:03:54 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -120,11 +120,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Estimate_Accept()[pri:7, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:57:05 IST" name="Estimate_Accept" finished-at="2021-10-08T18:58:20 IST" duration-ms="75439" status="PASS">
+        <test-method signature="Estimate_Accept()[pri:7, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:03:54 IST" name="Estimate_Accept" finished-at="2021-10-18T18:05:09 IST" duration-ms="75674" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Estimate_Accept -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:58:20 IST" name="teardown" finished-at="2021-10-08T18:58:20 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:05:09 IST" name="teardown" finished-at="2021-10-18T18:05:09 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -135,11 +135,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Estimate_Reject()[pri:8, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:58:20 IST" name="Estimate_Reject" finished-at="2021-10-08T18:59:15 IST" duration-ms="55154" status="PASS">
+        <test-method signature="Estimate_Reject()[pri:8, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:05:09 IST" name="Estimate_Reject" finished-at="2021-10-18T18:06:03 IST" duration-ms="54028" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Estimate_Reject -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:59:15 IST" name="teardown" finished-at="2021-10-08T18:59:15 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:06:03 IST" name="teardown" finished-at="2021-10-18T18:06:03 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -150,26 +150,91 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Addjob_NoRules_DiaryEvent()[pri:9, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:59:15 IST" name="Addjob_NoRules_DiaryEvent" finished-at="2021-10-08T18:59:49 IST" duration-ms="34198" status="PASS">
+        <test-method signature="Addjob_NoRules_DiaryEvent()[pri:9, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:06:03 IST" name="Addjob_NoRules_DiaryEvent" finished-at="2021-10-18T18:06:32 IST" duration-ms="28227" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <td class="fc-widget-content"></td> is not clickable at point (575, 271). Other element would receive the click: <div id="page-overlay" class="in-view"></div>
+  (Session info: chrome=94.0.4606.81)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-UBM9FTJ', ip: '192.168.100.67', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\MOHAME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54522}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f466d28ffa9650d300e33ef5313dcebb]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <td class="fc-widget-content"></td> is not clickable at point (575, 271). Other element would receive the click: <div id="page-overlay" class="in-view"></div>
+  (Session info: chrome=94.0.4606.81)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-UBM9FTJ', ip: '192.168.100.67', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\MOHAME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54522}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f466d28ffa9650d300e33ef5313dcebb
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+at action.Wrapper.click(Wrapper.java:110)
+at pages.Diary.Diary_Timing3(Diary.java:79)
+at testcase.Smoketest.Addjob_NoRules_DiaryEvent(Smoketest.java:210)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Addjob_NoRules_DiaryEvent -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:59:49 IST" name="teardown" finished-at="2021-10-08T18:59:49 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:06:32 IST" name="teardown" finished-at="2021-10-18T18:06:32 IST" duration-ms="470" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Addjob_NoRules_DiaryEvent status=SUCCESS method=Smoketest.Addjob_NoRules_DiaryEvent()[pri:9, instance:testcase.Smoketest@55536d9e] output={null}]]]>
+                <![CDATA[[TestResult name=Addjob_NoRules_DiaryEvent status=FAILURE method=Smoketest.Addjob_NoRules_DiaryEvent()[pri:9, instance:testcase.Smoketest@55536d9e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Addpayment_job()[pri:10, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T18:59:49 IST" name="Addpayment_job" finished-at="2021-10-08T19:00:33 IST" duration-ms="43709" status="PASS">
+        <test-method signature="Addpayment_job()[pri:10, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:06:32 IST" name="Addpayment_job" finished-at="2021-10-18T18:07:13 IST" duration-ms="41392" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Addpayment_job -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:00:33 IST" name="teardown" finished-at="2021-10-08T19:00:33 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:07:13 IST" name="teardown" finished-at="2021-10-18T18:07:13 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -180,11 +245,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Workaddress_Add()[pri:11, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:00:33 IST" name="Workaddress_Add" finished-at="2021-10-08T19:00:59 IST" duration-ms="25961" status="PASS">
+        <test-method signature="Workaddress_Add()[pri:11, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:07:13 IST" name="Workaddress_Add" finished-at="2021-10-18T18:07:41 IST" duration-ms="27358" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Workaddress_Add -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:00:59 IST" name="teardown" finished-at="2021-10-08T19:00:59 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:07:41 IST" name="teardown" finished-at="2021-10-18T18:07:41 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -195,11 +260,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Work_Address_Edit()[pri:12, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:00:59 IST" name="Work_Address_Edit" finished-at="2021-10-08T19:01:08 IST" duration-ms="8835" status="PASS">
+        <test-method signature="Work_Address_Edit()[pri:12, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:07:41 IST" name="Work_Address_Edit" finished-at="2021-10-18T18:07:50 IST" duration-ms="8904" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Work_Address_Edit -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:01:08 IST" name="teardown" finished-at="2021-10-08T19:01:08 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:07:50 IST" name="teardown" finished-at="2021-10-18T18:07:50 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -210,11 +275,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="WA_Add_job_Prefinal()[pri:13, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:01:08 IST" name="WA_Add_job_Prefinal" finished-at="2021-10-08T19:01:18 IST" duration-ms="9824" status="PASS">
+        <test-method signature="WA_Add_job_Prefinal()[pri:13, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:07:50 IST" name="WA_Add_job_Prefinal" finished-at="2021-10-18T18:08:00 IST" duration-ms="9884" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- WA_Add_job_Prefinal -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:01:18 IST" name="teardown" finished-at="2021-10-08T19:01:18 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:08:00 IST" name="teardown" finished-at="2021-10-18T18:08:00 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -225,11 +290,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="WA_Addpayment_job()[pri:14, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:01:18 IST" name="WA_Addpayment_job" finished-at="2021-10-08T19:01:59 IST" duration-ms="41385" status="PASS">
+        <test-method signature="WA_Addpayment_job()[pri:14, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:08:00 IST" name="WA_Addpayment_job" finished-at="2021-10-18T18:08:41 IST" duration-ms="41378" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- WA_Addpayment_job -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:01:59 IST" name="teardown" finished-at="2021-10-08T19:01:59 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:08:41 IST" name="teardown" finished-at="2021-10-18T18:08:41 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -240,11 +305,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="WA_Estimate_Accept()[pri:15, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:01:59 IST" name="WA_Estimate_Accept" finished-at="2021-10-08T19:03:04 IST" duration-ms="64994" status="PASS">
+        <test-method signature="WA_Estimate_Accept()[pri:15, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:08:41 IST" name="WA_Estimate_Accept" finished-at="2021-10-18T18:09:47 IST" duration-ms="65668" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- WA_Estimate_Accept -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:03:04 IST" name="teardown" finished-at="2021-10-08T19:03:04 IST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:09:47 IST" name="teardown" finished-at="2021-10-18T18:09:47 IST" duration-ms="5" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -255,509 +320,134 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Diary_Estimate()[pri:16, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:03:04 IST" name="Diary_Estimate" finished-at="2021-10-08T19:03:11 IST" duration-ms="7166" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a ui-sref="loggedin.diary" translate="" class="ng-scope" href="/diary">...</a> is not clickable at point (302, 21). Other element would receive the click: <div class="modal-backdrop fade in" ng-class="{in: animate}" modal-backdrop="" style=""></div>
-  (Session info: chrome=94.0.4606.71)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-UBM9FTJ', ip: '192.168.0.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\MOHAME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64062}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 321d035736d85fc60744b2e4cecd8bfd]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a ui-sref="loggedin.diary" translate="" class="ng-scope" href="/diary">...</a> is not clickable at point (302, 21). Other element would receive the click: <div class="modal-backdrop fade in" ng-class="{in: animate}" modal-backdrop="" style=""></div>
-  (Session info: chrome=94.0.4606.71)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-UBM9FTJ', ip: '192.168.0.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\MOHAME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64062}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 321d035736d85fc60744b2e4cecd8bfd
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-at action.Wrapper.click(Wrapper.java:110)
-at pages.Diary.Diary_Module(Diary.java:24)
-at testcase.Smoketest.Diary_Estimate(Smoketest.java:346)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method signature="Diary_Estimate()[pri:16, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:09:47 IST" name="Diary_Estimate" finished-at="2021-10-18T18:10:30 IST" duration-ms="43424" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Diary_Estimate -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:03:11 IST" name="teardown" finished-at="2021-10-08T19:03:11 IST" duration-ms="160" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:10:30 IST" name="teardown" finished-at="2021-10-18T18:10:30 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Diary_Estimate status=FAILURE method=Smoketest.Diary_Estimate()[pri:16, instance:testcase.Smoketest@55536d9e] output={null}]]]>
+                <![CDATA[[TestResult name=Diary_Estimate status=SUCCESS method=Smoketest.Diary_Estimate()[pri:16, instance:testcase.Smoketest@55536d9e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Diary_Job()[pri:17, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:03:11 IST" name="Diary_Job" finished-at="2021-10-08T19:03:19 IST" duration-ms="7117" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a ui-sref="loggedin.diary" translate="" class="ng-scope" href="/diary">...</a> is not clickable at point (302, 21). Other element would receive the click: <div class="modal-backdrop fade in" ng-class="{in: animate}" modal-backdrop="" style=""></div>
-  (Session info: chrome=94.0.4606.71)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-UBM9FTJ', ip: '192.168.0.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\MOHAME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64062}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 321d035736d85fc60744b2e4cecd8bfd]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a ui-sref="loggedin.diary" translate="" class="ng-scope" href="/diary">...</a> is not clickable at point (302, 21). Other element would receive the click: <div class="modal-backdrop fade in" ng-class="{in: animate}" modal-backdrop="" style=""></div>
-  (Session info: chrome=94.0.4606.71)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-UBM9FTJ', ip: '192.168.0.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\MOHAME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64062}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 321d035736d85fc60744b2e4cecd8bfd
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-at action.Wrapper.click(Wrapper.java:110)
-at pages.Diary.Diary_Module(Diary.java:24)
-at testcase.Smoketest.Diary_Job(Smoketest.java:361)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method signature="Diary_Job()[pri:17, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:10:30 IST" name="Diary_Job" finished-at="2021-10-18T18:11:12 IST" duration-ms="41509" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Diary_Job -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:03:19 IST" name="teardown" finished-at="2021-10-08T19:03:19 IST" duration-ms="191" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:11:12 IST" name="teardown" finished-at="2021-10-18T18:11:12 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Diary_Job status=FAILURE method=Smoketest.Diary_Job()[pri:17, instance:testcase.Smoketest@55536d9e] output={null}]]]>
+                <![CDATA[[TestResult name=Diary_Job status=SUCCESS method=Smoketest.Diary_Job()[pri:17, instance:testcase.Smoketest@55536d9e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Diary_Normal()[pri:18, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:03:19 IST" name="Diary_Normal" finished-at="2021-10-08T19:03:26 IST" duration-ms="7142" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a ui-sref="loggedin.diary" translate="" class="ng-scope" href="/diary">...</a> is not clickable at point (302, 21). Other element would receive the click: <div class="modal-backdrop fade in" ng-class="{in: animate}" modal-backdrop="" style=""></div>
-  (Session info: chrome=94.0.4606.71)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-UBM9FTJ', ip: '192.168.0.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\MOHAME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64062}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 321d035736d85fc60744b2e4cecd8bfd]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a ui-sref="loggedin.diary" translate="" class="ng-scope" href="/diary">...</a> is not clickable at point (302, 21). Other element would receive the click: <div class="modal-backdrop fade in" ng-class="{in: animate}" modal-backdrop="" style=""></div>
-  (Session info: chrome=94.0.4606.71)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-UBM9FTJ', ip: '192.168.0.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\MOHAME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64062}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 321d035736d85fc60744b2e4cecd8bfd
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-at action.Wrapper.click(Wrapper.java:110)
-at pages.Diary.Diary_Module(Diary.java:24)
-at testcase.Smoketest.Diary_Normal(Smoketest.java:376)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method signature="Diary_Normal()[pri:18, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:11:12 IST" name="Diary_Normal" finished-at="2021-10-18T18:11:37 IST" duration-ms="25819" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Diary_Normal -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:03:26 IST" name="teardown" finished-at="2021-10-08T19:03:26 IST" duration-ms="140" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:11:37 IST" name="teardown" finished-at="2021-10-18T18:11:37 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Diary_Normal status=FAILURE method=Smoketest.Diary_Normal()[pri:18, instance:testcase.Smoketest@55536d9e] output={null}]]]>
+                <![CDATA[[TestResult name=Diary_Normal status=SUCCESS method=Smoketest.Diary_Normal()[pri:18, instance:testcase.Smoketest@55536d9e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Addcustomer_job()[pri:19, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:03:26 IST" name="Addcustomer_job" finished-at="2021-10-08T19:03:33 IST" duration-ms="7094" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a ui-sref="loggedin.diary" translate="" class="ng-scope" href="/diary">...</a> is not clickable at point (302, 21). Other element would receive the click: <div class="modal-backdrop fade in" ng-class="{in: animate}" modal-backdrop="" style=""></div>
-  (Session info: chrome=94.0.4606.71)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-UBM9FTJ', ip: '192.168.0.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\MOHAME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64062}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 321d035736d85fc60744b2e4cecd8bfd]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a ui-sref="loggedin.diary" translate="" class="ng-scope" href="/diary">...</a> is not clickable at point (302, 21). Other element would receive the click: <div class="modal-backdrop fade in" ng-class="{in: animate}" modal-backdrop="" style=""></div>
-  (Session info: chrome=94.0.4606.71)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-UBM9FTJ', ip: '192.168.0.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\MOHAME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64062}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 321d035736d85fc60744b2e4cecd8bfd
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-at action.Wrapper.click(Wrapper.java:110)
-at pages.Diary.Diary_Module(Diary.java:24)
-at testcase.Smoketest.Addcustomer_job(Smoketest.java:388)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method signature="Addcustomer_job()[pri:19, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:11:37 IST" name="Addcustomer_job" finished-at="2021-10-18T18:12:26 IST" duration-ms="48063" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Addcustomer_job -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:03:33 IST" name="teardown" finished-at="2021-10-08T19:03:33 IST" duration-ms="164" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:12:26 IST" name="teardown" finished-at="2021-10-18T18:12:26 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Addcustomer_job status=FAILURE method=Smoketest.Addcustomer_job()[pri:19, instance:testcase.Smoketest@55536d9e] output={null}]]]>
+                <![CDATA[[TestResult name=Addcustomer_job status=SUCCESS method=Smoketest.Addcustomer_job()[pri:19, instance:testcase.Smoketest@55536d9e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="diaryutility()[pri:20, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:03:33 IST" name="diaryutility" finished-at="2021-10-08T19:03:37 IST" duration-ms="4154" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a ui-sref="loggedin.diary" translate="" class="ng-scope" href="/diary">...</a> is not clickable at point (302, 21). Other element would receive the click: <div class="modal-backdrop fade in" ng-class="{in: animate}" modal-backdrop="" style=""></div>
-  (Session info: chrome=94.0.4606.71)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-UBM9FTJ', ip: '192.168.0.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\MOHAME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64062}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 321d035736d85fc60744b2e4cecd8bfd]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a ui-sref="loggedin.diary" translate="" class="ng-scope" href="/diary">...</a> is not clickable at point (302, 21). Other element would receive the click: <div class="modal-backdrop fade in" ng-class="{in: animate}" modal-backdrop="" style=""></div>
-  (Session info: chrome=94.0.4606.71)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-UBM9FTJ', ip: '192.168.0.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\MOHAME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64062}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 321d035736d85fc60744b2e4cecd8bfd
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-at action.Wrapper.click(Wrapper.java:110)
-at pages.Diary.Diary_Module(Diary.java:24)
-at testcase.Smoketest.diaryutility(Smoketest.java:410)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method signature="diaryutility()[pri:20, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:12:26 IST" name="diaryutility" finished-at="2021-10-18T18:12:38 IST" duration-ms="12219" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- diaryutility -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:03:37 IST" name="teardown" finished-at="2021-10-08T19:03:38 IST" duration-ms="141" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:12:38 IST" name="teardown" finished-at="2021-10-18T18:12:38 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=diaryutility status=FAILURE method=Smoketest.diaryutility()[pri:20, instance:testcase.Smoketest@55536d9e] output={null}]]]>
+                <![CDATA[[TestResult name=diaryutility status=SUCCESS method=Smoketest.diaryutility()[pri:20, instance:testcase.Smoketest@55536d9e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Supplier_Create()[pri:21, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:03:38 IST" name="Supplier_Create" finished-at="2021-10-08T19:03:39 IST" duration-ms="1108" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a href="/suppliers" translate="" class="ng-scope">...</a> is not clickable at point (396, 21). Other element would receive the click: <div class="modal-backdrop fade in" ng-class="{in: animate}" modal-backdrop="" style=""></div>
-  (Session info: chrome=94.0.4606.71)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-UBM9FTJ', ip: '192.168.0.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\MOHAME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64062}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 321d035736d85fc60744b2e4cecd8bfd]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="/suppliers" translate="" class="ng-scope">...</a> is not clickable at point (396, 21). Other element would receive the click: <div class="modal-backdrop fade in" ng-class="{in: animate}" modal-backdrop="" style=""></div>
-  (Session info: chrome=94.0.4606.71)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-UBM9FTJ', ip: '192.168.0.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\MOHAME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64062}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 321d035736d85fc60744b2e4cecd8bfd
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-at action.Wrapper.click(Wrapper.java:110)
-at pages.Supplier.Supplier_Module(Supplier.java:29)
-at testcase.Smoketest.Supplier_Create(Smoketest.java:419)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method signature="Supplier_Create()[pri:21, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:12:38 IST" name="Supplier_Create" finished-at="2021-10-18T18:12:51 IST" duration-ms="12868" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Supplier_Create -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:03:39 IST" name="teardown" finished-at="2021-10-08T19:03:39 IST" duration-ms="150" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:12:51 IST" name="teardown" finished-at="2021-10-18T18:12:51 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Supplier_Create status=FAILURE method=Smoketest.Supplier_Create()[pri:21, instance:testcase.Smoketest@55536d9e] output={null}]]]>
+                <![CDATA[[TestResult name=Supplier_Create status=SUCCESS method=Smoketest.Supplier_Create()[pri:21, instance:testcase.Smoketest@55536d9e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Supplier_PO()[pri:22, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:03:39 IST" name="Supplier_PO" finished-at="2021-10-08T19:04:29 IST" duration-ms="50092" status="FAIL">
+        <test-method signature="Supplier_PO()[pri:22, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:12:51 IST" name="Supplier_PO" finished-at="2021-10-18T18:13:01 IST" duration-ms="10277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Supplier_PO -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:13:01 IST" name="teardown" finished-at="2021-10-18T18:13:01 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Supplier_PO status=SUCCESS method=Smoketest.Supplier_PO()[pri:22, instance:testcase.Smoketest@55536d9e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Supplier_Invoice()[pri:23, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:13:01 IST" name="Supplier_Invoice" finished-at="2021-10-18T18:13:58 IST" duration-ms="56706" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add new purchase order']"}
-  (Session info: chrome=94.0.4606.71)
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[text() ='Parts']"}
+  (Session info: chrome=94.0.4606.81)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-UBM9FTJ', ip: '192.168.0.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+System info: host: 'DESKTOP-UBM9FTJ', ip: '192.168.100.67', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\MOHAME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64062}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 321d035736d85fc60744b2e4cecd8bfd
-*** Element info: {Using=xpath, value=//a[text()='Add new purchase order']}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\MOHAME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54522}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f466d28ffa9650d300e33ef5313dcebb
+*** Element info: {Using=xpath, value=//div[text() ='Parts']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add new purchase order']"}
-  (Session info: chrome=94.0.4606.71)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[text() ='Parts']"}
+  (Session info: chrome=94.0.4606.81)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-UBM9FTJ', ip: '192.168.0.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+System info: host: 'DESKTOP-UBM9FTJ', ip: '192.168.100.67', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\MOHAME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64062}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 321d035736d85fc60744b2e4cecd8bfd
-*** Element info: {Using=xpath, value=//a[text()='Add new purchase order']}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\MOHAME~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54522}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f466d28ffa9650d300e33ef5313dcebb
+*** Element info: {Using=xpath, value=//div[text() ='Parts']}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -774,7 +464,8 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
 at action.Wrapper.click(Wrapper.java:110)
-at testcase.Smoketest.Supplier_PO(Smoketest.java:433)
+at pages.Supplierinvoice.supplirinvpart(Supplierinvoice.java:46)
+at testcase.Smoketest.Supplier_Invoice(Smoketest.java:451)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -808,66 +499,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Supplier_PO -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:04:29 IST" name="teardown" finished-at="2021-10-08T19:04:29 IST" duration-ms="145" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Supplier_PO status=FAILURE method=Smoketest.Supplier_PO()[pri:22, instance:testcase.Smoketest@55536d9e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method signature="Supplier_Invoice()[pri:23, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:04:29 IST" name="Supplier_Invoice" finished-at="2021-10-08T19:04:29 IST" duration-ms="0" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[null value in entry: url=null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: null value in entry: url=null
-at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:32)
-at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:42)
-at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:72)
-at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:124)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:276)
-at testcase.Smoketest.Supplier_Invoice(Smoketest.java:446)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- Supplier_Invoice -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:04:29 IST" name="teardown" finished-at="2021-10-08T19:04:29 IST" duration-ms="148" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:13:58 IST" name="teardown" finished-at="2021-10-18T18:13:58 IST" duration-ms="135" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -878,11 +511,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Customer_Createcontact()[pri:24, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:04:29 IST" name="Customer_Createcontact" finished-at="2021-10-08T19:04:40 IST" duration-ms="11201" status="PASS">
+        <test-method signature="Customer_Createcontact()[pri:24, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:13:58 IST" name="Customer_Createcontact" finished-at="2021-10-18T18:14:09 IST" duration-ms="11447" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Customer_Createcontact -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:04:40 IST" name="teardown" finished-at="2021-10-08T19:04:40 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:14:09 IST" name="teardown" finished-at="2021-10-18T18:14:09 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -893,11 +526,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="CustomerReports()[pri:25, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:04:40 IST" name="CustomerReports" finished-at="2021-10-08T19:05:10 IST" duration-ms="29679" status="PASS">
+        <test-method signature="CustomerReports()[pri:25, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:14:09 IST" name="CustomerReports" finished-at="2021-10-18T18:14:39 IST" duration-ms="29881" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CustomerReports -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:05:10 IST" name="teardown" finished-at="2021-10-08T19:05:10 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:14:39 IST" name="teardown" finished-at="2021-10-18T18:14:39 IST" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -908,15 +541,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="ServiceRemindersReports()[pri:26, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:05:10 IST" name="ServiceRemindersReports" finished-at="2021-10-08T19:05:40 IST" duration-ms="29357" status="PASS">
+        <test-method signature="ServiceRemindersReports()[pri:26, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:14:39 IST" name="ServiceRemindersReports" finished-at="2021-10-18T18:15:09 IST" duration-ms="29578" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ServiceRemindersReports -->
-        <test-method signature="SupplierReports()[pri:27, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:05:40 IST" name="SupplierReports" finished-at="2021-10-08T19:06:08 IST" duration-ms="28309" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SupplierReports -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:05:40 IST" name="teardown" finished-at="2021-10-08T19:05:40 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:15:09 IST" name="teardown" finished-at="2021-10-18T18:15:09 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -927,7 +556,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:06:08 IST" name="teardown" finished-at="2021-10-08T19:06:08 IST" duration-ms="0" status="PASS">
+        <test-method signature="SupplierReports()[pri:27, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:15:09 IST" name="SupplierReports" finished-at="2021-10-18T18:15:37 IST" duration-ms="28321" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SupplierReports -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:15:37 IST" name="teardown" finished-at="2021-10-18T18:15:37 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -938,11 +571,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="EstimateReport()[pri:28, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:06:08 IST" name="EstimateReport" finished-at="2021-10-08T19:06:45 IST" duration-ms="36670" status="PASS">
+        <test-method signature="EstimateReport()[pri:28, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:15:37 IST" name="EstimateReport" finished-at="2021-10-18T18:16:14 IST" duration-ms="36964" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EstimateReport -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:06:45 IST" name="teardown" finished-at="2021-10-08T19:06:45 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:16:14 IST" name="teardown" finished-at="2021-10-18T18:16:14 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -953,11 +586,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="JobReport()[pri:29, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:06:45 IST" name="JobReport" finished-at="2021-10-08T19:07:21 IST" duration-ms="36677" status="PASS">
+        <test-method signature="JobReport()[pri:29, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:16:14 IST" name="JobReport" finished-at="2021-10-18T18:16:51 IST" duration-ms="36723" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- JobReport -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:07:21 IST" name="teardown" finished-at="2021-10-08T19:07:21 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:16:51 IST" name="teardown" finished-at="2021-10-18T18:16:51 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -968,11 +601,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Work_address_Reports()[pri:30, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:07:21 IST" name="Work_address_Reports" finished-at="2021-10-08T19:07:55 IST" duration-ms="33764" status="PASS">
+        <test-method signature="Work_address_Reports()[pri:30, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:16:51 IST" name="Work_address_Reports" finished-at="2021-10-18T18:17:24 IST" duration-ms="33418" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Work_address_Reports -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:07:55 IST" name="teardown" finished-at="2021-10-08T19:07:55 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:17:24 IST" name="teardown" finished-at="2021-10-18T18:17:24 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -983,11 +616,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="SolarSearch_pageresponse()[pri:31, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:07:55 IST" name="SolarSearch_pageresponse" finished-at="2021-10-08T19:08:04 IST" duration-ms="9099" status="PASS">
+        <test-method signature="SolarSearch_pageresponse()[pri:31, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:17:24 IST" name="SolarSearch_pageresponse" finished-at="2021-10-18T18:17:32 IST" duration-ms="7588" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SolarSearch_pageresponse -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:08:04 IST" name="teardown" finished-at="2021-10-08T19:08:04 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:17:32 IST" name="teardown" finished-at="2021-10-18T18:17:32 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -998,7 +631,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-08T19:08:04 IST" name="tearDown" finished-at="2021-10-08T19:08:05 IST" duration-ms="631" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.Smoketest@55536d9e]" started-at="2021-10-18T18:17:32 IST" name="tearDown" finished-at="2021-10-18T18:17:32 IST" duration-ms="353" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

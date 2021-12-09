@@ -601,6 +601,7 @@ public class Smoketest extends Baseclass {
 		Assert.assertEquals(statuscode, 200);
 		
 	}
+	//stata
 	@Test(priority=32)
 	public void changesinvoicetype() throws InterruptedException
 	{

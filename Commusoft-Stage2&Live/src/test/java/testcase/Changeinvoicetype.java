@@ -22,8 +22,9 @@ public class Changeinvoicetype extends Baseclass{
 	@Test(priority=1)
 	public void changesinvoicetype() throws InterruptedException
 	{
+		driver.get(customerpage);
 		Changeinvoice changeinvoices=new Changeinvoice(driver);
-		changeinvoices.addcustomer();
+		//changeinvoices.addcustomer();
 		changeinvoices.addjob();
 		changeinvoices.adddiary();
 		changeinvoices.add_additionalinvoice();

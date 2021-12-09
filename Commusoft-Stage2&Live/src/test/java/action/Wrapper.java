@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,6 +19,7 @@ import org.testng.Assert;
 public class Wrapper {
 
 	 public WebDriver driver; 
+	 public JavascriptExecutor js;
 	 
 	 public long totalTime;
 	 public static String Location;

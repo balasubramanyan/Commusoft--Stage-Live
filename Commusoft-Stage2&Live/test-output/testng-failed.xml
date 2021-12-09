@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="testcase.Smoketest">
+        <methods>
+          <include name="Supplier_PO"/>
+          <include name="Work_address_Reports"/>
+          <include name="Addjob_NoRules"/>
+          <include name="teardown"/>
+          <include name="JobReport"/>
+          <include name="Diary_Estimate"/>
+          <include name="Addjob_NoRules_Adddtional"/>
+          <include name="SupplierReports"/>
+          <include name="Addjob_NoRules_DiaryEvent"/>
+          <include name="WA_Estimate_Accept"/>
+          <include name="Supplier_Invoice"/>
+          <include name="Add_job_Prefinal"/>
+          <include name="diaryutility"/>
+          <include name="Edit_Customer"/>
+          <include name="Diary_Job"/>
+          <include name="ServiceRemindersReports"/>
+          <include name="Workaddress_Add"/>
+          <include name="Addcustomer_job"/>
+          <include name="SolarSearch_pageresponse"/>
+          <include name="Supplier_Create"/>
+          <include name="WA_Add_job_Prefinal"/>
+          <include name="setup"/>
+          <include name="EstimateReport"/>
+          <include name="WA_Addpayment_job"/>
+          <include name="initial"/>
+          <include name="CustomerReports"/>
+          <include name="Diary_Normal"/>
+          <include name="Add_job_Final_Complete"/>
+          <include name="Addpayment_job"/>
+          <include name="Estimate_Accept"/>
+          <include name="Customer_Createcontact"/>
+          <include name="Work_Address_Edit"/>
+          <include name="tearDown"/>
+          <include name="Estimate_Reject"/>
+        </methods>
+      </class> <!-- testcase.Smoketest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

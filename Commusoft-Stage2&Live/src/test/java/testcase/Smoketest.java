@@ -11,6 +11,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import pages.Changeinvoice;
 import pages.CreateJob;
 import pages.Customer;
 import pages.Diary;
@@ -57,6 +58,7 @@ public class Smoketest extends Baseclass {
 		Thread.sleep(20000);
 		customerpage = driver.getCurrentUrl();
 	}
+	
 
 	@Test(priority = 2)
 	public void Edit_Customer() throws InterruptedException
@@ -598,6 +600,18 @@ public class Smoketest extends Baseclass {
 		System.out.println("Status:- " +statuscode);
 		Assert.assertEquals(statuscode, 200);
 		
+	}
+	@Test(priority=32)
+	public void changesinvoicetype() throws InterruptedException
+	{
+		driver.get(customerpage);
+		Changeinvoice changeinvoices=new Changeinvoice(driver);
+		//changeinvoices.addcustomer();
+		changeinvoices.addjob();
+		changeinvoices.adddiary();
+		changeinvoices.add_additionalinvoice();
+		changeinvoices.addfinalinvoice();
+		changeinvoices.editinvoicetype();
 	}
 
 

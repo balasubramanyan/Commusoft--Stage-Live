@@ -2,6 +2,8 @@ package action;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.testng.ITestResult;
@@ -9,7 +11,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
-
+//import io.testproject.sdk.internal.exceptions.AgentConnectException;
+//import io.testproject.sdk.internal.exceptions.InvalidTokenException;
+//import io.testproject.sdk.internal.exceptions.ObsoleteVersionException;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -69,6 +73,8 @@ public class Baseclass extends Wrapper {
 	{
 		
 		driver = Browsers.startapplication(driver, config.Browser(), config.URl());
+		String SystemName=InetAddress.getLocalHost().getHostName();
+		Sysout("Commusoft Web-Automation Started in :   "+SystemName );
 		
 		
 	}
@@ -80,6 +86,7 @@ public class Baseclass extends Wrapper {
 		{
 			logger.log(Status.PASS, "Method Been Executed Sucessfully:-" +result.getName());
 			System.out.println( "Method Been Executed Sucessfully:-" +result.getName());
+			Sysout("Method Been Executed Sucessfully:-" +result.getName());
 		}else 
 			if(ITestResult.FAILURE==result.getStatus())
 		{
@@ -87,6 +94,7 @@ public class Baseclass extends Wrapper {
 		//		logger.log(Status.FAIL,logger.addScreenCaptureFromPath(Screenshot.capture(driver))+result.getName());
 				logger.fail("Test Failed :- " +result.getName(), MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(driver)).build());
 				System.out.println( "Method Been Failed:-" +result.getName());
+				Sysout("Method Been Failed:-" +result.getName());
 			//	logger.log(Status.FAIL,logger.addScreenCaptureFromPath( capture(driver)) +"  Method Name:- " + result.getName());
 		}else
 		{
@@ -96,7 +104,8 @@ public class Baseclass extends Wrapper {
 		
 	}
 	@AfterSuite
-	public void tearDown(){
+	public void tearDown() throws UnknownHostException{
+		Sysout("Commusoft Web-Automation Completed in :   "+InetAddress.getLocalHost().getHostName());
 		report.flush();
 	   }
 

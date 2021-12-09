@@ -1,5 +1,10 @@
 package action;
 
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.net.URLConnection;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -114,7 +119,20 @@ public class Wrapper {
 	
 	
 	
-	
+	public void Sysout(String text)
+	{
+		String urlString = "https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s";
+		String apiToken = "896751198:AAE9Xnl-I9yRLETN_l_p1zr06_Fr_SEWXEU";
+		String chatId = "-760145184";
+		urlString = String.format(urlString, apiToken, chatId, text);
+		try {
+			URL url = new URL(urlString);
+			URLConnection conn = url.openConnection();
+			InputStream is = new BufferedInputStream(conn.getInputStream());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 	
 	
 	public void clear(String xpath)

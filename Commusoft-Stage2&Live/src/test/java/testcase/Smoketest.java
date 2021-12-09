@@ -33,7 +33,7 @@ public class Smoketest extends Baseclass {
 	public String WA;
 	public String Supplierhomepage;
 
-
+//manually edited
 
 	@Test(priority = 0)
 	public void login() throws InterruptedException

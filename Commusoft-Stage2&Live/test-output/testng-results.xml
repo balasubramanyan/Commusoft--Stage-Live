@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-12-09T19:37:22 IST" name="Default suite" finished-at="2021-12-09T19:38:09 IST" duration-ms="47059">
+    <groups>
+    </groups>
+    <test started-at="2021-12-09T19:37:22 IST" name="Default test" finished-at="2021-12-09T19:38:09 IST" duration-ms="47059">
+      <class name="testcase.Smoketest">
+        <test-method is-config="true" signature="initial()[pri:0, instance:testcase.Smoketest@3514a4c0]" started-at="2021-12-09T19:37:21 IST" name="initial" finished-at="2021-12-09T19:37:22 IST" duration-ms="1159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initial -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcase.Smoketest@3514a4c0]" started-at="2021-12-09T19:37:22 IST" name="setup" finished-at="2021-12-09T19:37:48 IST" duration-ms="25834" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="login()[pri:0, instance:testcase.Smoketest@3514a4c0]" started-at="2021-12-09T19:37:48 IST" name="login" finished-at="2021-12-09T19:38:09 IST" duration-ms="20371" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@3514a4c0]" started-at="2021-12-09T19:38:09 IST" name="teardown" finished-at="2021-12-09T19:38:09 IST" duration-ms="804" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login status=SUCCESS method=Smoketest.login()[pri:0, instance:testcase.Smoketest@3514a4c0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.Smoketest@3514a4c0]" started-at="2021-12-09T19:38:09 IST" name="tearDown" finished-at="2021-12-09T19:38:11 IST" duration-ms="1663" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testcase.Smoketest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

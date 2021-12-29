@@ -11,6 +11,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import pages.Changeinvoice;
 import pages.CreateJob;
 import pages.Customer;
 import pages.Diary;
@@ -32,7 +33,7 @@ public class Smoketest extends Baseclass {
 	public String WA;
 	public String Supplierhomepage;
 
-
+//manually edited
 
 	@Test(priority = 0)
 	public void login() throws InterruptedException
@@ -57,6 +58,7 @@ public class Smoketest extends Baseclass {
 		Thread.sleep(20000);
 		customerpage = driver.getCurrentUrl();
 	}
+	
 
 	@Test(priority = 2)
 	public void Edit_Customer() throws InterruptedException
@@ -405,9 +407,10 @@ public class Smoketest extends Baseclass {
 	@Test(priority =20)
 	public void diaryutility() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(3000);
 		Diary diary = new Diary(driver);
 		diary.Diary_Module();
+		Thread.sleep(6000);
 		diary.Diary_PrintJobSheet();
 		diary.Diary_PrintSummarySheet();
 	}
@@ -488,18 +491,19 @@ public class Smoketest extends Baseclass {
 	@Test (priority=25)
 	public void CustomerReports() throws InterruptedException
 	{
-
-		driver.get(homepage);
-		//customer report - 1
-		Reporting Report = new Reporting(driver); 
-		Report.Reporttab();
-		Report.Report_Sidemenu();
-		Report.Customer_Report();
-		Report.Customers_Report();
-		Report.First_Plus_button();
-		Report.Customer1_Assertion("View Customer");
-
-
+		//driver.get(homepage);
+				Reporting Report = new Reporting(driver); 
+				Report.Reporttab();
+				Report.Report_Sidemenu();
+				Report.Customer_Report();
+				Report.Customers_Report();
+				Report.click_filter();
+				Report.click_dateoption();
+				Report.click_todaydate();
+				Report.apply_filter();
+				Report.First_Plus_button();
+				Report.View_customer();
+		
 	}
 	@Test (priority=26)
 	public void ServiceRemindersReports() throws InterruptedException
@@ -512,7 +516,6 @@ public class Smoketest extends Baseclass {
 		Report.Service_Reminder_Report();
 		Report.Service_Reminders_Report();
 		Report.ServiceReminder1_Assertion();
-
 	}
 	@Test (priority = 27)
 	public void SupplierReports() throws InterruptedException
@@ -525,35 +528,53 @@ public class Smoketest extends Baseclass {
 		Report.Supplier_Report();
 		Report.Suppliers_Report();
 		Report.Supplier1_Assertion();
-
 	}
 	@Test (priority=28)
 	public void EstimateReport() throws InterruptedException
 	{
-		driver.get(homepage);
-		//Estimate Report = 1
-		Reporting Report = new Reporting(driver);
+		Reporting Report = new Reporting(driver); 
 		Report.Reporttab();
 		Report.Report_Sidemenu();
 		Report.Estimate_Report();
 		Report.Estimates_Report();
-		Report.Estimate1_Assertion();
+		Report.click_filter();
+		Report.click_dateoption();
+		Report.click_todaydate();
+		Report.apply_filter();
+		Report.First_Plus_button();
+		Report.click_viewestimate();
 	}
 	@Test(priority=29)
 	public void JobReport() throws InterruptedException
 	{
-		driver.get(homepage);
-		//Job Report = 1
-		Reporting Report = new Reporting(driver);
+		Reporting Report = new Reporting(driver); 
 		Report.Reporttab();
 		Report.Report_Sidemenu();
-		Report.Job_Report();
-		Report.Jobs_Report();
-		Report.Job1_Assertion();
-
-
+		Report.Estimate_Report();
+		Report.Estimates_Report();
+		Report.click_filter();
+		Report.click_dateoption();
+		Report.click_todaydate();
+		Report.apply_filter();
+		Report.First_Plus_button();
+		Report.click_viewestimate();
 	}
-	@Test(priority = 30)
+	@Test (priority=30)
+	public void Work_address_Reports() throws InterruptedException
+	{
+		Reporting Report = new Reporting(driver); 
+		Report.Reporttab();
+		Report.Report_Sidemenu();
+		Report.Customer_Report();
+		Report.WA_Report();
+		Report.click_filter();
+		Report.click_dateoption();
+		Report.click_todaydate();
+		Report.apply_filter();
+		Report.First_Plus_button();
+		Report.Click_View_workaddres();
+	}
+	@Test(priority = 31)
 	public  void SolarSearch_pageresponse() throws InterruptedException, IOException
 	{
 		type("#search-input","ranjit");
@@ -579,6 +600,19 @@ public class Smoketest extends Baseclass {
 		System.out.println("Status:- " +statuscode);
 		Assert.assertEquals(statuscode, 200);
 		
+	}
+	//stata
+	@Test(priority=32)
+	public void changesinvoicetype() throws InterruptedException
+	{
+		driver.get(customerpage);
+		Changeinvoice changeinvoices=new Changeinvoice(driver);
+		//changeinvoices.addcustomer();
+		changeinvoices.addjob();
+		changeinvoices.adddiary();
+		changeinvoices.add_additionalinvoice();
+		changeinvoices.addfinalinvoice();
+		changeinvoices.editinvoicetype();
 	}
 
 

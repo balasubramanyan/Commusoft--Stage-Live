@@ -38,7 +38,7 @@ public class Baseclass extends Wrapper {
 //	public static ExtentTest logger;
 
 	
-	
+	//test by jarba
 	
 	@BeforeSuite(alwaysRun = true)
 	public void initial() throws IOException

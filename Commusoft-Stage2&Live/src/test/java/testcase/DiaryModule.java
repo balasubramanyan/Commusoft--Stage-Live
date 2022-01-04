@@ -60,7 +60,8 @@ public class DiaryModule extends Baseclass {
 		diary.Diary_Module();
 		diary.Diary_Daily();
 		diary.Diary_Today();
-		diary.Diary_PM();
+		//diary.Diary_PM();
+		diary.Diary_Timing1();
 		diary.Diary_Normal_EvenDescription();
 		diary.Diary_Save();
 	}

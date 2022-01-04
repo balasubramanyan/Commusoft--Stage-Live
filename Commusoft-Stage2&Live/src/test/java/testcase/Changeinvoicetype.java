@@ -5,6 +5,8 @@ import org.testng.annotations.Test;
 
 import action.Baseclass;
 import pages.Changeinvoice;
+import pages.CreateJob;
+import pages.Diary;
 import pages.LoginPage;
 
 public class Changeinvoicetype extends Baseclass{
@@ -19,17 +21,18 @@ public class Changeinvoicetype extends Baseclass{
 		Thread.sleep(1000);
 		homepage = driver.getCurrentUrl(); 
 	}
-	@Test(priority=1)
+	//@Test(priority=1)
 	public void changesinvoicetype() throws InterruptedException
 	{
-		driver.get(customerpage);
+		//driver.get(customerpage);
 		Changeinvoice changeinvoices=new Changeinvoice(driver);
-		//changeinvoices.addcustomer();
+		changeinvoices.addcustomer();
 		changeinvoices.addjob();
 		changeinvoices.adddiary();
 		changeinvoices.add_additionalinvoice();
 		changeinvoices.addfinalinvoice();
 		changeinvoices.editinvoicetype();
 	}
+	
 }
 

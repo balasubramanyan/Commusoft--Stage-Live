@@ -77,7 +77,7 @@ public class Diary extends Wrapper {
 	}
 	public void Diary_Timing3()
 	{
-		click("(//td[@class='fc-widget-content'])[23]");
+		click("(//td[@class='fc-widget-content'])[34]");
 	}
 	public void Diary_Normal_EvenDescription()
 	{

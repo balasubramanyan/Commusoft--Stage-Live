@@ -30,6 +30,10 @@ public class Wrapper {
 	 public static String Location;
 	 public String formattedDate;
 	 public String customerpage;
+	 public String WAName;
+	 public String WAAccountNumber;
+	 public String CustomerName;
+	 public String AccountNumber;
 	 
 	 
 	public void type(String xpath, String value)

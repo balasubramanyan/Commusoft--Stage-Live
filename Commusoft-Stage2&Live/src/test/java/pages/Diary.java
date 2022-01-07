@@ -52,10 +52,11 @@ public class Diary extends Wrapper {
 			Thread.sleep(3000);
 		}
 	}
-	public void Diary_PM() throws InterruptedException
+	public void Diary_PM() 	
 	{
-		click("(//div[@class='fc-row fc-week fc-widget-content'])[2]");
+		click("(//div[@class='fc-row fc-week fc-widget-content'])[2]/div/table/tbody/tr/td[2]");
 	}
+	
 	public void Diary_EventFromJob() throws InterruptedException
 	{
 		Thread.sleep(3000);
@@ -64,11 +65,11 @@ public class Diary extends Wrapper {
 	
 	public void Diary_Timing()
 	{
-		click("(//td[@class=\"fc-widget-content\"])[10]");
+		click("(//td[@class='fc-widget-content'])[21]");
 	}
 	public void Diary_Timing1()
 	{
-		click("(//td[@class=\"fc-widget-content\"])[11]");
+		click("(//td[@class='fc-widget-content'])[11]");
 	}
 	public void Diary_Timing2()
 	{
@@ -76,7 +77,7 @@ public class Diary extends Wrapper {
 	}
 	public void Diary_Timing3()
 	{
-		click("(//td[@class=\"fc-widget-content\"])[15]");
+		click("(//td[@class='fc-widget-content'])[34]");
 	}
 	public void Diary_Normal_EvenDescription()
 	{
@@ -88,7 +89,7 @@ public class Diary extends Wrapper {
 	}
 	public void Diary_Estimate()
 	{
-		click("//a[text()='Estimate']");
+		click("(//div//a[@class=\"btn ng-scope\"])[1]");
 	}
 	public void Diary_job()
 	{

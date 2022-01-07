@@ -20,6 +20,7 @@ import pages.Estimate;
 import pages.Invoice;
 import pages.LoginPage;
 import pages.NotesandCommunication;
+import pages.QA62_Serviceremainder;
 import pages.Reporting;
 import pages.Supplier;
 import pages.Supplierinvoice;
@@ -574,7 +575,7 @@ public class Smoketest extends Baseclass {
 		Report.First_Plus_button();
 		Report.Click_View_workaddres();
 	}
-	@Test(priority = 31)
+	@Test(priority = 33)
 	public  void SolarSearch_pageresponse() throws InterruptedException, IOException
 	{
 		type("#search-input","ranjit");
@@ -602,7 +603,7 @@ public class Smoketest extends Baseclass {
 		
 	}
 	//stata
-	@Test(priority=32)
+	@Test(priority=31)
 	public void changesinvoicetype() throws InterruptedException
 	{
 		driver.get(customerpage);
@@ -613,6 +614,19 @@ public class Smoketest extends Baseclass {
 		changeinvoices.add_additionalinvoice();
 		changeinvoices.addfinalinvoice();
 		changeinvoices.editinvoicetype();
+	}
+	@Test(priority=32)
+	public void ser_remainder() throws InterruptedException
+	{
+		driver.get(homepage);
+		QA62_Serviceremainder Service_remainder =new QA62_Serviceremainder(driver);
+		Service_remainder.view_all_serviceremainder();
+		Service_remainder.enable_checkbox();
+		Service_remainder.process_remainder_btn();
+		Service_remainder.print_icon();
+		Service_remainder.notification();
+		Service_remainder.assertion_serviceremain();
+		
 	}
 
 

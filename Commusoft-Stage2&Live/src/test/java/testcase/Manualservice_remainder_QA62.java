@@ -29,7 +29,6 @@ public class Manualservice_remainder_QA62 extends Baseclass{
 		Service_remainder.process_remainder_btn();
 		Service_remainder.print_icon();
 		Service_remainder.notification();
-		Service_remainder.assertion_serviceremain();
-		
+		Service_remainder.assertion_serviceremain();	
 	}
 }

@@ -1,5 +1,6 @@
 package utility;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -15,10 +16,14 @@ import org.openqa.selenium.edge.EdgeDriver;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import io.testproject.sdk.internal.exceptions.AgentConnectException;
+import io.testproject.sdk.internal.exceptions.InvalidTokenException;
+import io.testproject.sdk.internal.exceptions.ObsoleteVersionException;
+
 public class Browsers {
 
 	
-	public static WebDriver startapplication(WebDriver driver,String browser, String URL)
+	public static WebDriver startapplication(WebDriver driver,String browser, String URL) throws InvalidTokenException, AgentConnectException, IOException, ObsoleteVersionException
 	{
 		if(browser.contains("chrome"))
 		{

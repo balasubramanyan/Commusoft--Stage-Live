@@ -3,8 +3,12 @@ package action;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.InetAddress;
 import java.net.URL;
 import java.net.URLConnection;
+import java.nio.charset.StandardCharsets;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -555,6 +559,166 @@ public class Wrapper {
 	public void Assertion(String ER , String AR, String R)
 	{
 		Assert.assertEquals(AR, ER,R);
+	}
+	public void SlackCommusoft(String text) throws IOException
+	{
+		URL url = new URL("https://hooks.slack.com/services/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");
+		HttpURLConnection http = (HttpURLConnection)url.openConnection();
+		http.setRequestMethod("POST");
+		http.setDoOutput(true);
+		http.setRequestProperty("Content-type", "application/json");
+
+		Date today = new Date();
+		SimpleDateFormat  DATE_FORMAT = new SimpleDateFormat("dd MMMM yyyy");
+       String date = DATE_FORMAT.format(today);
+		String data = "{\r\n"
+				+ "	\"attachments\": [\r\n"
+				+ "		{\r\n"
+				+ "			\"blocks\": [\r\n"
+				+ "				{\r\n"
+				+ "					\"type\": \"section\",\r\n"
+				+ "					\"text\": {\r\n"
+				+ "						\"type\": \"mrkdwn\",\r\n"
+				+ "						\"text\": \"*<https://stage2.commusoft.net/%7CAutomation Script Started>*\"\r\n"
+				+ "					}\r\n"
+				+ "				},\r\n"
+				+ "				{\r\n"
+				+ "					\"type\": \"section\",\r\n"
+				+ "					\"fields\": [\r\n"
+				+ "						{\r\n"
+				+ "							\"type\": \"mrkdwn\",\r\n"
+				+ "							\"text\": \"*Started In:*\\n"+text+"\"\r\n"
+				+ "						},\r\n"
+				+ "						{\r\n"
+				+ "							\"type\": \"mrkdwn\",\r\n"
+				+ "							\"text\": \"*Automation:*\\nWeb\"\r\n"
+				+ "						},\r\n"
+				+ "						{\r\n"
+				+ "							\"type\": \"mrkdwn\",\r\n"
+				+ "							\"text\": \"*Date:*\\n"+date+"\"\r\n"
+				+ "						},\r\n"
+				+ "						{\r\n"
+				+ "							\"type\": \"mrkdwn\",\r\n"
+				+ "							\"text\": \"*Platform:*\\nChrome\"\r\n"
+				+ "						}\r\n"
+				+ "					]\r\n"
+				+ "				}\r\n"
+				+ "			]\r\n"
+				+ "		}\r\n"
+				+ "	]\r\n"
+				+ "}\r\n"
+				+ "\r\n"
+				+ "\r\n"
+				+ "\r\n"
+				+ "\r\n"
+				+ "\r\n"
+				+ "";
+
+		byte[] out = data.getBytes(StandardCharsets.UTF_8);
+
+		OutputStream stream = http.getOutputStream();
+		stream.write(out);
+
+		System.out.println(http.getResponseCode() + " " + http.getResponseMessage());
+		http.disconnect();
+
+
+	}
+	public void SlackCommusoftstatus(String text) throws IOException
+	{
+		URL url = new URL("https://hooks.slack.com/services/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");
+		HttpURLConnection http = (HttpURLConnection)url.openConnection();
+		http.setRequestMethod("POST");
+		http.setDoOutput(true);
+		http.setRequestProperty("Content-type", "application/json");
+
+		String data = "{\r\n"
+				+ "	\"attachments\": [\r\n"
+				+ "		{\r\n"
+				+ "			\"blocks\": [\r\n"
+				+ "				{\r\n"
+				+ "					\"type\": \"section\",\r\n"
+				+ "					\"fields\": [\r\n"
+				+ "						{\r\n"
+				+ "							\"type\": \"mrkdwn\",\r\n"
+				+ "							\"text\": \""+text+"\"\r\n"
+				+ "						}\r\n"
+				+ "					]\r\n"
+				+ "				}\r\n"
+				+ "			]\r\n"
+				+ "		}\r\n"
+				+ "	]\r\n"
+				+ "}";
+
+		byte[] out = data.getBytes(StandardCharsets.UTF_8);
+
+		OutputStream stream = http.getOutputStream();
+		stream.write(out);
+
+		System.out.println(http.getResponseCode() + " " + http.getResponseMessage());
+		http.disconnect();
+
+
+	}
+	
+	public void SlackCommusoftdone(String text) throws IOException
+	{
+		URL url = new URL("https://hooks.slack.com/services/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");
+		HttpURLConnection http = (HttpURLConnection)url.openConnection();
+		http.setRequestMethod("POST");
+		http.setDoOutput(true);
+		http.setRequestProperty("Content-type", "application/json");
+
+		Date today = new Date();
+		SimpleDateFormat  DATE_FORMAT = new SimpleDateFormat("dd MMMM yyyy");
+       String date = DATE_FORMAT.format(today);
+       String SystemName=InetAddress.getLocalHost().getHostName();
+		String data = "{\r\n"
+				+ "	\"attachments\": [\r\n"
+				+ "		{\r\n"
+				+ "			\"blocks\": [\r\n"
+				+ "				{\r\n"
+				+ "					\"type\": \"section\",\r\n"
+				+ "					\"text\": {\r\n"
+				+ "						\"type\": \"mrkdwn\",\r\n"
+				+ "						\"text\": \"*<https://stage2.commusoft.net/%7CAutomation Script Completed>*\"\r\n"
+				+ "					}\r\n"
+				+ "				},\r\n"
+				+ "				{\r\n"
+				+ "					\"type\": \"section\",\r\n"
+				+ "					\"fields\": [\r\n"
+				+ "						{\r\n"
+				+ "							\"type\": \"mrkdwn\",\r\n"
+				+ "							\"text\": \"*Started In:*\\n"+SystemName+"\"\r\n"
+				+ "						},\r\n"
+				+ "						{\r\n"
+				+ "							\"type\": \"mrkdwn\",\r\n"
+				+ "							\"text\": \"*Automation:*\\nWeb\"\r\n"
+				+ "						},\r\n"
+				+ "						{\r\n"
+				+ "							\"type\": \"mrkdwn\",\r\n"
+				+ "							\"text\": \"*Date:*\\n"+date+"\"\r\n"
+				+ "						},\r\n"
+				+ "						{\r\n"
+				+ "							\"type\": \"mrkdwn\",\r\n"
+				+ "							\"text\": \"*Platform:*\\nChrome\"\r\n"
+				+ "						}\r\n"
+				+ "					]\r\n"
+				+ "				}\r\n"
+				+ "			]\r\n"
+				+ "		}\r\n"
+				+ "	]\r\n"
+				+ "}";
+
+		byte[] out = data.getBytes(StandardCharsets.UTF_8);
+
+		OutputStream stream = http.getOutputStream();
+		stream.write(out);
+
+		System.out.println(http.getResponseCode() + " " + http.getResponseMessage());
+		http.disconnect();
+
+
 	}
 	
 	public void user_name()

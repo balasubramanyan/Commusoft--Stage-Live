@@ -15,6 +15,7 @@ import pages.Changeinvoice;
 import pages.CreateJob;
 import pages.Customer;
 import pages.Diary;
+import pages.Download_excel_print_reports;
 import pages.Editcustomer_workaddress;
 import pages.Estimate;
 import pages.Invoice;
@@ -575,7 +576,102 @@ public class Smoketest extends Baseclass {
 		Report.First_Plus_button();
 		Report.Click_View_workaddres();
 	}
-	@Test(priority = 33)
+	@Test(priority=31)
+    public void customersreportdownload_print() throws InterruptedException
+    {
+	  Reporting customerreport=new Reporting (driver);
+	  customerreport.Reporttab();
+	  customerreport.Report_Sidemenu();
+	  customerreport.Customer_Report();
+	  customerreport.Customers_Report();
+	  Download_excel_print_reports customerprint =new Download_excel_print_reports(driver);
+	  customerprint.downloadexcel();
+	  customerprint.print();
+	  customerprint.closeprint();
+    }
+    @Test(priority=32)
+    public void jobreportdownload_print() throws InterruptedException
+    {
+      Reporting jobsreport= new Reporting(driver);
+      jobsreport.Reporttab();
+      jobsreport.Report_Sidemenu();
+      jobsreport.Job_Report();
+      jobsreport.Jobs_Report();
+      Download_excel_print_reports jobreportprintanddownload =new Download_excel_print_reports(driver);
+      jobsreport.click_filter();
+      jobsreport.click_dateoption();
+      jobsreport.click_todaydate();
+      jobsreport.apply_filter();
+      jobreportprintanddownload.print();
+      jobreportprintanddownload.closeprint();
+      jobreportprintanddownload.downloadexcel();
+     /* jobreportprintanddownload.jobsreportprint();
+      jobreportprintanddownload.notifications();
+      jobreportprintanddownload.assertion_jobrep();
+      jobreportprintanddownload.jobsreportdownloadexcel();
+      jobreportprintanddownload.notifications();
+      jobreportprintanddownload.assertion_jobrepoexcel();*/
+    }
+    @Test(priority=33)
+    public void timesheetreport() throws InterruptedException
+    {
+    	Reporting timesheet=new Reporting(driver);
+    	timesheet.Reporttab();
+    	timesheet.Report_Sidemenu();
+    	Download_excel_print_reports timesheetreportprintanddownload =new Download_excel_print_reports(driver);
+    	timesheetreportprintanddownload.clickusers();
+    	timesheetreportprintanddownload.clicktimesheet();
+    	timesheetreportprintanddownload.print();
+    	timesheetreportprintanddownload.closeprint();
+    	timesheetreportprintanddownload.downloadexcel();
+    }
+    @Test(priority=34)
+    public void salesreport() throws InterruptedException 
+    {
+    	Reporting salereport = new Reporting(driver);
+    	salereport.Reporttab();
+    	salereport.Report_Sidemenu();
+    	Download_excel_print_reports salesreportprintanddownload =new Download_excel_print_reports(driver);
+    	salesreportprintanddownload.clicksales();
+    	salesreportprintanddownload.clicksales2();
+    	salesreportprintanddownload.print();
+    	salesreportprintanddownload.closeprint();
+    	salesreportprintanddownload.downloadexcel();
+    	/*salesreportprintanddownload.salesreportprint();
+    	salesreportprintanddownload.notifications();
+    	salesreportprintanddownload.assertion_salesrepprint();
+    	salesreportprintanddownload.salesreportexcel();
+    	salesreportprintanddownload.notifications();
+    	salesreportprintanddownload.assertion_salesrepexcel();*/
+    }
+	
+	//stata
+	@Test(priority=35)
+	public void changesinvoicetype() throws InterruptedException
+	{
+		driver.get(customerpage);
+		Changeinvoice changeinvoices=new Changeinvoice(driver);
+		//changeinvoices.addcustomer();
+		changeinvoices.addjob();
+		changeinvoices.adddiary();
+		changeinvoices.add_additionalinvoice();
+		changeinvoices.addfinalinvoice();
+		changeinvoices.editinvoicetype();
+	}
+	@Test(priority=36)
+	public void ser_remainder() throws InterruptedException
+	{
+		driver.get(homepage);
+		QA62_Serviceremainder Service_remainder =new QA62_Serviceremainder(driver);
+		Service_remainder.view_all_serviceremainder();
+		Service_remainder.enable_checkbox();
+		Service_remainder.process_remainder_btn();
+		Service_remainder.print_icon();
+		Service_remainder.notification();
+		Service_remainder.assertion_serviceremain();
+		
+	}
+	@Test(priority = 37)
 	public  void SolarSearch_pageresponse() throws InterruptedException, IOException
 	{
 		type("#search-input","ranjit");
@@ -602,32 +698,8 @@ public class Smoketest extends Baseclass {
 		Assert.assertEquals(statuscode, 200);
 		
 	}
-	//stata
-	@Test(priority=31)
-	public void changesinvoicetype() throws InterruptedException
-	{
-		driver.get(customerpage);
-		Changeinvoice changeinvoices=new Changeinvoice(driver);
-		//changeinvoices.addcustomer();
-		changeinvoices.addjob();
-		changeinvoices.adddiary();
-		changeinvoices.add_additionalinvoice();
-		changeinvoices.addfinalinvoice();
-		changeinvoices.editinvoicetype();
-	}
-	@Test(priority=32)
-	public void ser_remainder() throws InterruptedException
-	{
-		driver.get(homepage);
-		QA62_Serviceremainder Service_remainder =new QA62_Serviceremainder(driver);
-		Service_remainder.view_all_serviceremainder();
-		Service_remainder.enable_checkbox();
-		Service_remainder.process_remainder_btn();
-		Service_remainder.print_icon();
-		Service_remainder.notification();
-		Service_remainder.assertion_serviceremain();
-		
-	}
+	
+	 
 
 
 }

@@ -46,11 +46,11 @@ public class SupplierModule extends Baseclass{
 		search.parts_deliverymethod("Delivery to office");
 		CreateJob Job = new CreateJob(driver);
 		Job.save_po();
-		/* Assertion */
-		Job.assert_Supplierparttoal();
-		Job.assert_Suppliersubtotal();
-		Job.assert_Suppliervat();
-		Job.assert_suppliereditgrand();	
+//		/* Assertion */
+//		Job.assert_Supplierparttoal();
+//		Job.assert_Suppliersubtotal();
+//		Job.assert_Suppliervat();
+//		Job.assert_suppliereditgrand();	
 	}
 	@Test(priority=3)
 	public void Supplier_Invoice() throws InterruptedException

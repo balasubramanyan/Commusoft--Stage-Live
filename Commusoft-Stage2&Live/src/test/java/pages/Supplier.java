@@ -15,7 +15,7 @@ public class Supplier extends Wrapper {
 	}
 	public void Suppliercreate() throws InterruptedException
 	{
-		click("//a[text()=\"Suppliers\"]");
+		click("//a[text()='Suppliers']");
 		click("//a[text()=\"New supplier \"]");
 		Thread.sleep(2000);
 		type("//input[@id=\"suppliertype_contacts_companyname\"]", "Supplier");

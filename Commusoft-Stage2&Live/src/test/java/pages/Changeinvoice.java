@@ -38,7 +38,7 @@ public void adddiary() throws InterruptedException
 	Thread.sleep(3000);
 	click("(//a[@class='icon ss-navigateright'])[1]");
 	click("//a[text()='Today']");
-	click("(//div[@class='fc-row fc-week fc-widget-content'])[2]/div/table/tbody/tr/td[3]");
+	click("(//td[@class='fc-widget-content'])[25]");
 	Thread.sleep(3000);
 	click("//button[@class='btn btn-primary']");
 }

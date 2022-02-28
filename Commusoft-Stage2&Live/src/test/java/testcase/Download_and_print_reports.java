@@ -45,12 +45,19 @@ public class Download_and_print_reports extends Baseclass{
       jobsreport.Job_Report();
       jobsreport.Jobs_Report();
       Download_excel_print_reports jobreportprintanddownload =new Download_excel_print_reports(driver);
-      jobreportprintanddownload.jobsreportprint();
+      jobsreport.click_filter();
+      jobsreport.click_dateoption();
+      jobsreport.click_todaydate();
+      jobsreport.apply_filter();
+      jobreportprintanddownload.print();
+      jobreportprintanddownload.closeprint();
+      jobreportprintanddownload.downloadexcel();
+     /* jobreportprintanddownload.jobsreportprint();
       jobreportprintanddownload.notifications();
       jobreportprintanddownload.assertion_jobrep();
       jobreportprintanddownload.jobsreportdownloadexcel();
       jobreportprintanddownload.notifications();
-      jobreportprintanddownload.assertion_jobrepoexcel();
+      jobreportprintanddownload.assertion_jobrepoexcel();*/
     }
     @Test(priority=3)
     public void timesheetreport() throws InterruptedException
@@ -74,12 +81,15 @@ public class Download_and_print_reports extends Baseclass{
     	Download_excel_print_reports salesreportprintanddownload =new Download_excel_print_reports(driver);
     	salesreportprintanddownload.clicksales();
     	salesreportprintanddownload.clicksales2();
-    	salesreportprintanddownload.salesreportprint();
+    	salesreportprintanddownload.print();
+    	salesreportprintanddownload.closeprint();
+    	salesreportprintanddownload.downloadexcel();
+    	/*salesreportprintanddownload.salesreportprint();
     	salesreportprintanddownload.notifications();
     	salesreportprintanddownload.assertion_salesrepprint();
     	salesreportprintanddownload.salesreportexcel();
     	salesreportprintanddownload.notifications();
-    	salesreportprintanddownload.assertion_salesrepexcel();	
+    	salesreportprintanddownload.assertion_salesrepexcel();*/
     }
 }
 

@@ -26,4 +26,8 @@ public class Config {
 	{
 		return pro.getProperty("URL");
 	}
+	public String URL2()
+	{
+		return pro.getProperty("URL2");
+	}
 }

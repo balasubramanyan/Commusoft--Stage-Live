@@ -491,7 +491,15 @@ public class Wrapper {
 			Actions drag = new Actions(driver);
 			drag.dragAndDrop(from,To).build().perform();
 		}
-		
+		public void scrolltoWebElement(String name) throws InterruptedException
+		{
+			WebElement Element = driver.findElement(By.xpath(name));
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].scrollIntoView();", Element);
+
+			Thread.sleep(2000);
+		}
+
 		
 		public void tab(String windowHandle1)
 		{
@@ -564,26 +572,28 @@ public class Wrapper {
 	{
 		Assert.assertEquals(AR, ER,R);
 	}
-	public void SlackCommusoft(String text) throws IOException
+	public void SlackCommusoft() throws IOException
 	{
-		URL url = new URL("https://hooks.slack.com/services/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");
+		String SystemName=InetAddress.getLocalHost().getHostName();
+		URL url = new URL("https://hooks.slack.com/services/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");
 		HttpURLConnection http = (HttpURLConnection)url.openConnection();
 		http.setRequestMethod("POST");
 		http.setDoOutput(true);
 		http.setRequestProperty("Content-type", "application/json");
-
 		Date today = new Date();
 		SimpleDateFormat  DATE_FORMAT = new SimpleDateFormat("dd MMMM yyyy");
        String date = DATE_FORMAT.format(today);
 		String data = "{\r\n"
 				+ "	\"attachments\": [\r\n"
 				+ "		{\r\n"
+				+ "			\"color\": \"#f2c744\",\r\n"
 				+ "			\"blocks\": [\r\n"
 				+ "				{\r\n"
-				+ "					\"type\": \"section\",\r\n"
+				+ "					\"type\": \"header\",\r\n"
 				+ "					\"text\": {\r\n"
-				+ "						\"type\": \"mrkdwn\",\r\n"
-				+ "						\"text\": \"*<https://stage2.commusoft.net/%7CAutomation Script Started>*\"\r\n"
+				+ "						\"type\": \"plain_text\",\r\n"
+				+ "						\"text\": \"Commusoft Automation\",\r\n"
+				+ "						\"emoji\": true\r\n"
 				+ "					}\r\n"
 				+ "				},\r\n"
 				+ "				{\r\n"
@@ -591,32 +601,27 @@ public class Wrapper {
 				+ "					\"fields\": [\r\n"
 				+ "						{\r\n"
 				+ "							\"type\": \"mrkdwn\",\r\n"
-				+ "							\"text\": \"*Started In:*\\n"+text+"\"\r\n"
+				+ "							\"text\": \"*Platform:*\\nWeb-Chrome\"\r\n"
 				+ "						},\r\n"
 				+ "						{\r\n"
 				+ "							\"type\": \"mrkdwn\",\r\n"
-				+ "							\"text\": \"*Automation:*\\nWeb\"\r\n"
-				+ "						},\r\n"
+				+ "							\"text\": \"*Created in:*\\n"+SystemName+"\"\r\n"
+				+ "						}\r\n"
+				+ "					]\r\n"
+				+ "				},\r\n"
+				+ "				{\r\n"
+				+ "					\"type\": \"section\",\r\n"
+				+ "					\"fields\": [\r\n"
 				+ "						{\r\n"
 				+ "							\"type\": \"mrkdwn\",\r\n"
 				+ "							\"text\": \"*Date:*\\n"+date+"\"\r\n"
-				+ "						},\r\n"
-				+ "						{\r\n"
-				+ "							\"type\": \"mrkdwn\",\r\n"
-				+ "							\"text\": \"*Platform:*\\nChrome\"\r\n"
 				+ "						}\r\n"
 				+ "					]\r\n"
 				+ "				}\r\n"
 				+ "			]\r\n"
 				+ "		}\r\n"
 				+ "	]\r\n"
-				+ "}\r\n"
-				+ "\r\n"
-				+ "\r\n"
-				+ "\r\n"
-				+ "\r\n"
-				+ "\r\n"
-				+ "";
+				+ "}";
 
 		byte[] out = data.getBytes(StandardCharsets.UTF_8);
 
@@ -626,26 +631,29 @@ public class Wrapper {
 		System.out.println(http.getResponseCode() + " " + http.getResponseMessage());
 		http.disconnect();
 
-
 	}
 	public void SlackCommusoftstatus(String text) throws IOException
 	{
-		URL url = new URL("https://hooks.slack.com/services/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");
+		String SystemName=InetAddress.getLocalHost().getHostName();
+		URL url = new URL("https://hooks.slack.com/services/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");
 		HttpURLConnection http = (HttpURLConnection)url.openConnection();
 		http.setRequestMethod("POST");
 		http.setDoOutput(true);
 		http.setRequestProperty("Content-type", "application/json");
-
+		Date today = new Date();
+		SimpleDateFormat  DATE_FORMAT = new SimpleDateFormat("dd MMMM yyyy");
+       String date = DATE_FORMAT.format(today);
 		String data = "{\r\n"
 				+ "	\"attachments\": [\r\n"
 				+ "		{\r\n"
+				+ "			\"color\": \"#f2c744\",\r\n"
 				+ "			\"blocks\": [\r\n"
 				+ "				{\r\n"
 				+ "					\"type\": \"section\",\r\n"
 				+ "					\"fields\": [\r\n"
 				+ "						{\r\n"
 				+ "							\"type\": \"mrkdwn\",\r\n"
-				+ "							\"text\": \""+text+"\"\r\n"
+				+ "							\"text\": \"*Case:*\\n"+text+"\"\r\n"
 				+ "						}\r\n"
 				+ "					]\r\n"
 				+ "				}\r\n"
@@ -667,25 +675,26 @@ public class Wrapper {
 	
 	public void SlackCommusoftdone(String text) throws IOException
 	{
-		URL url = new URL("https://hooks.slack.com/services/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");
+		String SystemName=InetAddress.getLocalHost().getHostName();
+		URL url = new URL("https://hooks.slack.com/services/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");
 		HttpURLConnection http = (HttpURLConnection)url.openConnection();
 		http.setRequestMethod("POST");
 		http.setDoOutput(true);
 		http.setRequestProperty("Content-type", "application/json");
-
 		Date today = new Date();
 		SimpleDateFormat  DATE_FORMAT = new SimpleDateFormat("dd MMMM yyyy");
        String date = DATE_FORMAT.format(today);
-       String SystemName=InetAddress.getLocalHost().getHostName();
 		String data = "{\r\n"
 				+ "	\"attachments\": [\r\n"
 				+ "		{\r\n"
+				+ "			\"color\": \"#F2C744\",\r\n"
 				+ "			\"blocks\": [\r\n"
 				+ "				{\r\n"
-				+ "					\"type\": \"section\",\r\n"
+				+ "					\"type\": \"header\",\r\n"
 				+ "					\"text\": {\r\n"
-				+ "						\"type\": \"mrkdwn\",\r\n"
-				+ "						\"text\": \"*<https://stage2.commusoft.net/%7CAutomation Script Completed>*\"\r\n"
+				+ "						\"type\": \"plain_text\",\r\n"
+				+ "						\"text\": \"Automation Completed\",\r\n"
+				+ "						\"emoji\": true\r\n"
 				+ "					}\r\n"
 				+ "				},\r\n"
 				+ "				{\r\n"
@@ -693,19 +702,20 @@ public class Wrapper {
 				+ "					\"fields\": [\r\n"
 				+ "						{\r\n"
 				+ "							\"type\": \"mrkdwn\",\r\n"
-				+ "							\"text\": \"*Started In:*\\n"+SystemName+"\"\r\n"
+				+ "							\"text\": \"*Platform:*\\nWeb-Chrome\"\r\n"
 				+ "						},\r\n"
 				+ "						{\r\n"
 				+ "							\"type\": \"mrkdwn\",\r\n"
-				+ "							\"text\": \"*Automation:*\\nWeb\"\r\n"
-				+ "						},\r\n"
+				+ "							\"text\": \"*Created in:*\\n"+SystemName+"\"\r\n"
+				+ "						}\r\n"
+				+ "					]\r\n"
+				+ "				},\r\n"
+				+ "				{\r\n"
+				+ "					\"type\": \"section\",\r\n"
+				+ "					\"fields\": [\r\n"
 				+ "						{\r\n"
 				+ "							\"type\": \"mrkdwn\",\r\n"
 				+ "							\"text\": \"*Date:*\\n"+date+"\"\r\n"
-				+ "						},\r\n"
-				+ "						{\r\n"
-				+ "							\"type\": \"mrkdwn\",\r\n"
-				+ "							\"text\": \"*Platform:*\\nChrome\"\r\n"
 				+ "						}\r\n"
 				+ "					]\r\n"
 				+ "				}\r\n"

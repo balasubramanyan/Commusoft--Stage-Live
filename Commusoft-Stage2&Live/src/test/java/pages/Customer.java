@@ -65,7 +65,7 @@ public class Customer extends Wrapper {
 	}
 	public void Customer_email()
 	{
-		type("#customertype_contacts_contactsemail_emailaddress", Karna[2]);
+		type("#customertype_contacts_contactsemail_emailaddress", "estimateemail@yopmail.com");
 	}
 	public void Customer_AddressLine1()
 	{

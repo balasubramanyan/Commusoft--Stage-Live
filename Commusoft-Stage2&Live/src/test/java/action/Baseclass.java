@@ -81,7 +81,7 @@ public class Baseclass extends Wrapper {
 		//driver = Browsers.startapplication(driver, config.Browser(), config.URL2());
 		String SystemName=InetAddress.getLocalHost().getHostName();
 		Sysout("Commusoft Web-Automation Started in :   "+SystemName );
-		SlackCommusoft(SystemName);
+		SlackCommusoft();
 		
 		
 	}

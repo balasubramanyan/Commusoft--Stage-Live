@@ -2,9 +2,12 @@ package testcase;
 
 import java.awt.AWTException;
 import java.awt.Robot;
+import java.util.ArrayList;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import action.Baseclass;
@@ -14,6 +17,7 @@ import pages.Reporting;
 import pages.Supplier;
 import pages.Customer;
 import pages.Editcustomer_workaddress;
+import pages.Estimate;
 import pages.CreateJob;
 import pages.searchengine;
 
@@ -336,55 +340,95 @@ String homepage;
 //		Report.Job_Report();
 //		Report.SLA_Performance_Report();
 //	}
-
+//
+//	
+//	@Test (priority=1) //QA-71
+//	public void Create_Customer() throws InterruptedException, AWTException
+//	{
+//		driver.get(homepage);
+//		Customer customer = new Customer(driver);
+//		customer.Add_Unique_Customer();
+//		customer.Verify_Customer();
+//		String CUS = driver.getCurrentUrl();
+//		
+//		Thread.sleep(5000);
+//		customer.workaddress_tab();
+//		customer.workaddress_addnewWorkaddress();
+//		customer.Unique_Workaddress_create();
+//		customer.Verify_WA();
+//		String WA = driver.getCurrentUrl();		
+//		
+//		driver.get(CUS);
+//		Editcustomer_workaddress editcustomer = new Editcustomer_workaddress(driver);
+//		editcustomer.Editcustomer_link();
+//		editcustomer.Editcustomer_title();
+//		editcustomer.Unique_Editcustomer_Name();
+//		editcustomer.Unique_Editcustomer_SurName();
+//		editcustomer.Unique_Editcustomer_Mobile();
+//		editcustomer.Unique_Editcustomer_email();
+//		editcustomer.Unique_Editcustomer_AddressLine1();
+//		editcustomer.Editcustomer_Save();
+//		String Edited_Cus = gettext("(//span[@class=\"ng-binding\"])[7]");
+//		System.out.println("Edited Cusotmer :"+Edited_Cus);
+//		Thread.sleep(4000);
+//
+//		driver.get(WA);
+//		Thread.sleep(4000);
+//		Editcustomer_workaddress editworkaddress = new Editcustomer_workaddress(driver);
+//		editworkaddress.Edit_workaddress();
+//		editworkaddress.Edit_WAtitle();
+//		editworkaddress.Unique_Edit_waname();
+//		editworkaddress.Unique_Edit_wasurname();
+//		editworkaddress.Unique_Edit_walandline();
+//		editworkaddress.Unique_Edit_wamobile();
+//		editworkaddress.Unique_Edit_waemail();
+//		editworkaddress.Unique_Edit_waaddress1();
+//		editworkaddress.Edit_wasavebutton();
+//		String Edited_WA = gettext("(//span[@class=\"ng-binding\"])[7]");
+//		System.out.println("Edited WA :"+Edited_WA);
+//		Thread.sleep(5000);
+//		
+//		
+//	}
 	
-	@Test (priority=1) //QA-71
-	public void Create_Customer() throws InterruptedException, AWTException
-	{
-		driver.get(homepage);
+	@Test(priority=1)
+	public void ss() throws InterruptedException{
+		
 		Customer customer = new Customer(driver);
-		customer.Add_Unique_Customer();
-		customer.Verify_Customer();
-		String CUS = driver.getCurrentUrl();
+		customer.Customer_create();
+		customer.Customer_title();
+		customer.Customer_Name();
+		customer.Customer_SurName();
+		customer.Customer_Mobile();
+		customer.Customer_email();
+		customer.Customer_AddressLine1();
+		customer.Customer_Save();
+		Thread.sleep(20000);
+		customerpage = driver.getCurrentUrl();
+		
 		
 		Thread.sleep(5000);
-		customer.workaddress_tab();
-		customer.workaddress_addnewWorkaddress();
-		customer.Unique_Workaddress_create();
-		customer.Verify_WA();
-		String WA = driver.getCurrentUrl();		
-		
-		driver.get(CUS);
-		Editcustomer_workaddress editcustomer = new Editcustomer_workaddress(driver);
-		editcustomer.Editcustomer_link();
-		editcustomer.Editcustomer_title();
-		editcustomer.Unique_Editcustomer_Name();
-		editcustomer.Unique_Editcustomer_SurName();
-		editcustomer.Unique_Editcustomer_Mobile();
-		editcustomer.Unique_Editcustomer_email();
-		editcustomer.Unique_Editcustomer_AddressLine1();
-		editcustomer.Editcustomer_Save();
-		String Edited_Cus = gettext("(//span[@class=\"ng-binding\"])[7]");
-		System.out.println("Edited Cusotmer :"+Edited_Cus);
-		Thread.sleep(4000);
-
-		driver.get(WA);
-		Thread.sleep(4000);
-		Editcustomer_workaddress editworkaddress = new Editcustomer_workaddress(driver);
-		editworkaddress.Edit_workaddress();
-		editworkaddress.Edit_WAtitle();
-		editworkaddress.Unique_Edit_waname();
-		editworkaddress.Unique_Edit_wasurname();
-		editworkaddress.Unique_Edit_walandline();
-		editworkaddress.Unique_Edit_wamobile();
-		editworkaddress.Unique_Edit_waemail();
-		editworkaddress.Unique_Edit_waaddress1();
-		editworkaddress.Edit_wasavebutton();
-		String Edited_WA = gettext("(//span[@class=\"ng-binding\"])[7]");
-		System.out.println("Edited WA :"+Edited_WA);
-		Thread.sleep(5000);
-		
-		
+		Estimate estimate = new Estimate(driver);
+		estimate.Estimate_AddNew();
+		estimate.choose_description();
+		estimate.Estimate_Notes();
+		estimate.Estimate_CustomerReference();
+		estimate.Estimate_user_group();
+		estimate.Estimate_AddEstimate();
+		estimate.Estimate_Price_tab();
+		estimate.Estimate_Price_NoBreakdown();
+		estimate.Estimate_Price_NoBreakdown_PartsTotal();
+		estimate.Estimate_InvoiceSchedule();
+		estimate.Estimate_InvoiceSchedule_Deposite();
+		estimate.Estimate_InvoiceSchedule_Completion();
+		estimate.Estimate_InvoiceSchedule_Retention();
+		estimate.Estimate_SendtoCustomer();
+		estimate.Estimate_Email();
+		estimate.Estimate_Email_Send();
+		estimate.Estimate_Notes_tab();
+		estimate.Estimate_Portal();
+		estimate.Estimate_Portal_Accept();
+		estimate.Estimate_Portal_Accept_Verification();
+				
 	}
-	
 }

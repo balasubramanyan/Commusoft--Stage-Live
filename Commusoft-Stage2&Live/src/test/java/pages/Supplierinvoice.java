@@ -43,7 +43,7 @@ public void supplirinvpart() throws InterruptedException
 	Thread.sleep(2000);
 	type("//input[@class='select2-input select2-focused']", "part");
 	Thread.sleep(3000);
-	click("//div[text() ='Parts']");
+	click("(//u[text() ='Part'])[2]");
 
 }
 

@@ -2,6 +2,8 @@ package action;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.testng.ITestResult;
@@ -9,12 +11,18 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
-
+//import io.testproject.sdk.internal.exceptions.AgentConnectException;
+//import io.testproject.sdk.internal.exceptions.InvalidTokenException;
+//import io.testproject.sdk.internal.exceptions.ObsoleteVersionException;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
+import io.testproject.sdk.internal.exceptions.AgentConnectException;
+import io.testproject.sdk.internal.exceptions.InvalidTokenException;
+import io.testproject.sdk.internal.exceptions.ObsoleteVersionException;
 import utility.Browsers;
 import utility.Config;
 import utility.Excelsheetdata;
@@ -34,7 +42,7 @@ public class Baseclass extends Wrapper {
 //	public static ExtentTest logger;
 
 	
-	
+	//test by jarba
 	
 	@BeforeSuite(alwaysRun = true)
 	public void initial() throws IOException
@@ -63,12 +71,17 @@ public class Baseclass extends Wrapper {
 		
 	
 	}
+	//change ccu
 	
 	@BeforeTest(alwaysRun = true)
-	public void setup() throws IOException
+	public void setup() throws IOException, InvalidTokenException, AgentConnectException, ObsoleteVersionException
 	{
 		
 		driver = Browsers.startapplication(driver, config.Browser(), config.URl());
+		//driver = Browsers.startapplication(driver, config.Browser(), config.URL2());
+		String SystemName=InetAddress.getLocalHost().getHostName();
+		Sysout("Commusoft Web-Automation Started in :   "+SystemName );
+		SlackCommusoft();
 		
 		
 	}
@@ -80,6 +93,8 @@ public class Baseclass extends Wrapper {
 		{
 			logger.log(Status.PASS, "Method Been Executed Sucessfully:-" +result.getName());
 			System.out.println( "Method Been Executed Sucessfully:-" +result.getName());
+			Sysout("Method Been Executed Sucessfully:-" +result.getName());
+			SlackCommusoftstatus("Method Been Executed Sucessfully:-" +result.getName());
 		}else 
 			if(ITestResult.FAILURE==result.getStatus())
 		{
@@ -87,6 +102,8 @@ public class Baseclass extends Wrapper {
 		//		logger.log(Status.FAIL,logger.addScreenCaptureFromPath(Screenshot.capture(driver))+result.getName());
 				logger.fail("Test Failed :- " +result.getName(), MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(driver)).build());
 				System.out.println( "Method Been Failed:-" +result.getName());
+				Sysout("Method Been Failed:-" +result.getName());
+				SlackCommusoftstatus("Method Been Failed:-" +result.getName());
 			//	logger.log(Status.FAIL,logger.addScreenCaptureFromPath( capture(driver)) +"  Method Name:- " + result.getName());
 		}else
 		{
@@ -96,7 +113,10 @@ public class Baseclass extends Wrapper {
 		
 	}
 	@AfterSuite
-	public void tearDown(){
+	public void tearDown() throws IOException{
+		Sysout("Commusoft Web-Automation Completed in :   "+InetAddress.getLocalHost().getHostName());
+		SlackCommusoftdone(InetAddress.getLocalHost().getHostName());
+		
 		report.flush();
 	   }
 

@@ -11,14 +11,17 @@ import io.restassured.RestAssured;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import pages.Changeinvoice;
 import pages.CreateJob;
 import pages.Customer;
 import pages.Diary;
+import pages.Download_excel_print_reports;
 import pages.Editcustomer_workaddress;
 import pages.Estimate;
 import pages.Invoice;
 import pages.LoginPage;
 import pages.NotesandCommunication;
+import pages.QA62_Serviceremainder;
 import pages.Reporting;
 import pages.Supplier;
 import pages.Supplierinvoice;
@@ -32,7 +35,7 @@ public class Smoketest extends Baseclass {
 	public String WA;
 	public String Supplierhomepage;
 
-
+//manually edited
 
 	@Test(priority = 0)
 	public void login() throws InterruptedException
@@ -41,6 +44,7 @@ public class Smoketest extends Baseclass {
 		loginpage.login(sheet.sheetIN("Login",0, 1),sheet.sheetIN("Login",1, 1),sheet.sheetIN("Login", 2, 1));
 		Thread.sleep(15000);
 		homepage = driver.getCurrentUrl();
+		Thread.sleep(3000);
 	}
 	@Test(priority = 1)
 	public void Add_Customer() throws InterruptedException
@@ -57,6 +61,7 @@ public class Smoketest extends Baseclass {
 		Thread.sleep(20000);
 		customerpage = driver.getCurrentUrl();
 	}
+	
 
 	@Test(priority = 2)
 	public void Edit_Customer() throws InterruptedException
@@ -82,7 +87,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("PreFinal");
-		job.createjob();
+		//job.createjob();
 	}
 	@Test(priority = 4)
 	public void Add_job_Final_Complete() throws InterruptedException
@@ -92,7 +97,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("AutoFinal");
-		job.createjob();
+		//job.createjob();
 		Thread.sleep(6000);
 		job.edit_job();
 		Thread.sleep(3000);
@@ -106,7 +111,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		job.createjob();
+		//job.createjob();
 		Thread.sleep(3000);
 		Invoice invoice = new Invoice(driver);
 		invoice.InvoiceTab();
@@ -126,7 +131,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		job.createjob();
+		//job.createjob();
 		Thread.sleep(3000);
 		Invoice invoice = new Invoice(driver);
 		invoice.InvoiceTab();
@@ -201,7 +206,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		job.createjob();
+		//job.createjob();
 		Thread.sleep(4000);
 		job.Add_new_diaryEvent();
 		Diary diary = new Diary(driver);
@@ -218,7 +223,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		job.createjob();
+		//job.createjob();
 		Thread.sleep(4000);
 		Invoice invoice = new Invoice(driver);
 		invoice.InvoiceTab();
@@ -281,7 +286,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("PreFinal");
-		job.createjob();
+		//job.createjob();
 	}
 	@Test(priority = 14)
 	public void WA_Addpayment_job() throws InterruptedException
@@ -291,7 +296,7 @@ public class Smoketest extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		job.createjob();
+		//job.createjob();
 		Thread.sleep(4000);
 		Invoice invoice = new Invoice(driver);
 		invoice.InvoiceTab();
@@ -405,9 +410,10 @@ public class Smoketest extends Baseclass {
 	@Test(priority =20)
 	public void diaryutility() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(3000);
 		Diary diary = new Diary(driver);
 		diary.Diary_Module();
+		Thread.sleep(6000);
 		diary.Diary_PrintJobSheet();
 		diary.Diary_PrintSummarySheet();
 	}
@@ -571,7 +577,102 @@ public class Smoketest extends Baseclass {
 		Report.First_Plus_button();
 		Report.Click_View_workaddres();
 	}
-	@Test(priority = 31)
+	@Test(priority=31)
+    public void customersreportdownload_print() throws InterruptedException
+    {
+	  Reporting customerreport=new Reporting (driver);
+	  customerreport.Reporttab();
+	  customerreport.Report_Sidemenu();
+	  customerreport.Customer_Report();
+	  customerreport.Customers_Report();
+	  Download_excel_print_reports customerprint =new Download_excel_print_reports(driver);
+	  customerprint.downloadexcel();
+	  customerprint.print();
+	  customerprint.closeprint();
+    }
+    @Test(priority=32)
+    public void jobreportdownload_print() throws InterruptedException
+    {
+      Reporting jobsreport= new Reporting(driver);
+      jobsreport.Reporttab();
+      jobsreport.Report_Sidemenu();
+      jobsreport.Job_Report();
+      jobsreport.Jobs_Report();
+      Download_excel_print_reports jobreportprintanddownload =new Download_excel_print_reports(driver);
+      jobsreport.click_filter();
+      jobsreport.click_dateoption1();
+      jobsreport.click_todaydate();
+      jobsreport.apply_filter();
+      jobreportprintanddownload.print();
+      jobreportprintanddownload.closeprint();
+      jobreportprintanddownload.downloadexcel();
+     /* jobreportprintanddownload.jobsreportprint();
+      jobreportprintanddownload.notifications();
+      jobreportprintanddownload.assertion_jobrep();
+      jobreportprintanddownload.jobsreportdownloadexcel();
+      jobreportprintanddownload.notifications();
+      jobreportprintanddownload.assertion_jobrepoexcel();*/
+    }
+    @Test(priority=33)
+    public void timesheetreport() throws InterruptedException
+    {
+    	Reporting timesheet=new Reporting(driver);
+    	timesheet.Reporttab();
+    	timesheet.Report_Sidemenu();
+    	Download_excel_print_reports timesheetreportprintanddownload =new Download_excel_print_reports(driver);
+    	timesheetreportprintanddownload.clickusers();
+    	timesheetreportprintanddownload.clicktimesheet();
+    	timesheetreportprintanddownload.print();
+    	timesheetreportprintanddownload.closeprint();
+    	timesheetreportprintanddownload.downloadexcel();
+    }
+    @Test(priority=34)
+    public void salesreport() throws InterruptedException 
+    {
+    	Reporting salereport = new Reporting(driver);
+    	salereport.Reporttab();
+    	salereport.Report_Sidemenu();
+    	Download_excel_print_reports salesreportprintanddownload =new Download_excel_print_reports(driver);
+    	salesreportprintanddownload.clicksales();
+    	salesreportprintanddownload.clicksales2();
+    	salesreportprintanddownload.print();
+    	salesreportprintanddownload.closeprint();
+    	salesreportprintanddownload.downloadexcel();
+    	/*salesreportprintanddownload.salesreportprint();
+    	salesreportprintanddownload.notifications();
+    	salesreportprintanddownload.assertion_salesrepprint();
+    	salesreportprintanddownload.salesreportexcel();
+    	salesreportprintanddownload.notifications();
+    	salesreportprintanddownload.assertion_salesrepexcel();*/
+    }
+	
+	//stata
+	@Test(priority=35)
+	public void changesinvoicetype() throws InterruptedException
+	{
+		driver.get(customerpage);
+		Changeinvoice changeinvoices=new Changeinvoice(driver);
+		//changeinvoices.addcustomer();
+		changeinvoices.addjob();
+		changeinvoices.adddiary();
+		changeinvoices.add_additionalinvoice();
+		changeinvoices.addfinalinvoice();
+		changeinvoices.editinvoicetype();
+	}
+	@Test(priority=36)
+	public void ser_remainder() throws InterruptedException
+	{
+		driver.get(homepage);
+		QA62_Serviceremainder Service_remainder =new QA62_Serviceremainder(driver);
+		Service_remainder.view_all_serviceremainder();
+		Service_remainder.enable_checkbox();
+		Service_remainder.process_remainder_btn();
+		Service_remainder.print_icon();
+		Service_remainder.notification();
+		Service_remainder.assertion_serviceremain();
+		
+	}
+	@Test(priority = 37)
 	public  void SolarSearch_pageresponse() throws InterruptedException, IOException
 	{
 		type("#search-input","ranjit");
@@ -598,6 +699,83 @@ public class Smoketest extends Baseclass {
 		Assert.assertEquals(statuscode, 200);
 		
 	}
+	@Test(priority=38)
+	public void Estimate_Accepted_In_Portal_With_Payment() throws InterruptedException{
+		
+		driver.get(homepage);
+		Thread.sleep(8000);
+		Customer customer = new Customer(driver);
+		customer.Customer_create();
+		customer.Customer_title();
+		customer.Customer_Name();
+		customer.Customer_SurName();
+		customer.Customer_Mobile();
+		customer.Customer_email();
+		customer.Customer_AddressLine1();
+		customer.Customer_Save();
+		Thread.sleep(20000);
+		customerpage = driver.getCurrentUrl();
+		Thread.sleep(5000);
+		Estimate estimate = new Estimate(driver);
+		estimate.Estimate_AddNew();
+		estimate.choose_description();
+		estimate.Estimate_Notes();
+		estimate.Estimate_CustomerReference();
+		estimate.Estimate_user_group();
+		estimate.Estimate_AddEstimate();
+		estimate.Estimate_Price_tab();
+		estimate.Estimate_Price_NoBreakdown();
+		estimate.Estimate_Price_NoBreakdown_PartsTotal();
+		estimate.Estimate_InvoiceSchedule();
+		estimate.Estimate_InvoiceSchedule_Deposite();
+		estimate.Estimate_InvoiceSchedule_Completion();
+		estimate.Estimate_InvoiceSchedule_Retention();
+		estimate.Estimate_SendtoCustomer();
+		estimate.Estimate_Email();
+		estimate.Estimate_Email_Send();
+		estimate.Estimate_Notes_tab();
+		estimate.Estimate_Portal();
+		estimate.Estimate_Portal_Accept();
+		estimate.Estimate_Portal_Accept_Verification();			
+	}
+	@Test(priority=39)
+	public void Estimate_Accepted_In_Portal_Without_Payment() throws InterruptedException
+	{
+		driver.get(homepage);
+		Thread.sleep(8000);
+		Customer customer = new Customer(driver);
+		customer.Customer_create();
+		customer.Customer_title();
+		customer.Customer_Name();
+		customer.Customer_SurName();
+		customer.Customer_Mobile();
+		customer.Customer_email();
+		customer.Customer_AddressLine1();
+		customer.Customer_Save();
+		Thread.sleep(20000);
+		customerpage = driver.getCurrentUrl();
+		Thread.sleep(5000);
+		Estimate estimate = new Estimate(driver);
+		estimate.Estimate_AddNew();
+		estimate.choose_description();
+		estimate.Estimate_Notes();
+		estimate.Estimate_CustomerReference();
+		estimate.Estimate_user_group();
+		estimate.Estimate_AddEstimate();
+		estimate.Estimate_Price_tab();
+		estimate.Estimate_Price_NoBreakdown();
+		estimate.Estimate_Price_NoBreakdown_PartsTotal();
+		estimate.Estimate_InvoiceSchedule();
+		estimate.Estimate_SendtoCustomer();
+		estimate.Estimate_Email();
+		estimate.Estimate_Email_Send();
+		estimate.Estimate_Notes_tab();
+		estimate.Estimate_Portal();
+		estimate.Estimate_Portal_Accept();
+		estimate.Estimate_Portal_Accept_Verification();	
+	}
+	
+	 
 
 
 }

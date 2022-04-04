@@ -1,11 +1,21 @@
 package action;
 
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.InetAddress;
+import java.net.URL;
+import java.net.URLConnection;
+import java.nio.charset.StandardCharsets;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,11 +28,16 @@ import org.testng.Assert;
 public class Wrapper {
 
 	 public WebDriver driver; 
+	 public JavascriptExecutor js;
 	 
 	 public long totalTime;
 	 public static String Location;
 	 public String formattedDate;
 	 public String customerpage;
+	 public String WAName;
+	 public String WAAccountNumber;
+	 public String CustomerName;
+	 public String AccountNumber;
 	 
 	 
 	public void type(String xpath, String value)
@@ -112,7 +127,20 @@ public class Wrapper {
 	
 	
 	
-	
+	public void Sysout(String text)
+	{
+		String urlString = "https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s";
+		String apiToken = "896751198:AAE9Xnl-I9yRLETN_l_p1zr06_Fr_SEWXEU";
+		String chatId = "-760145184";
+		urlString = String.format(urlString, apiToken, chatId, text);
+		try {
+			URL url = new URL(urlString);
+			URLConnection conn = url.openConnection();
+			InputStream is = new BufferedInputStream(conn.getInputStream());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 	
 	
 	public void clear(String xpath)
@@ -463,7 +491,15 @@ public class Wrapper {
 			Actions drag = new Actions(driver);
 			drag.dragAndDrop(from,To).build().perform();
 		}
-		
+		public void scrolltoWebElement(String name) throws InterruptedException
+		{
+			WebElement Element = driver.findElement(By.xpath(name));
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].scrollIntoView();", Element);
+
+			Thread.sleep(2000);
+		}
+
 		
 		public void tab(String windowHandle1)
 		{
@@ -535,6 +571,168 @@ public class Wrapper {
 	public void Assertion(String ER , String AR, String R)
 	{
 		Assert.assertEquals(AR, ER,R);
+	}
+	public void SlackCommusoft() throws IOException
+	{
+		String SystemName=InetAddress.getLocalHost().getHostName();
+		URL url = new URL("https://hooks.slack.com/services/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");
+		HttpURLConnection http = (HttpURLConnection)url.openConnection();
+		http.setRequestMethod("POST");
+		http.setDoOutput(true);
+		http.setRequestProperty("Content-type", "application/json");
+		Date today = new Date();
+		SimpleDateFormat  DATE_FORMAT = new SimpleDateFormat("dd MMMM yyyy");
+       String date = DATE_FORMAT.format(today);
+		String data = "{\r\n"
+				+ "	\"attachments\": [\r\n"
+				+ "		{\r\n"
+				+ "			\"color\": \"#f2c744\",\r\n"
+				+ "			\"blocks\": [\r\n"
+				+ "				{\r\n"
+				+ "					\"type\": \"header\",\r\n"
+				+ "					\"text\": {\r\n"
+				+ "						\"type\": \"plain_text\",\r\n"
+				+ "						\"text\": \"Commusoft Automation\",\r\n"
+				+ "						\"emoji\": true\r\n"
+				+ "					}\r\n"
+				+ "				},\r\n"
+				+ "				{\r\n"
+				+ "					\"type\": \"section\",\r\n"
+				+ "					\"fields\": [\r\n"
+				+ "						{\r\n"
+				+ "							\"type\": \"mrkdwn\",\r\n"
+				+ "							\"text\": \"*Platform:*\\nWeb-Chrome\"\r\n"
+				+ "						},\r\n"
+				+ "						{\r\n"
+				+ "							\"type\": \"mrkdwn\",\r\n"
+				+ "							\"text\": \"*Created in:*\\n"+SystemName+"\"\r\n"
+				+ "						}\r\n"
+				+ "					]\r\n"
+				+ "				},\r\n"
+				+ "				{\r\n"
+				+ "					\"type\": \"section\",\r\n"
+				+ "					\"fields\": [\r\n"
+				+ "						{\r\n"
+				+ "							\"type\": \"mrkdwn\",\r\n"
+				+ "							\"text\": \"*Date:*\\n"+date+"\"\r\n"
+				+ "						}\r\n"
+				+ "					]\r\n"
+				+ "				}\r\n"
+				+ "			]\r\n"
+				+ "		}\r\n"
+				+ "	]\r\n"
+				+ "}";
+
+		byte[] out = data.getBytes(StandardCharsets.UTF_8);
+
+		OutputStream stream = http.getOutputStream();
+		stream.write(out);
+
+		System.out.println(http.getResponseCode() + " " + http.getResponseMessage());
+		http.disconnect();
+
+	}
+	public void SlackCommusoftstatus(String text) throws IOException
+	{
+		String SystemName=InetAddress.getLocalHost().getHostName();
+		URL url = new URL("https://hooks.slack.com/services/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");
+		HttpURLConnection http = (HttpURLConnection)url.openConnection();
+		http.setRequestMethod("POST");
+		http.setDoOutput(true);
+		http.setRequestProperty("Content-type", "application/json");
+		Date today = new Date();
+		SimpleDateFormat  DATE_FORMAT = new SimpleDateFormat("dd MMMM yyyy");
+       String date = DATE_FORMAT.format(today);
+		String data = "{\r\n"
+				+ "	\"attachments\": [\r\n"
+				+ "		{\r\n"
+				+ "			\"color\": \"#f2c744\",\r\n"
+				+ "			\"blocks\": [\r\n"
+				+ "				{\r\n"
+				+ "					\"type\": \"section\",\r\n"
+				+ "					\"fields\": [\r\n"
+				+ "						{\r\n"
+				+ "							\"type\": \"mrkdwn\",\r\n"
+				+ "							\"text\": \"*Case:*\\n"+text+"\"\r\n"
+				+ "						}\r\n"
+				+ "					]\r\n"
+				+ "				}\r\n"
+				+ "			]\r\n"
+				+ "		}\r\n"
+				+ "	]\r\n"
+				+ "}";
+
+		byte[] out = data.getBytes(StandardCharsets.UTF_8);
+
+		OutputStream stream = http.getOutputStream();
+		stream.write(out);
+
+		System.out.println(http.getResponseCode() + " " + http.getResponseMessage());
+		http.disconnect();
+
+
+	}
+	
+	public void SlackCommusoftdone(String text) throws IOException
+	{
+		String SystemName=InetAddress.getLocalHost().getHostName();
+		URL url = new URL("https://hooks.slack.com/services/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");
+		HttpURLConnection http = (HttpURLConnection)url.openConnection();
+		http.setRequestMethod("POST");
+		http.setDoOutput(true);
+		http.setRequestProperty("Content-type", "application/json");
+		Date today = new Date();
+		SimpleDateFormat  DATE_FORMAT = new SimpleDateFormat("dd MMMM yyyy");
+       String date = DATE_FORMAT.format(today);
+		String data = "{\r\n"
+				+ "	\"attachments\": [\r\n"
+				+ "		{\r\n"
+				+ "			\"color\": \"#F2C744\",\r\n"
+				+ "			\"blocks\": [\r\n"
+				+ "				{\r\n"
+				+ "					\"type\": \"header\",\r\n"
+				+ "					\"text\": {\r\n"
+				+ "						\"type\": \"plain_text\",\r\n"
+				+ "						\"text\": \"Automation Completed\",\r\n"
+				+ "						\"emoji\": true\r\n"
+				+ "					}\r\n"
+				+ "				},\r\n"
+				+ "				{\r\n"
+				+ "					\"type\": \"section\",\r\n"
+				+ "					\"fields\": [\r\n"
+				+ "						{\r\n"
+				+ "							\"type\": \"mrkdwn\",\r\n"
+				+ "							\"text\": \"*Platform:*\\nWeb-Chrome\"\r\n"
+				+ "						},\r\n"
+				+ "						{\r\n"
+				+ "							\"type\": \"mrkdwn\",\r\n"
+				+ "							\"text\": \"*Created in:*\\n"+SystemName+"\"\r\n"
+				+ "						}\r\n"
+				+ "					]\r\n"
+				+ "				},\r\n"
+				+ "				{\r\n"
+				+ "					\"type\": \"section\",\r\n"
+				+ "					\"fields\": [\r\n"
+				+ "						{\r\n"
+				+ "							\"type\": \"mrkdwn\",\r\n"
+				+ "							\"text\": \"*Date:*\\n"+date+"\"\r\n"
+				+ "						}\r\n"
+				+ "					]\r\n"
+				+ "				}\r\n"
+				+ "			]\r\n"
+				+ "		}\r\n"
+				+ "	]\r\n"
+				+ "}";
+
+		byte[] out = data.getBytes(StandardCharsets.UTF_8);
+
+		OutputStream stream = http.getOutputStream();
+		stream.write(out);
+
+		System.out.println(http.getResponseCode() + " " + http.getResponseMessage());
+		http.disconnect();
+
+
 	}
 	
 	public void user_name()

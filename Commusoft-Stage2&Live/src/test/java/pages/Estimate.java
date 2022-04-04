@@ -131,7 +131,7 @@ public class Estimate extends Wrapper {
 	}
 	public void Estimate_Portal() throws InterruptedException
 	{
-		click("(//a[contains(text(),' open the portal')])[1]");//click on portal link
+		click("(//a[contains(text(),'open the portal')])[1]");//click on portal link
 		Thread.sleep(3000);
 	}
 	public void Estimate_Portal_Accept() throws InterruptedException

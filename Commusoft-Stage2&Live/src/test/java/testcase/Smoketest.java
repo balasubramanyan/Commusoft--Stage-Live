@@ -600,7 +600,7 @@ public class Smoketest extends Baseclass {
       jobsreport.Jobs_Report();
       Download_excel_print_reports jobreportprintanddownload =new Download_excel_print_reports(driver);
       jobsreport.click_filter();
-      jobsreport.click_dateoption();
+      jobsreport.click_dateoption1();
       jobsreport.click_todaydate();
       jobsreport.apply_filter();
       jobreportprintanddownload.print();

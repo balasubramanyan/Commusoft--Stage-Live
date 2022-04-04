@@ -24,6 +24,7 @@ public class Customer extends Wrapper {
 		customer.put("Ranjit", "Ranjit_Aravind_ranjit@commusoft.com_8965326598_Madurai_TamilNadu");
 		customer.put("Bala", "Ranjit_Aravind_ranjit@commusoft.com_8965326598_Madurai");
 		customer.put("Karna", "Karnan_Athisivam_karnan@commusoft.com_8248724397_Chennai");
+		customer.put("Karna_Edit", "Karikalan_A_kari@commusoft.com_8248724397_Chennai");
 		customer.put("Ezhil", "Ranjit_Aravind_ranjit@commusoft.com_8965326598_Madurai");
 		
 		return customer;
@@ -31,6 +32,8 @@ public class Customer extends Wrapper {
 	}
 		String a = customername().get("Karna");
 		String Karna[] = a.split("_");
+		String b = customername().get("Karna_Edit");
+		String Karna_Edit[] = b.split("_");
 	
 	public void Customer_create()
 	{
@@ -115,6 +118,19 @@ public class Customer extends Wrapper {
 	/*K*/
 	
 	public void Add_Customer() throws InterruptedException
+	{
+		Customer_create();
+		Customer_title();
+		Customer_Name();
+		Customer_SurName();
+		Customer_Mobile();
+		Customer_email();
+		Customer_AddressLine1();
+		Customer_Save();
+		Thread.sleep(25000);
+		
+	}
+	public void Edit_Customers() throws InterruptedException
 	{
 		Customer_create();
 		Customer_title();

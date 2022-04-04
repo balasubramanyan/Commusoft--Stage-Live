@@ -50,7 +50,7 @@ public class Smoketest_US extends Baseclass_US {
 	public String jobURL;
 	public String WA;
 	public String Supplierhomepage;
-
+//change made oin UK
 //manually edited
 
 	@Test(priority = 0)

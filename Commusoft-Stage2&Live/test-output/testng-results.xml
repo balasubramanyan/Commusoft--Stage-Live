@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-04T16:00:12 IST" name="Default suite" finished-at="2022-04-04T16:01:39 IST" duration-ms="86323">
+  <suite started-at="2022-04-04T17:44:42 IST" name="Default suite" finished-at="2022-04-04T17:46:51 IST" duration-ms="128865">
     <groups>
     </groups>
-    <test started-at="2022-04-04T16:00:12 IST" name="Default test" finished-at="2022-04-04T16:01:39 IST" duration-ms="86323">
+    <test started-at="2022-04-04T17:44:42 IST" name="Default test" finished-at="2022-04-04T17:46:51 IST" duration-ms="128865">
       <class name="testcase.Karna_Customer">
-        <test-method is-config="true" signature="initial()[pri:0, instance:testcase.Karna_Customer@1b1426f4]" started-at="2022-04-04T16:00:11 IST" name="initial" finished-at="2022-04-04T16:00:12 IST" duration-ms="1051" status="PASS">
+        <test-method is-config="true" signature="initial()[pri:0, instance:testcase.Karna_Customer@1b1426f4]" started-at="2022-04-04T17:44:41 IST" name="initial" finished-at="2022-04-04T17:44:42 IST" duration-ms="900" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initial -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcase.Karna_Customer@1b1426f4]" started-at="2022-04-04T16:00:12 IST" name="setup" finished-at="2022-04-04T16:00:29 IST" duration-ms="16663" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcase.Karna_Customer@1b1426f4]" started-at="2022-04-04T17:44:42 IST" name="setup" finished-at="2022-04-04T17:44:54 IST" duration-ms="12624" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login()[pri:0, instance:testcase.Karna_Customer@1b1426f4]" started-at="2022-04-04T16:00:29 IST" name="login" finished-at="2022-04-04T16:01:06 IST" duration-ms="36950" status="PASS">
+        <test-method signature="login()[pri:0, instance:testcase.Karna_Customer@1b1426f4]" started-at="2022-04-04T17:44:54 IST" name="login" finished-at="2022-04-04T17:45:28 IST" duration-ms="33632" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Karna_Customer@1b1426f4]" started-at="2022-04-04T16:01:06 IST" name="teardown" finished-at="2022-04-04T16:01:07 IST" duration-ms="1213" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Karna_Customer@1b1426f4]" started-at="2022-04-04T17:45:28 IST" name="teardown" finished-at="2022-04-04T17:45:30 IST" duration-ms="1518" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -30,11 +30,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="add()[pri:1, instance:testcase.Karna_Customer@1b1426f4]" started-at="2022-04-04T16:01:07 IST" name="add" finished-at="2022-04-04T16:01:37 IST" duration-ms="29970" status="PASS">
+        <test-method signature="add()[pri:1, instance:testcase.Karna_Customer@1b1426f4]" started-at="2022-04-04T17:45:30 IST" name="add" finished-at="2022-04-04T17:46:49 IST" duration-ms="79638" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- add -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Karna_Customer@1b1426f4]" started-at="2022-04-04T16:01:37 IST" name="teardown" finished-at="2022-04-04T16:01:39 IST" duration-ms="1487" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Karna_Customer@1b1426f4]" started-at="2022-04-04T17:46:49 IST" name="teardown" finished-at="2022-04-04T17:46:51 IST" duration-ms="1413" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -45,7 +45,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.Karna_Customer@1b1426f4]" started-at="2022-04-04T16:01:39 IST" name="tearDown" finished-at="2022-04-04T16:01:41 IST" duration-ms="2102" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.Karna_Customer@1b1426f4]" started-at="2022-04-04T17:46:51 IST" name="tearDown" finished-at="2022-04-04T17:46:52 IST" duration-ms="1473" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

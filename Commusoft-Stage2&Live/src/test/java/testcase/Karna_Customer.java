@@ -24,6 +24,15 @@ public class Karna_Customer extends Baseclass{
 	{
 		Customer customer = new Customer(driver);
 		customer.Add_Customer();
+		customer.Edit_Customers();
+		customer.Delete_Customers();
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 	

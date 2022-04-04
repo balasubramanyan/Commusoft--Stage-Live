@@ -42,6 +42,11 @@ public class Reporting extends Wrapper {
 		click("//a[text()='Date created']");
 		
 	}
+	public void click_dateoption1() throws InterruptedException 
+	{
+		click("//a[text()='Created on Date']");
+		
+	}
 	public void click_todaydate() throws InterruptedException 
 	{
 		click("//*[@id=\"daterange\"]/li[1]/span/a");//click today date

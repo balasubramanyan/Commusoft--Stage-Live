@@ -5,11 +5,13 @@
     <classes>
       <class name="lable.Customer_Module">
         <methods>
+          <include name="Contact_To_Primary"/>
           <include name="initial"/>
           <include name="teardown"/>
           <include name="tearDown"/>
           <include name="setup"/>
           <include name="Add_Edit_Delete_Branch"/>
+          <include name="Add_Edit_Delete_Company"/>
         </methods>
       </class> <!-- lable.Customer_Module -->
     </classes>

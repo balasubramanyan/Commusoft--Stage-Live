@@ -240,8 +240,6 @@ public class Customer extends Wrapper {
 		Thread.sleep(3000);
 		click("#delete-button");
 		Thread.sleep(5000);
-		
-		
 	}
 	public void Add_Unique_Customer() throws InterruptedException
 	{

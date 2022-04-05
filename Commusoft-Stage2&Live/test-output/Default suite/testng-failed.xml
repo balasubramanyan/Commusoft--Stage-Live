@@ -6,10 +6,10 @@
       <class name="testcase.Karna_Customer">
         <methods>
           <include name="initial"/>
-          <include name="add"/>
           <include name="teardown"/>
           <include name="tearDown"/>
           <include name="setup"/>
+          <include name="Add_Edit_Delete_Company"/>
         </methods>
       </class> <!-- testcase.Karna_Customer -->
     </classes>

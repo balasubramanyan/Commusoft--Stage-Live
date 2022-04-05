@@ -1,13 +1,14 @@
-package testcase;
+package lable;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import action.Baseclass;
+import pages.Company;
 import pages.Customer;
 import pages.LoginPage;
 
-public class Karna_Customer extends Baseclass{
+public class Customer_Module extends Baseclass{
 	
 	public String homepage;
 	
@@ -20,23 +21,22 @@ public class Karna_Customer extends Baseclass{
 		homepage = driver.getCurrentUrl();
 	}
 	@Test(priority=1)
-	public void add() throws InterruptedException
+	public void Add_Edit_Delete_Customer() throws InterruptedException
 	{
 		Customer customer = new Customer(driver);
 		customer.Add_Customer();
 		customer.Edit_Customers();
 		customer.Delete_Customers();
-		
-		
-		
-		
-		
-		
-		
-		
 	}
-	
-	
-	
+	@Test(priority=2)
+	public void Add_Edit_Delete_Company() throws InterruptedException
+	{
+		driver.get(homepage);
+		Thread.sleep(10000);
+		Company company = new Company(driver);
+		company.Create_Company();
+		company.Edit_Company();
+		company.Delete_Company();
+	}
 
 }

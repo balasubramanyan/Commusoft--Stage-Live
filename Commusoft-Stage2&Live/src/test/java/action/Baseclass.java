@@ -81,7 +81,7 @@ public class Baseclass extends Wrapper {
 		//driver = Browsers.startapplication(driver, config.Browser(), config.URL2());
 		String SystemName=InetAddress.getLocalHost().getHostName();
 		Sysout("Commusoft Web-Automation Started in :   "+SystemName );
-		SlackCommusoft();
+		//SlackCommusoft();
 		
 		
 	}
@@ -94,7 +94,7 @@ public class Baseclass extends Wrapper {
 			logger.log(Status.PASS, "Method Been Executed Sucessfully:-" +result.getName());
 			System.out.println( "Method Been Executed Sucessfully:-" +result.getName());
 			Sysout("Method Been Executed Sucessfully:-" +result.getName());
-			SlackCommusoftstatus("Method Been Executed Sucessfully:-" +result.getName());
+			//SlackCommusoftstatus("Method Been Executed Sucessfully:-" +result.getName());
 		}else 
 			if(ITestResult.FAILURE==result.getStatus())
 		{
@@ -103,7 +103,7 @@ public class Baseclass extends Wrapper {
 				logger.fail("Test Failed :- " +result.getName(), MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(driver)).build());
 				System.out.println( "Method Been Failed:-" +result.getName());
 				Sysout("Method Been Failed:-" +result.getName());
-				SlackCommusoftstatus("Method Been Failed:-" +result.getName());
+				//SlackCommusoftstatus("Method Been Failed:-" +result.getName());
 			//	logger.log(Status.FAIL,logger.addScreenCaptureFromPath( capture(driver)) +"  Method Name:- " + result.getName());
 		}else
 		{
@@ -115,7 +115,7 @@ public class Baseclass extends Wrapper {
 	@AfterSuite
 	public void tearDown() throws IOException{
 		Sysout("Commusoft Web-Automation Completed in :   "+InetAddress.getLocalHost().getHostName());
-		SlackCommusoftdone(InetAddress.getLocalHost().getHostName());
+		//SlackCommusoftdone(InetAddress.getLocalHost().getHostName());
 		
 		report.flush();
 	   }

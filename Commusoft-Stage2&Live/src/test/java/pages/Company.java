@@ -127,6 +127,7 @@ public class Company extends Wrapper{
 		}
 		public void Edit_Company() throws InterruptedException
 		{
+			Thread.sleep(5000);
 			click("#editcustomer");
 			Thread.sleep(5000);
 			clear("$customerDetails.companyname");

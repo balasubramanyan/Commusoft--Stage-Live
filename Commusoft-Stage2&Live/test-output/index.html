@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Ranjit\AppData\Local\Temp\testng-eclipse--1033828614\testng-customsuite.xml</span>
+                    <span>C:\Users\Ranjit\AppData\Local\Temp\testng-eclipse-983853305\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testcase.Karna_Customer" class="method navigator-link" hash-for-method="add">add</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testcase.Karna_Customer" class="method navigator-link" hash-for-method="Add_Edit_Delete_Company">Add_Edit_Delete_Company</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testcase.Karna_Customer" class="method navigator-link" hash-for-method="Add_Edit_Delete_Customer">Add_Edit_Delete_Customer</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -130,9 +135,16 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="add">
-                  </a> <!-- add -->
-                  <span class="method-name">add</span>
+                  <a name="Add_Edit_Delete_Company">
+                  </a> <!-- Add_Edit_Delete_Company -->
+                  <span class="method-name">Add_Edit_Delete_Company</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Add_Edit_Delete_Customer">
+                  </a> <!-- Add_Edit_Delete_Customer -->
+                  <span class="method-name">Add_Edit_Delete_Customer</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -147,7 +159,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Ranjit\AppData\Local\Temp\testng-eclipse--1033828614\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Ranjit\AppData\Local\Temp\testng-eclipse-983853305\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -196,20 +208,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'add')
+data.setCell(0, 1, 'Add_Edit_Delete_Company')
 data.setCell(0, 2, 'testcase.Karna_Customer')
-data.setCell(0, 3, 79638);
+data.setCell(0, 3, 111533);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'login')
+data.setCell(1, 1, 'Add_Edit_Delete_Customer')
 data.setCell(1, 2, 'testcase.Karna_Customer')
-data.setCell(1, 3, 33632);
+data.setCell(1, 3, 80133);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'login')
+data.setCell(2, 2, 'testcase.Karna_Customer')
+data.setCell(2, 3, 34703);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -242,27 +258,35 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">setup</span>
-                <span class="method-start">904 ms</span>
+                <span class="method-start">894 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">login</span>
-                <span class="method-start">13554 ms</span>
+                <span class="method-start">14589 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown([TestResult name=login status=SUCCESS method=Karna_Customer.login()[pri:0, instance:testcase.Karna_C...)</span>
-                <span class="method-start">47190 ms</span>
+                <span class="method-start">49297 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">add</span>
-                <span class="method-start">48711 ms</span>
+                <span class="method-name">Add_Edit_Delete_Customer</span>
+                <span class="method-start">50374 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">teardown([TestResult name=add status=SUCCESS method=Karna_Customer.add()[pri:1, instance:testcase.Karna_Custo...)</span>
-                <span class="method-start">128352 ms</span>
+                <span class="method-name">teardown([TestResult name=Add_Edit_Delete_Customer status=SUCCESS method=Karna_Customer.Add_Edit_Delete_Custo...)</span>
+                <span class="method-start">130508 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">Add_Edit_Delete_Company</span>
+                <span class="method-start">131715 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=Add_Edit_Delete_Company status=SUCCESS method=Karna_Customer.Add_Edit_Delete_Compan...)</span>
+                <span class="method-start">243250 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">129796 ms</span>
+                <span class="method-start">245029 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

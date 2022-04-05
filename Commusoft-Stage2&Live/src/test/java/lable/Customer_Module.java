@@ -11,17 +11,7 @@ import pages.LoginPage;
 
 public class Customer_Module extends Baseclass{
 	
-	public String homepage;
-	
-	@Test(priority = 0)
-	public void login() throws InterruptedException
-	{
-		LoginPage loginpage = PageFactory.initElements(driver, LoginPage.class);
-		loginpage.login(sheet.sheetIN("Login",0, 1),sheet.sheetIN("Login",1, 1),sheet.sheetIN("Login", 2, 1));
-		Thread.sleep(1000);
-		homepage = driver.getCurrentUrl();
-	}
-	@Test(priority=1)
+	@Test(priority=0)
 	public void Add_Edit_Delete_Customer() throws InterruptedException
 	{
 		Customer customer = new Customer(driver);
@@ -29,7 +19,7 @@ public class Customer_Module extends Baseclass{
 		customer.Edit_Customers();
 		customer.Delete_Customers();
 	}
-	@Test(priority=2)
+	@Test(priority=1)
 	public void Add_Edit_Delete_Company() throws InterruptedException
 	{
 		driver.get(homepage);
@@ -39,7 +29,7 @@ public class Customer_Module extends Baseclass{
 		company.Edit_Company();
 		company.Delete_Company();
 	}
-	@Test(priority=3)
+	@Test(priority=2)
 	public void Contact_To_Primary() throws InterruptedException
 	{
 		driver.get(homepage);
@@ -48,7 +38,7 @@ public class Customer_Module extends Baseclass{
 		customer.Add_Customer();
 		customer.Add_Primary_Contact();		
 	}
-	@Test(priority=4)
+	@Test(priority=3)
 	public void Add_Edit_Delete_Branch() throws InterruptedException
 	{
 		driver.get(homepage);

@@ -575,7 +575,7 @@ public class Wrapper {
 	public void SlackCommusoft() throws IOException
 	{
 		String SystemName=InetAddress.getLocalHost().getHostName();
-		URL url = new URL("https://hooks.slack.com/services/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");
+		URL url = new URL("https://hooks.slack.com/services/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");
 		HttpURLConnection http = (HttpURLConnection)url.openConnection();
 		http.setRequestMethod("POST");
 		http.setDoOutput(true);
@@ -635,7 +635,7 @@ public class Wrapper {
 	public void SlackCommusoftstatus(String text) throws IOException
 	{
 		String SystemName=InetAddress.getLocalHost().getHostName();
-		URL url = new URL("https://hooks.slack.com/services/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");
+		URL url = new URL("https://hooks.slack.com/services/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");
 		HttpURLConnection http = (HttpURLConnection)url.openConnection();
 		http.setRequestMethod("POST");
 		http.setDoOutput(true);
@@ -676,7 +676,7 @@ public class Wrapper {
 	public void SlackCommusoftdone(String text) throws IOException
 	{
 		String SystemName=InetAddress.getLocalHost().getHostName();
-		URL url = new URL("https://hooks.slack.com/services/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");
+		URL url = new URL("https://hooks.slack.com/services/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");
 		HttpURLConnection http = (HttpURLConnection)url.openConnection();
 		http.setRequestMethod("POST");
 		http.setDoOutput(true);

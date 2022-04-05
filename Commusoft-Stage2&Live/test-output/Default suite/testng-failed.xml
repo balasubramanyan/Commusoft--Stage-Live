@@ -9,7 +9,7 @@
           <include name="teardown"/>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="Add_Edit_Delete_Company"/>
+          <include name="Add_Edit_Delete_Branch"/>
         </methods>
       </class> <!-- lable.Customer_Module -->
     </classes>

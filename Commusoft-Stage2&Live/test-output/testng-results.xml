@@ -1,81 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-05T16:18:11 IST" name="Default suite" finished-at="2022-04-05T16:23:51 IST" duration-ms="339762">
+  <suite started-at="2022-04-05T18:14:06 IST" name="Default suite" finished-at="2022-04-05T18:21:09 IST" duration-ms="423629">
     <groups>
     </groups>
-    <test started-at="2022-04-05T16:18:11 IST" name="Default test" finished-at="2022-04-05T16:23:51 IST" duration-ms="339762">
+    <test started-at="2022-04-05T18:14:06 IST" name="Default test" finished-at="2022-04-05T18:21:09 IST" duration-ms="423629">
       <class name="lable.Customer_Module">
-        <test-method is-config="true" signature="initial()[pri:0, instance:lable.Customer_Module@581ac8a8]" started-at="2022-04-05T16:18:10 IST" name="initial" finished-at="2022-04-05T16:18:11 IST" duration-ms="935" status="PASS">
+        <test-method is-config="true" signature="initial()[pri:0, instance:lable.Customer_Module@6d4e5011]" started-at="2022-04-05T18:14:04 IST" name="initial" finished-at="2022-04-05T18:14:06 IST" duration-ms="1271" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initial -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:lable.Customer_Module@581ac8a8]" started-at="2022-04-05T16:18:11 IST" name="setup" finished-at="2022-04-05T16:18:23 IST" duration-ms="11409" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:lable.Customer_Module@6d4e5011]" started-at="2022-04-05T18:14:06 IST" name="setup" finished-at="2022-04-05T18:14:22 IST" duration-ms="16275" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login()[pri:0, instance:lable.Customer_Module@581ac8a8]" started-at="2022-04-05T16:18:23 IST" name="login" finished-at="2022-04-05T16:19:00 IST" duration-ms="36868" status="PASS">
+        <test-method signature="login()[pri:0, instance:lable.Customer_Module@6d4e5011]" started-at="2022-04-05T18:14:22 IST" name="login" finished-at="2022-04-05T18:14:27 IST" duration-ms="4489" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Customer_Module@581ac8a8]" started-at="2022-04-05T16:19:00 IST" name="teardown" finished-at="2022-04-05T16:19:00 IST" duration-ms="771" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Customer_Module@6d4e5011]" started-at="2022-04-05T18:14:27 IST" name="teardown" finished-at="2022-04-05T18:14:28 IST" duration-ms="1187" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login status=SUCCESS method=Customer_Module.login()[pri:0, instance:lable.Customer_Module@581ac8a8] output={null}]]]>
+                <![CDATA[[TestResult name=login status=SUCCESS method=Customer_Module.login()[pri:0, instance:lable.Customer_Module@6d4e5011] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Add_Edit_Delete_Customer()[pri:1, instance:lable.Customer_Module@581ac8a8]" started-at="2022-04-05T16:19:00 IST" name="Add_Edit_Delete_Customer" finished-at="2022-04-05T16:20:26 IST" duration-ms="85145" status="PASS">
+        <test-method signature="Add_Edit_Delete_Customer()[pri:1, instance:lable.Customer_Module@6d4e5011]" started-at="2022-04-05T18:14:28 IST" name="Add_Edit_Delete_Customer" finished-at="2022-04-05T18:16:03 IST" duration-ms="95028" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Add_Edit_Delete_Customer -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Customer_Module@581ac8a8]" started-at="2022-04-05T16:20:26 IST" name="teardown" finished-at="2022-04-05T16:20:26 IST" duration-ms="853" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Customer_Module@6d4e5011]" started-at="2022-04-05T18:16:03 IST" name="teardown" finished-at="2022-04-05T18:16:05 IST" duration-ms="1788" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Add_Edit_Delete_Customer status=SUCCESS method=Customer_Module.Add_Edit_Delete_Customer()[pri:1, instance:lable.Customer_Module@581ac8a8] output={null}]]]>
+                <![CDATA[[TestResult name=Add_Edit_Delete_Customer status=SUCCESS method=Customer_Module.Add_Edit_Delete_Customer()[pri:1, instance:lable.Customer_Module@6d4e5011] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Add_Edit_Delete_Company()[pri:2, instance:lable.Customer_Module@581ac8a8]" started-at="2022-04-05T16:20:26 IST" name="Add_Edit_Delete_Company" finished-at="2022-04-05T16:22:26 IST" duration-ms="119352" status="PASS">
+        <test-method signature="Add_Edit_Delete_Company()[pri:2, instance:lable.Customer_Module@6d4e5011]" started-at="2022-04-05T18:16:05 IST" name="Add_Edit_Delete_Company" finished-at="2022-04-05T18:18:05 IST" duration-ms="120316" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Add_Edit_Delete_Company -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Customer_Module@581ac8a8]" started-at="2022-04-05T16:22:26 IST" name="teardown" finished-at="2022-04-05T16:22:26 IST" duration-ms="695" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Customer_Module@6d4e5011]" started-at="2022-04-05T18:18:05 IST" name="teardown" finished-at="2022-04-05T18:18:06 IST" duration-ms="1201" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Add_Edit_Delete_Company status=SUCCESS method=Customer_Module.Add_Edit_Delete_Company()[pri:2, instance:lable.Customer_Module@581ac8a8] output={null}]]]>
+                <![CDATA[[TestResult name=Add_Edit_Delete_Company status=SUCCESS method=Customer_Module.Add_Edit_Delete_Company()[pri:2, instance:lable.Customer_Module@6d4e5011] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Contact_To_Primary()[pri:3, instance:lable.Customer_Module@581ac8a8]" started-at="2022-04-05T16:22:26 IST" name="Contact_To_Primary" finished-at="2022-04-05T16:23:50 IST" duration-ms="83976" status="PASS">
+        <test-method signature="Contact_To_Primary()[pri:3, instance:lable.Customer_Module@6d4e5011]" started-at="2022-04-05T18:18:06 IST" name="Contact_To_Primary" finished-at="2022-04-05T18:19:30 IST" duration-ms="84204" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Contact_To_Primary -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Customer_Module@581ac8a8]" started-at="2022-04-05T16:23:50 IST" name="teardown" finished-at="2022-04-05T16:23:51 IST" duration-ms="655" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Customer_Module@6d4e5011]" started-at="2022-04-05T18:19:30 IST" name="teardown" finished-at="2022-04-05T18:19:32 IST" duration-ms="1260" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Contact_To_Primary status=SUCCESS method=Customer_Module.Contact_To_Primary()[pri:3, instance:lable.Customer_Module@581ac8a8] output={null}]]]>
+                <![CDATA[[TestResult name=Contact_To_Primary status=SUCCESS method=Customer_Module.Contact_To_Primary()[pri:3, instance:lable.Customer_Module@6d4e5011] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:lable.Customer_Module@581ac8a8]" started-at="2022-04-05T16:23:51 IST" name="tearDown" finished-at="2022-04-05T16:23:52 IST" duration-ms="1103" status="PASS">
+        <test-method signature="Add_Edit_Delete_Branch()[pri:4, instance:lable.Customer_Module@6d4e5011]" started-at="2022-04-05T18:19:32 IST" name="Add_Edit_Delete_Branch" finished-at="2022-04-05T18:21:08 IST" duration-ms="96560" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_Edit_Delete_Branch -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Customer_Module@6d4e5011]" started-at="2022-04-05T18:21:08 IST" name="teardown" finished-at="2022-04-05T18:21:09 IST" duration-ms="1269" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Add_Edit_Delete_Branch status=SUCCESS method=Customer_Module.Add_Edit_Delete_Branch()[pri:4, instance:lable.Customer_Module@6d4e5011] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:lable.Customer_Module@6d4e5011]" started-at="2022-04-05T18:21:09 IST" name="tearDown" finished-at="2022-04-05T18:21:12 IST" duration-ms="2249" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

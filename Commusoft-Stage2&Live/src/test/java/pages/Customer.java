@@ -11,14 +11,14 @@ import org.openqa.selenium.WebDriver;
 import action.Wrapper;
 
 public class Customer extends Wrapper {
-	
-	
-	
+
+
+
 	public Customer(WebDriver ldriver)
 	{
 		this.driver = ldriver;
 	}
-	
+
 	public HashMap<String,String> customername()
 	{
 		HashMap<String,String> customer = new HashMap<String,String>();
@@ -27,15 +27,15 @@ public class Customer extends Wrapper {
 		customer.put("Karna", "Karnan_Athisivam_karnan@commusoft.com_8248724397_NO.4,4thCROSSSTREET_GOWRI NAGAR_MUGALIVAKKAM_CHENNAI_Senior Test Engineer");
 		customer.put("Karna_Edit", "Karikalan_A_kari@commusoft.com_8248724397_Floor3,241Southwark_BridgeRd_London,_SE1 6FP");
 		customer.put("Ezhil", "Ranjit_Aravind_ranjit@commusoft.com_8965326598_Madurai");
-		
+
 		return customer;
-		
+
 	}
-		String a = customername().get("Karna");
-		String Karna[] = a.split("_");
-		String b = customername().get("Karna_Edit");
-		String Karna_Edit[] = b.split("_");
-	
+	String a = customername().get("Karna");
+	String Karna[] = a.split("_");
+	String b = customername().get("Karna_Edit");
+	String Karna_Edit[] = b.split("_");
+
 	public void Customer_create()
 	{
 		click("#customertypecustomer");
@@ -46,7 +46,7 @@ public class Customer extends Wrapper {
 	}
 	public void EditCustomer_title() throws InterruptedException
 	{
-		
+
 		Thread.sleep(2000);
 		selectdropdown("$selectedTitle", "Dr");
 	}
@@ -63,9 +63,9 @@ public class Customer extends Wrapper {
 	public void Unique_Customer_Name()
 	{
 		String name = Karna[0] + new Random().nextInt(1000);
-		
+
 		type("#customertype_contacts_name", name);
-		
+
 	}
 	public void Customer_Name(String name)
 	{
@@ -178,22 +178,22 @@ public class Customer extends Wrapper {
 	public void Workaddress_create() throws InterruptedException
 	{
 		type("#workaddress_contacts_name","Work Address Ranjit");
-		
+
 		type("#workaddress_contacts_surname","Aravind");
-		
+
 		type("#workaddress_contacts_contactstelephone_0_telephonenumber","9865326598");
-		
+
 		type("#workaddress_contacts_contactstelephone_1_telephonenumber","2530178");
-		
+
 		type("#workaddress_contacts_contactsemail_emailaddress","ranjittestinfgun@yopmail.com");
-		
+
 		type("#workaddress_addressline1","Madurai JILLA");
 		click("//span[@ng-hide='saving']");
 		Thread.sleep(9000);
 	}
-	
+
 	/*K*/
-	
+
 	public void Add_Customer() throws InterruptedException
 	{
 		Customer_create();
@@ -209,7 +209,7 @@ public class Customer extends Wrapper {
 		Customer_town();
 		Customer_Save();
 		Thread.sleep(25000);
-		
+
 	}
 	public void Edit_Customers() throws InterruptedException
 	{
@@ -227,7 +227,7 @@ public class Customer extends Wrapper {
 		EditCustomer_town();
 		EditCustomer_Save();
 		Thread.sleep(10000);
-		
+
 	}
 	public void Delete_Customers() throws InterruptedException
 	{
@@ -272,13 +272,72 @@ public class Customer extends Wrapper {
 		type("//input[@id=\"confirm_delete_input\"]", "primary");
 		Thread.sleep(4000);
 		click("//a[@class=\"btn btn-primary make-default-btn save_btn\"]");
-		
+
 		if(driver.findElement(By.xpath("//td[@class=\"ng-binding\" and contains(text(),'"+Karna[8]+"')]")).isDisplayed()) {
-		System.out.println("Primary contact changed as per the code flow");	
+			System.out.println("Primary contact changed as per the code flow");	
 		}else {
 			System.out.println("Primary contact Error in changing");		
 		}
 	}
+	public void Add_Branch() throws InterruptedException
+	{
+		Thread.sleep(4000);
+		click("//span[@class=\"ng-scope\" and contains(text(),'Branches')]");
+		Thread.sleep(4000);
+		click("//a[@id=\"addNewBranch\"]");
+		Thread.sleep(3000);
+		type("#branch_branchname", "Branch Name");
+		type("#branch_addressline1", "Add1");
+		type("#branch_addressline2", "Add2");
+		type("#branch_addressline3", "Add3");
+		type("#branch_town", "Town");
+		Thread.sleep(3000);
+		click("(//span[@class=\"select2-chosen\"])[1]");
+		Thread.sleep(3000);
+		type("//input[@class=\"select2-input select2-focused\"]", "Bristol");		
+		click("//span[@class=\"select2-match\" and contains(text(),'Bristol')]");
+		type("#branch_postcode", "600032");
+		Thread.sleep(3000);
+		click("//button[@type=\"submit\"]");
+	}
+	public void Edit_Branch() throws InterruptedException
+	{
+		//edit
+		Thread.sleep(4000);
+		click("//a[@class=\"edit ng-scope\"]");
+		Thread.sleep(5000);
+		clear("$branchDetails.branchname");
+		type("$branchDetails.branchname", "Branch edited");
+		clear("$addressline1");
+		type("$addressline1", "Add1 edited");
+		clear("$addressline2");
+		type("$addressline2", "Add2 edited");
+		clear("$addressline3");
+		type("$addressline3", "Add3 edited");
+		clear("$town");
+		type("$town", "Town edited");
+		click("(//span[@class=\"select2-chosen\"])[1]");
+		Thread.sleep(2000);
+		type("//input[@class=\"select2-input select2-focused\"]", "Kent");		
+		click("//span[@class=\"select2-match\" and contains(text(),'Kent')]");
+		Thread.sleep(4000);
+		clear("//input[@id=\"postcode\"]");
+		type("//input[@id=\"postcode\"]", "SE1 6FP");
+		Thread.sleep(5000);
+		click("//button[@class=\"btn btn-primary loading_btn save_btn\"]");
+	}
+	public void Delete_Branch() throws InterruptedException
+	{
+		//delete
+		Thread.sleep(7000);
+		click("(//a[@class=\"ng-scope\" and contains(text(),'Delete')])[2]");
+		Thread.sleep(4000);
+		type("//input[@id=\"confirm_delete_input\"]", "DELETE");
+		Thread.sleep(2000);
+		click("//a[@id=\"delete-button\"]");
+
+	}
+
 	public void Add_Unique_Customer() throws InterruptedException
 	{
 		Thread.sleep(6000);
@@ -291,7 +350,7 @@ public class Customer extends Wrapper {
 		Customer_AddressLine1();
 		Customer_Save();
 		Thread.sleep(25000);
-		
+
 	}
 	public void Verify_Customer() throws InterruptedException
 	{
@@ -310,26 +369,26 @@ public class Customer extends Wrapper {
 		Assertion(AccountNumber, ActualNumber, "Customer Number Loaded Successfully as expected");
 		Assertion(CustomerName, Actual, "Customer Loaded Successfully as expected");
 	}
-	
+
 	public void Unique_Workaddress_create() throws InterruptedException
 	{
 		String name = "Work Address Karnan" + new Random().nextInt(1000);
-		
+
 		type("#workaddress_contacts_name",name);
-		
+
 		type("#workaddress_contacts_surname","Athisivam");
-		
+
 		type("#workaddress_contacts_contactstelephone_0_telephonenumber","8248724397");
-		
+
 		type("#workaddress_contacts_contactstelephone_1_telephonenumber","2530178");
-		
+
 		type("#workaddress_contacts_contactsemail_emailaddress","karnan@yopmail.com");
-		
+
 		type("#workaddress_addressline1","Chennai City");
 		click("//span[@ng-hide='saving']");
 		Thread.sleep(9000);
 	}
-	
+
 	public void Verify_WA() throws InterruptedException
 	{
 		Thread.sleep(6000);
@@ -348,5 +407,5 @@ public class Customer extends Wrapper {
 		Assertion(WAAccountNumber, ActualNumber, "WA Number Loaded Successfully as expected");
 		Assertion(WAName, Actual, "WA Loaded Successfully as expected");
 	}
-	
+
 }

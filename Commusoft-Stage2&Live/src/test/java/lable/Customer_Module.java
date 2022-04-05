@@ -48,5 +48,16 @@ public class Customer_Module extends Baseclass{
 		customer.Add_Customer();
 		customer.Add_Primary_Contact();		
 	}
+	@Test(priority=4)
+	public void Add_Edit_Delete_Branch() throws InterruptedException
+	{
+		driver.get(homepage);
+		Thread.sleep(10000);
+		Customer customer = new Customer(driver);
+		customer.Add_Customer();
+		customer.Add_Branch();
+		customer.Edit_Branch();
+		customer.Delete_Branch();
+	}
 
 }

@@ -3,7 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcase.Karna_Customer">
+      <class name="lable.Customer_Module">
         <methods>
           <include name="initial"/>
           <include name="teardown"/>
@@ -11,7 +11,7 @@
           <include name="setup"/>
           <include name="Add_Edit_Delete_Company"/>
         </methods>
-      </class> <!-- testcase.Karna_Customer -->
+      </class> <!-- lable.Customer_Module -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

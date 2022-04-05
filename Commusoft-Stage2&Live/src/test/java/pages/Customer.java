@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Random;
 
 import org.bouncycastle.tsp.TimeStampResponse;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import action.Wrapper;
@@ -23,7 +24,7 @@ public class Customer extends Wrapper {
 		HashMap<String,String> customer = new HashMap<String,String>();
 		customer.put("Ranjit", "Ranjit_Aravind_ranjit@commusoft.com_8965326598_Madurai_TamilNadu");
 		customer.put("Bala", "Ranjit_Aravind_ranjit@commusoft.com_8965326598_Madurai");
-		customer.put("Karna", "Karnan_Athisivam_karnan@commusoft.com_8248724397_NO.4,4thCROSSSTREET_GOWRI NAGAR_MUGALIVAKKAM_CHENNAI");
+		customer.put("Karna", "Karnan_Athisivam_karnan@commusoft.com_8248724397_NO.4,4thCROSSSTREET_GOWRI NAGAR_MUGALIVAKKAM_CHENNAI_Senior Test Engineer");
 		customer.put("Karna_Edit", "Karikalan_A_kari@commusoft.com_8248724397_Floor3,241Southwark_BridgeRd_London,_SE1 6FP");
 		customer.put("Ezhil", "Ranjit_Aravind_ranjit@commusoft.com_8965326598_Madurai");
 		
@@ -231,7 +232,7 @@ public class Customer extends Wrapper {
 	public void Delete_Customers() throws InterruptedException
 	{
 		//This method follow the Edit customer 
-	
+		Thread.sleep(5000);
 		click("//a[@class=\"btn dropdown-toggle btn-small quick-links-btn\"]");
 		Thread.sleep(4000);
 		click("//a[@class=\"ng-scope\" and contains(text(),'Delete')]");
@@ -240,6 +241,43 @@ public class Customer extends Wrapper {
 		Thread.sleep(3000);
 		click("#delete-button");
 		Thread.sleep(5000);
+	}
+	public void Add_Primary_Contact() throws InterruptedException
+	{
+		Thread.sleep(4000);
+		click("//a[@id=\"contactsTab\"]");
+		Thread.sleep(4000);
+		click("//a[@class=\"btn btn-primary btn-small loading_btn save_btn ng-scope\" and contains(text(),'Add new contact')]");
+		Thread.sleep(5000);
+		selectdropdown("#contact_settingsTitlesid", "Mr");
+		type("#contact_name", "Contact Name");
+		type("#contact_surname", "Sur Name");
+		click("#show_date_picker");
+		Thread.sleep(3000);
+		click("//a[@class=\"daterange-day ng-binding today\"]");
+		type("$contact[contactstelephone][0][telephonenumber]", "87878787");
+		Thread.sleep(4000);
+		click("//span[@class=\"ng-scope\" and contains(text(),'Add phone number')]");
+		Thread.sleep(3000);
+		type("#contact_position", Karna[8]);
+		type("#contact_contactsemail_emailaddress", "erere@sdsd.ol");
+		type("//input[@ng-model=\"Twitter_Handle\"]", "twitter");
+		type("//input[@ng-model=\"Facebook_URL\"]", "FB");
+		type("//input[@ng-model=\"LinkedIn_URL\"]", "LinkedIn");
+		Thread.sleep(3000);
+		click("//button[@type=\"submit\"]");
+		Thread.sleep(6000);
+		click("//a[@class=\"edit ng-scope\" and contains(text(),'Set as primary contact')]");
+		Thread.sleep(5000);
+		type("//input[@id=\"confirm_delete_input\"]", "primary");
+		Thread.sleep(4000);
+		click("//a[@class=\"btn btn-primary make-default-btn save_btn\"]");
+		
+		if(driver.findElement(By.xpath("//td[@class=\"ng-binding\" and contains(text(),'"+Karna[8]+"')]")).isDisplayed()) {
+		System.out.println("Primary contact changed as per the code flow");	
+		}else {
+			System.out.println("Primary contact Error in changing");		
+		}
 	}
 	public void Add_Unique_Customer() throws InterruptedException
 	{

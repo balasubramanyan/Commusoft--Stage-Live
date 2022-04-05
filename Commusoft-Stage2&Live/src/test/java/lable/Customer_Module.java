@@ -1,5 +1,6 @@
 package lable;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
@@ -37,6 +38,15 @@ public class Customer_Module extends Baseclass{
 		company.Create_Company();
 		company.Edit_Company();
 		company.Delete_Company();
+	}
+	@Test(priority=3)
+	public void Contact_To_Primary() throws InterruptedException
+	{
+		driver.get(homepage);
+		Thread.sleep(10000);
+		Customer customer = new Customer(driver);
+		customer.Add_Customer();
+		customer.Add_Primary_Contact();		
 	}
 
 }

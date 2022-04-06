@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\azaru\AppData\Local\Temp\testng-eclipse--10034118\testng-customsuite.xml</span>
+                    <span>C:\Users\azaru\AppData\Local\Temp\testng-eclipse--455552113\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,6 +103,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="lable.Invoice_module" class="method navigator-link" hash-for-method="add_invoice">add_invoice</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="lable.Invoice_module" class="method navigator-link" hash-for-method="adding_additional_invoice_nobreakdown">adding_additional_invoice_nobreakdown</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -142,6 +147,13 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="adding_additional_invoice_nobreakdown">
+                  </a> <!-- adding_additional_invoice_nobreakdown -->
+                  <span class="method-name">adding_additional_invoice_nobreakdown</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="delete_invoice">
                   </a> <!-- delete_invoice -->
                   <span class="method-name">delete_invoice</span>
@@ -159,7 +171,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\azaru\AppData\Local\Temp\testng-eclipse--10034118\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\azaru\AppData\Local\Temp\testng-eclipse--455552113\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -208,24 +220,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'add_invoice')
 data.setCell(0, 2, 'lable.Invoice_module')
-data.setCell(0, 3, 24813);
+data.setCell(0, 3, 30660);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'edit_invoice')
+data.setCell(1, 1, 'adding_additional_invoice_nobreakdown')
 data.setCell(1, 2, 'lable.Invoice_module')
-data.setCell(1, 3, 19669);
+data.setCell(1, 3, 26947);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'delete_invoice')
+data.setCell(2, 1, 'edit_invoice')
 data.setCell(2, 2, 'lable.Invoice_module')
-data.setCell(2, 3, 2033);
+data.setCell(2, 3, 21867);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'delete_invoice')
+data.setCell(3, 2, 'lable.Invoice_module')
+data.setCell(3, 3, 1497);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 46 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -258,35 +274,43 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">setup</span>
-                <span class="method-start">647 ms</span>
+                <span class="method-start">678 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">add_invoice</span>
-                <span class="method-start">17721 ms</span>
+                <span class="method-start">20402 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown([TestResult name=add_invoice status=SUCCESS method=Invoice_module.add_invoice()[pri:1, instance:labl...)</span>
-                <span class="method-start">42539 ms</span>
+                <span class="method-start">51067 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">edit_invoice</span>
-                <span class="method-start">43844 ms</span>
+                <span class="method-start">52516 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown([TestResult name=edit_invoice status=SUCCESS method=Invoice_module.edit_invoice()[pri:2, instance:la...)</span>
-                <span class="method-start">63514 ms</span>
+                <span class="method-start">74385 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">delete_invoice</span>
-                <span class="method-start">65288 ms</span>
+                <span class="method-start">76457 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown([TestResult name=delete_invoice status=SUCCESS method=Invoice_module.delete_invoice()[pri:3, instanc...)</span>
-                <span class="method-start">67322 ms</span>
+                <span class="method-start">77956 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">adding_additional_invoice_nobreakdown</span>
+                <span class="method-start">80293 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=adding_additional_invoice_nobreakdown status=SUCCESS method=Invoice_module.adding_a...)</span>
+                <span class="method-start">107242 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">69696 ms</span>
+                <span class="method-start">108844 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

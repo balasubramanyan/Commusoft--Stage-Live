@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import action.Baseclass;
 import pages.Company;
 import pages.Customer;
-import pages.LoginPage;
 
 public class Customer_Module extends Baseclass{
 	

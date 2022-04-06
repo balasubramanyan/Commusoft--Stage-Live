@@ -1,66 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-06T15:00:57 IST" name="Default suite" finished-at="2022-04-06T15:02:06 IST" duration-ms="69025">
+  <suite started-at="2022-04-06T17:47:05 IST" name="Default suite" finished-at="2022-04-06T17:48:53 IST" duration-ms="108111">
     <groups>
     </groups>
-    <test started-at="2022-04-06T15:00:57 IST" name="Default test" finished-at="2022-04-06T15:02:06 IST" duration-ms="69025">
+    <test started-at="2022-04-06T17:47:05 IST" name="Default test" finished-at="2022-04-06T17:48:53 IST" duration-ms="108111">
       <class name="lable.Invoice_module">
-        <test-method is-config="true" signature="initial()[pri:0, instance:lable.Invoice_module@76c3e77a]" started-at="2022-04-06T15:00:57 IST" name="initial" finished-at="2022-04-06T15:00:57 IST" duration-ms="645" status="PASS">
+        <test-method is-config="true" signature="initial()[pri:0, instance:lable.Invoice_module@78123e82]" started-at="2022-04-06T17:47:04 IST" name="initial" finished-at="2022-04-06T17:47:05 IST" duration-ms="676" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initial -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:lable.Invoice_module@76c3e77a]" started-at="2022-04-06T15:00:57 IST" name="setup" finished-at="2022-04-06T15:01:14 IST" duration-ms="17039" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:lable.Invoice_module@78123e82]" started-at="2022-04-06T17:47:05 IST" name="setup" finished-at="2022-04-06T17:47:24 IST" duration-ms="19688" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="add_invoice()[pri:1, instance:lable.Invoice_module@76c3e77a]" started-at="2022-04-06T15:01:14 IST" name="add_invoice" finished-at="2022-04-06T15:01:39 IST" duration-ms="24813" status="PASS">
+        <test-method signature="add_invoice()[pri:1, instance:lable.Invoice_module@78123e82]" started-at="2022-04-06T17:47:24 IST" name="add_invoice" finished-at="2022-04-06T17:47:55 IST" duration-ms="30660" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- add_invoice -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Invoice_module@76c3e77a]" started-at="2022-04-06T15:01:39 IST" name="teardown" finished-at="2022-04-06T15:01:41 IST" duration-ms="1305" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Invoice_module@78123e82]" started-at="2022-04-06T17:47:55 IST" name="teardown" finished-at="2022-04-06T17:47:57 IST" duration-ms="1444" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=add_invoice status=SUCCESS method=Invoice_module.add_invoice()[pri:1, instance:lable.Invoice_module@76c3e77a] output={null}]]]>
+                <![CDATA[[TestResult name=add_invoice status=SUCCESS method=Invoice_module.add_invoice()[pri:1, instance:lable.Invoice_module@78123e82] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="edit_invoice()[pri:2, instance:lable.Invoice_module@76c3e77a]" started-at="2022-04-06T15:01:41 IST" name="edit_invoice" finished-at="2022-04-06T15:02:00 IST" duration-ms="19669" status="PASS">
+        <test-method signature="edit_invoice()[pri:2, instance:lable.Invoice_module@78123e82]" started-at="2022-04-06T17:47:57 IST" name="edit_invoice" finished-at="2022-04-06T17:48:18 IST" duration-ms="21867" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- edit_invoice -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Invoice_module@76c3e77a]" started-at="2022-04-06T15:02:00 IST" name="teardown" finished-at="2022-04-06T15:02:02 IST" duration-ms="1773" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Invoice_module@78123e82]" started-at="2022-04-06T17:48:18 IST" name="teardown" finished-at="2022-04-06T17:48:20 IST" duration-ms="2071" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=edit_invoice status=SUCCESS method=Invoice_module.edit_invoice()[pri:2, instance:lable.Invoice_module@76c3e77a] output={null}]]]>
+                <![CDATA[[TestResult name=edit_invoice status=SUCCESS method=Invoice_module.edit_invoice()[pri:2, instance:lable.Invoice_module@78123e82] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="delete_invoice()[pri:3, instance:lable.Invoice_module@76c3e77a]" started-at="2022-04-06T15:02:02 IST" name="delete_invoice" finished-at="2022-04-06T15:02:04 IST" duration-ms="2033" status="PASS">
+        <test-method signature="delete_invoice()[pri:3, instance:lable.Invoice_module@78123e82]" started-at="2022-04-06T17:48:20 IST" name="delete_invoice" finished-at="2022-04-06T17:48:22 IST" duration-ms="1497" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- delete_invoice -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Invoice_module@76c3e77a]" started-at="2022-04-06T15:02:04 IST" name="teardown" finished-at="2022-04-06T15:02:06 IST" duration-ms="2349" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Invoice_module@78123e82]" started-at="2022-04-06T17:48:22 IST" name="teardown" finished-at="2022-04-06T17:48:24 IST" duration-ms="2336" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=delete_invoice status=SUCCESS method=Invoice_module.delete_invoice()[pri:3, instance:lable.Invoice_module@76c3e77a] output={null}]]]>
+                <![CDATA[[TestResult name=delete_invoice status=SUCCESS method=Invoice_module.delete_invoice()[pri:3, instance:lable.Invoice_module@78123e82] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:lable.Invoice_module@76c3e77a]" started-at="2022-04-06T15:02:06 IST" name="tearDown" finished-at="2022-04-06T15:02:08 IST" duration-ms="1724" status="PASS">
+        <test-method signature="adding_additional_invoice_nobreakdown()[pri:4, instance:lable.Invoice_module@78123e82]" started-at="2022-04-06T17:48:24 IST" name="adding_additional_invoice_nobreakdown" finished-at="2022-04-06T17:48:51 IST" duration-ms="26947" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- adding_additional_invoice_nobreakdown -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Invoice_module@78123e82]" started-at="2022-04-06T17:48:51 IST" name="teardown" finished-at="2022-04-06T17:48:53 IST" duration-ms="1544" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=adding_additional_invoice_nobreakdown status=SUCCESS method=Invoice_module.adding_additional_invoice_nobreakdown()[pri:4, instance:lable.Invoice_module@78123e82] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:lable.Invoice_module@78123e82]" started-at="2022-04-06T17:48:53 IST" name="tearDown" finished-at="2022-04-06T17:48:55 IST" duration-ms="2496" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

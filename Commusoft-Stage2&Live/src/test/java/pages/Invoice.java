@@ -60,6 +60,7 @@ public class Invoice extends Wrapper {
 	}
 	public void BreakdownByCategory_des(String a) throws InterruptedException
 	{
+		Thread.sleep(2000);
 		dclick("(//td[contains(@class,'overflow_handsontable select_icon')])[1]");
 		type("//input[contains(@class,'select2-input select')]", a);
 		Thread.sleep(1000);
@@ -180,9 +181,10 @@ public class Invoice extends Wrapper {
 	}
 	public void Confirm_box() throws InterruptedException
 	{
-		click("//button[text()='Ok']");
+		
+		//click("//button[text()='Ok']");
 		Thread.sleep(4000);
-		//click("//button[@type='submit'])[3]");
+		click("(//button[@type='submit'])[3]");
 	}
 	public void save_invoice()
 	{

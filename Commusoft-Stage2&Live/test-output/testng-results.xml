@@ -1,70 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="4" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-05T19:43:23 IST" name="Failed suite [Failed suite [Default suite]]" finished-at="2022-04-05T19:49:25 IST" duration-ms="361698">
+  <suite started-at="2022-04-06T15:00:57 IST" name="Default suite" finished-at="2022-04-06T15:02:06 IST" duration-ms="69025">
     <groups>
     </groups>
-    <test started-at="2022-04-05T19:43:23 IST" name="Default test(failed)(failed)" finished-at="2022-04-05T19:49:25 IST" duration-ms="361698">
-      <class name="lable.Customer_Module">
-        <test-method is-config="true" signature="initial()[pri:0, instance:lable.Customer_Module@fba92d3]" started-at="2022-04-05T19:43:22 IST" name="initial" finished-at="2022-04-05T19:43:23 IST" duration-ms="858" status="PASS">
+    <test started-at="2022-04-06T15:00:57 IST" name="Default test" finished-at="2022-04-06T15:02:06 IST" duration-ms="69025">
+      <class name="lable.Invoice_module">
+        <test-method is-config="true" signature="initial()[pri:0, instance:lable.Invoice_module@76c3e77a]" started-at="2022-04-06T15:00:57 IST" name="initial" finished-at="2022-04-06T15:00:57 IST" duration-ms="645" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initial -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:lable.Customer_Module@fba92d3]" started-at="2022-04-05T19:43:23 IST" name="setup" finished-at="2022-04-05T19:44:12 IST" duration-ms="48516" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:lable.Invoice_module@76c3e77a]" started-at="2022-04-06T15:00:57 IST" name="setup" finished-at="2022-04-06T15:01:14 IST" duration-ms="17039" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Add_Edit_Delete_Company()[pri:1, instance:lable.Customer_Module@fba92d3]" started-at="2022-04-05T19:44:12 IST" name="Add_Edit_Delete_Company" finished-at="2022-04-05T19:46:20 IST" duration-ms="127784" status="PASS">
+        <test-method signature="add_invoice()[pri:1, instance:lable.Invoice_module@76c3e77a]" started-at="2022-04-06T15:01:14 IST" name="add_invoice" finished-at="2022-04-06T15:01:39 IST" duration-ms="24813" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Add_Edit_Delete_Company -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Customer_Module@fba92d3]" started-at="2022-04-05T19:46:20 IST" name="teardown" finished-at="2022-04-05T19:46:21 IST" duration-ms="1106" status="PASS">
+        </test-method> <!-- add_invoice -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Invoice_module@76c3e77a]" started-at="2022-04-06T15:01:39 IST" name="teardown" finished-at="2022-04-06T15:01:41 IST" duration-ms="1305" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Add_Edit_Delete_Company status=SUCCESS method=Customer_Module.Add_Edit_Delete_Company()[pri:1, instance:lable.Customer_Module@fba92d3] output={null}]]]>
+                <![CDATA[[TestResult name=add_invoice status=SUCCESS method=Invoice_module.add_invoice()[pri:1, instance:lable.Invoice_module@76c3e77a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Contact_To_Primary()[pri:2, instance:lable.Customer_Module@fba92d3]" started-at="2022-04-05T19:46:21 IST" name="Contact_To_Primary" finished-at="2022-04-05T19:47:45 IST" duration-ms="84682" status="PASS">
+        <test-method signature="edit_invoice()[pri:2, instance:lable.Invoice_module@76c3e77a]" started-at="2022-04-06T15:01:41 IST" name="edit_invoice" finished-at="2022-04-06T15:02:00 IST" duration-ms="19669" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Contact_To_Primary -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Customer_Module@fba92d3]" started-at="2022-04-05T19:47:45 IST" name="teardown" finished-at="2022-04-05T19:47:47 IST" duration-ms="1212" status="PASS">
+        </test-method> <!-- edit_invoice -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Invoice_module@76c3e77a]" started-at="2022-04-06T15:02:00 IST" name="teardown" finished-at="2022-04-06T15:02:02 IST" duration-ms="1773" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Contact_To_Primary status=SUCCESS method=Customer_Module.Contact_To_Primary()[pri:2, instance:lable.Customer_Module@fba92d3] output={null}]]]>
+                <![CDATA[[TestResult name=edit_invoice status=SUCCESS method=Invoice_module.edit_invoice()[pri:2, instance:lable.Invoice_module@76c3e77a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="Add_Edit_Delete_Branch()[pri:3, instance:lable.Customer_Module@fba92d3]" started-at="2022-04-05T19:47:47 IST" name="Add_Edit_Delete_Branch" finished-at="2022-04-05T19:49:24 IST" duration-ms="97290" status="PASS">
+        <test-method signature="delete_invoice()[pri:3, instance:lable.Invoice_module@76c3e77a]" started-at="2022-04-06T15:02:02 IST" name="delete_invoice" finished-at="2022-04-06T15:02:04 IST" duration-ms="2033" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Add_Edit_Delete_Branch -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Customer_Module@fba92d3]" started-at="2022-04-05T19:49:24 IST" name="teardown" finished-at="2022-04-05T19:49:25 IST" duration-ms="1064" status="PASS">
+        </test-method> <!-- delete_invoice -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Invoice_module@76c3e77a]" started-at="2022-04-06T15:02:04 IST" name="teardown" finished-at="2022-04-06T15:02:06 IST" duration-ms="2349" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Add_Edit_Delete_Branch status=SUCCESS method=Customer_Module.Add_Edit_Delete_Branch()[pri:3, instance:lable.Customer_Module@fba92d3] output={null}]]]>
+                <![CDATA[[TestResult name=delete_invoice status=SUCCESS method=Invoice_module.delete_invoice()[pri:3, instance:lable.Invoice_module@76c3e77a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:lable.Customer_Module@fba92d3]" started-at="2022-04-05T19:49:26 IST" name="tearDown" finished-at="2022-04-05T19:49:27 IST" duration-ms="1390" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:lable.Invoice_module@76c3e77a]" started-at="2022-04-06T15:02:06 IST" name="tearDown" finished-at="2022-04-06T15:02:08 IST" duration-ms="1724" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- lable.Customer_Module -->
-    </test> <!-- Default test(failed)(failed) -->
-  </suite> <!-- Failed suite [Failed suite [Default suite]] -->
+      </class> <!-- lable.Invoice_module -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

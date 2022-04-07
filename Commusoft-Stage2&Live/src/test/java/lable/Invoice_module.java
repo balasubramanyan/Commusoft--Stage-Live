@@ -166,4 +166,20 @@ String jobpage; //="https://app.commusoft.co.uk/customers/customer_list/1726/job
 	    adding_invoice.unitprice_FullBreakdown_ByCategory_Parts1("789.05");
 	    adding_invoice.save_invoice();
     }
+	@Test(priority=8)
+	public void adding_interiminvoice_nobreakdown() throws InterruptedException
+	{
+		driver.get(jobpage);
+	    Invoice adding_invoice =new Invoice(driver);
+	    adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Interim_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_notes1("No breakdown additional invoice");
+	    //adding_invoice.customerreference("No breakdown");
+	    adding_invoice.invoice_Category();
+	    adding_invoice.invoice_UserGroup();
+	    adding_invoice.sub_total("800.96");
+	    adding_invoice.save_invoice();
+	}
   }

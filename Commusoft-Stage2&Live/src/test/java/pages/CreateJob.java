@@ -330,6 +330,162 @@ public class CreateJob extends Wrapper {
 		click("//button[@class=\"btn btn-primary primary-button ng-binding\"]");
 	}
 	
+	//ezhil
+	public void addjob1() throws InterruptedException
+	{
+		click("//a[@id='newJob']");
+		Thread.sleep(1000);
+	}
+	public void JobDescription(String a, String b, String c) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("//span[text()='-- Please choose --']"); 
+		// Des select
+		Thread.sleep(2000);
+		click("(//div[@class='select2-result-label'])[7]"); 
+		// Skill
+		Thread.sleep(5000);
+		click("(//input[@class=\"select2-input select2-default\"])[1]"); 
+		Thread.sleep(5000);
+		click("//option[text()='Test QA']");
+		// Job note
+		Thread.sleep(5000);
+		type("//textarea[@name='engineernotes']", a);    
+		//Service job
+		Thread.sleep(5000);
+		click("//input[@formcontrolname='isservicejob']"); 
+		Thread.sleep(5000);
+		click("(//select[@name='servicereminderinstance'])[1]");
+		Thread.sleep(5000);
+		click("(//option[text()='Boiler service'])[1]");
+		//Quoted amount
+		Thread.sleep(5000);
+		type("//input[@formcontrolname='quotedamount']", b); 
+		//Customer reference
+		Thread.sleep(5000);
+		type("//input[@formcontrolname=\"ponumber\"]", c);
+		//Expected completion date
+		Thread.sleep(5000);
+		click("//span[@class=\"add-on date-picker-edit\"]");
+		Thread.sleep(5000);
+		click("(//td [@role=\"gridcell\"])[25]");
+		Thread.sleep(5000);
+		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(5000);
+		click("//option[text()= '07']");
+		Thread.sleep(5000);
+		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(5000);
+		click("//option[text()= '15']");
+		Thread.sleep(5000);
+		click("//select[@class='meridian ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(5000);
+		click("//option[text()= 'AM']");
+		//Priority
+		Thread.sleep(5000);
+		click("//select[@formcontrolname='priority']");
+		Thread.sleep(5000);
+		click("//option[text()=\"Not Important\"]");
+		//User group
+		Thread.sleep(5000);
+		click("//select[@formcontrolname='usergroupsid']");
+		Thread.sleep(5000);
+		click("//option[text()= 'Aravind Group']");
+		//Invoice Category
+		Thread.sleep(5000);
+		click("//select[@formcontrolname='invoicecategoryid']");
+		Thread.sleep(5000);
+		click("//option[text()= 'Aravind Category']");
+		
+	}
+	public void createjob1() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("//span[text()='Add job']");
+	}
+	public void jobeditlink(String D, String E, String F, String G) throws InterruptedException
+	{
+		Thread.sleep(5000);
+		click("//a[text()='Edit']");
+		Thread.sleep(5000);
+		//Job desc
+		clear("//input[@formcontrolname='description']");
+		Thread.sleep(5000);
+		type("//input[@formcontrolname='description']", D);
+		//Skill
+		clear("(//input[@class='select2-input select2-default'])[1]");
+		click("(//input[@class='select2-input select2-default'])[1]");
+		Thread.sleep(5000);
+		click("//option[text()='Test QA']");
+		// Job note
+		Thread.sleep(5000);
+		type("//textarea[@name='engineernotes']", E);    
+		//Service job
+		Thread.sleep(5000);
+		click("//input[@formcontrolname='isservicejob']"); 
+		Thread.sleep(5000);
+		click("//input[@formcontrolname='isservicejob']");
+	//	Thread.sleep(5000);
+	//	click("(//select[@name='servicereminderinstance'])[1]");
+	//	Thread.sleep(5000);
+	//	click("(//option[text()='Boiler service'])[1]");
+		//Quoted amount
+		Thread.sleep(5000);
+		type("//input[@formcontrolname='quotedamount']", F); 
+		//Customer reference
+		Thread.sleep(5000);
+		type("//input[@formcontrolname=\"ponumber\"]", G);
+		//Expected completion date
+		Thread.sleep(5000);
+		click("//span[@class=\"add-on date-picker-edit\"]");
+		Thread.sleep(5000);
+		click("(//td [@role=\"gridcell\"])[25]");
+		Thread.sleep(5000);
+		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(5000);
+		click("//option[text()= '08']");
+		Thread.sleep(5000);
+		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(5000);
+		click("//option[text()= '45']");
+		Thread.sleep(5000);
+		click("//select[@class='meridian ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(5000);
+		click("//option[text()= 'PM']");
+		//Priority
+		Thread.sleep(5000);
+		click("//select[@formcontrolname='priority']");
+		Thread.sleep(5000);
+		click("//option[text()='Important']");
+		//User group
+		Thread.sleep(5000);
+		click("//select[@formcontrolname='usergroupsid']");
+		Thread.sleep(5000);
+		click("//option[text()= 'Ranjit Group']");
+		//Invoice Category
+		Thread.sleep(5000);
+		click("//select[@formcontrolname='invoicecategoryid']");
+		Thread.sleep(5000);
+		click("//option[text()= 'Ranjit Category']");
+		
+	}
+	public void Editsavejob() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("//button[@type='submit']");
+	}
+	public void Jobdeleted(String H) throws InterruptedException
+	{
+		Thread.sleep(5000);
+		click("//a[@class='btn dropdown-toggle btn-small quick-links-btn']");
+		Thread.sleep(2000);
+		click("//a[@has-permission='Jobs,deleteaccess']");
+		Thread.sleep(5000);
+		type("//input[@id='confirm_delete_input']", H);
+		Thread.sleep(5000);
+		click("//a[@id='delete-button']");
+		
+	}
 
 }
 

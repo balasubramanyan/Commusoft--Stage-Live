@@ -46,7 +46,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Apr 6, 2022 05:47:04 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Apr 7, 2022 09:18:10 AM</span>
 				</a>
 			</li>
 			<li>
@@ -72,6 +72,8 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -122,10 +124,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -137,10 +139,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='16.667%'><span class='strong'>1</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>3</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>2</span> others
 				</div>
 			</div>
 		</div>
@@ -155,17 +157,17 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Smoke Test</span>
-						<span class='test-time'>Apr 6, 2022 05:47:04 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Apr 7, 2022 09:18:10 AM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 6, 2022 05:47:04 PM</span>
-	<span class='label end-time'>Apr 6, 2022 05:48:51 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 1m 47s+60ms</span>
+	<span class='label start-time'>Apr 7, 2022 09:18:10 AM</span>
+	<span class='label end-time'>Apr 7, 2022 09:20:00 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 50s+1ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -179,23 +181,33 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>5:47:55 PM</td>
+					<td class='timestamp'>9:18:45 AM</td>
 					<td class='step-details'>Method Been Executed Sucessfully:-add_invoice</td>
 				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>5:48:18 PM</td>
-					<td class='step-details'>Method Been Executed Sucessfully:-edit_invoice</td>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>9:19:07 AM</td>
+					<td class='step-details'>Method Been Failed:-edit_invoice</td>
 				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>5:48:22 PM</td>
-					<td class='step-details'>Method Been Executed Sucessfully:-delete_invoice</td>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>9:19:07 AM</td>
+					<td class='step-details'>Test Failed :- edit_invoice<img data-featherlight='C:\Users\azaru\OneDrive\Desktop\Automation\Commusoft--Stage-Live\Commusoft-Stage2&Live\.\ScreenShot\04\07_2022_09_19_07.png' width='10%' src='C:\Users\azaru\OneDrive\Desktop\Automation\Commusoft--Stage-Live\Commusoft-Stage2&Live\.\ScreenShot\04\07_2022_09_19_07.png' data-src='C:\Users\azaru\OneDrive\Desktop\Automation\Commusoft--Stage-Live\Commusoft-Stage2&Live\.\ScreenShot\04\07_2022_09_19_07.png'></td>
 				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>5:48:51 PM</td>
-					<td class='step-details'>Method Been Executed Sucessfully:-adding_additional_invoice_nobreakdown</td>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>9:19:48 AM</td>
+					<td class='step-details'>Method Been Failed:-delete_invoice</td>
+				</tr>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>9:20:00 AM</td>
+					<td class='step-details'>Method been Skiped</td>
+				</tr>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>9:20:00 AM</td>
+					<td class='step-details'>Method been Skiped</td>
 				</tr>
 			</tbody>
 		</table>
@@ -243,25 +255,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>6</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 6, 2022 05:47:04 PM</div>
+					<div class='panel-lead'>Apr 7, 2022 09:18:10 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 6, 2022 05:48:55 PM</div>
+			 		<div class='panel-lead'>Apr 7, 2022 09:20:01 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 1m 50s+730ms</div>
+					<div class='panel-lead'>0h 1m 51s+428ms</div>
 				</div>
 			</div>
 		</div>
@@ -274,22 +286,22 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				
-				passChild: 4,
-				failChild: 0,
+				passChild: 1,
+				failChild: 3,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
-				skipChild: 0,
+				skipChild: 2,
 				infoChild: 0,
-				exceptionsChild: 0,
+				exceptionsChild: 5,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="lable.Invoice_module">
+        <methods>
+          <include name="initial"/>
+          <include name="teardown"/>
+          <include name="tearDown"/>
+          <include name="adding_additional_invoice_breakdownbycategory"/>
+          <include name="setup"/>
+          <include name="delete_invoice"/>
+          <include name="edit_invoice"/>
+          <include name="adding_additional_invoice_nobreakdown"/>
+        </methods>
+      </class> <!-- lable.Invoice_module -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

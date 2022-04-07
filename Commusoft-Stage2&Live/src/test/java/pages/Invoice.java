@@ -127,6 +127,15 @@ public class Invoice extends Wrapper {
 		Thread.sleep(1000);
 		type("//textarea[@class='handsontableInput']", a);
 	}
+	public void unitprice_FullBreakdown_ByCategory_Parts1(String a) throws InterruptedException
+	{
+		dclick("(//td[@class='overflow_handsontable'])[2]");
+		Thread.sleep(1000);
+		clear("(//textarea[@class=\"handsontableInput\"])[2]");
+		Thread.sleep(1000);
+		type("(//textarea[@class='handsontableInput'])[2]",a);
+		
+	}
 	
 	public void invoice_description()
 	{
@@ -195,6 +204,11 @@ public class Invoice extends Wrapper {
 	}
 	public void save_invoice()
 	{
+		click("(//button[@type='submit'])[1]");
+	}
+	public void save_invoice1() throws InterruptedException
+	{
+		Thread.sleep(2000);
 		click("(//button[@type='submit'])[1]");
 	}
 	public void delete_inv()

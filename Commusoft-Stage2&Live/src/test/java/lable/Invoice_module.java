@@ -127,6 +127,22 @@ String jobpage;
 	    adding_invoice.unitprice("1000");
 	    adding_invoice.save_invoice();	    
 	}
-	
-	
+	@Test(priority=6)
+	public void adding_additional_invoice_Fullbreakdown() throws InterruptedException
+	{
+		driver.get(jobpage);
+		Invoice adding_invoice =new Invoice(driver);
+		adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Additional_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_notes1("Fullbreakdown additional invoice");
+	    //adding_invoice.customerreference("breakdown by category");
+	    adding_invoice.invoice_Category();
+	    adding_invoice.invoice_UserGroup();
+	    adding_invoice.Invoice_Breakdown_Full_breakdown();
+	    adding_invoice.Full_Breakdown_des("Test1");
+	    adding_invoice.unitprice("1001.89");
+	    adding_invoice.save_invoice();
+	}	
 }

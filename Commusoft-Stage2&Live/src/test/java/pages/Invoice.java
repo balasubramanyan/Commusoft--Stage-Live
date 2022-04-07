@@ -20,6 +20,11 @@ public class Invoice extends Wrapper {
 		click("//a[@has-permission='Customerinvoicing,writeaccess']");
 		Thread.sleep(1000);
 	}
+	public void editinvoice() throws InterruptedException
+	{
+		click("(//a[@class=\"ng-scope\"])[20]");
+		Thread.sleep(2000);
+	}
 	
 	public void Additional_invoice() throws InterruptedException
 	{
@@ -55,6 +60,7 @@ public class Invoice extends Wrapper {
 	}
 	public void BreakdownByCategory_des(String a) throws InterruptedException
 	{
+		Thread.sleep(2000);
 		dclick("(//td[contains(@class,'overflow_handsontable select_icon')])[1]");
 		type("//input[contains(@class,'select2-input select')]", a);
 		Thread.sleep(1000);
@@ -129,27 +135,74 @@ public class Invoice extends Wrapper {
 	
 	public void invoice_description(String a)
 	{
-		type("(//input[@class='validate-control-input ng-untouched ng-pristine ng-valid'])[1]", "Description");
+		type("(//input[@class='validate-control-input ng-untouched ng-pristine ng-valid'])[1]", a);
+	}
+	public void clear_invoice_description()
+	{
+		clear("(//input[@class='validate-control-input ng-untouched ng-pristine ng-valid'])[1]");
 	}
 	
+	public void edit_invoice_description(String a) throws InterruptedException
+	{
+		type("//input[@class='validate-control-input ng-pristine ng-valid ng-touched']",a);
+		Thread.sleep(4000);
+	}
+	public void invoice_notes()
+	{
+		click("//a[text()='Copy from job notes']");
+	}
+	public void invoice_notes1(String a)
+	{
+		type("#note",a);
+	}
+	
+	public void customerreference(String a) throws InterruptedException
+	{
+		clear("//input[@class='input-medium ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(4000);
+        type("//input[@class='input-medium ng-valid ng-dirty ng-touched']",a);
+        Thread.sleep(3000);
+		//type("//input[@class='input-medium ng-valid ng-touched ng-dirty']","azarudeen");
+	}
 	public void invoice_UserGroup()
 	{
 		selectdropdownvalue("//select[@formcontrolname='userGroupId']", "1");
+	}
+	public void editinvoice_UserGroup()
+	{
+		selectdropdownvalue("//select[@formcontrolname='userGroupId']", "2");
 	}
 	
 	public void invoice_Category()
 	{
 		selectdropdownvalue("//select[@formcontrolname='invoiceCategoryId']", "1");
 	}
+	public void editinvoice_Category()
+	{
+		selectdropdownvalue("//select[@formcontrolname='invoiceCategoryId']", "2");
+	}
 	
 	public void sub_total(String a)
 	{
 		type("(//input[@class='validate-control-input ng-untouched ng-pristine ng-valid'])[2]", a);
 	}
-	
+	public void Confirm_box() throws InterruptedException
+	{
+		
+		//click("//button[text()='Ok']");
+		Thread.sleep(4000);
+		click("(//button[@type='submit'])[3]");
+	}
 	public void save_invoice()
 	{
 		click("(//button[@type='submit'])[1]");
+	}
+	public void delete_inv()
+	{
+		click("//a[@class='btn dropdown-toggle btn-small quick-links-btn']");
+		click("//a[text()='Delete']");
+		type("#confirm_delete_input","delete");
+		click("#delete-button");	
 	}
 	public void invoice_AddnewPayment()
 	{

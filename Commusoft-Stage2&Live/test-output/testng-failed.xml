@@ -3,18 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcase.Smoketest">
+      <class name="lable.Invoice_module">
         <methods>
           <include name="initial"/>
-          <include name="Addjob_NoRules_DiaryEvent"/>
-          <include name="changesinvoicetype"/>
-          <include name="Estimate_Accepted_In_Portal_With_Payment"/>
-          <include name="Estimate_Accepted_In_Portal_Without_Payment"/>
           <include name="teardown"/>
           <include name="tearDown"/>
+          <include name="adding_additional_invoice_breakdownbycategory"/>
           <include name="setup"/>
+          <include name="delete_invoice"/>
+          <include name="edit_invoice"/>
+          <include name="adding_additional_invoice_nobreakdown"/>
         </methods>
-      </class> <!-- testcase.Smoketest -->
+      </class> <!-- lable.Invoice_module -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

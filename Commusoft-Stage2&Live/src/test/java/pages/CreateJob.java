@@ -398,6 +398,61 @@ public class CreateJob extends Wrapper {
 		click("//option[text()= 'Aravind Category']");
 		
 	}
+	public void JobDescriptionFOC(String a, String b, String c) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("//span[text()='-- Please choose --']"); 
+		// Des select
+		Thread.sleep(2000);
+		click("(//div[@class='select2-result-label'])[7]"); 
+		// Skill
+		Thread.sleep(5000);
+		click("(//input[@class=\"select2-input select2-default\"])[1]"); 
+		Thread.sleep(5000);
+		click("//option[text()='Test QA']");
+		// Job note
+		Thread.sleep(5000);
+		type("//textarea[@name='engineernotes']", a);    
+		//Quoted amount
+		Thread.sleep(5000);
+		type("//input[@formcontrolname='quotedamount']", b); 
+		//Customer reference
+		Thread.sleep(5000);
+		type("//input[@formcontrolname=\"ponumber\"]", c);
+		//Expected completion date
+		Thread.sleep(5000);
+		click("//span[@class=\"add-on date-picker-edit\"]");
+		Thread.sleep(5000);
+		click("(//td [@role=\"gridcell\"])[25]");
+		Thread.sleep(5000);
+		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(5000);
+		click("//option[text()= '07']");
+		Thread.sleep(5000);
+		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(5000);
+		click("//option[text()= '15']");
+		Thread.sleep(5000);
+		click("//select[@class='meridian ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(5000);
+		click("//option[text()= 'AM']");
+		//Priority
+		Thread.sleep(5000);
+		click("//select[@formcontrolname='priority']");
+		Thread.sleep(5000);
+		click("//option[text()=\"Not Important\"]");
+		//User group
+		Thread.sleep(5000);
+		click("//select[@formcontrolname='usergroupsid']");
+		Thread.sleep(5000);
+		click("//option[text()= 'Aravind Group']");
+		//Invoice Category
+		Thread.sleep(5000);
+		click("//select[@formcontrolname='invoicecategoryid']");
+		Thread.sleep(5000);
+		click("//option[text()= 'Aravind Category']");
+		
+	}
 	public void createjob1() throws InterruptedException
 	{
 		Thread.sleep(2000);
@@ -486,6 +541,23 @@ public class CreateJob extends Wrapper {
 		click("//a[@id='delete-button']");
 		
 	}
-
+	public void JobFOC(String I) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("//a[@class='btn dropdown-toggle btn-small quick-links-btn']");
+		Thread.sleep(2000);
+		click("//a[@has-permission='Completejobasfreeofcharge,writeaccess']");
+		Thread.sleep(2000);
+		//Reason
+		click("//select[@id='freeofchargeandabortjob_reason']");
+		click("//option[@value='2']");
+		Thread.sleep(2000);
+		//More details
+		click("//textarea[@id='freeofchargeandabortjob_moredetails']");
+		type("//textarea[@id='freeofchargeandabortjob_moredetails']", I);
+		Thread.sleep(2000);
+		click("//button[@class='btn btn-primary loading_btn save_btn']");
+		
+	}
 }
 

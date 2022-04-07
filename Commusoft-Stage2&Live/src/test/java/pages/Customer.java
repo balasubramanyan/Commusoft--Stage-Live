@@ -1,5 +1,8 @@
 package pages;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.security.Timestamp;
 import java.util.HashMap;
 import java.util.Random;
@@ -209,6 +212,148 @@ public class Customer extends Wrapper {
 		Customer_town();
 		Customer_Save();
 		Thread.sleep(25000);
+
+	}
+	public void Add_WA() throws InterruptedException, AWTException
+    {
+        //add WA
+        click("//span[@class=\"ng-scope ng-binding\" and contains(text(),'Work address')]");
+        Thread.sleep(5000);
+        click("//a[@id=\"addNewBranch\"]");
+        Thread.sleep(4000);
+        click("(//span[@class=\"select2-chosen\"])[1]");
+        Thread.sleep(2000);
+        type("//input[@class=\"select2-input select2-focused\"]", "Landlord");
+        Thread.sleep(2000);
+        if(driver.findElement(By.xpath("//div[@class=\"select2-result-label\" and contains(text(),'CompanyName')]")).isDisplayed())
+        {
+            Thread.sleep(3000);
+            click("//div[@class=\"select2-result-label\" and contains(text(),'CompanyName')]");
+        }else 
+        {
+            Thread.sleep(5000);
+            //start creating the landlord
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_ESCAPE);
+            Thread.sleep(2000);
+            click("//a[@class=\"add-on below-input\"]");
+            Thread.sleep(7000);
+            selectdropdown("//select[@id=\"landlord_settingsTitlesid\"]", "Mr");
+            type("//input[@id=\"landlord_name\"]", "Landlord");
+            type("//input[@id=\"landlord_surname\"]", "Surname");
+            type("//input[@id=\"landlord_companyname\"]", "CompanyName");
+            type("//input[@id=\"landlord_postcode\"]", "600032");
+            type("//input[@id=\"landlord_addressline1\"]", "Add1");
+            type("//input[@id=\"landlord_addressline2\"]", "Add2");
+            type("//input[@id=\"landlord_addressline3\"]", "Add3");
+            type("//input[@id=\"landlord_town\"]", "Town");
+            Thread.sleep(3000);
+            click("(//span[@class=\"select2-chosen\"])[4]");
+            Thread.sleep(3000);
+            type("//input[@class=\"select2-input select2-focused\"]", "Bristol");
+            Thread.sleep(2000);
+            click("//span[@class=\"select2-match\" and contains(text(),'Bristol')]");
+            Thread.sleep(4000);
+            click("//span[@ng-hide=\"saving\" and contains(text(),'Save')]");
+            //adding landlord completed
+        }
+        Thread.sleep(3000);
+        selectdropdown("//select[@id=\"workaddress_contacts_settingsTitlesid\"]", "Mr");
+        Thread.sleep(2000);
+        type("//input[@id=\"workaddress_contacts_name\"]", "WA");
+        type("//input[@id=\"workaddress_contacts_surname\"]", "Surname");
+        type("//input[@id=\"workaddress_contacts_companyname\"]", "Company");
+        type("//input[@id=\"workaddress_contacts_contactstelephone_1_telephonenumber\"]", "111111");
+        type("//input[@id=\"workaddress_contacts_contactstelephone_0_telephonenumber\"]", "222222");
+        type("//input[@id=\"workaddress_contacts_contactsemail_emailaddress\"]", "email@gmai.so");
+        type("//input[@id=\"workaddress_addressline1\"]", "Add1");
+        type("//input[@id=\"workaddress_addressline2\"]", "Add2");
+        type("//input[@id=\"workaddress_addressline3\"]", "Add3");
+        type("//input[@id=\"workaddress_town\"]", "Town");
+        Thread.sleep(2000);
+        click("(//span[@class=\"select2-chosen\"])[2]");
+        Thread.sleep(7000);
+        type("//input[@class=\"select2-input select2-focused\"]", "Antrim");
+        Thread.sleep(4000);
+        click("//span[@class=\"select2-match\" and contains(text(),'Antrim')]");
+        type("//input[@id=\"workaddress_uprnNumber\"]", "600032");
+        Thread.sleep(4000);
+        click("//span[@ng-hide=\"saving\" and contains(text(),'Add Work address')]");
+        Thread.sleep(7000);
+    }
+	public void Edit_WA() throws InterruptedException
+	{
+		 //started editing the WA
+        Thread.sleep(4000);
+        click("//span[@class=\"ng-scope\" and contains(text(),'Edit work address')]");
+        Thread.sleep(4000);
+        
+        //adding landlord
+        click("//a[@class=\"add-on below-input ng-scope\"]");
+        Thread.sleep(7000);
+        selectdropdown("//select[@id=\"landlord_settingsTitlesid\"]", "Mr");
+        type("//input[@id=\"landlord_name\"]", "Edited");
+        type("//input[@id=\"landlord_surname\"]", "Surname");
+        type("//input[@id=\"landlord_companyname\"]", "CompanyName");
+        type("//input[@id=\"landlord_postcode\"]", "600032");
+        type("//input[@id=\"landlord_addressline1\"]", "Add1");
+        type("//input[@id=\"landlord_addressline2\"]", "Add2");
+        type("//input[@id=\"landlord_addressline3\"]", "Add3");
+        type("//input[@id=\"landlord_town\"]", "Town");
+        Thread.sleep(3000);
+        click("(//span[@class=\"select2-chosen\"])[6]");
+        Thread.sleep(5000);
+        type("//input[@class=\"select2-input select2-focused\"]", "Bristol");
+        Thread.sleep(2000);
+        click("//span[@class=\"select2-match\" and contains(text(),'Bristol')]");
+        Thread.sleep(4000);
+        click("//button[@type=\"submit\"]");
+        //adding landlord completed
+        
+        Thread.sleep(3000);
+        clear("//input[@name=\"customerDetails.companyname\"]");
+        type("//input[@name=\"customerDetails.companyname\"]","Edited Company");
+        clear("//input[@name=\"customerLandlineNumber\"]");
+        type("//input[@name=\"customerLandlineNumber\"]","10101010");
+        clear("//input[@name=\"customerMobileNumber\"]");
+        type("//input[@name=\"customerMobileNumber\"]","20202020");
+        clear("//input[@name=\"customerEmail\"]");
+        type("//input[@name=\"customerEmail\"]", "edited@gmail.coj");
+        clear("//input[@name=\"addressline1\"]");
+        type("//input[@name=\"addressline1\"]", "edited@gmail.coj");
+        clear("//input[@name=\"addressline2\"]");
+        type("//input[@name=\"addressline2\"]", "edited@gmail.coj");
+        clear("//input[@name=\"addressline3\"]");
+        type("//input[@name=\"addressline3\"]", "edited@gmail.coj");
+        clear("//input[@name=\"town\"]");
+        type("//input[@name=\"town\"]", "edited@gmail.coj");
+        
+        Thread.sleep(2000);
+        click("(//span[@class=\"select2-chosen\"])[2]");
+        Thread.sleep(7000);
+        type("//input[@class=\"select2-input select2-focused\"]", "Cumbria");
+        Thread.sleep(4000);
+        click("//span[@class=\"select2-match\" and contains(text(),'Cumbria')]");
+        Thread.sleep(4000);
+        
+        clear("(//input[@name=\"postcode\"])[3]");
+        type("(//input[@name=\"postcode\"])[3]", "11111");
+        Thread.sleep(4000);
+        
+        click("//span[@ng-hide=\"updating\" and contains(text(),'Save')]");
+
+	}
+	public void Delete_WA() throws InterruptedException
+	{
+		 //delete WA
+        Thread.sleep(4000);
+        click("//span[@class=\"ng-scope\" and contains(text(),'Quick links')]");
+        Thread.sleep(3000);
+        click("//a[@class=\"ng-scope\" and contains(text(),'Delete')]");
+        Thread.sleep(2000);
+        type("//input[@id=\"confirm_delete_input\"]", "DELETE");
+        Thread.sleep(7000);
+        click("//a[@id=\"delete-button\"]");
 
 	}
 	public void Edit_Customers() throws InterruptedException

@@ -12,8 +12,8 @@ import pages.LoginPage;
 public class Invoice_module extends Baseclass
 {
 String invoicepage;
-String editpage="https://app.commusoft.co.uk/customers/customer/1635/jobs/1669/invoices/537/view";
-String jobpage;
+String editpage; //="https://app.commusoft.co.uk/customers/customer/1635/jobs/1669/invoices/537/view";
+String jobpage; //="https://app.commusoft.co.uk/customers/customer_list/1726/jobs/1733/details/view";
 
 	@Test(priority = 1)
 	public void add_invoice() throws InterruptedException
@@ -144,5 +144,26 @@ String jobpage;
 	    adding_invoice.Full_Breakdown_des("Test1");
 	    adding_invoice.unitprice("1001.89");
 	    adding_invoice.save_invoice();
+	    
 	}	
-}
+	@Test(priority=7)
+	public void adding_additional_invoice_Fullbreakdownbycategory() throws InterruptedException
+	{
+		driver.get(jobpage);
+		Invoice adding_invoice =new Invoice(driver);
+		adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Additional_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_notes1("Fullbreakdownbycategory additional invoice");
+	    //adding_invoice.customerreference("breakdown by category");
+	    adding_invoice.invoice_Category();
+	    adding_invoice.invoice_UserGroup();
+	    adding_invoice.Invoice_Breakdown_Full_breakdown_by_category();
+	    adding_invoice.Full_Breakdown_ByCategory_Labour_Description("Azarudeen");
+	    adding_invoice.unitprice_FullBreakdown_ByCategory_Labour("1111");
+	    adding_invoice.Full_Breakdown_ByCategory_Parts_Description("parts test");
+	    adding_invoice.unitprice_FullBreakdown_ByCategory_Parts1("789.05");
+	    adding_invoice.save_invoice();
+    }
+  }

@@ -151,11 +151,18 @@ public class Invoice extends Wrapper {
 	{
 		click("//a[text()='Copy from job notes']");
 	}
-	public void customerreference() throws InterruptedException
+	public void invoice_notes1(String a)
 	{
-		clear("//input[@class='input-medium ng-pristine ng-valid ng-touched']");
+		type("#note",a);
+	}
+	
+	public void customerreference(String a) throws InterruptedException
+	{
+		clear("//input[@class='input-medium ng-untouched ng-pristine ng-valid']");
 		Thread.sleep(4000);
-		type("//input[@class='input-medium ng-valid ng-touched ng-dirty']","azarudeen");
+        type("//input[@class='input-medium ng-valid ng-dirty ng-touched']",a);
+        Thread.sleep(3000);
+		//type("//input[@class='input-medium ng-valid ng-touched ng-dirty']","azarudeen");
 	}
 	public void invoice_UserGroup()
 	{

@@ -1,5 +1,7 @@
 package lable;
 
+import java.awt.AWTException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
@@ -48,5 +50,16 @@ public class Customer_Module extends Baseclass{
 		customer.Edit_Branch();
 		customer.Delete_Branch();
 	}
+	@Test(priority=4)
+    public void Add_Edit_Delete_WA() throws InterruptedException, AWTException
+    {
+        driver.get(homepage);
+        Thread.sleep(10000);
+        Customer customer = new Customer(driver);
+        customer.Add_Customer();
+        customer.Add_WA();
+        customer.Edit_WA(); 
+        customer.Delete_WA();        
+    }
 
 }

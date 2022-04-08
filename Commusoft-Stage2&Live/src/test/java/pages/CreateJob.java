@@ -398,7 +398,7 @@ public class CreateJob extends Wrapper {
 		click("//option[text()= 'Aravind Category']");
 		
 	}
-	public void JobDescriptionFOC(String a, String b, String c) throws InterruptedException
+	public void JobDescription2(String a, String b, String c) throws InterruptedException
 	{
 		Thread.sleep(2000);
 		click("//span[text()='-- Please choose --']"); 
@@ -557,7 +557,22 @@ public class CreateJob extends Wrapper {
 		type("//textarea[@id='freeofchargeandabortjob_moredetails']", I);
 		Thread.sleep(2000);
 		click("//button[@class='btn btn-primary loading_btn save_btn']");
+		Thread.sleep(2000);
+		click("(//a[@class='ng-binding'])[2]");
+	}
+	public void Job_complete(String I) throws InterruptedException
+	{
+		
+		Thread.sleep(2000);
+		//Complete check box
+		click("//input[@formcontrolname='completed']");
+		Thread.sleep(2000);
+		click("(//span[@class='add-on date-picker-edit'])[2]");
+		Thread.sleep(2000);
+		click("(//td[@role='gridcell'])[20]");
 		
 	}
+	
+	
 }
 

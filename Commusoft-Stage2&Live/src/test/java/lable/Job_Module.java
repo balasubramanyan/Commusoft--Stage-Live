@@ -51,18 +51,33 @@ public class Job_Module extends Baseclass{
 	public void jobaddFOC() throws InterruptedException
 	{
 		CreateJob job = new CreateJob(driver);
-		//job.customer();
-		//job.customerview();
 		job.addjob1();
-		job.JobDescriptionFOC("Demo", "First", "Second");
+		job.JobDescription2("Demo", "First", "Second");
 		job.createjob1();
 		
 	}
 	@Test(priority = 5)
-	public void jobeditFOC() throws InterruptedException
+	public void jobFOC() throws InterruptedException
 	{
 		CreateJob job = new CreateJob(driver);
 		job.JobFOC("Automaction done for job");
+		
+	}
+	@Test(priority = 6)
+	public void jobaddcomplete() throws InterruptedException
+	{
+		CreateJob job = new CreateJob(driver);
+		job.addjob1();
+		job.JobDescription2("Demo", "First", "Second");
+		job.createjob1();
+	}
+	@Test(priority = 7)
+	public void jobcompelete() throws InterruptedException
+	{
+		CreateJob job = new CreateJob(driver);
+		job.edit_job();
+		job.complete_job();
+		job.Editsavejob();
 		
 	}
 	

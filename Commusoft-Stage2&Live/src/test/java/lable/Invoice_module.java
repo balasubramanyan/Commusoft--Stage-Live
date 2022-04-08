@@ -175,11 +175,69 @@ String jobpage; //="https://app.commusoft.co.uk/customers/customer_list/1726/job
 	    adding_invoice.addinvoice();
 	    adding_invoice.Interim_invoice();
 	    adding_invoice.invoice_description();
-	    adding_invoice.invoice_notes1("No breakdown additional invoice");
+	    adding_invoice.invoice_notes1("No breakdown interim invoice");
 	    //adding_invoice.customerreference("No breakdown");
 	    adding_invoice.invoice_Category();
 	    adding_invoice.invoice_UserGroup();
-	    adding_invoice.sub_total("800.96");
+	    adding_invoice.sub_total("80.96");
 	    adding_invoice.save_invoice();
 	}
+	@Test(priority=9)
+	public void adding_interiminvoice_breakdownbycategory() throws InterruptedException
+	{
+		driver.get(jobpage);
+		Invoice adding_invoice =new Invoice(driver);
+		adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Interim_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_notes1("Breakdownbycategory interim invoice");
+	    //adding_invoice.customerreference("breakdown by category");
+	    adding_invoice.invoice_Category();
+	    adding_invoice.invoice_UserGroup();
+	    adding_invoice.Invoice_Breakdown_Breakdown_by_category();
+	    adding_invoice.BreakdownByCategory_des("Labour");
+	    adding_invoice.unitprice("2006");
+	    adding_invoice.save_invoice();	    
+	}
+	@Test(priority=10)
+	public void adding_interiminvoice_Fullbreakdown() throws InterruptedException
+	{
+		driver.get(jobpage);
+		Invoice adding_invoice =new Invoice(driver);
+		adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Interim_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_notes1("Fullbreakdown interim invoice");
+	    //adding_invoice.customerreference("breakdown by category");
+	    adding_invoice.invoice_Category();
+	    adding_invoice.invoice_UserGroup();
+	    adding_invoice.Invoice_Breakdown_Full_breakdown();
+	    adding_invoice.Full_Breakdown_des("Test1");
+	    adding_invoice.unitprice("1091.89");
+	    adding_invoice.save_invoice();
+	    
+	}	
+	@Test(priority=11)
+	public void adding_interiminvoice_Fullbreakdownbycategory() throws InterruptedException
+	{
+		driver.get(jobpage);
+		Invoice adding_invoice =new Invoice(driver);
+		adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Interim_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_notes1("Fullbreakdownbycategory interim invoice");
+	    //adding_invoice.customerreference("breakdown by category");
+	    adding_invoice.invoice_Category();
+	    adding_invoice.invoice_UserGroup();
+	    adding_invoice.Invoice_Breakdown_Full_breakdown_by_category();
+	    adding_invoice.Full_Breakdown_ByCategory_Labour_Description("Azarudeen");
+	    adding_invoice.unitprice_FullBreakdown_ByCategory_Labour("1111");
+	    adding_invoice.Full_Breakdown_ByCategory_Parts_Description("parts test");
+	    adding_invoice.unitprice_FullBreakdown_ByCategory_Parts1("789.05");
+	    adding_invoice.save_invoice();
+    }
+	
   }

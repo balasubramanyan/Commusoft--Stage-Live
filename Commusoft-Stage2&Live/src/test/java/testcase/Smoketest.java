@@ -30,22 +30,13 @@ import utility.PageloadResponse;
 
 public class Smoketest extends Baseclass {
 
-	public String homepage;
+	//public String homepage;
 	public String jobURL;
 	public String WA;
 	public String Supplierhomepage;
 
 //manually edited
 
-	@Test(priority = 0)
-	public void login() throws InterruptedException
-	{
-		LoginPage loginpage = PageFactory.initElements(driver, LoginPage.class);
-		loginpage.login(sheet.sheetIN("Login",0, 1),sheet.sheetIN("Login",1, 1),sheet.sheetIN("Login", 2, 1));
-		Thread.sleep(15000);
-		homepage = driver.getCurrentUrl();
-		Thread.sleep(3000);
-	}
 	@Test(priority = 1)
 	public void Add_Customer() throws InterruptedException
 	{

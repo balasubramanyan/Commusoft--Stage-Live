@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.openqa.selenium.support.PageFactory;
@@ -82,9 +84,13 @@ public class Baseclass extends Wrapper {
 		
 		driver = Browsers.startapplication(driver, config.Browser(), config.URl());
 		//driver = Browsers.startapplication(driver, config.Browser(), config.URL2());
+		Date today = new Date();
+		SimpleDateFormat  DATE_FORMAT = new SimpleDateFormat("dd MMMM yyyy");
+       String date = DATE_FORMAT.format(today);
 		String SystemName=InetAddress.getLocalHost().getHostName();
-		Sysout("Commusoft Web-Automation Started in :   "+SystemName );
-		SlackCommusoft();
+		Sysout("Commusoft Web-Automation Started in :   "+SystemName +""+"Date:"+""+ date );
+		Systemout("Commusoft Web-Automation Started in :   "+SystemName +""+"Date:"+""+ date );
+//		SlackCommusoft();
 		
 		LoginPage loginpage = PageFactory.initElements(driver, LoginPage.class);
 		loginpage.login(sheet.sheetIN("Login",0, 1),sheet.sheetIN("Login",1, 1),sheet.sheetIN("Login", 2, 1));
@@ -97,12 +103,14 @@ public class Baseclass extends Wrapper {
 	@AfterMethod(alwaysRun = true)
 	public void teardown(ITestResult result) throws IOException
 	{
+		
 		if(result.getStatus()==ITestResult.SUCCESS)
 		{
 			logger.log(Status.PASS, "Method Been Executed Sucessfully:-" +result.getName());
 			System.out.println( "Method Been Executed Sucessfully:-" +result.getName());
 			Sysout("Method Been Executed Sucessfully:-" +result.getName());
-			SlackCommusoftstatus("Method Been Executed Sucessfully:-" +result.getName());
+			Systemout("Method Been Executed Sucessfully:-" +result.getName());
+//			SlackCommusoftstatus("Method Been Executed Sucessfully:-" +result.getName());
 		}else 
 			if(ITestResult.FAILURE==result.getStatus())
 		{
@@ -111,7 +119,8 @@ public class Baseclass extends Wrapper {
 				logger.fail("Test Failed :- " +result.getName(), MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(driver)).build());
 				System.out.println( "Method Been Failed:-" +result.getName());
 				Sysout("Method Been Failed:-" +result.getName());
-				SlackCommusoftstatus("Method Been Failed:-" +result.getName());
+				Systemout("Method Been Failed:-" +result.getName());
+//				SlackCommusoftstatus("Method Been Failed:-" +result.getName());
 			//	logger.log(Status.FAIL,logger.addScreenCaptureFromPath( capture(driver)) +"  Method Name:- " + result.getName());
 		}else
 		{
@@ -122,8 +131,12 @@ public class Baseclass extends Wrapper {
 	}
 	@AfterSuite
 	public void tearDown() throws IOException{
-		Sysout("Commusoft Web-Automation Completed in :   "+InetAddress.getLocalHost().getHostName());
-		SlackCommusoftdone(InetAddress.getLocalHost().getHostName());
+		Date today = new Date();
+		SimpleDateFormat  DATE_FORMAT = new SimpleDateFormat("dd MMMM yyyy");
+       String date = DATE_FORMAT.format(today);
+		Sysout("Commusoft Web-Automation Completed in :   "+InetAddress.getLocalHost().getHostName()+""+"Date:"+""+ date);
+		Systemout("Commusoft Web-Automation Completed in :   "+InetAddress.getLocalHost().getHostName()+""+"Date:"+""+ date);
+//		SlackCommusoftdone(InetAddress.getLocalHost().getHostName());
 		
 		report.flush();
 	   }

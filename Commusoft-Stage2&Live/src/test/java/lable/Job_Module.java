@@ -78,6 +78,7 @@ public class Job_Module extends Baseclass{
 		job.edit_job();
 		job.complete_job();
 		job.Editsavejob();
+		Thread.sleep(2000);
 		
 	}
 	

@@ -27,7 +27,7 @@ public void addcustomer() {
 
 public void addjob()
 {
-	click("//a[@id='newJob']");
+	click("//a[@id='newJob']"); //testing by bala
 	click("(//span[@class='select2-chosen'])[3]");
 	click("(//div[@class='select2-result-label'])[2]");
 	click("//button[@type='submit']");

@@ -77,8 +77,27 @@ public class Job_Module extends Baseclass{
 		CreateJob job = new CreateJob(driver);
 		job.edit_job();
 		job.complete_job();
-		job.Editsavejob();
-		
 	}
+	@Test(priority = 8)
+	public void Recalljob() throws InterruptedException
+	{
+		CreateJob job = new CreateJob(driver);
+		job.customer_breadcrum();
+		job.addjob1();
+		job.JobDescription2("Demo", "First", "Second");
+		job.createjob1();
+		job.Job_Recall("Demo", "First", "Second", "Ezhil");
+	}
+	@Test(priority = 9)
+	public void Aboutjob() throws InterruptedException
+	{
+		CreateJob job = new CreateJob(driver);
+		job.customer_breadcrum();
+		job.addjob1();
+		job.JobDescription2("Demo", "First", "Second");
+		job.createjob1();
+		job.Job_Abort("Demo");
+	}
+
 	
 }

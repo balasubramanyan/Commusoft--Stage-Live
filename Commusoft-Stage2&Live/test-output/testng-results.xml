@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-04-11T16:09:48 IST" name="Default suite" finished-at="2022-04-11T16:17:47 IST" duration-ms="478550">
+    <groups>
+    </groups>
+    <test started-at="2022-04-11T16:09:48 IST" name="Default test" finished-at="2022-04-11T16:17:47 IST" duration-ms="478550">
+      <class name="lable.Job_Module">
+        <test-method is-config="true" signature="initial()[pri:0, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:09:48 IST" name="initial" finished-at="2022-04-11T16:09:48 IST" duration-ms="545" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initial -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:09:48 IST" name="setup" finished-at="2022-04-11T16:10:03 IST" duration-ms="14785" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="AddCustomer()[pri:0, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:10:03 IST" name="AddCustomer" finished-at="2022-04-11T16:10:34 IST" duration-ms="30798" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddCustomer -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:10:34 IST" name="teardown" finished-at="2022-04-11T16:10:35 IST" duration-ms="1765" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AddCustomer status=SUCCESS method=Job_Module.AddCustomer()[pri:0, instance:lable.Job_Module@4efc180e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="jobadd()[pri:1, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:10:35 IST" name="jobadd" finished-at="2022-04-11T16:11:30 IST" duration-ms="54425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- jobadd -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:11:30 IST" name="teardown" finished-at="2022-04-11T16:11:32 IST" duration-ms="1773" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=jobadd status=SUCCESS method=Job_Module.jobadd()[pri:1, instance:lable.Job_Module@4efc180e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="jobedit()[pri:2, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:11:32 IST" name="jobedit" finished-at="2022-04-11T16:12:23 IST" duration-ms="51254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- jobedit -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:12:23 IST" name="teardown" finished-at="2022-04-11T16:12:25 IST" duration-ms="1746" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=jobedit status=SUCCESS method=Job_Module.jobedit()[pri:2, instance:lable.Job_Module@4efc180e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Jobdelete()[pri:3, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:12:25 IST" name="Jobdelete" finished-at="2022-04-11T16:12:33 IST" duration-ms="8487" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Jobdelete -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:12:33 IST" name="teardown" finished-at="2022-04-11T16:12:35 IST" duration-ms="2077" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Jobdelete status=SUCCESS method=Job_Module.Jobdelete()[pri:3, instance:lable.Job_Module@4efc180e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="jobaddFOC()[pri:4, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:12:35 IST" name="jobaddFOC" finished-at="2022-04-11T16:13:23 IST" duration-ms="47809" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- jobaddFOC -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:13:23 IST" name="teardown" finished-at="2022-04-11T16:13:25 IST" duration-ms="1929" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=jobaddFOC status=SUCCESS method=Job_Module.jobaddFOC()[pri:4, instance:lable.Job_Module@4efc180e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="jobFOC()[pri:5, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:13:25 IST" name="jobFOC" finished-at="2022-04-11T16:13:41 IST" duration-ms="15820" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- jobFOC -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:13:41 IST" name="teardown" finished-at="2022-04-11T16:13:42 IST" duration-ms="1704" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=jobFOC status=SUCCESS method=Job_Module.jobFOC()[pri:5, instance:lable.Job_Module@4efc180e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="jobaddcomplete()[pri:6, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:13:42 IST" name="jobaddcomplete" finished-at="2022-04-11T16:14:30 IST" duration-ms="47895" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- jobaddcomplete -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:14:30 IST" name="teardown" finished-at="2022-04-11T16:14:35 IST" duration-ms="4195" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=jobaddcomplete status=SUCCESS method=Job_Module.jobaddcomplete()[pri:6, instance:lable.Job_Module@4efc180e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="jobcompelete()[pri:7, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:14:35 IST" name="jobcompelete" finished-at="2022-04-11T16:14:48 IST" duration-ms="13281" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- jobcompelete -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:14:48 IST" name="teardown" finished-at="2022-04-11T16:14:49 IST" duration-ms="1567" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=jobcompelete status=SUCCESS method=Job_Module.jobcompelete()[pri:7, instance:lable.Job_Module@4efc180e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Recalljob()[pri:8, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:14:49 IST" name="Recalljob" finished-at="2022-04-11T16:16:33 IST" duration-ms="103999" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Recalljob -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:16:33 IST" name="teardown" finished-at="2022-04-11T16:16:37 IST" duration-ms="3262" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Recalljob status=SUCCESS method=Job_Module.Recalljob()[pri:8, instance:lable.Job_Module@4efc180e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Aboutjob()[pri:9, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:16:37 IST" name="Aboutjob" finished-at="2022-04-11T16:17:45 IST" duration-ms="68317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Aboutjob -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:17:45 IST" name="teardown" finished-at="2022-04-11T16:17:47 IST" duration-ms="1609" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Aboutjob status=SUCCESS method=Job_Module.Aboutjob()[pri:9, instance:lable.Job_Module@4efc180e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:lable.Job_Module@4efc180e]" started-at="2022-04-11T16:17:47 IST" name="tearDown" finished-at="2022-04-11T16:17:48 IST" duration-ms="1868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- lable.Job_Module -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

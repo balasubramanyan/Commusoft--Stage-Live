@@ -224,6 +224,19 @@ public class Invoice extends Wrapper {
         Thread.sleep(4000);
         click("(//button[@type='submit'])[3]");
     }
+    public void draft_invoice() 
+    {
+    	click("//a[@class='more-btn btn jobs-advanced']");
+    	click("(//input[@type='checkbox'])[1]");
+    }
+    public void convert_draftinvoice() throws InterruptedException
+    {
+    	Thread.sleep(4000);
+    	click("(//a[@class=\"ng-scope\"])[19]");
+    	Thread.sleep(4000);
+    	type("#confirm_delete_input","Save");
+    	click("#delete-button");
+    }
     public void save_invoice()
     {
         click("(//button[@type='submit'])[1]");

@@ -13,7 +13,7 @@ public class Changeinvoice_US extends Wrapper_US
 
 public void addcustomer() {
 	  
-	  click("#customertypecustomer");
+	  click("#customertypecustomer");//testing
 	  selectdropdown("#customertype_contacts_settingsTitlesid", "Mr");
 	  type("#customertype_contacts_name","Mohammed azarudeen");
 	  type("#customertype_contacts_surname", "N S");

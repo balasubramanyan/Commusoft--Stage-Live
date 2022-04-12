@@ -4,6 +4,8 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.security.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Random;
 
@@ -410,7 +412,11 @@ public class Customer extends Wrapper {
         Thread.sleep(5000);
         click("//span[@ng-click=\"show_date_picker = true\"]");
         Thread.sleep(4000);
-        click("//a[@class=\"daterange-day ng-binding\" and contains(text(),'12')]");
+//        SimpleDateFormat formatter = new SimpleDateFormat("dd");
+//    	Date date = new Date();
+//    	String CurrentDate = formatter.format(date);
+//        String NextDate = 1+formatter.format(date);
+//        click("//a[@class=\"daterange-day ng-binding\" and contains(text(),'"+NextDate+"')]");
         Thread.sleep(3000);
         click("//button[@id=\"saveEditServiceReminder\"]");
         Thread.sleep(4000);

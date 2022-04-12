@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="lable.Job_Module">
+      <class name="lable.Customer_Module">
         <methods>
+          <include name="Add_Edit_Delete_Reminder"/>
           <include name="initial"/>
-          <include name="Aboutjob"/>
           <include name="teardown"/>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="Recalljob"/>
         </methods>
-      </class> <!-- lable.Job_Module -->
+      </class> <!-- lable.Customer_Module -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

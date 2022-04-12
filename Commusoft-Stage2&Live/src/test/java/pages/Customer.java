@@ -387,6 +387,42 @@ public class Customer extends Wrapper {
 		click("#delete-button");
 		Thread.sleep(5000);
 	}
+	public void Add_Service_Reminder() throws InterruptedException
+	{
+		Thread.sleep(4000);
+        click("//span[@class=\"ng-scope\" and contains(text(),'Reminders & Notifications')]");
+        Thread.sleep(4000);
+        click("//a[@id=\"AddNewServiceReminder\"]");
+        Thread.sleep(7000);
+        click("//select[@id=\"servicereminder_contactid\"]");
+        Thread.sleep(4000);
+        click("#servicereminder_contactid");
+        Thread.sleep(3000);
+        selectdropdown("//select[@id=\"servicereminder_contactid\"]", "Mr Karnan Athisivam - Phone call, Email, Letter");
+        Thread.sleep(3000);
+        click("//button[@type=\"submit\"]");
+	}
+	public void Edit_Service_Reminder() throws InterruptedException
+	{
+		//edit
+        Thread.sleep(3000);
+        click("//a[@class=\"edit ng-scope\" and contains(text(),'Edit')]");
+        Thread.sleep(5000);
+        click("//span[@ng-click=\"show_date_picker = true\"]");
+        Thread.sleep(4000);
+        click("//a[@class=\"daterange-day ng-binding\" and contains(text(),'12')]");
+        Thread.sleep(3000);
+        click("//button[@id=\"saveEditServiceReminder\"]");
+        Thread.sleep(4000);
+	}
+	public void Delete_Service_Reminder() throws InterruptedException
+	{
+		//delete
+        click("//a[@class=\"delete ng-scope\"]");
+        Thread.sleep(4000);
+        type("//input[@id=\"confirm_delete_input\"]", "DELETE");
+        click("//a[@ng-show=\"deletebutton\"]");
+	}
 	public void Add_Primary_Contact() throws InterruptedException
 	{
 		Thread.sleep(4000);

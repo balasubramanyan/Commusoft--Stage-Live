@@ -429,6 +429,47 @@ public class Customer extends Wrapper {
         type("//input[@id=\"confirm_delete_input\"]", "DELETE");
         click("//a[@ng-show=\"deletebutton\"]");
 	}
+	public void Add_Reminder() throws InterruptedException 
+	{
+		Thread.sleep(4000);
+        click("//span[@class=\"ng-scope\" and contains(text(),'Reminders & Notifications')]");
+        Thread.sleep(4000);
+        //add reminder
+        Thread.sleep(3000);
+        click("//a[@id=\"AddNewReminder\"]");
+        Thread.sleep(2000);
+        type("//textarea[@id=\"reminder_remindernote\"]", "Adding Normal Reminder to the Customer using automation");
+        click("//input[@class=\"select2-input select2-default\"]");
+        type("//input[@class=\"select2-input select2-focused\"]", "Karna");
+        click("//div[@class=\"select2-result-label\" and contains(text(),'Karnan Athisivam')]");
+        click("//span[@ng-hide=\"saving\"and contains(text(),'Add reminder')]");
+        Thread.sleep(4000);
+	}
+	public void Edit_Reminder() throws InterruptedException
+	{
+		//edit
+        Thread.sleep(5000);
+        click("//a[@class=\"edit ng-scope\"and contains(text(),'Edit')]");
+        clear("//textarea[@class=\"customer-note-textarea ng-pristine ng-valid ng-valid-required\"]");
+        Thread.sleep(3000);
+        type("//textarea[@name=\"reminder[remindernote]\"]", "Updating Normal Reminder to the Customer using automation");
+        Thread.sleep(3000);
+        click("//input[@class=\"select2-input select2-default\"]");
+        type("//input[@class=\"select2-input select2-focused\"]", "Karikalan");
+        click("//div[@class=\"select2-result-label\" and contains(text(),'Karikalan Athisivam')]");
+        Thread.sleep(4000);
+        click("//button[@id=\"saveEditReminder\"]");
+	}
+	public void Delete_Reminder() throws InterruptedException
+	{
+		//delete
+        Thread.sleep(3000);
+        click("//a[@class=\"delete ng-scope\"]");
+        Thread.sleep(5000);
+        type("//input[@id=\"confirm_delete_input\"]", "DELETE");
+        Thread.sleep(3000);
+        click("//a[@id=\"delete-button\"]");
+	}
 	public void Add_Primary_Contact() throws InterruptedException
 	{
 		Thread.sleep(4000);

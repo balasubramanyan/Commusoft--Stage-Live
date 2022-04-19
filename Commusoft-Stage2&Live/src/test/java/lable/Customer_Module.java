@@ -62,7 +62,7 @@ public class Customer_Module extends Baseclass{
         customer.Delete_WA();        
     }
 	@Test(priority=5)
-    public void Add_Edit_Delete_Reminder() throws InterruptedException, AWTException
+    public void Add_Edit_Delete_Service_Reminder() throws InterruptedException, AWTException
     {
         driver.get(homepage);
         Thread.sleep(10000);
@@ -71,6 +71,17 @@ public class Customer_Module extends Baseclass{
         customer.Add_Service_Reminder();
         customer.Edit_Service_Reminder();
         customer.Delete_Service_Reminder();        
+    }
+	@Test(priority=6)
+    public void Add_Edit_Delete_Reminder() throws InterruptedException, AWTException
+    {
+        driver.get(homepage);
+        Thread.sleep(10000);
+        Customer customer = new Customer(driver);
+        customer.Add_Customer();
+        customer.Add_Reminder();
+        customer.Edit_Reminder();
+        customer.Delete_Reminder();
     }
 
 	

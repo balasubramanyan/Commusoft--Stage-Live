@@ -75,7 +75,7 @@ public class Diary extends Wrapper {
     //------------Customer--> Job--> Select diary check box
     public void Customer_job_Diary_Timing()
     {
-        click("(//td[@class='fc-widget-content'])[33]");
+        click("(//td[@class='fc-widget-content'])[42]");
         
     }
 //  public void Customer_job_Diary_Timing_Change() throws InterruptedException
@@ -111,8 +111,9 @@ public class Diary extends Wrapper {
 //      click("(//option[text()='AM']");
 //      
 //  }
-    public void Customer_job_Diary_Timing_savebutton()
+    public void Customer_job_Diary_Timing_savebutton() throws InterruptedException
     {
+    	Thread.sleep(2000);
         click("//button[@class='btn btn-primary']");
     }
     //-------------------

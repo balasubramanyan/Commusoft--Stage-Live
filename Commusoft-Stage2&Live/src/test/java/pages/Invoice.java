@@ -19,7 +19,7 @@ public class Invoice extends Wrapper {
     }
     public void editinvoice() throws InterruptedException
     {
-        click("(//a[@class=\"ng-scope\"])[20]");
+        click("(//a[@class='ng-scope'])[20]");
         Thread.sleep(2000);
     }
     
@@ -119,6 +119,15 @@ public class Invoice extends Wrapper {
         type("//input[contains(@class,'select2-input select')]", a);
         Thread.sleep(1000);
         typeenter("//input[contains(@class,'select2-input select')]");
+        Thread.sleep(1000);
+        click("(//td[contains(@class,'overflow_handsontable select_icon')])[1]");
+    }
+    public void Full_Breakdown_ByCategory_Labour_Description2(String a) throws InterruptedException
+    {
+        dclick("(//td[contains(@class,'overflow_handsontable select_icon')])[1]");
+        type("(//input[contains(@class,'select2-input')])[6]", a);
+        Thread.sleep(1000);
+        typeenter("(//input[contains(@class,'select2-input')])[6]");
         Thread.sleep(1000);
         click("(//td[contains(@class,'overflow_handsontable select_icon')])[1]");
     }
@@ -253,6 +262,50 @@ public class Invoice extends Wrapper {
         click("//a[text()='Delete']");
         type("#confirm_delete_input","delete");
         click("#delete-button");  
+    }
+    public void quick_links()
+    {
+    	click("#quickLinks");
+    }
+    public void invoiceaddresses()
+    {
+    	click("#invoiceAddresses");
+    }
+    public void addnewinvoiceaddress()
+    {
+    	click("#addNewInvoiceAddress");
+    }
+    public void searchinvoiceaddress(String a)
+    {
+    	type("#postcode", "yes");
+    	typeenter("#postcode");
+    }
+    public void invoiceaddress() throws InterruptedException
+    {
+    	selectdropdown("#invoiceaddress_contacts_settingsTitlesid","Mr");
+    	type("#invoiceaddress_contacts_name", "mohamed");
+    	type("#invoiceaddress_contacts_surname", "azar");
+    	type("#invoiceaddress_contacts_contactstelephone_1_telephonenumber", "1234567890");
+    	type("#invoiceaddress_contacts_contactstelephone_0_telephonenumber", "9190919109");
+    	type("#invoiceaddress_contacts_contactsemail_emailaddress", "azarudeen@commusoft.com");
+    	type("#invoiceaddress_addressline1", "41 prince avenue");
+    	type("#invoiceaddress_addressline2", "kk nagar");
+    	type("#invoiceaddress_addressline3", "Guindy");
+    	Thread.sleep(2000);
+    	click("#s2id_invoiceaddress_settingsstateprovinceid");
+    	click("(//div[@class='select2-result-label'])[2]");
+    	//selectdropdown("(//ul[@class='select2-results'])[2]","Bristol");
+    	//selectdropdown("#select2-drop","Bristol");
+    	//selectdropdown("(//span[@class='select2-arrow'])[1]","Bristol");
+    	type("#invoiceaddress_postcode", "640008");
+    	click("//span[text()='Save invoice address']");
+    	Thread.sleep(2000);
+    	click("(//a[@class='ng-binding'])[2]");
+    }
+    public void invoiceaddress2()
+    {
+    	click("#s2id_invoiceAddressId");
+    	click("(//div[@class='select2-result-label'])[2]");
     }
     public void invoice_AddnewPayment()
     {

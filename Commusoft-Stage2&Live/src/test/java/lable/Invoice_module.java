@@ -14,6 +14,8 @@ public class Invoice_module extends Baseclass
 String invoicepage;
 String editpage; //="https://app.commusoft.co.uk/customers/customer/1635/jobs/1669/invoices/537/view";
 String jobpage; //="https://app.commusoft.co.uk/customers/customer_list/1726/jobs/1733/details/view";
+String Prefinalinvoice;
+String customerpage;//="https://app.commusoft.co.uk/customers/customer/1922/view/property/view";
 
 	@Test(priority = 1)
 	public void add_invoice() throws InterruptedException
@@ -368,7 +370,8 @@ String jobpage; //="https://app.commusoft.co.uk/customers/customer_list/1726/job
 	    adding_invoice.unitprice_FullBreakdown_ByCategory_Labour("1111");
 	    adding_invoice.Full_Breakdown_ByCategory_Parts_Description("parts test");
 	    adding_invoice.unitprice_FullBreakdown_ByCategory_Parts1("789.05");
-	    adding_invoice.save_invoice();
+	    adding_invoice.save_invoice1();
+	    Prefinalinvoice=driver.getCurrentUrl();
     }
 	@Test(priority=16)
 	public void adding_finalinvoice_nobreakdown() throws InterruptedException
@@ -560,5 +563,59 @@ String jobpage; //="https://app.commusoft.co.uk/customers/customer_list/1726/job
 	    adding_invoice.save_invoice();
 	    adding_invoice.convert_draftinvoice();
 		}
-	
-  }
+	@Test(priority=21)
+	public void Prefinalinvoice_to_Finalinvoice() throws InterruptedException
+	{
+		driver.get(Prefinalinvoice);
+		Invoice adding_invoice =new Invoice(driver);
+		adding_invoice.editinvoice();
+		adding_invoice.Final_invoice();
+		adding_invoice.save_invoice();
+	}
+    @Test(priority=22)	
+    public void Externalinvoice_use_as_invoiceaddress() throws InterruptedException
+	{
+    	driver.get(homepage);
+		Customer invoice =new Customer (driver);
+		invoice.Customer_create();
+		invoice.Customer_title();
+		invoice.Customer_Name();
+		invoice.Customer_SurName();
+		invoice.Customer_Landline();
+	    invoice.Customer_Mobile();
+	    invoice.Customer_AddressLine1();
+	    invoice.Customer_AddressLine2();
+	    invoice.Customer_AddressLine3();
+	    invoice.Customer_town();
+	    invoice.Customer_Save();
+	    Thread.sleep(4000);
+	    customerpage=driver.getCurrentUrl();
+	    driver.get(customerpage);
+		Thread.sleep(4000);
+		Invoice adding_invoice =new Invoice(driver);
+		adding_invoice.quick_links();
+		adding_invoice.invoiceaddresses();
+		adding_invoice.addnewinvoiceaddress();
+		adding_invoice.searchinvoiceaddress("yes");
+		adding_invoice.addnewinvoiceaddress();
+		adding_invoice.invoiceaddress();
+		CreateJob job = new CreateJob(driver);
+		job.addjob();
+		job.JobDescription("PreFinal");
+		adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Final_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_notes1("Fullbreakdownbycategory final invoice");
+	    //adding_invoice.customerreference("breakdown by category");
+	    adding_invoice.invoiceaddress2();
+	    adding_invoice.invoice_Category();
+	    adding_invoice.invoice_UserGroup();
+	    adding_invoice.Invoice_Breakdown_Full_breakdown_by_category();
+	    adding_invoice.Full_Breakdown_ByCategory_Labour_Description("Azarudeen");
+	    adding_invoice.unitprice_FullBreakdown_ByCategory_Labour("1111");
+	    adding_invoice.Full_Breakdown_ByCategory_Parts_Description("parts test");
+	    adding_invoice.unitprice_FullBreakdown_ByCategory_Parts1("789.05");
+	    adding_invoice.save_invoice();
+	}
+	}

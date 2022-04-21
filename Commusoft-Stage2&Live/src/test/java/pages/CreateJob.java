@@ -25,7 +25,7 @@ public class CreateJob extends Wrapper {
 		selectdropdown("$job[priority]", "Important");
 		selectdropdownvalue("$job[usergroupsid]","1");
 		selectdropdownvalue("$job[invoicecategoryid]", "1");
-		click("//button[@type='submit']");
+		//	click("//button[@type='submit']");
 		Thread.sleep(3000);
 
 	}
@@ -654,7 +654,12 @@ public class CreateJob extends Wrapper {
 
 		Thread.sleep(2000);
 		click("//a[text()='Total number of customers:']");
+		Thread.sleep(2000);
 		click("(//a[text()='View'])[1]");
+		Thread.sleep(2000);
+		click("(//a[text()='View'])[4]");
+		Thread.sleep(2000);
+		//*[@id="ongoingwork"]/table/tbody/tr[2]/td[9]/a[2]
 	}
 
 
@@ -707,4 +712,71 @@ public class CreateJob extends Wrapper {
 		click("(//button[@type='submit'])[1]");
 
 	}
-}
+	public void link_job_recall() throws InterruptedException
+	{
+
+		Thread.sleep(2000);
+		click("//a[@class='btn dropdown-toggle btn-small quick-links-btn']");
+		Thread.sleep(2000);		
+		click("//a[text()='Link job as a recall to another job']");
+		Thread.sleep(2000);
+		click("(//a[@class='select2-choice'])[2]");
+		Thread.sleep(3000);
+		//click("(//input[@type='text'])[5]");
+		type("(//input[@type='text'])[5]", "test");
+		Thread.sleep(3000);
+		click("(//div[@class='select2-result-label'])[1]");
+		Thread.sleep(2000);
+		click("//button[text()='Confirm link']");
+		
+	}
+	public void Customer_addedjob_diray() throws InterruptedException
+	{
+
+		Thread.sleep(2000);
+		click("//a[@class='btn btn-small btn-primary']");
+			
+	}
+	public void Customer_Editjob_diray() throws InterruptedException
+	{
+
+		Thread.sleep(2000);
+		click("(//a[text()='Edit'])[2]");
+		Thread.sleep(2000);
+		click("//span[@class='add-on date-picker-edit']");
+		
+		Thread.sleep(2000);
+		click("(//a[@class='daterange-day ng-binding'])[23]");
+		Thread.sleep(2000);
+		click("(//select[@ng-change='updateHours(hours)'])[1]");
+		Thread.sleep(2000);
+		click("//option[text()= '07']");
+		Thread.sleep(2000);
+		click("(//select[@ng-change='updateMinutes()'])[1]");
+		Thread.sleep(2000);
+		click("//option[text()= '15']");
+		Thread.sleep(2000);
+		click("//select[@class='diary-time-meridian ng-pristine ng-valid']");
+		Thread.sleep(2000);
+		click("//option[text()= 'AM']");	
+		Thread.sleep(2000);
+		click("(//select[@ng-change='updateHours(hours)'])[1]");
+		Thread.sleep(2000);
+		click("//option[text()= '08']");
+		Thread.sleep(2000);
+		click("(//select[@ng-change='updateMinutes()'])[1]");
+		Thread.sleep(2000);
+		click("//option[text()= '15']");
+		Thread.sleep(2000);
+		click("//select[@class='diary-time-meridian ng-pristine ng-valid']");
+		Thread.sleep(2000);
+		click("//option[text()= 'AM']");	
+		Thread.sleep(2000);
+		click("(//button[text()='Save'])[1]");
+		Thread.sleep(2000);
+		click("(//button[text()='Save and close'])[1]");
+		
+		
+		
+	}
+}      

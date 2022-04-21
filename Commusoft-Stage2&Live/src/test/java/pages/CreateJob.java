@@ -25,7 +25,7 @@ public class CreateJob extends Wrapper {
 		selectdropdown("$job[priority]", "Important");
 		selectdropdownvalue("$job[usergroupsid]","1");
 		selectdropdownvalue("$job[invoicecategoryid]", "1");
-		//	click("//button[@type='submit']");
+		click("//button[@type='submit']");
 		Thread.sleep(3000);
 
 	}

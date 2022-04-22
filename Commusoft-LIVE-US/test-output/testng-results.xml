@@ -1,70 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="20" passed="16" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-01T17:09:59 IST" name="Default suite" finished-at="2022-04-01T17:10:55 IST" duration-ms="56110">
+  <suite started-at="2022-04-22T10:05:45 IST" name="Default suite" finished-at="2022-04-22T10:17:02 IST" duration-ms="676939">
     <groups>
     </groups>
-    <test started-at="2022-04-01T17:09:59 IST" name="Default test" finished-at="2022-04-01T17:10:55 IST" duration-ms="56110">
-      <class name="testcase_US.DiaryModule_US">
-        <test-method is-config="true" signature="initial()[pri:0, instance:testcase_US.DiaryModule_US@fa49800]" started-at="2022-04-01T17:09:58 IST" name="initial" finished-at="2022-04-01T17:09:59 IST" duration-ms="801" status="PASS">
+    <test started-at="2022-04-22T10:05:45 IST" name="Default test" finished-at="2022-04-22T10:17:02 IST" duration-ms="676939">
+      <class name="testcase_US.Smoketest_US">
+        <test-method is-config="true" signature="initial()[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:05:44 IST" name="initial" finished-at="2022-04-22T10:05:45 IST" duration-ms="744" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initial -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcase_US.DiaryModule_US@fa49800]" started-at="2022-04-01T17:09:59 IST" name="setup" finished-at="2022-04-01T17:10:41 IST" duration-ms="41262" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:05:45 IST" name="setup" finished-at="2022-04-22T10:06:23 IST" duration-ms="38405" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login()[pri:0, instance:testcase_US.DiaryModule_US@fa49800]" started-at="2022-04-01T17:10:41 IST" name="login" finished-at="2022-04-01T17:10:45 IST" duration-ms="4622" status="PASS">
+        <test-method signature="login()[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:06:23 IST" name="login" finished-at="2022-04-22T10:06:45 IST" duration-ms="21636" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.DiaryModule_US@fa49800]" started-at="2022-04-01T17:10:45 IST" name="teardown" finished-at="2022-04-01T17:10:46 IST" duration-ms="1268" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:06:45 IST" name="teardown" finished-at="2022-04-22T10:06:46 IST" duration-ms="1196" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login status=SUCCESS method=DiaryModule_US.login()[pri:0, instance:testcase_US.DiaryModule_US@fa49800] output={null}]]]>
+                <![CDATA[[TestResult name=login status=SUCCESS method=Smoketest_US.login()[pri:0, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="diaryutility()[pri:5, instance:testcase_US.DiaryModule_US@fa49800]" started-at="2022-04-01T17:10:46 IST" name="diaryutility" finished-at="2022-04-01T17:10:54 IST" duration-ms="7473" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+        <test-method signature="Supplier_Create()[pri:21, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:06:46 IST" name="Supplier_Create" finished-at="2022-04-22T10:06:58 IST" duration-ms="11612" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Supplier_Create -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:06:58 IST" name="teardown" finished-at="2022-04-22T10:06:59 IST" duration-ms="1235" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Supplier_Create status=SUCCESS method=Smoketest_US.Supplier_Create()[pri:21, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Supplier_PO()[pri:22, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:06:59 IST" name="Supplier_PO" finished-at="2022-04-22T10:07:09 IST" duration-ms="9745" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Supplier_PO -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:07:09 IST" name="teardown" finished-at="2022-04-22T10:07:10 IST" duration-ms="1180" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Supplier_PO status=SUCCESS method=Smoketest_US.Supplier_PO()[pri:22, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Supplier_Invoice()[pri:23, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:07:10 IST" name="Supplier_Invoice" finished-at="2022-04-22T10:08:18 IST" duration-ms="67573" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Supplier_Invoice -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:08:18 IST" name="teardown" finished-at="2022-04-22T10:08:19 IST" duration-ms="1652" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Supplier_Invoice status=SUCCESS method=Smoketest_US.Supplier_Invoice()[pri:23, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Customer_Createcontact()[pri:24, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:08:19 IST" name="Customer_Createcontact" finished-at="2022-04-22T10:08:19 IST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[element click intercepted: Element <span class="text ng-scope" translate="">...</span> is not clickable at point (1406, 642). Other element would receive the click: <div class="modal-backdrop fade in"></div>
-  (Session info: chrome=100.0.4896.60)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'AZARUDEEN-LENOV', ip: '192.168.100.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.60, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\azaru\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58584}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 767143f8f91ab73f4cc78b6156fa8abd]]>
+              <![CDATA[null value in entry: url=null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="text ng-scope" translate="">...</span> is not clickable at point (1406, 642). Other element would receive the click: <div class="modal-backdrop fade in"></div>
-  (Session info: chrome=100.0.4896.60)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'AZARUDEEN-LENOV', ip: '192.168.100.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.60, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\azaru\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58584}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 767143f8f91ab73f4cc78b6156fa8abd
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-at action_US.Wrapper_US.click(Wrapper_US.java:124)
-at pages_US.Diary_US.Diary_PrintSummarySheet(Diary_US.java:238)
-at testcase_US.DiaryModule_US.diaryutility(DiaryModule_US.java:93)
+              <![CDATA[java.lang.NullPointerException: null value in entry: url=null
+at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:32)
+at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:42)
+at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:72)
+at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:124)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:276)
+at testcase_US.Smoketest_US.Customer_Createcontact(Smoketest_US.java:488)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -95,26 +118,502 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- diaryutility -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.DiaryModule_US@fa49800]" started-at="2022-04-01T17:10:54 IST" name="teardown" finished-at="2022-04-01T17:10:55 IST" duration-ms="1444" status="PASS">
+        </test-method> <!-- Customer_Createcontact -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:08:19 IST" name="teardown" finished-at="2022-04-22T10:08:21 IST" duration-ms="1486" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=diaryutility status=FAILURE method=DiaryModule_US.diaryutility()[pri:5, instance:testcase_US.DiaryModule_US@fa49800] output={null}]]]>
+                <![CDATA[[TestResult name=Customer_Createcontact status=FAILURE method=Smoketest_US.Customer_Createcontact()[pri:24, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase_US.DiaryModule_US@fa49800]" started-at="2022-04-01T17:10:55 IST" name="tearDown" finished-at="2022-04-01T17:10:57 IST" duration-ms="1911" status="PASS">
+        <test-method signature="CustomerReports()[pri:25, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:08:21 IST" name="CustomerReports" finished-at="2022-04-22T10:08:51 IST" duration-ms="30224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CustomerReports -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:08:51 IST" name="teardown" finished-at="2022-04-22T10:08:53 IST" duration-ms="1628" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CustomerReports status=SUCCESS method=Smoketest_US.CustomerReports()[pri:25, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="ServiceRemindersReports()[pri:26, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:08:53 IST" name="ServiceRemindersReports" finished-at="2022-04-22T10:09:21 IST" duration-ms="28554" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ServiceRemindersReports -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:09:21 IST" name="teardown" finished-at="2022-04-22T10:09:23 IST" duration-ms="1527" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ServiceRemindersReports status=SUCCESS method=Smoketest_US.ServiceRemindersReports()[pri:26, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="SupplierReports()[pri:27, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:09:23 IST" name="SupplierReports" finished-at="2022-04-22T10:09:51 IST" duration-ms="28038" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SupplierReports -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:09:51 IST" name="teardown" finished-at="2022-04-22T10:09:52 IST" duration-ms="1173" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=SupplierReports status=SUCCESS method=Smoketest_US.SupplierReports()[pri:27, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="EstimateReport()[pri:28, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:09:52 IST" name="EstimateReport" finished-at="2022-04-22T10:10:28 IST" duration-ms="36280" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EstimateReport -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:10:28 IST" name="teardown" finished-at="2022-04-22T10:10:30 IST" duration-ms="1345" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=EstimateReport status=SUCCESS method=Smoketest_US.EstimateReport()[pri:28, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="JobReport()[pri:29, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:10:30 IST" name="JobReport" finished-at="2022-04-22T10:11:06 IST" duration-ms="36695" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- JobReport -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:11:06 IST" name="teardown" finished-at="2022-04-22T10:11:07 IST" duration-ms="1187" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=JobReport status=SUCCESS method=Smoketest_US.JobReport()[pri:29, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Work_address_Reports()[pri:30, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:11:07 IST" name="Work_address_Reports" finished-at="2022-04-22T10:11:41 IST" duration-ms="33252" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Work_address_Reports -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:11:41 IST" name="teardown" finished-at="2022-04-22T10:11:42 IST" duration-ms="1324" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Work_address_Reports status=SUCCESS method=Smoketest_US.Work_address_Reports()[pri:30, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="customersreportdownload_print()[pri:31, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:11:42 IST" name="customersreportdownload_print" finished-at="2022-04-22T10:12:08 IST" duration-ms="25861" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- customersreportdownload_print -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:12:08 IST" name="teardown" finished-at="2022-04-22T10:12:09 IST" duration-ms="1174" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=customersreportdownload_print status=SUCCESS method=Smoketest_US.customersreportdownload_print()[pri:31, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="jobreportdownload_print()[pri:32, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:12:09 IST" name="jobreportdownload_print" finished-at="2022-04-22T10:12:41 IST" duration-ms="31802" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- jobreportdownload_print -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:12:41 IST" name="teardown" finished-at="2022-04-22T10:12:42 IST" duration-ms="1221" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=jobreportdownload_print status=SUCCESS method=Smoketest_US.jobreportdownload_print()[pri:32, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="timesheetreport()[pri:33, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:12:42 IST" name="timesheetreport" finished-at="2022-04-22T10:13:12 IST" duration-ms="29917" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- timesheetreport -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:13:12 IST" name="teardown" finished-at="2022-04-22T10:13:14 IST" duration-ms="1493" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=timesheetreport status=SUCCESS method=Smoketest_US.timesheetreport()[pri:33, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="salesreport()[pri:34, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:13:14 IST" name="salesreport" finished-at="2022-04-22T10:13:43 IST" duration-ms="29891" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- salesreport -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:13:43 IST" name="teardown" finished-at="2022-04-22T10:13:45 IST" duration-ms="1191" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=salesreport status=SUCCESS method=Smoketest_US.salesreport()[pri:34, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="changesinvoicetype()[pri:35, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:13:45 IST" name="changesinvoicetype" finished-at="2022-04-22T10:13:45 IST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[null value in entry: url=null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: null value in entry: url=null
+at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:32)
+at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:42)
+at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:72)
+at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:124)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:276)
+at testcase_US.Smoketest_US.changesinvoicetype(Smoketest_US.java:670)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changesinvoicetype -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:13:45 IST" name="teardown" finished-at="2022-04-22T10:13:46 IST" duration-ms="1404" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=changesinvoicetype status=FAILURE method=Smoketest_US.changesinvoicetype()[pri:35, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="ser_remainder()[pri:36, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:13:46 IST" name="ser_remainder" finished-at="2022-04-22T10:13:59 IST" duration-ms="13024" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ser_remainder -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:13:59 IST" name="teardown" finished-at="2022-04-22T10:14:00 IST" duration-ms="1347" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ser_remainder status=SUCCESS method=Smoketest_US.ser_remainder()[pri:36, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="SolarSearch_pageresponse()[pri:37, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:14:00 IST" name="SolarSearch_pageresponse" finished-at="2022-04-22T10:14:08 IST" duration-ms="8044" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SolarSearch_pageresponse -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:14:08 IST" name="teardown" finished-at="2022-04-22T10:14:10 IST" duration-ms="1203" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=SolarSearch_pageresponse status=SUCCESS method=Smoketest_US.SolarSearch_pageresponse()[pri:37, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Estimate_Accepted_In_Portal_With_Payment()[pri:38, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:14:10 IST" name="Estimate_Accepted_In_Portal_With_Payment" finished-at="2022-04-22T10:16:50 IST" duration-ms="160563" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class="action-button confirm" and contains(text(),'Accept')]"}
+  (Session info: chrome=100.0.4896.127)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'AZARUDEEN-LENOV', ip: '192.168.100.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\azaru\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62397}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 93be490482788cde92c9563e3cc943bd
+*** Element info: {Using=xpath, value=//button[@class="action-button confirm" and contains(text(),'Accept')]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class="action-button confirm" and contains(text(),'Accept')]"}
+  (Session info: chrome=100.0.4896.127)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'AZARUDEEN-LENOV', ip: '192.168.100.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\azaru\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62397}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 93be490482788cde92c9563e3cc943bd
+*** Element info: {Using=xpath, value=//button[@class="action-button confirm" and contains(text(),'Accept')]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+at action_US.Wrapper_US.click(Wrapper_US.java:124)
+at pages_US.Estimate_US.Estimate_Portal_Accept(Estimate_US.java:140)
+at testcase_US.Smoketest_US.Estimate_Accepted_In_Portal_With_Payment(Smoketest_US.java:755)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Estimate_Accepted_In_Portal_With_Payment -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:16:50 IST" name="teardown" finished-at="2022-04-22T10:16:52 IST" duration-ms="1510" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Estimate_Accepted_In_Portal_With_Payment status=FAILURE method=Smoketest_US.Estimate_Accepted_In_Portal_With_Payment()[pri:38, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Estimate_Accepted_In_Portal_Without_Payment()[pri:39, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:16:52 IST" name="Estimate_Accepted_In_Portal_Without_Payment" finished-at="2022-04-22T10:17:02 IST" duration-ms="10221" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[no such window: window was already closed
+  (Session info: chrome=100.0.4896.127)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'AZARUDEEN-LENOV', ip: '192.168.100.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\azaru\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62397}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 93be490482788cde92c9563e3cc943bd
+*** Element info: {Using=id, value=customertypecustomer}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
+  (Session info: chrome=100.0.4896.127)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'AZARUDEEN-LENOV', ip: '192.168.100.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\azaru\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62397}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 93be490482788cde92c9563e3cc943bd
+*** Element info: {Using=id, value=customertypecustomer}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+at org.openqa.selenium.By$ById.findElement(By.java:188)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+at action_US.Wrapper_US.click(Wrapper_US.java:114)
+at pages_US.Customer_US.Customer_create(Customer_US.java:37)
+at testcase_US.Smoketest_US.Estimate_Accepted_In_Portal_Without_Payment(Smoketest_US.java:764)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Estimate_Accepted_In_Portal_Without_Payment -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:17:02 IST" name="teardown" finished-at="2022-04-22T10:17:02 IST" duration-ms="8" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Estimate_Accepted_In_Portal_Without_Payment status=FAILURE method=Smoketest_US.Estimate_Accepted_In_Portal_Without_Payment()[pri:39, instance:testcase_US.Smoketest_US@32ee6fee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[no such window: window was already closed
+  (Session info: chrome=100.0.4896.127)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'AZARUDEEN-LENOV', ip: '192.168.100.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\azaru\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62397}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 93be490482788cde92c9563e3cc943bd]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
+  (Session info: chrome=100.0.4896.127)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'AZARUDEEN-LENOV', ip: '192.168.100.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\azaru\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62397}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 93be490482788cde92c9563e3cc943bd
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:294)
+at utility.Screenshot.capture(Screenshot.java:22)
+at action_US.Baseclass_US.teardown(Baseclass_US.java:74)
+at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
+at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:671)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:655)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase_US.Smoketest_US@32ee6fee]" started-at="2022-04-22T10:17:02 IST" name="tearDown" finished-at="2022-04-22T10:17:04 IST" duration-ms="1771" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testcase_US.DiaryModule_US -->
+      </class> <!-- testcase_US.Smoketest_US -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

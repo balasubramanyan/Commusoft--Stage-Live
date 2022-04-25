@@ -70,7 +70,7 @@ public class Diary extends Wrapper {
     }
     public void Diary_Timing3()
     {
-        click("(//td[@class='fc-widget-content'])[34]");
+        click("(//td[@class='fc-widget-content'])[9]");
     }
     //------------Customer--> Job--> Select diary check box
     public void Customer_job_Diary_Timing()

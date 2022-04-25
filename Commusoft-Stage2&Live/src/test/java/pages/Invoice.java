@@ -307,6 +307,16 @@ public class Invoice extends Wrapper {
     	click("#s2id_invoiceAddressId");
     	click("(//div[@class='select2-result-label'])[2]");
     }
+    public void enable_invoice_address() throws InterruptedException
+    {
+    	click("//a[@class='btn dropdown-toggle btn-small quick-links-btn']");
+    	click("#invoiceAddresses");
+    	click("#enableWorkaddress");
+    	selectdropdown("#enableInvoiceAddress_enableworkaddress","Enabled");
+    	click("//button[@class='custom-btn-small btn btn-primary save_btn save-user-button loading_btn']");
+    	Thread.sleep(2000);
+    	click("(//a[@class='ng-binding'])[2]");
+    }
     public void invoice_AddnewPayment()
     {
         click("//a[@class='btn btn-small btn-primary action-btn']");

@@ -2,6 +2,7 @@ package pages;
 
 import java.util.Set;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
@@ -20,6 +21,66 @@ public class Download_excel_print_reports extends Wrapper{
 	public void print() throws InterruptedException
 	{
 		click("#printscreen");
+		Thread.sleep(4000);
+	}
+	public void customerprint1() throws InterruptedException
+	{
+		try 
+		  {
+			if (driver.findElement(By.xpath("//a[@id='printscreen']")).isDisplayed())
+			click("//a[@id='printscreen']");
+			  String oldwin=driver.getWindowHandle();
+				 Set<String> handles=driver.getWindowHandles();
+					
+					for (String newWin : handles) 
+					{
+						driver.switchTo().window(newWin);
+						
+					}
+					driver.switchTo().window(oldwin);
+		  }
+		  catch(Exception customerprint1 )
+		  {
+			  click("//span[@class='icon ss-print ng-scope']");
+			  Thread.sleep(100000);
+			  click("#drop3");
+		      Thread.sleep(4000);
+		      String Actualtitle = gettext("(//h5[@class='notification-title ng-scope ng-binding'])[1]");
+		      System.out.println(Actualtitle);
+		      Assert.assertEquals(Actualtitle, "Print PDF - NS Azar");
+		      Thread.sleep(4000);
+		  }
+	}
+	
+	public void customer_download2() throws InterruptedException
+		{
+			try
+			{
+				if(driver.findElement(By.xpath("//a[@id='downloadscreen']")).isDisplayed())
+				click("//a[@id='downloadscreen']");
+			}
+			catch (Exception customer_download2 )
+			{
+				click("//span[@class='icon ss-download ng-scope']");
+				Thread.sleep(100000);
+				click("#drop3");
+		    	Thread.sleep(4000);
+		    	String Actualtitle = gettext("(//h5[@class='notification-title ng-scope ng-binding'])[1]");
+		        System.out.println(Actualtitle);
+		        Assert.assertEquals(Actualtitle, "Download Excel - NS Azar");
+		        Thread.sleep(4000);
+			}
+		}
+			
+	
+	public void printsalesreport() throws InterruptedException
+	{
+		click("//span[@class='icon ss-print ng-scope']");
+		Thread.sleep(4000);
+	}
+	public void downloadexcelsalesreport() throws InterruptedException
+	{
+		click("//span[@class='icon ss-download ng-scope']");
 		Thread.sleep(4000);
 	}
 	public void closeprint()
@@ -99,14 +160,14 @@ public class Download_excel_print_reports extends Wrapper{
     {
     	String Actualtitle = gettext("(//h5[@class='notification-title ng-scope ng-binding'])[1]");
         System.out.println(Actualtitle);
-        Assert.assertEquals(Actualtitle, "Sales report (PDF) - NS Azar");
+        Assert.assertEquals(Actualtitle, "Print PDF - NS Azar");
         Thread.sleep(4000);
     }
     public void assertion_salesrepexcel() throws InterruptedException
     {
     	String Actualtitle = gettext("(//h5[@class='notification-title ng-scope ng-binding'])[1]");
         System.out.println(Actualtitle);
-        Assert.assertEquals(Actualtitle, "Sales report (Excel) - NS Azar");
+        Assert.assertEquals(Actualtitle, "Download Excel - NS Azar");
         Thread.sleep(4000);
     }
     

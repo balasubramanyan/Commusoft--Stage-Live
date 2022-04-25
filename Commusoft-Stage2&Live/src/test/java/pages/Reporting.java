@@ -35,7 +35,7 @@ public class Reporting extends Wrapper {
 	}
 	public void click_filter() throws InterruptedException 
 	{
-		click("//input[@class=\"filter-search-field ng-pristine ng-valid left-padding ui-autocomplete-input\"]");// click filter option
+		click("//input[@class='filter-search-field ng-pristine ng-valid left-padding ui-autocomplete-input']");// click filter option
 	}
 	public void click_dateoption() throws InterruptedException 
 	{

@@ -82,8 +82,8 @@ public class Baseclass extends Wrapper {
 	public void setup() throws IOException, InvalidTokenException, AgentConnectException, ObsoleteVersionException, InterruptedException
 	{
 		
-		driver = Browsers.startapplication(driver, config.Browser(), config.URl());
-		//driver = Browsers.startapplication(driver, config.Browser(), config.URL2());
+		//driver = Browsers.startapplication(driver, config.Browser(), config.URl());
+		driver = Browsers.startapplication(driver, config.Browser(), config.URL2());
 		Date today = new Date();
 		SimpleDateFormat  DATE_FORMAT = new SimpleDateFormat("dd MMMM yyyy");
        String date = DATE_FORMAT.format(today);

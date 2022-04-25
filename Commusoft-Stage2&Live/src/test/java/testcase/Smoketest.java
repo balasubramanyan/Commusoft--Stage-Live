@@ -485,7 +485,7 @@ public class Smoketest extends Baseclass {
 	@Test (priority=25)
 	public void CustomerReports() throws InterruptedException
 	{
-		//driver.get(homepage);
+		 //driver.get(homepage);
 				Reporting Report = new Reporting(driver); 
 				Report.Reporttab();
 				Report.Report_Sidemenu();
@@ -502,7 +502,7 @@ public class Smoketest extends Baseclass {
 	@Test (priority=26)
 	public void ServiceRemindersReports() throws InterruptedException
 	{
-		driver.get(homepage);
+		//driver.get(homepage);
 		//Service_Reminder = 1
 		Reporting Report = new Reporting(driver);
 		Report.Reporttab();
@@ -514,7 +514,7 @@ public class Smoketest extends Baseclass {
 	@Test (priority = 27)
 	public void SupplierReports() throws InterruptedException
 	{
-		driver.get(homepage);
+		//driver.get(homepage);
 		//Supplier Report = 1
 		Reporting Report = new Reporting(driver);
 		Report.Reporttab();
@@ -577,9 +577,17 @@ public class Smoketest extends Baseclass {
 	  customerreport.Customer_Report();
 	  customerreport.Customers_Report();
 	  Download_excel_print_reports customerprint =new Download_excel_print_reports(driver);
-	  customerprint.downloadexcel();
-	  customerprint.print();
-	  customerprint.closeprint();
+	  customerprint.customerprint1(); 
+	  //customerprint.downloadexcel();
+      //customerprint.print();
+	  //customerprint.closeprint();
+      //customerprint.salesreportprint();
+	  //customerprint.notifications();
+	  //customerprint.assertion_salesrepprint();
+	  customerprint.customer_download2();
+      //customerprint.salesreportexcel();
+  	  //customerprint.notifications();
+  	  //customerprint.assertion_salesrepexcel();
     }
     @Test(priority=32)
     public void jobreportdownload_print() throws InterruptedException
@@ -617,25 +625,26 @@ public class Smoketest extends Baseclass {
     	timesheetreportprintanddownload.closeprint();
     	timesheetreportprintanddownload.downloadexcel();
     }
-    @Test(priority=34)
-    public void salesreport() throws InterruptedException 
-    {
-    	Reporting salereport = new Reporting(driver);
-    	salereport.Reporttab();
-    	salereport.Report_Sidemenu();
-    	Download_excel_print_reports salesreportprintanddownload =new Download_excel_print_reports(driver);
-    	salesreportprintanddownload.clicksales();
-    	salesreportprintanddownload.clicksales2();
-    	salesreportprintanddownload.print();
-    	salesreportprintanddownload.closeprint();
-    	salesreportprintanddownload.downloadexcel();
-    	/*salesreportprintanddownload.salesreportprint();
-    	salesreportprintanddownload.notifications();
-    	salesreportprintanddownload.assertion_salesrepprint();
-    	salesreportprintanddownload.salesreportexcel();
-    	salesreportprintanddownload.notifications();
-    	salesreportprintanddownload.assertion_salesrepexcel();*/
-    }
+	 @Test(priority=34)
+	    public void salesreport() throws InterruptedException 
+	    {
+	    	Reporting salereport = new Reporting(driver);
+	    	salereport.Reporttab();
+	    	salereport.Report_Sidemenu();
+	    	Download_excel_print_reports salesreportprintanddownload =new Download_excel_print_reports(driver);
+	    	salesreportprintanddownload.clicksales();
+	    	salesreportprintanddownload.clicksales2();
+//	    	salesreportprintanddownload.printsalesreport();
+//	    	salesreportprintanddownload.closeprint();
+//	    	salesreportprintanddownload.downloadexcelsalesreport();
+	    	salesreportprintanddownload.salesreportprint();
+	    	salesreportprintanddownload.notifications();
+	    	salesreportprintanddownload.assertion_salesrepprint();
+	    	salesreportprintanddownload.salesreportexcel();
+	    	salesreportprintanddownload.notifications();
+	    	salesreportprintanddownload.assertion_salesrepexcel();
+	    }
+		
 	
 	//stata
 	@Test(priority=35)

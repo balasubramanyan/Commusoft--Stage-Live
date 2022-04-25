@@ -97,7 +97,11 @@ public void addfinalinvoice() throws InterruptedException
 	type("//textarea[@class='handsontableInput']","500");
 	Thread.sleep(3000);
 	typeenter("//textarea[@class='handsontableInput']");
-	Thread.sleep(3000);
+	click("//button[@class='btn btn-primary loading_btn save_btn']");
+	Thread.sleep(2000);
+	type("(//input[@id='confirm_delete_input'])[2]", "CONFIrm");
+	Thread.sleep(2000);
+	click("#delete-button");
 	click("//button[@class='btn btn-primary loading_btn save_btn']");
 		
 }

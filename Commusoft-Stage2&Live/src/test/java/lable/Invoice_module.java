@@ -618,4 +618,41 @@ String customerpage;//="https://app.commusoft.co.uk/customers/customer/1922/view
 	    adding_invoice.unitprice_FullBreakdown_ByCategory_Parts1("789.05");
 	    adding_invoice.save_invoice();
 	}
+    @Test(priority=23)	
+    public void workaddress_As_invoiceaddress() throws InterruptedException
+    {
+    	driver.get(homepage);
+		Customer invoice =new Customer (driver);
+		invoice.Customer_create();
+		invoice.Customer_title();
+		invoice.Customer_Name();
+		invoice.Customer_SurName();
+		invoice.Customer_Landline();
+	    invoice.Customer_Mobile();
+	    invoice.Customer_AddressLine1();
+	    invoice.Customer_AddressLine2();
+	    invoice.Customer_AddressLine3();
+	    invoice.Customer_town();
+	    invoice.Customer_Save();
+	    Thread.sleep(4000);
+	    invoice.workaddress_tab();
+	    invoice.workaddress_addnewWorkaddress();
+	    invoice.Workaddress_create();
+	    Invoice adding_invoice =new Invoice(driver);
+	    adding_invoice.enable_invoice_address();
+	    CreateJob WAjob=new CreateJob(driver);
+	    WAjob.addjob();
+	    WAjob.JobDescription("PreFinal");
+	    adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Final_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_notes();
+	    adding_invoice.invoiceaddress2();
+	    adding_invoice.invoice_Category();
+	    adding_invoice.Invoice_Breakdown_No_Breakdown();
+	    adding_invoice.sub_total("1000");
+	    adding_invoice.save_invoice();
+	    
+	    }
 	}

@@ -2,21 +2,26 @@ package testcase;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import action.Baseclass;
+import pages.Changeinvoice;
 import pages.CreateJob;
 import pages.Customer;
 import pages.Diary;
+import pages.Download_excel_print_reports;
 import pages.Estimate;
 import pages.Invoice;
 import pages.LoginPage;
 import pages.NotesandCommunication;
+import pages.Reporting;
 
 public class Checking extends Baseclass {
 	
 	String homepage;
-   
+	String customerpage ="https://stage2.commusoft.net/customers/customer/1980/view/property/view";
+   String Customersreport ;
 	
 	
 //	@Test(priority = 0)
@@ -27,43 +32,20 @@ public class Checking extends Baseclass {
 //		Thread.sleep(1000);
 //		homepage = driver.getCurrentUrl();
 //	}
-//	@Test(priority = 1)
-//	public void Addpayment_job() throws InterruptedException
-//	{
-//		driver.get("https://app.commusoft.co.uk/customers/customer/1045/view/property/view");
-//		Thread.sleep(4000);
-//		CreateJob job = new CreateJob(driver);
-//		job.addjob();
-//		job.JobDescription("No Rules");
-//		job.createjob();
-//		Thread.sleep(4000);
-//		Invoice invoice = new Invoice(driver);
-//		invoice.InvoiceTab();
-//		invoice.addinvoice();
-//		invoice.Pre_Final_invoice();
-//		invoice.Invoice_Breakdown_Full_breakdown();
-//		invoice.invoice_description();
-//		invoice.Full_Breakdown_des("Price 1");
-//		invoice.invoice_UserGroup();
-//		invoice.invoice_Category();
-//		invoice.save_invoice();
-//		NotesandCommunication communication = new NotesandCommunication(driver);
-//		communication.emailinvoice();
-//		communication.printinvoice();
-//		invoice.invoice_AddnewPayment();
-//		invoice.invoice_payment_AddDescription();
-//		invoice.invoice_payment_method();
-//		invoice.invoice_payment_nominalcode();
-//		invoice.invoice_payment_amount();
-//		invoice.invoice_paymeny_save();
-//	}
-	@Test
-	public void SlackCommusoft() throws IOException {
-		// TODO Auto-generated method stub
-		super.SlackCommusoft();
-	}
-		
+   @Test(priority=35)
+	public void changesinvoicetype() throws InterruptedException
+	{
+		driver.get(customerpage);
+		Changeinvoice changeinvoices=new Changeinvoice(driver);
+		//changeinvoices.addcustomer();
+		changeinvoices.addjob();
+		changeinvoices.adddiary();
+		changeinvoices.add_additionalinvoice();
+		changeinvoices.addfinalinvoice();
+		changeinvoices.editinvoicetype();
+	}	
 }
+
 
 
 

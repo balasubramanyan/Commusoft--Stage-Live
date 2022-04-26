@@ -29,6 +29,20 @@ public class CreateJob extends Wrapper {
 		Thread.sleep(3000);
 
 	}
+	public void JobDescription1(String a) throws InterruptedException
+	{
+		searchengine search = new searchengine(driver);
+		search.searchbox_jobDescription(a);
+		//selectdropdownvalue("$servicereminderinstance", "3");
+		type("$quotedamount", "2000");
+		type("$ponumber", "Customer reference");
+		selectdropdown("$job[priority]", "Important");
+		selectdropdownvalue("$job[usergroupsid]","1");
+		selectdropdownvalue("$job[invoicecategoryid]", "1");
+		Thread.sleep(3000);
+		click("//button[@type='submit']");
+	}
+	
 	public void job_diary_customerside()
 	{
 		click("//span[text()= 'Book into diary after adding job']");

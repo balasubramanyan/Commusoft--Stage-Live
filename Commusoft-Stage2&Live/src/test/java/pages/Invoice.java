@@ -1,5 +1,7 @@
 package pages;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
 import action.Wrapper;
 public class Invoice extends Wrapper {
     
@@ -390,6 +392,16 @@ public class Invoice extends Wrapper {
     public void delete_button()
     {
     	click ("//a[@id='delete-button']");
+    }
+    public void Raisefinalinvoice()
+    {
+    	click("//a[text()='Raise final invoice']");
+    }
+    public void assertionprefinal()
+    {
+    	String Actualtitle = gettext("(//td[@class='ng-binding'])[1]");
+        System.out.println(Actualtitle);
+        Assert.assertEquals(Actualtitle, "Prefinal");
     }
     
 }

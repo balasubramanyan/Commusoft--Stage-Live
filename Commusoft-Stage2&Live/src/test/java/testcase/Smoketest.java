@@ -775,7 +775,5 @@ public class Smoketest extends Baseclass {
 		estimate.Estimate_Portal_Accept_Verification();	
 	}
 	
-	 
-
 
 }

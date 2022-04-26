@@ -342,12 +342,54 @@ public class Invoice extends Wrapper {
     {
         click("//button[@type='submit']");
     }
-    
-    
-    
-    
-    
-    
+    public void payment_reference()
+    {
+    	type("(//input[@class='ng-pristine ng-valid'])[4]", "AZII");
+    }
+    public void view_payment ()
+    {
+    	click ("(//td[@class='ng-scope'])[4]");
+    }
+    public void Editpayment ()
+    {
+    	click("((//div[@class='section-title with-edit'])[1]//a)[2]");
+    }
+    public void editinvoice_payment_method() throws InterruptedException
+    {
+    	Thread.sleep(2000);
+        selectdropdownvalue("//select[@name='paymentMethod']","3");
         
+    }
+    public void invoice_payment_amount1()
+    {
+    	dclick("//td[@class='overflow_handsontable']");
+    	dclick("//td[@class='overflow_handsontable current highlight']");
+        clear("//textarea[@class='handsontableInput']");
+        type("//textarea[@class='handsontableInput']","89");
+     }
+    public void invoice_payment_editDescription() throws InterruptedException
+    {
+        clear("//textarea[@ng-model='description']");
+        type("//textarea[@ng-model='description']","Enter");
+        Thread.sleep(2000);
+    }
+    public void editpayment_reference() throws InterruptedException
+    {
+    	clear("(//input[@class='ng-pristine ng-valid'])[4]");
+    	type("//input[@class='ng-valid ng-animate ng-pristine-remove ng-pristine-remove-active ng-dirty']", "AZIIoh");
+    	Thread.sleep(2000);
+    } 
+    public void Deletepay()
+    {
+    	click("//a[@has-permission='Customerpayments,deleteaccess']");
+    }
+    public void confirmdelete()
+    {
+    	type("//input[@id='confirm_delete_input']", "DelETE");
+    }
+    public void delete_button()
+    {
+    	click ("//a[@id='delete-button']");
+    }
     
 }

@@ -692,5 +692,40 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
     	deletepayment.delete_button();
 
     }
+    @Test(priority=27)
+    public void Finalinvoice_from_jobinfobar() throws InterruptedException
+    {
+    	driver.get(homepage);
+		Customer invoice =new Customer (driver);
+		invoice.Customer_create();
+		invoice.Customer_title();
+		invoice.Customer_Name();
+		invoice.Customer_SurName();
+		invoice.Customer_Landline();
+	    invoice.Customer_Mobile();
+	    invoice.Customer_AddressLine1();
+	    invoice.Customer_AddressLine2();
+	    invoice.Customer_AddressLine3();
+	    invoice.Customer_town();
+	    invoice.Customer_Save();
+	    Thread.sleep(4000);
+	    customerpage=driver.getCurrentUrl();
+	    driver.get(customerpage);
+		Thread.sleep(4000);
+		CreateJob job = new CreateJob(driver);
+		job.addjob();
+		job.JobDescription("No Rules");
+		job.edit_job();
+		job.complete_job();
+		Invoice finalinvoice=new Invoice(driver);
+		finalinvoice.Raisefinalinvoice();
+		finalinvoice.invoice_description();
+		finalinvoice.invoice_notes();
+		finalinvoice.invoice_Category();
+		finalinvoice.Invoice_Breakdown_No_Breakdown();
+		finalinvoice.sub_total("5000");
+		finalinvoice.save_invoice();
+		
+    }
     
 	}

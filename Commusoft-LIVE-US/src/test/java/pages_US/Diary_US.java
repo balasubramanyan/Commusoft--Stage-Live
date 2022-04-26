@@ -238,7 +238,6 @@ public class Diary_US extends Wrapper_US {
 		click("//span[text()='Print summary sheets']");
 		String windowHandle1 = driver.getWindowHandle();
 		driver.switchTo().window(windowHandle1);
-		driver.close();
 	}
 
 }

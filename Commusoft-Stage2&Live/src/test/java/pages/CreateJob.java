@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import action.Wrapper;
 
 public class CreateJob extends Wrapper {
-	
+
 	public CreateJob(WebDriver ldriver)
 	{
 		this.driver = ldriver;
@@ -20,14 +20,18 @@ public class CreateJob extends Wrapper {
 		searchengine search = new searchengine(driver);
 		search.searchbox_jobDescription(a);
 		//selectdropdownvalue("$servicereminderinstance", "3");
-				type("$quotedamount", "5000");
-				type("$ponumber", "Customer reference");
-				selectdropdown("$job[priority]", "Important");
-				selectdropdownvalue("$job[usergroupsid]","1");
-				selectdropdownvalue("$job[invoicecategoryid]", "1");
-				click("//button[@type='submit']");
+		type("$quotedamount", "2000");
+		type("$ponumber", "Customer reference");
+		selectdropdown("$job[priority]", "Important");
+		selectdropdownvalue("$job[usergroupsid]","1");
+		selectdropdownvalue("$job[invoicecategoryid]", "1");
+		click("//button[@type='submit']");
 		Thread.sleep(3000);
-		
+
+	}
+	public void job_diary_customerside()
+	{
+		click("//span[text()= 'Book into diary after adding job']");
 	}
 	public void createjob()
 	{
@@ -81,8 +85,8 @@ public class CreateJob extends Wrapper {
 		clear("(//textarea[@class=\"handsontableInput\"])[3]");
 		type("(//textarea[@class=\"handsontableInput\"])[3]", amount);
 		typeenter("(//textarea[@class=\"handsontableInput\"])[3]");
-		
-		
+
+
 	}
 	public void PO_part_unitprice_eidt( String amount)
 	{
@@ -181,102 +185,102 @@ public class CreateJob extends Wrapper {
 	}
 	public void assert_partedittoal()
 	{
-	String part_total = gettext("(//span[@class=\"ng-binding\"])[16]");//part total
-	part_total = part_total.replace("£", "");
-	String Expectedparttotal= "600.00";
-	Assertion(part_total, Expectedparttotal,"Wrong part total");
+		String part_total = gettext("(//span[@class=\"ng-binding\"])[16]");//part total
+		part_total = part_total.replace("£", "");
+		String Expectedparttotal= "600.00";
+		Assertion(part_total, Expectedparttotal,"Wrong part total");
 	}
 	public void assert_Supplierparttoal()
 	{
-	String part_total = gettext("(//span[@class=\"ng-binding\"])[21]");//part total
-	part_total = part_total.replace("£", "");
-	String Expectedparttotal= "600.00";
-	Assertion(part_total, Expectedparttotal,"Wrong part total");
+		String part_total = gettext("(//span[@class=\"ng-binding\"])[21]");//part total
+		part_total = part_total.replace("£", "");
+		String Expectedparttotal= "600.00";
+		Assertion(part_total, Expectedparttotal,"Wrong part total");
 	}
 	public void assert_item_edittotal()
 	{
-	String item_total = gettext("(//span[@class=\"ng-binding\"])[23]");//item total
-	item_total = item_total.replace("£", "");
-	String Expecteditemtotal= "200.00";
-	Assertion(item_total, Expecteditemtotal,"Wrong item total");
+		String item_total = gettext("(//span[@class=\"ng-binding\"])[23]");//item total
+		item_total = item_total.replace("£", "");
+		String Expecteditemtotal= "200.00";
+		Assertion(item_total, Expecteditemtotal,"Wrong item total");
 	}
 	public void assert_Supplieritem_total()
 	{
-	String item_total = gettext("(//span[@class=\"ng-binding\"])[28]");//item total
-	item_total = item_total.replace("£", "");
-	String Expecteditemtotal= "200.00";
-	Assertion(item_total, Expecteditemtotal,"Wrong item total");
+		String item_total = gettext("(//span[@class=\"ng-binding\"])[28]");//item total
+		item_total = item_total.replace("£", "");
+		String Expecteditemtotal= "200.00";
+		Assertion(item_total, Expecteditemtotal,"Wrong item total");
 	}
 	public void assert_subedittotal()
 	{
-	String sub_total = gettext("(//span[@class=\"ng-binding\"])[24]");//sub total
-	sub_total = sub_total.replace("£", "");
-	String Expectedsubtotal= "800.00";
-	Assertion(sub_total, Expectedsubtotal,"Wrong sub total");
+		String sub_total = gettext("(//span[@class=\"ng-binding\"])[24]");//sub total
+		sub_total = sub_total.replace("£", "");
+		String Expectedsubtotal= "800.00";
+		Assertion(sub_total, Expectedsubtotal,"Wrong sub total");
 	}
 	public void assert_Suppliersubtotal()
 	{
-	String sub_total = gettext("(//span[@class=\"ng-binding\"])[29]");//sub total
-	sub_total = sub_total.replace("£", "");
-	String Expectedsubtotal= "800.00";
-	Assertion(sub_total, Expectedsubtotal,"Wrong sub total");
+		String sub_total = gettext("(//span[@class=\"ng-binding\"])[29]");//sub total
+		sub_total = sub_total.replace("£", "");
+		String Expectedsubtotal= "800.00";
+		Assertion(sub_total, Expectedsubtotal,"Wrong sub total");
 	}
 	public void assert_editvat()
 	{
-	String VAT = gettext("(//span[@class=\"ng-binding\"])[25]");//VAT
-	VAT = VAT.replace("£", "");
-	String ExpectedVATpart= "120.00";
-	Assertion(VAT,ExpectedVATpart,"Wrong VAT value");
+		String VAT = gettext("(//span[@class=\"ng-binding\"])[25]");//VAT
+		VAT = VAT.replace("£", "");
+		String ExpectedVATpart= "120.00";
+		Assertion(VAT,ExpectedVATpart,"Wrong VAT value");
 	}
 	public void assert_Suppliervat()
 	{
-	String VAT = gettext("(//span[@class=\"ng-binding\"])[30]");//VAT
-	VAT = VAT.replace("£", "");
-	String ExpectedVATpart= "120.00";
-	Assertion(VAT,ExpectedVATpart,"Wrong VAT value");
+		String VAT = gettext("(//span[@class=\"ng-binding\"])[30]");//VAT
+		VAT = VAT.replace("£", "");
+		String ExpectedVATpart= "120.00";
+		Assertion(VAT,ExpectedVATpart,"Wrong VAT value");
 	}
 	public void assert_editgrand()
 	{
-	String Grandtotal = gettext("(//span[@class=\"ng-binding\"])[26]");//Grand total
-	Grandtotal = Grandtotal.replace("£", "");
-	String ExpectedGrandtotal= "920.00";
-	Assertion(Grandtotal,ExpectedGrandtotal,"Wrong Grandtotal value");
+		String Grandtotal = gettext("(//span[@class=\"ng-binding\"])[26]");//Grand total
+		Grandtotal = Grandtotal.replace("£", "");
+		String ExpectedGrandtotal= "920.00";
+		Assertion(Grandtotal,ExpectedGrandtotal,"Wrong Grandtotal value");
 	}
 	public void assert_suppliereditgrand()
 	{
-	String Grandtotal = gettext("(//span[@class=\"ng-binding\"])[31]");//Grand total
-	Grandtotal = Grandtotal.replace("£", "");
-	String ExpectedGrandtotal= "920.00";
-	Assertion(Grandtotal,ExpectedGrandtotal,"Wrong Grandtotal value");
+		String Grandtotal = gettext("(//span[@class=\"ng-binding\"])[31]");//Grand total
+		Grandtotal = Grandtotal.replace("£", "");
+		String ExpectedGrandtotal= "920.00";
+		Assertion(Grandtotal,ExpectedGrandtotal,"Wrong Grandtotal value");
 	}
-	
+
 	public void assert_Suppliergrand()
 	{
-	String Grandtotal = gettext("(//span[@class=\"ng-binding\"])[31]");//Grand total
-	Grandtotal = Grandtotal.replace("£", "");
-	String ExpectedGrandtotal= "920.00";
-	Assertion(Grandtotal,ExpectedGrandtotal,"Wrong Grandtotal value");
+		String Grandtotal = gettext("(//span[@class=\"ng-binding\"])[31]");//Grand total
+		Grandtotal = Grandtotal.replace("£", "");
+		String ExpectedGrandtotal= "920.00";
+		Assertion(Grandtotal,ExpectedGrandtotal,"Wrong Grandtotal value");
 	}
 	public void assert_invoicetotal()
 	{
-	String Total_in = gettext("(//div[@class=\"total-value\"])[1]");
-	Total_in = Total_in.replace("£", "");
-	String Expectedintotal= "800.00";
-	Assertion(Total_in, Expectedintotal,"Wrong invoice total");
+		String Total_in = gettext("(//div[@class=\"total-value\"])[1]");
+		Total_in = Total_in.replace("£", "");
+		String Expectedintotal= "800.00";
+		Assertion(Total_in, Expectedintotal,"Wrong invoice total");
 	}
 	public void assert_invoicetotal(String ex)
 	{
-	String Total_in = gettext("(//strong[@class=\"ng-binding\"])[1]");
-	Total_in = Total_in.replace("£", "");
-	//int k =Integer.parseInt(Total_in);
-	Assertion(Total_in, ex,"Wrong invoice total");
+		String Total_in = gettext("(//strong[@class=\"ng-binding\"])[1]");
+		Total_in = Total_in.replace("£", "");
+		//int k =Integer.parseInt(Total_in);
+		Assertion(Total_in, ex,"Wrong invoice total");
 	}
 	public void assert_invoicevattotal()
 	{
-	String Total_vat = gettext("(//div[@class=\"total-value\"])[2]");
-	Total_vat = Total_vat.replace("£", "");
-	String Expectedvattotal= "160.00";
-	Assertion(Total_vat, Expectedvattotal,"Wrong vat total");
+		String Total_vat = gettext("(//div[@class=\"total-value\"])[2]");
+		Total_vat = Total_vat.replace("£", "");
+		String Expectedvattotal= "160.00";
+		Assertion(Total_vat, Expectedvattotal,"Wrong vat total");
 	}
 	public void assert_invoicevattotal(String ex) throws InterruptedException
 	{
@@ -287,23 +291,23 @@ public class CreateJob extends Wrapper {
 	}
 	public void assert_invoicegrand()
 	{
-	String Total_grand = gettext("(//div[@class=\"total-value\"])[3]");
-	Total_grand = Total_grand.replace("£", "");
-	String Expectedgrandtotal= "960.00";
-	Assertion(Total_grand, Expectedgrandtotal,"Wrong grand total");
+		String Total_grand = gettext("(//div[@class=\"total-value\"])[3]");
+		Total_grand = Total_grand.replace("£", "");
+		String Expectedgrandtotal= "960.00";
+		Assertion(Total_grand, Expectedgrandtotal,"Wrong grand total");
 	}
 	public void assert_invoicegrand(String ex)
 	{
-	String Total_grand = gettext("(//strong[@class=\"ng-binding\"])[3]");
-	Total_grand = Total_grand.replace("£", "");
-	Assertion(Total_grand, ex,"Wrong grand total");
+		String Total_grand = gettext("(//strong[@class=\"ng-binding\"])[3]");
+		Total_grand = Total_grand.replace("£", "");
+		Assertion(Total_grand, ex,"Wrong grand total");
 	}
 	public void assert_finalinvoicetotal()
 	{
-	String Finalvalue = gettext("(//div[@class=\"total-value\"])[3]");
-	Finalvalue = Finalvalue.replace("£", "");
-	String ExpectedFinalvalue= "960.00";
-	Assertion(Finalvalue, ExpectedFinalvalue,"Wrong Final total");
+		String Finalvalue = gettext("(//div[@class=\"total-value\"])[3]");
+		Finalvalue = Finalvalue.replace("£", "");
+		String ExpectedFinalvalue= "960.00";
+		Assertion(Finalvalue, ExpectedFinalvalue,"Wrong Final total");
 	}
 	public void Jobparts_fulfil(String qty, String markup, String status) throws InterruptedException
 	{
@@ -329,7 +333,517 @@ public class CreateJob extends Wrapper {
 		Thread.sleep(2000);
 		click("//button[@class=\"btn btn-primary primary-button ng-binding\"]");
 	}
-	
 
-}
+	//ezhil
+	public void addjob1() throws InterruptedException
+	{
+		click("//a[@id='newJob']");
+		Thread.sleep(1000);
+	}
+	public void JobDescription(String a, String b, String c) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("//span[text()='-- Please choose --']"); 
+		// Des select
+		Thread.sleep(2000);
+		click("(//div[@class='select2-result-label'])[7]"); 
+		// Skill
+		Thread.sleep(2000);
+		click("(//input[@class=\"select2-input select2-default\"])[1]"); 
+		Thread.sleep(2000);
+		click("//option[text()='Test QA']");
+		// Job note
+		Thread.sleep(2000);
+		type("//textarea[@name='engineernotes']", a);    
+		//Service job
+		Thread.sleep(2000);
+		click("//input[@formcontrolname='isservicejob']"); 
+		Thread.sleep(2000);
+		click("(//select[@name='servicereminderinstance'])[1]");
+		Thread.sleep(2000);
+		click("(//option[text()='Boiler service'])[1]");
+		//Quoted amount
+		Thread.sleep(2000);
+		type("//input[@formcontrolname='quotedamount']", b); 
+		//Customer reference
+		Thread.sleep(2000);
+		type("//input[@formcontrolname=\"ponumber\"]", c);
+		//Expected completion date
+		Thread.sleep(2000);
+		click("//span[@class=\"add-on date-picker-edit\"]");
+		Thread.sleep(2000);
+		click("(//td [@role=\"gridcell\"])[25]");
+		Thread.sleep(2000);
+		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(2000);
+		click("//option[text()= '07']");
+		Thread.sleep(2000);
+		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(2000);
+		click("//option[text()= '15']");
+		Thread.sleep(2000);
+		click("//select[@class='meridian ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(2000);
+		click("//option[text()= 'AM']");
+		//Priority
+		Thread.sleep(2000);
+		click("//select[@formcontrolname='priority']");
+		Thread.sleep(2000);
+		click("//option[text()=\"Not Important\"]");
+		//User group
+		Thread.sleep(2000);
+		click("//select[@formcontrolname='usergroupsid']");
+		Thread.sleep(2000);
+		click("//option[text()= 'Aravind Group']");
+		//Invoice Category
+		Thread.sleep(2000);
+		click("//select[@formcontrolname='invoicecategoryid']");
+		Thread.sleep(2000);
+		click("//option[text()= 'Aravind Category']");
 
+	}
+	public void JobDescription2(String a, String b, String c) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("//span[text()='-- Please choose --']"); 
+		// Des select
+		Thread.sleep(2000);
+		click("(//div[@class='select2-result-label'])[7]"); 
+		// Skill
+		Thread.sleep(2000);
+		click("(//input[@class=\"select2-input select2-default\"])[1]"); 
+		Thread.sleep(2000);
+		click("//option[text()='Test QA']");
+		// Job note
+		type("//textarea[@name='engineernotes']", a);    
+		//Quoted amount
+		Thread.sleep(2000);
+		type("//input[@formcontrolname='quotedamount']", b); 
+		//Customer reference
+		Thread.sleep(2000);
+		type("//input[@formcontrolname=\"ponumber\"]", c);
+		//Expected completion date
+		Thread.sleep(2000);
+		click("//span[@class=\"add-on date-picker-edit\"]");
+		Thread.sleep(2000);
+		click("(//td [@role=\"gridcell\"])[25]");
+		Thread.sleep(2000);
+		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(2000);
+		click("//option[text()= '07']");
+		Thread.sleep(2000);
+		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(2000);
+		click("//option[text()= '15']");
+		Thread.sleep(2000);
+		click("//select[@class='meridian ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(2000);
+		click("//option[text()= 'AM']");
+		//Priority
+		Thread.sleep(2000);
+		click("//select[@formcontrolname='priority']");
+		Thread.sleep(2000);
+		click("//option[text()=\"Not Important\"]");
+		//User group
+		Thread.sleep(2000);
+		click("//select[@formcontrolname='usergroupsid']");
+		Thread.sleep(2000);
+		click("//option[text()= 'Aravind Group']");
+		//Invoice Category
+		Thread.sleep(2000);
+		click("//select[@formcontrolname='invoicecategoryid']");
+		Thread.sleep(2000);
+		click("//option[text()= 'Aravind Category']");
+
+	}
+	public void createjob1() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("//span[text()='Add job']");
+	}
+	public void jobeditlink(String D, String E, String F, String G) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("//a[text()='Edit']");
+		Thread.sleep(2000);
+		//Job desc
+		clear("//input[@formcontrolname='description']");
+		Thread.sleep(2000);
+		type("//input[@formcontrolname='description']", D);
+		//Skill
+		clear("(//input[@class='select2-input select2-default'])[1]");
+		click("(//input[@class='select2-input select2-default'])[1]");
+		Thread.sleep(2000);
+		click("//option[text()='Test QA']");
+		// Job note
+		Thread.sleep(2000);
+		type("//textarea[@name='engineernotes']", E);    
+		//Service job
+		Thread.sleep(2000);
+		click("//input[@formcontrolname='isservicejob']"); 
+		Thread.sleep(2000);
+		click("//input[@formcontrolname='isservicejob']");
+		//	Thread.sleep(2000);
+		//	click("(//select[@name='servicereminderinstance'])[1]");
+		//	Thread.sleep(2000);
+		//	click("(//option[text()='Boiler service'])[1]");
+		//Quoted amount
+		Thread.sleep(2000);
+		type("//input[@formcontrolname='quotedamount']", F); 
+		//Customer reference
+		Thread.sleep(2000);
+		type("//input[@formcontrolname=\"ponumber\"]", G);
+		//Expected completion date
+		Thread.sleep(2000);
+		click("//span[@class=\"add-on date-picker-edit\"]");
+		Thread.sleep(2000);
+		click("(//td [@role=\"gridcell\"])[25]");
+		Thread.sleep(2000);
+		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(2000);
+		click("//option[text()= '08']");
+		Thread.sleep(2000);
+		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(2000);
+		click("//option[text()= '45']");
+		Thread.sleep(2000);
+		click("//select[@class='meridian ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(2000);
+		click("//option[text()= 'PM']");
+		//Priority
+		Thread.sleep(2000);
+		click("//select[@formcontrolname='priority']");
+		Thread.sleep(2000);
+		click("//option[text()='Important']");
+		//User group
+		Thread.sleep(2000);
+		click("//select[@formcontrolname='usergroupsid']");
+		Thread.sleep(2000);
+		click("//option[text()= 'Ranjit Group']");
+		//Invoice Category
+		Thread.sleep(2000);
+		click("//select[@formcontrolname='invoicecategoryid']");
+		Thread.sleep(2000);
+		click("//option[text()= 'Ranjit Category']");
+
+	}
+	public void Editsavejob() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("//button[@type='submit']");
+	}
+	public void Jobdeleted(String H) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("//a[@class='btn dropdown-toggle btn-small quick-links-btn']");
+		Thread.sleep(2000);
+		click("//a[@has-permission='Jobs,deleteaccess']");
+		Thread.sleep(2000);
+		type("//input[@id='confirm_delete_input']", H);
+		Thread.sleep(2000);
+		click("//a[@id='delete-button']");
+
+	}
+	public void JobFOC(String I) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("//a[@class='btn dropdown-toggle btn-small quick-links-btn']");
+		Thread.sleep(2000);
+		click("//a[@has-permission='Completejobasfreeofcharge,writeaccess']");
+		Thread.sleep(2000);
+		//Reason
+		click("//select[@id='freeofchargeandabortjob_reason']");
+		click("//option[@value='2']");
+		Thread.sleep(2000);
+		//More details
+		click("//textarea[@id='freeofchargeandabortjob_moredetails']");
+		type("//textarea[@id='freeofchargeandabortjob_moredetails']", I);
+		Thread.sleep(2000);
+		click("//button[@class='btn btn-primary loading_btn save_btn']");
+		Thread.sleep(5000);
+		click("(//a[@class='ng-binding'])[2]");
+	}
+	public void customer_breadcrum() throws InterruptedException
+	{
+
+		Thread.sleep(5000);
+		click("(//a[@class='ng-binding'])[2]");
+
+	}
+	public void Job_complete() throws InterruptedException
+	{
+
+		Thread.sleep(2000);
+		//Complete check box
+		click("//input[@formcontrolname='completed']");
+		Thread.sleep(2000);
+		click("(//span[@class='add-on date-picker-edit'])[2]");
+		Thread.sleep(2000);
+		click("(//td[@role='gridcell'])[20]");
+		Thread.sleep(2000);
+		click("//button[@type='submit']");
+
+
+	}
+	public void Job_Recall(String D,String E,String F,String G ) throws InterruptedException
+	{
+
+		Thread.sleep(2000);
+		click("//a[@class='btn dropdown-toggle btn-small quick-links-btn']");
+		Thread.sleep(2000);
+		//Recall link
+		click("//a[text()='Create recall']");
+		Thread.sleep(2000);
+		//Job desc
+		clear("//input[@formcontrolname='description']");
+		Thread.sleep(2000);
+		type("//input[@formcontrolname='description']", D);
+		//Who's to blame
+		click("(//a[@class='select2-choice'])[3]");
+		click("(//div[@class='select2-result-label'])[5]");
+		Thread.sleep(2000);
+		click("//option[text()='Test QA']");
+		// Job note
+		Thread.sleep(2000);
+		type("//textarea[@name='engineernotes']", E);    
+		//Quoted amount
+		Thread.sleep(2000);
+		type("//input[@formcontrolname='quotedamount']", F); 
+		//Customer reference
+		Thread.sleep(2000);
+		type("//input[@formcontrolname=\"ponumber\"]", G);
+		//Expected completion date
+		Thread.sleep(2000);
+		click("//span[@class=\"add-on date-picker-edit\"]");
+		Thread.sleep(2000);
+		click("(//td [@role=\"gridcell\"])[25]");
+		Thread.sleep(2000);
+		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(2000);
+		click("//option[text()= '08']");
+		Thread.sleep(2000);
+		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(2000);
+		click("//option[text()= '45']");
+		Thread.sleep(2000);
+		click("//select[@class='meridian ng-untouched ng-pristine ng-valid']");
+		Thread.sleep(2000);
+		click("//option[text()= 'PM']");
+		//Priority
+		Thread.sleep(2000);
+		click("//select[@formcontrolname='priority']");
+		Thread.sleep(2000);
+		click("//option[text()='Important']");
+		//User group
+		Thread.sleep(2000);
+		click("//select[@formcontrolname='usergroupsid']");
+		Thread.sleep(2000);
+		click("//option[text()= 'Ranjit Group']");
+		//Invoice Category
+		Thread.sleep(2000);
+		click("//select[@formcontrolname='invoicecategoryid']");
+		Thread.sleep(2000);
+		click("//option[text()= 'Ranjit Category']");
+		Thread.sleep(2000);
+		click("//span[text()='Add recall']");
+
+	}
+
+	public void customer_jobmodule() throws InterruptedException
+	{
+
+		Thread.sleep(2000);
+		click("//a[text()='Total number of customers:']");
+		Thread.sleep(2000);
+		click("(//a[text()='View'])[1]");
+		Thread.sleep(2000);
+		//click("(//a[text()='View'])[4]");
+		Thread.sleep(2000);
+		//*[@id="ongoingwork"]/table/tbody/tr[2]/td[9]/a[2]
+	}
+
+
+	public void Job_Abort(String reasontext ) throws InterruptedException
+	{
+
+		Thread.sleep(2000);
+		click("//a[@class='btn dropdown-toggle btn-small quick-links-btn']");
+		Thread.sleep(2000);
+		//Abort link
+		click("//a[text()='Abort job']");
+		Thread.sleep(2000);
+		//Reason dropdown
+		click("//select[@name='freeofchargeandabortjob[reason]']");
+		Thread.sleep(2000);
+		click("//option[@value='1']");
+		Thread.sleep(2000);
+		click("//textarea[@id='freeofchargeandabortjob_moredetails']");
+		Thread.sleep(2000);
+		type("//textarea[@id='freeofchargeandabortjob_moredetails']", reasontext );
+		//Save button
+		Thread.sleep(2000);
+		click("//button[@type='submit']");
+
+	}
+
+	public void Job_PlaceOnHold() throws InterruptedException
+	{
+
+		Thread.sleep(2000);
+		click("//a[@class='btn dropdown-toggle btn-small quick-links-btn']");
+		Thread.sleep(2000);		
+		click("//a[text()='Place job on hold']");
+		Thread.sleep(1000);
+		//Dropdown
+		click("//select[@id='onholdjob_settingsjobonholddescriptionid']");
+		click("//option[@value=\"1\"]");
+		//set a reminder
+		click("//input[@id='onholdjob_issetreminder']");
+		click("//span[@ng-click='show_date_picker = true']");
+		click("//a[@class='month-text ng-binding']");
+		//Month
+		click("(//a[@class='daterange-day ng-binding'])[5]");
+		//Date
+		click("(//a[@class='daterange-day ng-binding'])[6]");
+		//user select
+		click("//input[@class='select2-input select2-default']");
+		click("(//div[@class='select2-result-label'])[1]");
+		//save
+		click("(//button[@type='submit'])[1]");
+
+	}
+	public void link_job_recall() throws InterruptedException
+	{
+
+		Thread.sleep(2000);
+		click("//a[@class='btn dropdown-toggle btn-small quick-links-btn']");
+		Thread.sleep(2000);		
+		click("//a[text()='Link job as a recall to another job']");
+		Thread.sleep(2000);
+		click("(//a[@class='select2-choice'])[2]");
+		Thread.sleep(1000);
+		//click("(//input[@type='text'])[5]");
+		//type("(//input[@type='text'])[5]", "test");
+		Thread.sleep(1000);
+		click("(//div[@class='select2-result-label'])[1]");
+		Thread.sleep(2000);
+		click("//button[text()='Confirm link']");
+
+	}
+	public void Customer_addedjob_diray() throws InterruptedException
+	{
+
+		Thread.sleep(2000);
+		click("//a[@class='btn btn-small btn-primary']");
+
+	}
+	public void Customer_Editjob_diray() throws InterruptedException
+	{
+
+		Thread.sleep(2000);
+		click("(//a[text()='Edit'])[2]");
+		Thread.sleep(2000);
+		click("//span[@class='add-on date-picker-edit']");
+
+		Thread.sleep(2000);
+		click("(//a[@class='daterange-day ng-binding'])[15]");
+		Thread.sleep(2000);
+		click("(//select[@ng-change='updateHours(hours)'])[1]");
+		Thread.sleep(2000);
+		click("//option[@value='07']");
+		Thread.sleep(2000);
+		click("//select[@ng-change='updateMinutes()']");
+		Thread.sleep(3000);
+		click("//option[@value='30']");
+		Thread.sleep(2000);
+		click("//select[@class='diary-time-meridian ng-pristine ng-valid']");
+		Thread.sleep(2000);
+		click("//option[@value='AM']");	
+		Thread.sleep(2000);
+		click("(//select[@ng-change='updateHours(hours)'])[3]");
+		Thread.sleep(3000);
+		click("(//option[@value='08'])[4]");
+		Thread.sleep(2000);
+		click("(//select[@ng-change='updateMinutes()'])[3]");
+		Thread.sleep(3000);
+		click("(//option[@value='30'])[3]");
+		Thread.sleep(2000);
+		click("//select[@class='diary-time-meridian ng-pristine ng-valid']");
+		Thread.sleep(3000);
+		click("(//option[@value='AM'])[2]");
+		//Lock status
+		Thread.sleep(2000);
+		click("(//select[@ng-model='diary_event.lock_event'])[1]");
+		Thread.sleep(2000);
+		click("(//option[text()='Lock to engineer'])[1]");
+		//Is this a special event
+		Thread.sleep(2000);
+		click("(//input[@name=\"is_special_event\"])[1]");
+		
+		Thread.sleep(2000);
+		click("(//select[@id='top-input-in-details-step'])[1]");
+		Thread.sleep(2000);
+		click("(//option[text()='30 mins'])[1]");
+		//Job desc
+		Thread.sleep(1000);
+		click("(//input[@ng-model='diary_event.description'])[1]");
+		clear("(//input[@ng-model='diary_event.description'])[1]");
+		type("(//input[@ng-model='diary_event.description'])[1]", "Diary edit");
+		//Job Notes
+		Thread.sleep(1000);
+		click("(//textarea[@ng-model='diary_event.notes'])[1]");
+		clear("(//textarea[@ng-model='diary_event.notes'])[1]");
+		type("(//textarea[@ng-model='diary_event.notes'])[1]", "Diary edit notes");
+		//Save
+		Thread.sleep(1000);
+		click("(//button[text()='Save'])[1]");
+		Thread.sleep(2000);
+		click("(//a[text()='Edit'])[3]");
+		//Save&close
+		Thread.sleep(1000);
+		click("(//button[text()='Save and close'])[1]");
+		
+		//Change to Allday
+		Thread.sleep(2000);
+		click("(//a[text()='Edit'])[2]");
+		Thread.sleep(2000);
+		click("//select[@name='allDayValue']");
+		Thread.sleep(2000);
+		click("//option[text()='All day']");
+		//Save&close
+		Thread.sleep(1000);
+		click("(//button[text()='Save and close'])[1]");
+
+		//Change to Morning 
+		Thread.sleep(2000);
+		click("(//a[text()='Edit'])[2]");
+		Thread.sleep(2000);
+		click("//select[@name='allDayValue']");
+		Thread.sleep(2000);
+		click("//option[text()='Morning']");
+		//Save&close
+		Thread.sleep(1000);
+		click("(//button[text()='Save and close'])[1]");
+		
+		//Change to Afternoon
+		Thread.sleep(2000);
+		click("(//a[text()='Edit'])[2]");
+		Thread.sleep(2000);
+		click("//select[@name='allDayValue']");
+		Thread.sleep(2000);
+		click("//option[text()='Afternoon']");
+		//Save&close
+		Thread.sleep(1000);
+		click("(//button[text()='Save and close'])[1]");
+	}
+
+	public void Customer_Deletejob_diray() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("(//a[text()='Edit'])[2]");
+		Thread.sleep(2000);
+		click("//a[@class='btn btn-danger on-left ng-scope']");
+		Thread.sleep(2000);
+		click("//a[@tabindex='1']");
+	}
+}      

@@ -141,6 +141,20 @@ public class Wrapper {
 			e.printStackTrace();
 		}
 	}
+	public void Systemout(String text)
+	{
+		String urlString = "https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s";
+		String apiToken = "896751198:AAE9Xnl-I9yRLETN_l_p1zr06_Fr_SEWXEU";
+		String chatId = "-697914350";
+		urlString = String.format(urlString, apiToken, chatId, text);
+		try {
+			URL url = new URL(urlString);
+			URLConnection conn = url.openConnection();
+			InputStream is = new BufferedInputStream(conn.getInputStream());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 	
 	
 	public void clear(String xpath)
@@ -575,7 +589,7 @@ public class Wrapper {
 	public void SlackCommusoft() throws IOException
 	{
 		String SystemName=InetAddress.getLocalHost().getHostName();
-		URL url = new URL("https://hooks.slack.com/services/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");
+		URL url = new URL("https://hooks.slack.com/services/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");
 		HttpURLConnection http = (HttpURLConnection)url.openConnection();
 		http.setRequestMethod("POST");
 		http.setDoOutput(true);
@@ -635,7 +649,7 @@ public class Wrapper {
 	public void SlackCommusoftstatus(String text) throws IOException
 	{
 		String SystemName=InetAddress.getLocalHost().getHostName();
-		URL url = new URL("https://hooks.slack.com/services/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");
+		URL url = new URL("https://hooks.slack.com/services/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");
 		HttpURLConnection http = (HttpURLConnection)url.openConnection();
 		http.setRequestMethod("POST");
 		http.setDoOutput(true);
@@ -676,7 +690,7 @@ public class Wrapper {
 	public void SlackCommusoftdone(String text) throws IOException
 	{
 		String SystemName=InetAddress.getLocalHost().getHostName();
-		URL url = new URL("https://hooks.slack.com/services/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");
+		URL url = new URL("https://hooks.slack.com/services/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");
 		HttpURLConnection http = (HttpURLConnection)url.openConnection();
 		http.setRequestMethod("POST");
 		http.setDoOutput(true);

@@ -3,15 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcase_US.DiaryModule_US">
+      <class name="testcase_US.Smoketest_US">
         <methods>
           <include name="initial"/>
-          <include name="diaryutility"/>
+          <include name="Customer_Createcontact"/>
+          <include name="Estimate_Accepted_In_Portal_With_Payment"/>
+          <include name="Estimate_Accepted_In_Portal_Without_Payment"/>
           <include name="setup"/>
           <include name="tearDown"/>
           <include name="teardown"/>
+          <include name="changesinvoicetype"/>
         </methods>
-      </class> <!-- testcase_US.DiaryModule_US -->
+      </class> <!-- testcase_US.Smoketest_US -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -16,6 +16,8 @@ String editpage; //="https://app.commusoft.co.uk/customers/customer/1635/jobs/16
 String jobpage; //="https://app.commusoft.co.uk/customers/customer_list/1726/jobs/1733/details/view";
 String Prefinalinvoice;
 String customerpage;//="https://app.commusoft.co.uk/customers/customer/1922/view/property/view";
+String payment;
+String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jobs/2274/invoices/1084/payment/142/edit";
 
 	@Test(priority = 1)
 	public void add_invoice() throws InterruptedException
@@ -520,7 +522,8 @@ String customerpage;//="https://app.commusoft.co.uk/customers/customer/1922/view
 	    adding_invoice.unitprice_FullBreakdown_ByCategory_Labour("1111");
 	    adding_invoice.Full_Breakdown_ByCategory_Parts_Description("parts test");
 	    adding_invoice.unitprice_FullBreakdown_ByCategory_Parts1("789.05");
-	    adding_invoice.save_invoice();
+	    adding_invoice.save_invoice1();
+	    payment= driver.getCurrentUrl();
     }
 	@Test(priority=20)
 	public void Draftinvoice_to_invoice() throws InterruptedException
@@ -653,6 +656,41 @@ String customerpage;//="https://app.commusoft.co.uk/customers/customer/1922/view
 	    adding_invoice.Invoice_Breakdown_No_Breakdown();
 	    adding_invoice.sub_total("1000");
 	    adding_invoice.save_invoice();
-	    
 	    }
+   @Test(priority=24)
+    public void invoicepaymentadd()
+    {
+    	driver.get(payment);
+    	Invoice addpayment=new Invoice(driver);
+    	addpayment.invoice_AddnewPayment();
+    	addpayment.invoice_payment_AddDescription();
+    	addpayment.payment_reference();
+    	addpayment.invoice_payment_method();
+    	addpayment.invoice_payment_nominalcode();
+    	addpayment.invoice_payment_amount();
+    	addpayment.invoice_paymeny_save();			
+    }
+    @Test(priority=25)
+    public void invoicepaymentedit() throws InterruptedException
+    {
+    	//driver.get(editpay);
+    	Invoice editpayment=new Invoice(driver);
+    	editpayment.view_payment();
+    	editpayment.Editpayment();
+    	editpayment.invoice_payment_editDescription();
+    	editpayment.editpayment_reference();
+    	editpayment.editinvoice_payment_method();
+    	editpayment.invoice_payment_amount1();
+    	editpayment.invoice_paymeny_save();
+    	}
+    @Test(priority=26)
+    public void invoicepaymentdelete()
+    {
+    	Invoice deletepayment=new Invoice(driver);
+    	deletepayment.Deletepay();
+    	deletepayment.confirmdelete();
+    	deletepayment.delete_button();
+
+    }
+    
 	}

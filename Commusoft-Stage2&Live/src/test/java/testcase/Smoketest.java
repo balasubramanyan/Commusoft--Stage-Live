@@ -699,7 +699,7 @@ public class Smoketest extends Baseclass {
 		Assert.assertEquals(statuscode, 200);
 		
 	}
-	//@Test(priority=38)
+	@Test(priority=38)
 	public void Estimate_Accepted_In_Portal_With_Payment() throws InterruptedException{
 		
 		driver.get(homepage);
@@ -738,7 +738,7 @@ public class Smoketest extends Baseclass {
 		estimate.Estimate_Portal_Accept();
 		estimate.Estimate_Portal_Accept_Verification();			
 	}
-	//@Test(priority=39)
+	@Test(priority=39)
 	public void Estimate_Accepted_In_Portal_Without_Payment() throws InterruptedException
 	{
 		driver.get(homepage);

@@ -391,5 +391,10 @@ public class Invoice extends Wrapper {
     {
     	click ("//a[@id='delete-button']");
     }
+    public void Raisefinalinvoice()
+    {
+    	click("//a[text()='Raise final invoice']");
+    }
+    
     
 }

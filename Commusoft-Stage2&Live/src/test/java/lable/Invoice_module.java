@@ -18,6 +18,10 @@ String Prefinalinvoice;
 String customerpage;//="https://app.commusoft.co.uk/customers/customer/1922/view/property/view";
 String payment;
 String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jobs/2274/invoices/1084/payment/142/edit";
+String additionalinvoiceurl; //="https://app.commusoft.co.uk/customers/customer_list/2231/jobs/2754/invoices/1277/view";
+String interiminvoiceurl;
+String prefinalinvoiceurl;
+String Finalinvoiceurl;
 
 	@Test(priority = 1)
 	public void add_invoice() throws InterruptedException
@@ -27,6 +31,7 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
 		invoice.Customer_title();
 		invoice.Customer_Name();
 		invoice.Customer_SurName();
+		invoice.Customer_email();
 		invoice.Customer_Landline();
 	    invoice.Customer_Mobile();
 	    invoice.Customer_AddressLine1();
@@ -86,6 +91,7 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
 		invoice.Customer_title();
 		invoice.Customer_Name();
 		invoice.Customer_SurName();
+		invoice.Customer_email();
 		invoice.Customer_Landline();
 	    invoice.Customer_Mobile();
 	    invoice.Customer_AddressLine1();
@@ -168,8 +174,10 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
 	    adding_invoice.unitprice_FullBreakdown_ByCategory_Labour("1111");
 	    adding_invoice.Full_Breakdown_ByCategory_Parts_Description("parts test");
 	    adding_invoice.unitprice_FullBreakdown_ByCategory_Parts1("789.05");
-	    adding_invoice.save_invoice();
-    }
+	    adding_invoice.save_invoice1();
+	    additionalinvoiceurl=driver.getCurrentUrl();
+	    
+	}
 	@Test(priority=8)
 	public void adding_interiminvoice_nobreakdown() throws InterruptedException
 	{
@@ -242,7 +250,8 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
 	    adding_invoice.unitprice_FullBreakdown_ByCategory_Labour("1252");
 	    adding_invoice.Full_Breakdown_ByCategory_Parts_Description("parts test");
 	    adding_invoice.unitprice_FullBreakdown_ByCategory_Parts1("689.05");
-	    adding_invoice.save_invoice();
+	    adding_invoice.save_invoice1();
+	    interiminvoiceurl=driver.getCurrentUrl();
     }
 	@Test(priority=12)
 	public void adding_prefinalinvoice_nobreakdown() throws InterruptedException
@@ -269,6 +278,7 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
 		invoice.Customer_title();
 		invoice.Customer_Name();
 		invoice.Customer_SurName();
+		invoice.Customer_email();
 		invoice.Customer_Landline();
 	    invoice.Customer_Mobile();
 	    invoice.Customer_AddressLine1();
@@ -306,6 +316,7 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
 		invoice.Customer_title();
 		invoice.Customer_Name();
 		invoice.Customer_SurName();
+		invoice.Customer_email();
 		invoice.Customer_Landline();
 	    invoice.Customer_Mobile();
 	    invoice.Customer_AddressLine1();
@@ -344,6 +355,7 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
 		invoice.Customer_title();
 		invoice.Customer_Name();
 		invoice.Customer_SurName();
+		invoice.Customer_email();
 		invoice.Customer_Landline();
 	    invoice.Customer_Mobile();
 	    invoice.Customer_AddressLine1();
@@ -384,6 +396,7 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
 		invoice.Customer_title();
 		invoice.Customer_Name();
 		invoice.Customer_SurName();
+		invoice.Customer_email();
 		invoice.Customer_Landline();
 	    invoice.Customer_Mobile();
 	    invoice.Customer_AddressLine1();
@@ -419,6 +432,7 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
 		invoice.Customer_title();
 		invoice.Customer_Name();
 		invoice.Customer_SurName();
+		invoice.Customer_email();
 		invoice.Customer_Landline();
 	    invoice.Customer_Mobile();
 	    invoice.Customer_AddressLine1();
@@ -445,7 +459,8 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
 	    adding_invoice.Invoice_Breakdown_Breakdown_by_category();
 	    adding_invoice.BreakdownByCategory_des("Labour");
 	    adding_invoice.unitprice("2006");
-	    adding_invoice.save_invoice();	    
+	    adding_invoice.save_invoice1();	    
+	    Finalinvoiceurl=driver.getCurrentUrl();
 	}
 	@Test(priority=18)
 	public void adding_finalinvoice_Fullbreakdown() throws InterruptedException
@@ -456,6 +471,7 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
 		invoice.Customer_title();
 		invoice.Customer_Name();
 		invoice.Customer_SurName();
+		invoice.Customer_email();
 		invoice.Customer_Landline();
 	    invoice.Customer_Mobile();
 	    invoice.Customer_AddressLine1();
@@ -494,6 +510,7 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
 		invoice.Customer_title();
 		invoice.Customer_Name();
 		invoice.Customer_SurName();
+		invoice.Customer_email();
 		invoice.Customer_Landline();
 	    invoice.Customer_Mobile();
 	    invoice.Customer_AddressLine1();
@@ -534,6 +551,7 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
 		invoice.Customer_title();
 		invoice.Customer_Name();
 		invoice.Customer_SurName();
+		invoice.Customer_email();
 		invoice.Customer_Landline();
 	    invoice.Customer_Mobile();
 	    invoice.Customer_AddressLine1();
@@ -584,6 +602,7 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
 		invoice.Customer_title();
 		invoice.Customer_Name();
 		invoice.Customer_SurName();
+		invoice.Customer_email();
 		invoice.Customer_Landline();
 	    invoice.Customer_Mobile();
 	    invoice.Customer_AddressLine1();
@@ -630,6 +649,7 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
 		invoice.Customer_title();
 		invoice.Customer_Name();
 		invoice.Customer_SurName();
+		invoice.Customer_email();
 		invoice.Customer_Landline();
 	    invoice.Customer_Mobile();
 	    invoice.Customer_AddressLine1();
@@ -657,6 +677,7 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
 	    adding_invoice.sub_total("1000");
 	    adding_invoice.save_invoice();
 	    }
+    
    @Test(priority=24)
     public void invoicepaymentadd() throws InterruptedException
     {
@@ -683,7 +704,7 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
     	editpayment.editinvoice_payment_method();
     	editpayment.invoice_payment_amount1();
     	editpayment.invoice_paymeny_save();
-    	}
+   	}
     @Test(priority=26)
     public void invoicepaymentdelete()
     {
@@ -702,6 +723,7 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
 		invoice.Customer_title();
 		invoice.Customer_Name();
 		invoice.Customer_SurName();
+		invoice.Customer_email();
 		invoice.Customer_Landline();
 	    invoice.Customer_Mobile();
 	    invoice.Customer_AddressLine1();
@@ -737,6 +759,7 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
 		invoice.Customer_title();
 		invoice.Customer_Name();
 		invoice.Customer_SurName();
+		invoice.Customer_email();
 		invoice.Customer_Landline();
 	    invoice.Customer_Mobile();
 	    invoice.Customer_AddressLine1();
@@ -753,7 +776,50 @@ String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jo
 		job.JobDescription1("Auto prefinal");
 		Invoice autopre = new Invoice(driver);
 		autopre.InvoiceTab();
-		autopre.assertionprefinal();
-				
+		autopre.assertionprefinal();				
+    }
+    @Test(priority=29)
+    public void Additionalinvoice_print_email() throws InterruptedException
+   
+    {
+    	driver.get(additionalinvoiceurl);
+    	Invoice email_print=new Invoice(driver);
+    	email_print.invoice_communication_email();
+    	email_print.invoice_communication_print();
+    	email_print.closeprint();
+    	email_print.verifyprint();
+    }
+    @Test(priority=30)
+    public void interiminvoice_print_email() throws InterruptedException
+   
+    {
+    	driver.get(interiminvoiceurl);
+    	Invoice email_print=new Invoice(driver);
+    	email_print.invoice_communication_email();
+    	email_print.invoice_communication_print();
+    	email_print.closeprint();
+    	email_print.verifyprint();
+    }
+    @Test(priority=31)
+    public void prefinalinvoice_print_email() throws InterruptedException
+   
+    {
+    	driver.get(prefinalinvoiceurl);
+    	Invoice email_print=new Invoice(driver);
+    	email_print.invoice_communication_email();
+    	email_print.invoice_communication_print();
+    	email_print.closeprint();
+    	email_print.verifyprint();
+    }
+    @Test(priority=32)
+    public void finalinvoice_print_email() throws InterruptedException
+   
+    {
+    	driver.get(Finalinvoiceurl);
+    	Invoice email_print=new Invoice(driver);
+    	email_print.invoice_communication_email();
+    	email_print.invoice_communication_print();
+    	email_print.closeprint();
+    	email_print.verifyprint();
     }
 	}

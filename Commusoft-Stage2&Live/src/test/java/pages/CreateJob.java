@@ -25,10 +25,24 @@ public class CreateJob extends Wrapper {
 		selectdropdown("$job[priority]", "Important");
 		selectdropdownvalue("$job[usergroupsid]","1");
 		selectdropdownvalue("$job[invoicecategoryid]", "1");
-		//	click("//button[@type='submit']");
+		click("//button[@type='submit']");
 		Thread.sleep(3000);
 
 	}
+	public void JobDescription1(String a) throws InterruptedException
+	{
+		searchengine search = new searchengine(driver);
+		search.searchbox_jobDescription(a);
+		//selectdropdownvalue("$servicereminderinstance", "3");
+		type("$quotedamount", "2000");
+		type("$ponumber", "Customer reference");
+		selectdropdown("$job[priority]", "Important");
+		selectdropdownvalue("$job[usergroupsid]","1");
+		selectdropdownvalue("$job[invoicecategoryid]", "1");
+		Thread.sleep(3000);
+		click("//button[@type='submit']");
+	}
+	
 	public void job_diary_customerside()
 	{
 		click("//span[text()= 'Book into diary after adding job']");
@@ -657,7 +671,7 @@ public class CreateJob extends Wrapper {
 		Thread.sleep(2000);
 		click("(//a[text()='View'])[1]");
 		Thread.sleep(2000);
-		click("(//a[text()='View'])[4]");
+		//click("(//a[text()='View'])[4]");
 		Thread.sleep(2000);
 		//*[@id="ongoingwork"]/table/tbody/tr[2]/td[9]/a[2]
 	}
@@ -705,7 +719,7 @@ public class CreateJob extends Wrapper {
 		click("(//a[@class='daterange-day ng-binding'])[5]");
 		//Date
 		click("(//a[@class='daterange-day ng-binding'])[6]");
-        //user select
+		//user select
 		click("//input[@class='select2-input select2-default']");
 		click("(//div[@class='select2-result-label'])[1]");
 		//save
@@ -721,21 +735,21 @@ public class CreateJob extends Wrapper {
 		click("//a[text()='Link job as a recall to another job']");
 		Thread.sleep(2000);
 		click("(//a[@class='select2-choice'])[2]");
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		//click("(//input[@type='text'])[5]");
-		type("(//input[@type='text'])[5]", "test");
-		Thread.sleep(3000);
+		//type("(//input[@type='text'])[5]", "test");
+		Thread.sleep(1000);
 		click("(//div[@class='select2-result-label'])[1]");
 		Thread.sleep(2000);
 		click("//button[text()='Confirm link']");
-		
+
 	}
 	public void Customer_addedjob_diray() throws InterruptedException
 	{
 
 		Thread.sleep(2000);
 		click("//a[@class='btn btn-small btn-primary']");
-			
+
 	}
 	public void Customer_Editjob_diray() throws InterruptedException
 	{
@@ -744,39 +758,106 @@ public class CreateJob extends Wrapper {
 		click("(//a[text()='Edit'])[2]");
 		Thread.sleep(2000);
 		click("//span[@class='add-on date-picker-edit']");
+
+		Thread.sleep(2000);
+		click("(//a[@class='daterange-day ng-binding'])[15]");
+		Thread.sleep(2000);
+		click("(//select[@ng-change='updateHours(hours)'])[1]");
+		Thread.sleep(2000);
+		click("//option[@value='07']");
+		Thread.sleep(2000);
+		click("//select[@ng-change='updateMinutes()']");
+		Thread.sleep(3000);
+		click("//option[@value='30']");
+		Thread.sleep(2000);
+		click("//select[@class='diary-time-meridian ng-pristine ng-valid']");
+		Thread.sleep(2000);
+		click("//option[@value='AM']");	
+		Thread.sleep(2000);
+		click("(//select[@ng-change='updateHours(hours)'])[3]");
+		Thread.sleep(3000);
+		click("(//option[@value='08'])[4]");
+		Thread.sleep(2000);
+		click("(//select[@ng-change='updateMinutes()'])[3]");
+		Thread.sleep(3000);
+		click("(//option[@value='30'])[3]");
+		Thread.sleep(2000);
+		click("//select[@class='diary-time-meridian ng-pristine ng-valid']");
+		Thread.sleep(3000);
+		click("(//option[@value='AM'])[2]");
+		//Lock status
+		Thread.sleep(2000);
+		click("(//select[@ng-model='diary_event.lock_event'])[1]");
+		Thread.sleep(2000);
+		click("(//option[text()='Lock to engineer'])[1]");
+		//Is this a special event
+		Thread.sleep(2000);
+		click("(//input[@name=\"is_special_event\"])[1]");
 		
 		Thread.sleep(2000);
-		click("(//a[@class='daterange-day ng-binding'])[23]");
+		click("(//select[@id='top-input-in-details-step'])[1]");
 		Thread.sleep(2000);
-		click("(//select[@ng-change='updateHours(hours)'])[1]");
-		Thread.sleep(2000);
-		click("//option[text()= '07']");
-		Thread.sleep(2000);
-		click("(//select[@ng-change='updateMinutes()'])[1]");
-		Thread.sleep(2000);
-		click("//option[text()= '15']");
-		Thread.sleep(2000);
-		click("//select[@class='diary-time-meridian ng-pristine ng-valid']");
-		Thread.sleep(2000);
-		click("//option[text()= 'AM']");	
-		Thread.sleep(2000);
-		click("(//select[@ng-change='updateHours(hours)'])[1]");
-		Thread.sleep(2000);
-		click("//option[text()= '08']");
-		Thread.sleep(2000);
-		click("(//select[@ng-change='updateMinutes()'])[1]");
-		Thread.sleep(2000);
-		click("//option[text()= '15']");
-		Thread.sleep(2000);
-		click("//select[@class='diary-time-meridian ng-pristine ng-valid']");
-		Thread.sleep(2000);
-		click("//option[text()= 'AM']");	
-		Thread.sleep(2000);
+		click("(//option[text()='30 mins'])[1]");
+		//Job desc
+		Thread.sleep(1000);
+		click("(//input[@ng-model='diary_event.description'])[1]");
+		clear("(//input[@ng-model='diary_event.description'])[1]");
+		type("(//input[@ng-model='diary_event.description'])[1]", "Diary edit");
+		//Job Notes
+		Thread.sleep(1000);
+		click("(//textarea[@ng-model='diary_event.notes'])[1]");
+		clear("(//textarea[@ng-model='diary_event.notes'])[1]");
+		type("(//textarea[@ng-model='diary_event.notes'])[1]", "Diary edit notes");
+		//Save
+		Thread.sleep(1000);
 		click("(//button[text()='Save'])[1]");
 		Thread.sleep(2000);
+		click("(//a[text()='Edit'])[3]");
+		//Save&close
+		Thread.sleep(1000);
 		click("(//button[text()='Save and close'])[1]");
 		
+		//Change to Allday
+		Thread.sleep(2000);
+		click("(//a[text()='Edit'])[2]");
+		Thread.sleep(2000);
+		click("//select[@name='allDayValue']");
+		Thread.sleep(2000);
+		click("//option[text()='All day']");
+		//Save&close
+		Thread.sleep(1000);
+		click("(//button[text()='Save and close'])[1]");
+
+		//Change to Morning 
+		Thread.sleep(2000);
+		click("(//a[text()='Edit'])[2]");
+		Thread.sleep(2000);
+		click("//select[@name='allDayValue']");
+		Thread.sleep(2000);
+		click("//option[text()='Morning']");
+		//Save&close
+		Thread.sleep(1000);
+		click("(//button[text()='Save and close'])[1]");
 		
-		
+		//Change to Afternoon
+		Thread.sleep(2000);
+		click("(//a[text()='Edit'])[2]");
+		Thread.sleep(2000);
+		click("//select[@name='allDayValue']");
+		Thread.sleep(2000);
+		click("//option[text()='Afternoon']");
+		//Save&close
+		Thread.sleep(1000);
+		click("(//button[text()='Save and close'])[1]");
+	}
+
+	public void Customer_Deletejob_diray() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("(//a[text()='Edit'])[2]");
+		Thread.sleep(2000);
+		click("//a[@class='btn btn-danger on-left ng-scope']");
+		Thread.sleep(2000);
+		click("//a[@tabindex='1']");
 	}
 }      

@@ -1,5 +1,7 @@
 package pages;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
 import action.Wrapper;
 public class Invoice extends Wrapper {
     
@@ -307,6 +309,16 @@ public class Invoice extends Wrapper {
     	click("#s2id_invoiceAddressId");
     	click("(//div[@class='select2-result-label'])[2]");
     }
+    public void enable_invoice_address() throws InterruptedException
+    {
+    	click("//a[@class='btn dropdown-toggle btn-small quick-links-btn']");
+    	click("#invoiceAddresses");
+    	click("#enableWorkaddress");
+    	selectdropdown("#enableInvoiceAddress_enableworkaddress","Enabled");
+    	click("//button[@class='custom-btn-small btn btn-primary save_btn save-user-button loading_btn']");
+    	Thread.sleep(2000);
+    	click("(//a[@class='ng-binding'])[2]");
+    }
     public void invoice_AddnewPayment()
     {
         click("//a[@class='btn btn-small btn-primary action-btn']");
@@ -332,12 +344,64 @@ public class Invoice extends Wrapper {
     {
         click("//button[@type='submit']");
     }
-    
-    
-    
-    
-    
-    
+    public void payment_reference()
+    {
+    	type("(//input[@class='ng-pristine ng-valid'])[4]", "AZII");
+    }
+    public void view_payment ()
+    {
+    	click ("(//td[@class='ng-scope'])[4]");
+    }
+    public void Editpayment ()
+    {
+    	click("((//div[@class='section-title with-edit'])[1]//a)[2]");
+    }
+    public void editinvoice_payment_method() throws InterruptedException
+    {
+    	Thread.sleep(2000);
+        selectdropdownvalue("//select[@name='paymentMethod']","3");
         
+    }
+    public void invoice_payment_amount1()
+    {
+    	dclick("//td[@class='overflow_handsontable']");
+    	dclick("//td[@class='overflow_handsontable current highlight']");
+        clear("//textarea[@class='handsontableInput']");
+        type("//textarea[@class='handsontableInput']","89");
+     }
+    public void invoice_payment_editDescription() throws InterruptedException
+    {
+        clear("//textarea[@ng-model='description']");
+        type("//textarea[@ng-model='description']","Enter");
+        Thread.sleep(2000);
+    }
+    public void editpayment_reference() throws InterruptedException
+    {
+    	clear("(//input[@class='ng-pristine ng-valid'])[4]");
+    	type("//input[@class='ng-valid ng-animate ng-pristine-remove ng-pristine-remove-active ng-dirty']", "AZIIoh");
+    	Thread.sleep(2000);
+    } 
+    public void Deletepay()
+    {
+    	click("//a[@has-permission='Customerpayments,deleteaccess']");
+    }
+    public void confirmdelete()
+    {
+    	type("//input[@id='confirm_delete_input']", "DelETE");
+    }
+    public void delete_button()
+    {
+    	click ("//a[@id='delete-button']");
+    }
+    public void Raisefinalinvoice()
+    {
+    	click("//a[text()='Raise final invoice']");
+    }
+    public void assertionprefinal()
+    {
+    	String Actualtitle = gettext("(//td[@class='ng-binding'])[1]");
+        System.out.println(Actualtitle);
+        Assert.assertEquals(Actualtitle, "Prefinal");
+    }
     
 }

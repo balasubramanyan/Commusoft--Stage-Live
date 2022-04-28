@@ -38,7 +38,7 @@ public void adddiary() throws InterruptedException
 	Thread.sleep(3000);
 	click("(//a[@class='icon ss-navigateright'])[1]");
 	click("//a[text()='Today']");
-	click("(//td[@class='fc-widget-content'])[25]");
+	click("(//td[@class='fc-widget-content'])[46]");
 	Thread.sleep(3000);
 	click("//button[@class='btn btn-primary']");
 }
@@ -97,13 +97,16 @@ public void addfinalinvoice() throws InterruptedException
 	type("//textarea[@class='handsontableInput']","500");
 	Thread.sleep(3000);
 	typeenter("//textarea[@class='handsontableInput']");
-	Thread.sleep(3000);
 	click("//button[@class='btn btn-primary loading_btn save_btn']");
+	Thread.sleep(2000);
+	type("(//input[@id='confirm_delete_input'])[2]", "CONFIrm");
+	Thread.sleep(2000);
+	click("(//button[@id=\"delete-button\"])[2]");
 		
 }
 public void editinvoicetype() throws InterruptedException
 {
-	click("(//div[@class='section-title with-edit']//a)[1]");
+	click("(//div[@class='ng-scope']//a)[19]");
 	selectdropdown("(//div[@class='controls']//select)[1]","Interim invoice");
 	Thread.sleep(3000);
 	click("//button[@class='btn btn-primary loading_btn save_btn']");

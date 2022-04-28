@@ -30,11 +30,11 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+	<classpathentry exported="true" kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" kind="src" path="/Commusoft-Stage2&amp;Live"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/Commusoft-Stage2&amp;Live"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

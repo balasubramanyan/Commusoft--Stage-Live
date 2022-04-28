@@ -16,6 +16,8 @@ String editpage; //="https://app.commusoft.co.uk/customers/customer/1635/jobs/16
 String jobpage; //="https://app.commusoft.co.uk/customers/customer_list/1726/jobs/1733/details/view";
 String Prefinalinvoice;
 String customerpage;//="https://app.commusoft.co.uk/customers/customer/1922/view/property/view";
+String payment;
+String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jobs/2274/invoices/1084/payment/142/edit";
 
 	@Test(priority = 1)
 	public void add_invoice() throws InterruptedException
@@ -520,7 +522,8 @@ String customerpage;//="https://app.commusoft.co.uk/customers/customer/1922/view
 	    adding_invoice.unitprice_FullBreakdown_ByCategory_Labour("1111");
 	    adding_invoice.Full_Breakdown_ByCategory_Parts_Description("parts test");
 	    adding_invoice.unitprice_FullBreakdown_ByCategory_Parts1("789.05");
-	    adding_invoice.save_invoice();
+	    adding_invoice.save_invoice1();
+	    payment= driver.getCurrentUrl();
     }
 	@Test(priority=20)
 	public void Draftinvoice_to_invoice() throws InterruptedException
@@ -618,4 +621,139 @@ String customerpage;//="https://app.commusoft.co.uk/customers/customer/1922/view
 	    adding_invoice.unitprice_FullBreakdown_ByCategory_Parts1("789.05");
 	    adding_invoice.save_invoice();
 	}
+    @Test(priority=23)	
+    public void workaddress_As_invoiceaddress() throws InterruptedException
+    {
+    	driver.get(homepage);
+		Customer invoice =new Customer (driver);
+		invoice.Customer_create();
+		invoice.Customer_title();
+		invoice.Customer_Name();
+		invoice.Customer_SurName();
+		invoice.Customer_Landline();
+	    invoice.Customer_Mobile();
+	    invoice.Customer_AddressLine1();
+	    invoice.Customer_AddressLine2();
+	    invoice.Customer_AddressLine3();
+	    invoice.Customer_town();
+	    invoice.Customer_Save();
+	    Thread.sleep(4000);
+	    invoice.workaddress_tab();
+	    invoice.workaddress_addnewWorkaddress();
+	    invoice.Workaddress_create();
+	    Invoice adding_invoice =new Invoice(driver);
+	    adding_invoice.enable_invoice_address();
+	    CreateJob WAjob=new CreateJob(driver);
+	    WAjob.addjob();
+	    WAjob.JobDescription("PreFinal");
+	    adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Final_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_notes();
+	    adding_invoice.invoiceaddress2();
+	    adding_invoice.invoice_Category();
+	    adding_invoice.Invoice_Breakdown_No_Breakdown();
+	    adding_invoice.sub_total("1000");
+	    adding_invoice.save_invoice();
+	    }
+   @Test(priority=24)
+    public void invoicepaymentadd() throws InterruptedException
+    {
+    	driver.get(payment);
+    	Invoice addpayment=new Invoice(driver);
+    	addpayment.invoice_AddnewPayment();
+    	addpayment.invoice_payment_AddDescription();
+    	addpayment.payment_reference();
+    	addpayment.invoice_payment_method();
+    	addpayment.invoice_payment_nominalcode();
+    	addpayment.invoice_payment_amount();
+    	addpayment.invoice_paymeny_save();		
+    	Thread.sleep(2000);
+    }
+    @Test(priority=25)
+    public void invoicepaymentedit() throws InterruptedException
+    {
+    	//driver.get(editpay);
+    	Invoice editpayment=new Invoice(driver);
+    	editpayment.view_payment();
+    	editpayment.Editpayment();
+    	editpayment.invoice_payment_editDescription();
+    	editpayment.editpayment_reference();
+    	editpayment.editinvoice_payment_method();
+    	editpayment.invoice_payment_amount1();
+    	editpayment.invoice_paymeny_save();
+    	}
+    @Test(priority=26)
+    public void invoicepaymentdelete()
+    {
+    	Invoice deletepayment=new Invoice(driver);
+    	deletepayment.Deletepay();
+    	deletepayment.confirmdelete();
+    	deletepayment.delete_button();
+
+    }
+    @Test(priority=27)
+    public void Finalinvoice_from_jobinfobar() throws InterruptedException
+    {
+    	driver.get(homepage);
+		Customer invoice =new Customer (driver);
+		invoice.Customer_create();
+		invoice.Customer_title();
+		invoice.Customer_Name();
+		invoice.Customer_SurName();
+		invoice.Customer_Landline();
+	    invoice.Customer_Mobile();
+	    invoice.Customer_AddressLine1();
+	    invoice.Customer_AddressLine2();
+	    invoice.Customer_AddressLine3();
+	    invoice.Customer_town();
+	    invoice.Customer_Save();
+	    Thread.sleep(4000);
+	    customerpage=driver.getCurrentUrl();
+	    driver.get(customerpage);
+		Thread.sleep(4000);
+		CreateJob job = new CreateJob(driver);
+		job.addjob();
+		job.JobDescription("No Rules");
+		job.edit_job();
+		job.complete_job();
+		Invoice finalinvoice=new Invoice(driver);
+		finalinvoice.Raisefinalinvoice();
+		finalinvoice.invoice_description();
+		finalinvoice.invoice_notes();
+		finalinvoice.invoice_Category();
+		finalinvoice.Invoice_Breakdown_No_Breakdown();
+		finalinvoice.sub_total("5000");
+		finalinvoice.save_invoice();
+		
+    }
+    @Test(priority=28)
+    public void Automatic_prefinalinvoice() throws InterruptedException
+    {
+    	driver.get(homepage);
+		Customer invoice =new Customer (driver);
+		invoice.Customer_create();
+		invoice.Customer_title();
+		invoice.Customer_Name();
+		invoice.Customer_SurName();
+		invoice.Customer_Landline();
+	    invoice.Customer_Mobile();
+	    invoice.Customer_AddressLine1();
+	    invoice.Customer_AddressLine2();
+	    invoice.Customer_AddressLine3();
+	    invoice.Customer_town();
+	    invoice.Customer_Save();
+	    Thread.sleep(4000);
+	    customerpage=driver.getCurrentUrl();
+	    driver.get(customerpage);
+		Thread.sleep(4000);
+		CreateJob job = new CreateJob(driver);
+		job.addjob();
+		job.JobDescription1("Auto prefinal");
+		Invoice autopre = new Invoice(driver);
+		autopre.InvoiceTab();
+		autopre.assertionprefinal();
+				
+    }
 	}

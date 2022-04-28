@@ -75,7 +75,12 @@ public class Diary extends Wrapper {
     //------------Customer--> Job--> Select diary check box
     public void Customer_job_Diary_Timing()
     {
-        click("(//td[@class='fc-widget-content'])[42]");
+        click("(//td[@class='fc-widget-content'])[38]");
+        
+    }
+    public void Customer_job_Diary_Timing1()
+    {
+        click("(//td[@class='fc-widget-content'])[39]");
         
     }
 //  public void Customer_job_Diary_Timing_Change() throws InterruptedException

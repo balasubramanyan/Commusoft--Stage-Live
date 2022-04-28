@@ -1,4 +1,6 @@
 package pages;
+import java.util.Set;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
@@ -403,5 +405,44 @@ public class Invoice extends Wrapper {
         System.out.println(Actualtitle);
         Assert.assertEquals(Actualtitle, "Prefinal");
     }
-    
+    public void invoice_communication_email() throws InterruptedException 
+    {
+    	Thread.sleep(3000);
+    	click("//a[text()='Email invoice']");
+		Thread.sleep(2000);
+		click("//input[@class='select2-input select2-default']");
+		click("//div[@class='select2-result-label']");
+		//selectdropdown("//select[@ng-model='email.selected_recipient_address']","eezhilraja@commusoft.com");
+		Thread.sleep(1000);
+		click("(//a[@ng-click='sendEmail()'])[2]");
+		Thread.sleep(2000);
+    }
+    public void invoice_communication_print() throws InterruptedException 
+    {
+    click("//a[@ng-click='showPrintInvoice()']");
+	Thread.sleep(2000);
+	click("//button[@ng-click='print()']");
+	
+    }
+    public void closeprint() throws InterruptedException
+	{
+    	    String oldwin=driver.getWindowHandle();
+			for (String newWin : driver.getWindowHandles()) 
+			{
+				driver.switchTo().window(newWin);
+			}
+			
+			Thread.sleep(2000);
+			driver.close();
+			driver.switchTo().window(oldwin);
+	}
+    public void verifyprint() throws InterruptedException
+    {
+    	Thread.sleep(4000);
+    	String Actualtext=gettext("(//strong[@class='ng-scope ng-binding'])[1]");
+    	System.out.println(Actualtext);
+    	Assert.assertEquals(Actualtext, "This Invoice was last sent by Print");
+    	Thread.sleep(2000);
+    	
+    }
 }

@@ -171,15 +171,13 @@ public class ConsolidatedInv extends Wrapper {
 	Thread.sleep(3000);
 	}
 	
-	public void deleteInvoice() throws InterruptedException
+	public void emailInvoice() throws InterruptedException
 	
 	{
 		click("//a[contains(text(), 'Email invoice')]");
-		type("#confirm_delete_input","Save");
-    	click("#delete-button");
+		
 		Thread.sleep(4000);
 	}
-	
 	public void emailWidget() throws InterruptedException
 	{
 		
@@ -188,14 +186,19 @@ public class ConsolidatedInv extends Wrapper {
 		Thread.sleep(3000);
 		click("//a[@ng-click='sendEmail()']");
 	}
-	
-public void emailInvoice() throws InterruptedException
+	public void deleteInvoice() throws InterruptedException
 	
 	{
-		click("//a[contains(text(), 'Delete')]");
-		
+		click("//a[contains(text(),'Delete')]");
+		type("#confirm_delete_input","delete");
+		Thread.sleep(3000);
+    	click("#delete-button");
 		Thread.sleep(4000);
 	}
+	
+	
+	
+	
 
 }
 

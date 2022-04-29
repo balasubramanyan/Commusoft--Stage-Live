@@ -14,7 +14,7 @@ public class Consolidated_Inv extends Baseclass {
 
 	String homepage;
 	
-	public String ConInv = "https://stage2.commusoft.net/customers/customer/1973/multiple_invoice/1810/view";
+	//public String ConInv = "https://stage2.commusoft.net/customers/customer/1973/multiple_invoice/1810/view";
 
 	//@Test(priority = 0)
 	public void login() throws InterruptedException {
@@ -224,7 +224,7 @@ public class Consolidated_Inv extends Baseclass {
 		Thread.sleep(3000);
 	}
 	
-	//@Test(priority = 22)
+	@Test(priority = 22)
 	public void Switchtab() throws InterruptedException
 	{
 		ConsolidatedInv tabs = new ConsolidatedInv(driver);
@@ -260,7 +260,6 @@ public class Consolidated_Inv extends Baseclass {
 		CreateJob job = new CreateJob(driver);
 		job.addjob();
 		job.JobDescription("No Rules");
-		click("//button[@type='submit']");
 		Thread.sleep(3000);	}
    
    @Test(priority = 26)
@@ -306,6 +305,7 @@ public class Consolidated_Inv extends Baseclass {
 	public void delete_invoice() throws InterruptedException
 	{
 		ConsolidatedInv delinvoice = new ConsolidatedInv(driver);
+		delinvoice.quicklinks();
 		delinvoice.deleteInvoice();
 		Thread.sleep(3000);
 

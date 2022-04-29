@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import action.Baseclass;
 import pages.CreateJob;
 import pages.Customer;
+import pages.Estimate;
 import pages.Invoice;
 import pages.LoginPage;
 
@@ -14,14 +15,14 @@ public class Invoice_module extends Baseclass
 String invoicepage;
 String editpage; //="https://app.commusoft.co.uk/customers/customer/1635/jobs/1669/invoices/537/view";
 String jobpage; //="https://app.commusoft.co.uk/customers/customer_list/1726/jobs/1733/details/view";
-String Prefinalinvoice;
 String customerpage;//="https://app.commusoft.co.uk/customers/customer/1922/view/property/view";
 String payment;
 String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jobs/2274/invoices/1084/payment/142/edit";
 String additionalinvoiceurl; //="https://app.commusoft.co.uk/customers/customer_list/2231/jobs/2754/invoices/1277/view";
 String interiminvoiceurl;
-String prefinalinvoiceurl;
+String Prefinalinvoice;
 String Finalinvoiceurl;
+String retention;
 
 	@Test(priority = 1)
 	public void add_invoice() throws InterruptedException
@@ -804,7 +805,7 @@ String Finalinvoiceurl;
     public void prefinalinvoice_print_email() throws InterruptedException
    
     {
-    	driver.get(prefinalinvoiceurl);
+    	driver.get(Prefinalinvoice);
     	Invoice email_print=new Invoice(driver);
     	email_print.invoice_communication_email();
     	email_print.invoice_communication_print();
@@ -821,5 +822,68 @@ String Finalinvoiceurl;
     	email_print.invoice_communication_print();
     	email_print.closeprint();
     	email_print.verifyprint();
+    }
+    @Test(priority=33)
+    public void Minus_deposit_retention_interim_invoices_on_finalinvoice() throws InterruptedException 
+    {
+    	driver.get(homepage);
+		Customer invoice =new Customer (driver);
+		invoice.Customer_create();
+		invoice.Customer_title();
+		invoice.Customer_Name();
+		invoice.Customer_SurName();
+		invoice.Customer_email();
+		invoice.Customer_Landline();
+	    invoice.Customer_Mobile();
+	    invoice.Customer_AddressLine1();
+	    invoice.Customer_AddressLine2();
+	    invoice.Customer_AddressLine3();
+	    invoice.Customer_town();
+	    invoice.Customer_Save();
+	    Thread.sleep(4000);
+	    customerpage=driver.getCurrentUrl();
+	    driver.get(customerpage);
+	    Estimate invoice1=new Estimate(driver);
+	    invoice1.Estimate_AddNew();
+	    invoice1.choose_description();
+	    invoice1.Estimate_Notes();
+	    invoice1.Estimate_CustomerReference();
+	    invoice1.Estimate_user_group();
+	    invoice1.Estimate_AddEstimate();
+		Thread.sleep(3000);
+		invoice1.Estimate_Price_tab();
+		Thread.sleep(3000);
+		invoice1.Estimate_Price_NoBreakdown();
+		Thread.sleep(3000);
+		invoice1.Estimate_Price_NoBreakdown_PartsTotal();
+		Thread.sleep(3000);
+		invoice1.Estimate_InvoiceSchedule();
+		Thread.sleep(3000);
+		invoice1.Estimate_InvoiceSchedule_Deposite();
+		Thread.sleep(3000);
+		invoice1.Estimate_InvoiceSchedule_Completion();
+		Thread.sleep(3000);
+		invoice1.Estimate_InvoiceSchedule_Retention();
+		Thread.sleep(3000);
+		invoice1.Estimate_SendtoCustomer();
+		invoice1.Estimate_Accept();
+		Invoice invoice2=new Invoice(driver);
+		invoice2.InvoiceTab();
+		retention=driver.getCurrentUrl();
+		invoice2.addinvoice();
+		invoice2.Interim_invoice();
+		invoice2.invoice_description();
+		invoice2.invoice_notes();
+		invoice2.invoice_Category();
+		invoice2.Invoice_Breakdown_No_Breakdown();
+		invoice2.sub_total("100");
+		invoice2.save_invoice1();   
+		driver.get(retention);
+		invoice2.addinvoice();
+		invoice2.Final_invoice();
+		invoice2.invoice_description();
+		invoice2.invoice_notes();
+		invoice2.invoice_Category();
+		invoice2.save_invoice1();
     }
 	}

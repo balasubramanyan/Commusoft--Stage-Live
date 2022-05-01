@@ -11,9 +11,10 @@ public class Invoice extends Wrapper {
     {
         this.driver =ldriver;
     }
-    public void InvoiceTab()
+    public void InvoiceTab() throws InterruptedException
     {
         click("//span[text()='Invoices']");
+        Thread.sleep(2000);
     }
     
     public void addinvoice() throws InterruptedException

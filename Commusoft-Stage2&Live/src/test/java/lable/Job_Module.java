@@ -13,14 +13,12 @@ import pages.LoginPage;
 public class Job_Module extends Baseclass{
 
 
-
 	@Test(priority = 0)
 	public void AddCustomer() throws InterruptedException
 	{
 		Customer customer = new Customer(driver);
 		customer.Add_Customer();
 	}
-
 	@Test(priority = 1)
 	public void jobadd() throws InterruptedException
 	{
@@ -30,7 +28,6 @@ public class Job_Module extends Baseclass{
 		job.addjob1();
 		job.JobDescription("Demo", "First", "Second");
 		job.createjob1();
-
 	}
 	@Test(priority = 2)
 	public void jobedit() throws InterruptedException
@@ -38,69 +35,157 @@ public class Job_Module extends Baseclass{
 		CreateJob job = new CreateJob(driver);
 		job.jobeditlink("TestDes", "Test", "Edit first", "Edit second");
 		job.Editsavejob();
-
-
 	}
 	@Test(priority=3)
 	public void Jobdelete() throws InterruptedException
 	{
 		CreateJob job = new CreateJob(driver);
 		job.Jobdeleted("delete");
-
-
 	}
 	@Test(priority = 4)
+	public void Addjob_with_diary() throws InterruptedException
+	{
+		CreateJob job = new CreateJob(driver);
+		
+		//job.customer_jobmodule();
+		//job.customer_breadcrum();
+		job.addjob1();
+		job.JobDescription2("Demo");
+		job.job_diary_customerside();
+		job.createjob1();
+		Thread.sleep(5000);
+		driver.navigate().refresh();
+		Diary diary = new Diary(driver);
+		diary.Diary_Today();
+		Thread.sleep(2000);
+		diary.Customer_job_Diary_Timing();
+		diary.Customer_job_Diary_Timing_savebutton();
+
+	}
+
+	@Test(priority = 5)
+	public void Customer_addedJob_diray() throws InterruptedException
+	{
+		CreateJob job = new CreateJob(driver);
+		//job.customer_jobmodule();
+		job.customer_breadcrum();
+		job.addjob1();
+		job.JobDescription2("Demo");
+		job.createjob1();
+		job.Customer_addedjob_diray();
+		//Create customer--> create job-->  create diary... 
+		Thread.sleep(5000);
+		driver.navigate().refresh();
+		Diary diary = new Diary(driver);
+		diary.Diary_Today();
+		Thread.sleep(3000);
+		diary.Customer_job_Diary_Timing_2();
+		diary.Customer_job_Diary_Timing_savebutton();
+		//Edit diary...
+		Thread.sleep(2000);
+		job.Customer_Editjob_diray();
+		job.Customer_Deletejob_diray();
+
+	}
+	@Test(priority = 6)
 	public void jobaddFOC() throws InterruptedException
 	{
 		CreateJob job = new CreateJob(driver);
+		//job.customer_jobmodule();
+		job.customer_breadcrum();
 		job.addjob1();
-		job.JobDescription2("Demo", "First", "Second");
+		job.JobDescription2("Demo");
 		job.createjob1();
 		job.JobFOC("Automaction done for job");
+	}
+
+	@Test(priority = 7)
+	public void Customer_Job_diray_Cancel() throws InterruptedException
+	{
+		CreateJob job = new CreateJob(driver);
+		
+		//job.customer_jobmodule();
+	//	job.customer_breadcrum();
+		job.addjob1();
+		job.JobDescription2("Demo");
+		job.createjob1();
+		job.Customer_addedjob_diray();
+		Thread.sleep(2000);
+		driver.navigate().refresh();
+		Diary diary = new Diary(driver);
+		diary.Diary_Today();
+		Thread.sleep(3000);
+		diary.Customer_job_Diary_Timing_3();
+		diary.Customer_job_Diary_Timing_savebutton();
+
+		//Cancel diary
+		Thread.sleep(3000);
+		job.Customer_Canceljob_diray();
 
 	}
+
 	
-	@Test(priority = 5)
+	@Test(priority = 8)
 	public void jobaddcomplete() throws InterruptedException
 	{
 		CreateJob job = new CreateJob(driver);
+		job.customer_breadcrum();
 		job.addjob1();
-		job.JobDescription2("Demo", "First", "Second");
+		job.JobDescription2("Demo");
 		job.createjob1();
 		job.edit_job();
 		job.complete_job();
 	}
-	
-	@Test(priority = 6)
+	@Test(priority = 9)
 	public void Recalljob() throws InterruptedException
 	{
 		CreateJob job = new CreateJob(driver);
 		job.customer_breadcrum();
 		job.addjob1();
-		job.JobDescription2("Demo", "First", "Second");
+		job.JobDescription2("Demo");
 		job.createjob1();
 		job.Job_Recall("Demo", "First", "Second", "Ezhil");
 	}
-	@Test(priority = 7)
+	@Test(priority = 10)
 	public void Aboutjob() throws InterruptedException
 	{
 		CreateJob job = new CreateJob(driver);
 		job.customer_breadcrum();
 		job.addjob1();
-		job.JobDescription2("Demo", "First", "Second");
+		job.JobDescription2("Demo");
 		job.createjob1();
 		job.Job_Abort("Demo");
 	}
-	@Test(priority = 8)
+	@Test(priority = 11)
+	public void Addjob_Job_PlaceOnHold() throws InterruptedException
+	{
+		CreateJob job = new CreateJob(driver);
+		job.customer_breadcrum();
+		job.addjob1();
+		job.JobDescription2("Demo");
+		job.createjob1();
+		job.Job_PlaceOnHold();
+	}
+	@Test(priority = 12)
+	public void Addjob_link() throws InterruptedException
+	{
+		CreateJob job = new CreateJob(driver);
+		job.customer_breadcrum();
+		job.addjob1();
+		job.JobDescription2("Demo");
+		job.createjob1();
+		job.link_job_recall();
+	}
+	@Test(priority = 13)
 	public void Addjob_Final_invoice() throws InterruptedException
 	{
 		CreateJob job = new CreateJob(driver);
 		job.customer_breadcrum();
 		job.addjob1();
-		job.JobDescription2("Demo", "First", "Second");
+		job.JobDescription2("Demo");
 		job.createjob1();
 		Invoice adding_invoice = new Invoice(driver);
-		
+
 		Thread.sleep(5000);
 		adding_invoice.InvoiceTab();
 		adding_invoice.addinvoice();
@@ -117,76 +202,5 @@ public class Job_Module extends Baseclass{
 		adding_invoice.unitprice_FullBreakdown_ByCategory_Parts1("789.05");
 		adding_invoice.save_invoice();
 	}
-	
-	@Test(priority = 9)
-	public void Addjob_with_diary() throws InterruptedException
-	{
-		CreateJob job = new CreateJob(driver);
-		//job.customer_jobmodule();
-		job.customer_breadcrum();
-		job.addjob1();
-		job.JobDescription2("Demo", "First", "Second");
-		job.job_diary_customerside();
-		job.createjob1();
-		Thread.sleep(5000);
-		Diary diary = new Diary(driver);
-		diary.Diary_Today();
-		Thread.sleep(2000);
-		diary.Customer_job_Diary_Timing();
-		diary.Customer_job_Diary_Timing_savebutton();
-	}
-	
-	@Test(priority = 10)
-	public void Addjob_Job_PlaceOnHold() throws InterruptedException
-	{
-		CreateJob job = new CreateJob(driver);
-		//job.customer_jobmodule();
-		job.customer_breadcrum();
-		job.addjob1();
-		job.JobDescription2("Demo", "First", "Second");
-		job.createjob1();
-		job.Job_PlaceOnHold();
-	}
-	
-
-	@Test(priority = 11)
-	public void Addjob_link() throws InterruptedException
-	{
-		CreateJob job = new CreateJob(driver);
-		//job.customer_jobmodule();
-		job.customer_breadcrum();
-		job.addjob1();
-		job.JobDescription2("Demo", "First", "Second");
-		job.createjob1();
-		job.link_job_recall();
-	}
-
-
-	@Test(priority = 12)
-	public void Customer_addedJob_diray() throws InterruptedException
-	{
-		CreateJob job = new CreateJob(driver);
-		//job.customer_jobmodule();
-		job.customer_breadcrum();
-		job.addjob1();
-		job.JobDescription2("Demo", "First", "Second");
-		job.createjob1();
-		job.Customer_addedjob_diray();
-
-		//Create customer--> create job-->  create diary... 
-		Thread.sleep(5000);
-		Diary diary = new Diary(driver);
-		diary.Diary_Today();
-		Thread.sleep(3000);
-		diary.Customer_job_Diary_Timing1();
-		diary.Customer_job_Diary_Timing_savebutton();
-
-		//Edit diary...
-		Thread.sleep(2000);
-		job.Customer_Editjob_diray();
-		job.Customer_Deletejob_diray();
-
-	}
-
 
 }

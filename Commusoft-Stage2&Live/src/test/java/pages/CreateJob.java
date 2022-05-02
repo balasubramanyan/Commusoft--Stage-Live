@@ -30,18 +30,18 @@ public class CreateJob extends Wrapper {
 
 	}
 	public void JobDescription1(String a) throws InterruptedException
-	{
-		searchengine search = new searchengine(driver);
-		search.searchbox_jobDescription(a);
-		//selectdropdownvalue("$servicereminderinstance", "3");
-		type("$quotedamount", "2000");
-		type("$ponumber", "Customer reference");
-		selectdropdown("$job[priority]", "Important");
-		selectdropdownvalue("$job[usergroupsid]","1");
-		selectdropdownvalue("$job[invoicecategoryid]", "1");
-		Thread.sleep(3000);
-		click("//button[@type='submit']");
-	}
+    {
+        searchengine search = new searchengine(driver);
+        search.searchbox_jobDescription(a);
+        //selectdropdownvalue("$servicereminderinstance", "3");
+        type("$quotedamount", "2000");
+        type("$ponumber", "Customer reference");
+        selectdropdown("$job[priority]", "Important");
+        selectdropdownvalue("$job[usergroupsid]","1");
+        selectdropdownvalue("$job[invoicecategoryid]", "1");
+        Thread.sleep(3000);
+        click("//button[@type='submit']");
+    }
 	
 	public void job_diary_customerside()
 	{
@@ -351,6 +351,7 @@ public class CreateJob extends Wrapper {
 	//ezhil
 	public void addjob1() throws InterruptedException
 	{
+		Thread.sleep(1000);
 		click("//a[@id='newJob']");
 		Thread.sleep(1000);
 	}
@@ -359,113 +360,116 @@ public class CreateJob extends Wrapper {
 		Thread.sleep(2000);
 		click("//span[text()='-- Please choose --']"); 
 		// Des select
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("(//div[@class='select2-result-label'])[7]"); 
 		// Skill
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("(//input[@class=\"select2-input select2-default\"])[1]"); 
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("//option[text()='Test QA']");
 		// Job note
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		type("//textarea[@name='engineernotes']", a);    
 		//Service job
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("//input[@formcontrolname='isservicejob']"); 
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("(//select[@name='servicereminderinstance'])[1]");
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("(//option[text()='Boiler service'])[1]");
 		//Quoted amount
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		type("//input[@formcontrolname='quotedamount']", b); 
 		//Customer reference
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		type("//input[@formcontrolname=\"ponumber\"]", c);
 		//Expected completion date
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("//span[@class=\"add-on date-picker-edit\"]");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		click("(//td [@role=\"gridcell\"])[25]");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		click("//option[text()= '07']");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		click("//option[text()= '15']");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		click("//select[@class='meridian ng-untouched ng-pristine ng-valid']");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		click("//option[text()= 'AM']");
 		//Priority
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("//select[@formcontrolname='priority']");
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("//option[text()=\"Not Important\"]");
 		//User group
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("//select[@formcontrolname='usergroupsid']");
-		Thread.sleep(2000);
+		//Thread.sleep(1000);
 		click("//option[text()= 'Aravind Group']");
 		//Invoice Category
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		click("//select[@formcontrolname='invoicecategoryid']");
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("//option[text()= 'Aravind Category']");
 
 	}
-	public void JobDescription2(String a, String b, String c) throws InterruptedException
+	public void JobDescription2(String a) throws InterruptedException
 	{
 		Thread.sleep(2000);
 		click("//span[text()='-- Please choose --']"); 
 		// Des select
 		Thread.sleep(2000);
 		click("(//div[@class='select2-result-label'])[7]"); 
-		// Skill
-		Thread.sleep(2000);
-		click("(//input[@class=\"select2-input select2-default\"])[1]"); 
-		Thread.sleep(2000);
-		click("//option[text()='Test QA']");
+//		// Skill
+//		Thread.sleep(2000);
+//		click("(//input[@class=\"select2-input select2-default\"])[1]"); 
+//		Thread.sleep(2000);
+//		click("//option[text()='Test QA']");
+		
 		// Job note
-		type("//textarea[@name='engineernotes']", a);    
-		//Quoted amount
 		Thread.sleep(2000);
-		type("//input[@formcontrolname='quotedamount']", b); 
-		//Customer reference
-		Thread.sleep(2000);
-		type("//input[@formcontrolname=\"ponumber\"]", c);
-		//Expected completion date
-		Thread.sleep(2000);
-		click("//span[@class=\"add-on date-picker-edit\"]");
-		Thread.sleep(2000);
-		click("(//td [@role=\"gridcell\"])[25]");
-		Thread.sleep(2000);
-		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
-		Thread.sleep(2000);
-		click("//option[text()= '07']");
-		Thread.sleep(2000);
-		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
-		Thread.sleep(2000);
-		click("//option[text()= '15']");
-		Thread.sleep(2000);
-		click("//select[@class='meridian ng-untouched ng-pristine ng-valid']");
-		Thread.sleep(2000);
-		click("//option[text()= 'AM']");
-		//Priority
-		Thread.sleep(2000);
-		click("//select[@formcontrolname='priority']");
-		Thread.sleep(2000);
-		click("//option[text()=\"Not Important\"]");
-		//User group
-		Thread.sleep(2000);
-		click("//select[@formcontrolname='usergroupsid']");
-		Thread.sleep(2000);
-		click("//option[text()= 'Aravind Group']");
-		//Invoice Category
-		Thread.sleep(2000);
-		click("//select[@formcontrolname='invoicecategoryid']");
+		type("//textarea[@name='engineernotes']", a); 
+		
+//		//Quoted amount
+//		Thread.sleep(2000);
+//		type("//input[@formcontrolname='quotedamount']", b); 
+//		//Customer reference
+//		Thread.sleep(2000);
+//		type("//input[@formcontrolname=\"ponumber\"]", c);
+//		//Expected completion date
+//		Thread.sleep(2000);
+//		click("//span[@class=\"add-on date-picker-edit\"]");
+//		Thread.sleep(2000);
+//		click("(//td [@role=\"gridcell\"])[25]");
+//		Thread.sleep(2000);
+//		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
+//		Thread.sleep(2000);
+//		click("//option[text()= '07']");
+//		Thread.sleep(2000);
+//		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
+//		Thread.sleep(2000);
+//		click("//option[text()= '15']");
+//		Thread.sleep(2000);
+//		click("//select[@class='meridian ng-untouched ng-pristine ng-valid']");
+//		Thread.sleep(2000);
+//		click("//option[text()= 'AM']");
+//		//Priority
+//		Thread.sleep(2000);
+//		click("//select[@formcontrolname='priority']");
+//		Thread.sleep(2000);
+//		click("//option[text()=\"Not Important\"]");
+//		//User group
+//		Thread.sleep(2000);
+//		click("//select[@formcontrolname='usergroupsid']");
+//		Thread.sleep(2000);
+//		click("//option[text()= 'Aravind Group']");
+//		//Invoice Category
+//		Thread.sleep(2000);
+//		click("//select[@formcontrolname='invoicecategoryid']");
 		Thread.sleep(2000);
 		click("//option[text()= 'Aravind Category']");
 
@@ -552,7 +556,7 @@ public class CreateJob extends Wrapper {
 		click("//a[@class='btn dropdown-toggle btn-small quick-links-btn']");
 		Thread.sleep(2000);
 		click("//a[@has-permission='Jobs,deleteaccess']");
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		type("//input[@id='confirm_delete_input']", H);
 		Thread.sleep(2000);
 		click("//a[@id='delete-button']");
@@ -604,61 +608,61 @@ public class CreateJob extends Wrapper {
 
 		Thread.sleep(2000);
 		click("//a[@class='btn dropdown-toggle btn-small quick-links-btn']");
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		//Recall link
 		click("//a[text()='Create recall']");
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		//Job desc
 		clear("//input[@formcontrolname='description']");
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		type("//input[@formcontrolname='description']", D);
 		//Who's to blame
 		click("(//a[@class='select2-choice'])[3]");
 		click("(//div[@class='select2-result-label'])[5]");
-		Thread.sleep(2000);
+		
 		click("//option[text()='Test QA']");
 		// Job note
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		type("//textarea[@name='engineernotes']", E);    
 		//Quoted amount
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		type("//input[@formcontrolname='quotedamount']", F); 
 		//Customer reference
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		type("//input[@formcontrolname=\"ponumber\"]", G);
 		//Expected completion date
 		Thread.sleep(2000);
 		click("//span[@class=\"add-on date-picker-edit\"]");
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("(//td [@role=\"gridcell\"])[25]");
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		click("//option[text()= '08']");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		click("//select[@class='hour-min ng-untouched ng-pristine ng-valid']");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		click("//option[text()= '45']");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		click("//select[@class='meridian ng-untouched ng-pristine ng-valid']");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		click("//option[text()= 'PM']");
 		//Priority
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("//select[@formcontrolname='priority']");
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("//option[text()='Important']");
 		//User group
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("//select[@formcontrolname='usergroupsid']");
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("//option[text()= 'Ranjit Group']");
 		//Invoice Category
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("//select[@formcontrolname='invoicecategoryid']");
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("//option[text()= 'Ranjit Category']");
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("//span[text()='Add recall']");
 
 	}
@@ -733,13 +737,14 @@ public class CreateJob extends Wrapper {
 		click("//a[@class='btn dropdown-toggle btn-small quick-links-btn']");
 		Thread.sleep(2000);		
 		click("//a[text()='Link job as a recall to another job']");
-		Thread.sleep(2000);
-		click("(//a[@class='select2-choice'])[2]");
-		Thread.sleep(1000);
+		//Thread.sleep(2000);
+		//click("(//span[@class="select2-arrow"])[2]");
+		//Thread.sleep(1000);
 		//click("(//input[@type='text'])[5]");
-		//type("(//input[@type='text'])[5]", "test");
-		Thread.sleep(1000);
-		click("(//div[@class='select2-result-label'])[1]");
+		
+		//type("(//input[@class='select2-input select2-focused'])[2]", "test");
+		//Thread.sleep(1000);
+		//click("(//div[@class='select2-result-label'])[1]");
 		Thread.sleep(2000);
 		click("//button[text()='Confirm link']");
 
@@ -753,7 +758,7 @@ public class CreateJob extends Wrapper {
 	}
 	public void Customer_Editjob_diray() throws InterruptedException
 	{
-
+		
 		Thread.sleep(2000);
 		click("(//a[text()='Edit'])[2]");
 		Thread.sleep(2000);
@@ -767,56 +772,54 @@ public class CreateJob extends Wrapper {
 		click("//option[@value='07']");
 		Thread.sleep(2000);
 		click("//select[@ng-change='updateMinutes()']");
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		click("//option[@value='30']");
 		Thread.sleep(2000);
 		click("//select[@class='diary-time-meridian ng-pristine ng-valid']");
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("//option[@value='AM']");	
 		Thread.sleep(2000);
 		click("(//select[@ng-change='updateHours(hours)'])[3]");
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		click("(//option[@value='08'])[4]");
 		Thread.sleep(2000);
 		click("(//select[@ng-change='updateMinutes()'])[3]");
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		click("(//option[@value='30'])[3]");
 		Thread.sleep(2000);
 		click("//select[@class='diary-time-meridian ng-pristine ng-valid']");
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		click("(//option[@value='AM'])[2]");
 		//Lock status
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("(//select[@ng-model='diary_event.lock_event'])[1]");
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		click("(//option[text()='Lock to engineer'])[1]");
 		//Is this a special event
 		Thread.sleep(2000);
 		click("(//input[@name=\"is_special_event\"])[1]");
-		
+
 		Thread.sleep(2000);
 		click("(//select[@id='top-input-in-details-step'])[1]");
 		Thread.sleep(2000);
 		click("(//option[text()='30 mins'])[1]");
 		//Job desc
-		Thread.sleep(1000);
-		click("(//input[@ng-model='diary_event.description'])[1]");
+		Thread.sleep(2000);
 		clear("(//input[@ng-model='diary_event.description'])[1]");
 		type("(//input[@ng-model='diary_event.description'])[1]", "Diary edit");
 		//Job Notes
-		Thread.sleep(1000);
-		click("(//textarea[@ng-model='diary_event.notes'])[1]");
+		Thread.sleep(2000);
 		clear("(//textarea[@ng-model='diary_event.notes'])[1]");
 		type("(//textarea[@ng-model='diary_event.notes'])[1]", "Diary edit notes");
 		//Save
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		click("(//button[text()='Save'])[1]");
 		Thread.sleep(2000);
 		click("(//a[text()='Edit'])[3]");
 		//Save&close
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		click("(//button[text()='Save and close'])[1]");
-		
+
 		//Change to Allday
 		Thread.sleep(2000);
 		click("(//a[text()='Edit'])[2]");
@@ -825,7 +828,7 @@ public class CreateJob extends Wrapper {
 		Thread.sleep(2000);
 		click("//option[text()='All day']");
 		//Save&close
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		click("(//button[text()='Save and close'])[1]");
 
 		//Change to Morning 
@@ -836,9 +839,9 @@ public class CreateJob extends Wrapper {
 		Thread.sleep(2000);
 		click("//option[text()='Morning']");
 		//Save&close
-		Thread.sleep(1000);
-		click("(//button[text()='Save and close'])[1]");
 		
+		click("(//button[text()='Save and close'])[1]");
+
 		//Change to Afternoon
 		Thread.sleep(2000);
 		click("(//a[text()='Edit'])[2]");
@@ -847,12 +850,13 @@ public class CreateJob extends Wrapper {
 		Thread.sleep(2000);
 		click("//option[text()='Afternoon']");
 		//Save&close
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		click("(//button[text()='Save and close'])[1]");
 	}
 
 	public void Customer_Deletejob_diray() throws InterruptedException
 	{
+		
 		Thread.sleep(2000);
 		click("(//a[text()='Edit'])[2]");
 		Thread.sleep(2000);
@@ -860,4 +864,30 @@ public class CreateJob extends Wrapper {
 		Thread.sleep(2000);
 		click("//a[@tabindex='1']");
 	}
+
+	public void Customer_Canceljob_diray() throws InterruptedException
+	{
+		
+		
+		Thread.sleep(2000);
+		click("(//a[text()='Edit'])[2]");
+//		Thread.sleep(2000);
+//		click("(//input[@ng-model='diary_event.description'])[1]");
+//		Thread.sleep(2000);
+//		click("//select[@name='allDayValue']");
+//		Thread.sleep(2000);
+//		click("//option[text()='Afternoon']");
+		Thread.sleep(2000);
+		click("//a[@class='btn btn-warning on-left ng-scope']");
+		
+		Thread.sleep(2000);
+		type("//textarea[@ng-model='diary_event.reasonCanceled']", "Cancel");
+		Thread.sleep(2000);
+		click("//button[text()='Cancel event']");
+		Thread.sleep(2000);
+		click("//a[@tabindex='1']");
+		Thread.sleep(2000);
+		click("(//a[@id='cancel-panel-btn'])[2]");
+	}
+
 }      

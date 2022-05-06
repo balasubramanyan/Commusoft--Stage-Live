@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import action.Wrapper;
 
 public class Estimate extends Wrapper {
-	
+
 	public Estimate(WebDriver ldriver)
 	{
 		this.driver = ldriver;
@@ -75,8 +75,8 @@ public class Estimate extends Wrapper {
 		type("//input[@id='time0row0associated_rows01']", "200");
 		Thread.sleep(2000);
 		typeenter("//input[@id='time0row0associated_rows01']");
-//		Actions builder = new Actions(driver);        
-//		builder.sendKeys(Keys.ENTER);
+		//		Actions builder = new Actions(driver);        
+		//		builder.sendKeys(Keys.ENTER);
 		Thread.sleep(3000);
 	}
 	public void Estimate_InvoiceSchedule_Completion() throws InterruptedException
@@ -87,8 +87,8 @@ public class Estimate extends Wrapper {
 		type("//input[@id='time1row0associated_rows01']", "200");
 		Thread.sleep(2000);
 		typeenter("//input[@id='time1row0associated_rows01']");
-//		Actions builder = new Actions(driver);        
-//		builder.sendKeys(Keys.ENTER);
+		//		Actions builder = new Actions(driver);        
+		//		builder.sendKeys(Keys.ENTER);
 		Thread.sleep(3000);
 	}
 	public void Estimate_InvoiceSchedule_Retention() throws InterruptedException
@@ -99,8 +99,8 @@ public class Estimate extends Wrapper {
 		type("//input[@id='time2row0associated_rows01']", "200");
 		Thread.sleep(2000);
 		typeenter("//input[@id='time2row0associated_rows01']");
-//		Actions builder = new Actions(driver);        
-//		builder.sendKeys(Keys.ENTER);
+		//		Actions builder = new Actions(driver);        
+		//		builder.sendKeys(Keys.ENTER);
 		Thread.sleep(3000);
 	}
 	public void Estimate_SendtoCustomer() throws InterruptedException
@@ -182,7 +182,7 @@ public class Estimate extends Wrapper {
 		type("//input[@id='confirm_delete_input']", "REJECT");
 		selectdropdown("//select[@ng-model='select_estimate_reject_reason']", "Too expensive");
 		click("//button[@id='delete-button']");
-	
+
 	}
 	public void Estimate_partsTab() throws InterruptedException
 	{
@@ -230,7 +230,57 @@ public class Estimate extends Wrapper {
 		click("(//td[@class='supplier  '])[2]");
 		Thread.sleep(2000);
 	}
-	
-	
+
+	public void Intro()throws InterruptedException
+	{
+		Thread.sleep(1000);
+		click("//span[text()='Introduction']");
+		Thread.sleep(3000);
+		driver.switchTo().frame("estimate_intro_ifr");
+		// select the editor and do the input 
+		driver.findElement(By.id("tinymce")).sendKeys("Estimate Create for ezhilraja work ");
+		// switch back to the default window 
+		driver.switchTo().defaultContent();
+		Thread.sleep(1000);
+		click("//a[@class=\"btn btn-primary on-right save_btn loading_btn\"]");
+	}
+	public void Estimate_body()throws InterruptedException
+	{
+		Thread.sleep(1000);
+		click("//span[text()='Estimate body']");
+		Thread.sleep(3000);
+		driver.switchTo().frame("estimate_body_ifr");
+		// select the editor and do the input 
+		driver.findElement(By.id("tinymce")).sendKeys("Estimate bodyCreate for ezhilraja work ");
+		// switch back to the default window 
+		driver.switchTo().defaultContent();
+		Thread.sleep(1000);
+		click("//a[@class=\"btn btn-primary on-right save_btn loading_btn\"]");
+	}
+	public void Estimate_Survey_Edit()throws InterruptedException
+	{
+		Thread.sleep(1000);
+		click("(//a[text()='Edit'])[1]");
+		clear("//input[@name='description']");
+		type("//input[@name='description']", "Updated estimate desc");
+		Thread.sleep(1000);
+		type("//textarea[@class='customer-note-textarea ng-pristine ng-valid']", "Estimate notes updated");
+		Thread.sleep(1000);
+		type("//input[@name='customerReference']", "Refer NO 55");		
+		Thread.sleep(1000);
+		selectdropdownvalue("//select[@name='userGroupId']", "1");
+		Thread.sleep(1000);
+		click("//button[@class='btn btn-primary loading_btn save_btn']");
+	}
+	public void Estimate_Delete()throws InterruptedException
+	{
+		Thread.sleep(1000);
+		click("//a[@id='quickLinks']");
+		click("(//a[text()='Delete'])[1]");
+		Thread.sleep(2000);
+		type("//input[@id='confirm_delete_input']", "Delete");
+		Thread.sleep(1000);
+		click("//a[@id='delete-button']");
+	}
 
 }

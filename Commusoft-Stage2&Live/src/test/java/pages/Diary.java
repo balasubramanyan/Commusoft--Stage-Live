@@ -73,14 +73,20 @@ public class Diary extends Wrapper {
         click("(//td[@class='fc-widget-content'])[34]");
     }
     //------------Customer--> Job--> Select diary check box
+    
     public void Customer_job_Diary_Timing()
     {
-        click("(//td[@class='fc-widget-content'])[38]");
+        click("(//td[@class='fc-widget-content'])[23]");
         
     }
-    public void Customer_job_Diary_Timing1()
+    public void Customer_job_Diary_Timing_2()
     {
-        click("(//td[@class='fc-widget-content'])[39]");
+        click("(//td[@class='fc-widget-content'])[24]");
+        
+    }
+    public void Customer_job_Diary_Timing_3()
+    {
+        click("(//td[@class='fc-widget-content'])[25]");
         
     }
 //  public void Customer_job_Diary_Timing_Change() throws InterruptedException

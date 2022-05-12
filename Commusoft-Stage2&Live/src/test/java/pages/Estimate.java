@@ -2,9 +2,12 @@ package pages;
 
 import java.util.ArrayList;
 
+import org.apache.xmlbeans.impl.xb.xsdschema.ListDocument.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.Keyboard;
 
 import action.Wrapper;
 
@@ -281,6 +284,152 @@ public class Estimate extends Wrapper {
 		type("//input[@id='confirm_delete_input']", "Delete");
 		Thread.sleep(1000);
 		click("//a[@id='delete-button']");
+	}																																																																
+	public void MakeNewOption()throws InterruptedException
+	{
+		Thread.sleep(1000);
+		click("//a[@id='quickLinks']");
+		click("(//a[text()='Add additional option'])[1]");
+		Thread.sleep(2000);
+		click("//input[@value='new_option']");
+		Thread.sleep(1000);
+		click("//a[@class='btn btn-primary ng-scope']");
+		Thread.sleep(2000);
+		click("(//a[text()='Edit'])[2]");
+		Thread.sleep(3000);
+		click("//span[text()='Price']");
+		Thread.sleep(1000);
+		//click("//a[@ng-click=\"confirmPrompt(); hideConfirmationBox()\"]");
+		
 	}
+	public void Estimate_InvoiceSchedule_MakeNewOption() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		click("//span[text()='Invoice schedule']");
+		Thread.sleep(2000);
+	}
+	public void Estimate_InvoiceSchedule_Deposite_MakeNewOption() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		dclick("(//span[@class='value-cell'])[2]");
+		clear("//input[@id='time0row0associated_rows01']");
+		type("//input[@id='time0row0associated_rows01']", "200");
+		Thread.sleep(2000);
+		typeenter("//input[@id='time0row0associated_rows01']");
+		//		Actions builder = new Actions(driver);        
+		//		builder.sendKeys(Keys.ENTER);
+		Thread.sleep(3000);
+	}
+	public void Estimate_InvoiceSchedule_Completion_MakeNewOption() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		dclick("(//span[@class='value-cell'])[5]");
+		clear("//input[@id='time1row0associated_rows01']");
+		type("//input[@id='time1row0associated_rows01']", "200");
+		Thread.sleep(2000);
+		typeenter("//input[@id='time1row0associated_rows01']");
+		//		Actions builder = new Actions(driver);        
+		//		builder.sendKeys(Keys.ENTER);
+		Thread.sleep(3000);
+	}
+	public void Estimate_InvoiceSchedule_Retention_MakeNewOption() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		dclick("(//span[@class='value-cell'])[8]");
+		clear("//input[@id='time2row0associated_rows01']");
+		type("//input[@id='time2row0associated_rows01']", "200");
+		Thread.sleep(2000);
+		typeenter("//input[@id='time2row0associated_rows01']");
+		//		Actions builder = new Actions(driver);        
+		//		builder.sendKeys(Keys.ENTER);
+		Thread.sleep(3000);
+	}
+	public void AdditionalOption_breadcrum()throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("//a[text()='Additional options']");
+		
+	}
+	public void Estimate_Clone()throws InterruptedException
+	{
+		Thread.sleep(1000);
+		click("//a[@id='quickLinks']");
+		click("(//a[text()='Add additional option'])[1]");
+		Thread.sleep(2000);
+		click("//input[@ng-click=\"cloneOption('clone')\"]");
+		Thread.sleep(1000);
+		click("//a[@class='btn btn-primary ng-scope']");
+		
+	}
+	public void Estimate_Accept2() throws InterruptedException
+	{
+		click("//li[@id='estimate-accept-step']");
+		Thread.sleep(2000);
+		click("(//input[@ng-checked='option.estimate_option_allow_check === true'])[1]");
+		click("(//input[@ng-checked='option.estimate_option_allow_check === true'])[2]");
+		click("//button[text()='Accept']");
+		Thread.sleep(3000);
+		type("//input[@id='confirm_delete_input']", "ACCEPT");
+		Thread.sleep(1000);
+		click("//button[@id='delete-button']");
+	}
+	
+	
+	
+	
+	
+	
+	public void Estimate_parts() throws InterruptedException
+	{
+		Thread.sleep(1000);
+		click("//a[@id='partsTab']");
+		Thread.sleep(10000);
+		click("//button[text()='Add part list']");
+		//Part list name
+		Thread.sleep(1000);
+		clear("//input[@placeholder='Name']");
+		type("//input[@placeholder='Name']", "Part name ");
+		//Supplier
+		Thread.sleep(3000);
+		click("//div[@class='Select-multi-value-wrapper']");
+		Thread.sleep(3000);
 
+		
+		//click("//div[@class='Select-multi-value-wrapper']");
+		//Thread.sleep(3000);
+		selectdropdownvalue("//[@class='Select-input']/aria-activedescendant=\"react-select-2--value\"]", "Aravind");
+		//type("//*[@id='react-select-2--value']/div[3]/input]","Aravind");
+		
+		Thread.sleep(3000);
+		//click("//div[@class='Select-multi-value-wrapper']");
+		//Thread.sleep(3000);
+//		click("//div[@class=\"Select-clear-zone\"]");
+//		type("//div[@class='Select-multi-value-wrapper']","Aravind");
+		//clear("//div[@class='Select-multi-value-wrapper']");
+		//Thread.sleep(3000);
+	//	type("//div[@class=\"Select is-clearable is-focused is-open is-searchable Select--multi\"]","Aravind");
+		//type("//div[@class='Select-input']","Part");
+		//click("//span[@class=\"Select-arrow-zone\"]");
+	//	Thread.sleep(2000);
+	//	type("//div[@class='Select-input']","Part");
+	//	click("//input[@aria-activedescendant='react-select-2--option-1']");
+	//	clear("//div[@class='Select-multi-value-wrapper']");
+		
+		//Thread.sleep(5000);
+		//type("//div[@class=\"Select is-clearable is-focused is-open is-searchable Select--multi\"]","Part");
+		Thread.sleep(2000);
+		//click("(//div[@class='Select-menu-outer'])[2]");
+		//click("//button[text() = 'Save']");
+		
+	}
+	public static  void selectOption(WebDriver driver, String optionName) throws InterruptedException {
+		Thread.sleep(2000);
+        java.util.List<WebElement> options = driver.findElements(By.xpath("//*[@id=\"react-select-2--value\"]/div[3]/input]"));
+        options.forEach(option -> {
+            if (option.getAttribute("Aravind").equals(optionName)) {
+                Actions actions = new Actions(driver);
+                actions.moveToElement(option).click().build().perform();
+            }
+        });
+	}
 }

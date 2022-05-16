@@ -1,6 +1,13 @@
 package pages;
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
 import action.Wrapper;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -76,17 +83,17 @@ public class Diary extends Wrapper {
     
     public void Customer_job_Diary_Timing()
     {
-        click("(//td[@class='fc-widget-content'])[23]");
+        click("(//td[@class='fc-widget-content'])[20]");
         
     }
     public void Customer_job_Diary_Timing_2()
     {
-        click("(//td[@class='fc-widget-content'])[24]");
+        click("(//td[@class='fc-widget-content'])[21]");
         
     }
     public void Customer_job_Diary_Timing_3()
     {
-        click("(//td[@class='fc-widget-content'])[25]");
+        click("(//td[@class='fc-widget-content'])[22]");
         
     }
 //  public void Customer_job_Diary_Timing_Change() throws InterruptedException
@@ -287,5 +294,83 @@ public class Diary extends Wrapper {
         click("//span[text()='Print summary sheets']");
         String windowHandle1 = driver.getWindowHandle();
         driver.switchTo().window(windowHandle1);
+    }
+    
+// newly added
+    
+    public void Diary_recurring()
+    {
+        click("//input[@ng-model='add_diary_event_form_inputs.is_recurring_event']");
+    }
+    
+    public void Diary_Repeats()
+    {
+        selectdropdownvalue("(//select[@name='repeats_every'])[1]","Daily");
+    }
+    
+    public void Diary_Repeatsevery()
+    {
+        selectdropdownvalue("(//select[@name='repeats_every'])[2]","1");
+    }
+    
+    public void Diary_Occurrences()
+    {
+    	type("//input[@name='occurrences']", "2");
+    }
+    public void Diary_eventnotes()
+    {
+        type("//textarea[@ng-model='add_normal_event_inputs.engineer_notes']", "Normal event notes for an engineer");
+        
+    }
+    public void Diary_Notifications()
+    {
+    	click("//a[contains( text(), 'Notifications')]");
+    }
+    
+    public void Diary_NotifyEng()
+    {
+    	click("#top-input-in-notifications-step");
+    }
+    
+    public void Diary_Notifymethod() throws InterruptedException
+    {
+    	
+    	click("//select[@name='notification_method']");
+    	Thread.sleep(3000);
+    	Select s = new Select(driver.findElement(By.xpath("//select[@name='notification_method']")));
+    	s.selectByIndex(1);
+    
+    }
+    
+    public void Diary_Send_notification() throws InterruptedException
+    {
+    	click("//select[@name='send_notification']");
+    	Thread.sleep(3000);
+    	Select s = new Select(driver.findElement(By.xpath("//select[@name='send_notification']")));
+    	s.selectByIndex(1);
+    	
+    }
+    
+    public void Diary_subject()
+    { 
+    	driver.switchTo().frame("uiTinymce0_ifr");
+    	click("//*[@id='tinymce']");
+    	type("//*[@id='tinymce']", "testing");   	
+    	//driver.switchTo().defaultContent();
+    }
+    public void press_tab_key()
+    { 
+    	   Actions act = new Actions(driver);	   
+    	   act.sendKeys(Keys.TAB).build().perform(); 	
+    }
+    
+    public void Diary_message()
+    {
+    	
+    	WebElement iframeElement = driver.findElement(By.id("uiTinymce1_ifr"));
+    	//now using the switch command
+    	driver.switchTo().frame(iframeElement);
+    	type("//*[@id='tinymce']", "testing message"); 
+   
     }
 }

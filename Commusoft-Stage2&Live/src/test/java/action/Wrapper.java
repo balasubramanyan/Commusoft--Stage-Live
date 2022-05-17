@@ -27,7 +27,7 @@ import org.testng.Assert;
 
 public class Wrapper {
 
-	 public WebDriver driver; 
+	 public static WebDriver driver; 
 	 public JavascriptExecutor js;
 	 
 	 public long totalTime;

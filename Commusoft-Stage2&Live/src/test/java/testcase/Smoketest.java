@@ -43,7 +43,7 @@ public class Smoketest extends Baseclass {
 
 //manually edited
 
-	/*@Test(priority = 1)
+	@Test(priority = 1)
 	public void Add_Customer() throws InterruptedException
 	{
 		Customer customer = new Customer(driver);
@@ -339,7 +339,7 @@ public class Smoketest extends Baseclass {
 		estimate.Estimate_SendtoCustomer();
 		estimate.Estimate_Accept();
 		Thread.sleep(6000);
-	}*/
+	}
 	@Test(priority = 16)
 	public void add_invoice() throws InterruptedException
 	{

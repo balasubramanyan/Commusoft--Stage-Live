@@ -445,5 +445,6 @@ public class Invoice extends Wrapper {
     	Assert.assertEquals(Actualtext, "This Invoice was last sent by Print");
     	Thread.sleep(2000);
     	
-    }
+    
+}
 }

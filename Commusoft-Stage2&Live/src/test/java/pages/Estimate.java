@@ -2,9 +2,12 @@ package pages;
 
 import java.util.ArrayList;
 
+import org.apache.xmlbeans.impl.xb.xsdschema.ListDocument.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.Keyboard;
 
 import action.Wrapper;
 
@@ -281,6 +284,285 @@ public class Estimate extends Wrapper {
 		type("//input[@id='confirm_delete_input']", "Delete");
 		Thread.sleep(1000);
 		click("//a[@id='delete-button']");
-	}
+	}																																																																
+	public void MakeNewOption()throws InterruptedException
+	{
+		Thread.sleep(1000);
+		click("//a[@id='quickLinks']");
+		click("(//a[text()='Add additional option'])[1]");
+		Thread.sleep(2000);
+		click("//input[@value='new_option']");
+		Thread.sleep(1000);
+		click("//a[@class='btn btn-primary ng-scope']");
+		Thread.sleep(2000);
+		click("(//a[text()='Edit'])[2]");
+		Thread.sleep(3000);
+		click("//span[text()='Price']");
+		Thread.sleep(1000);
+		//click("//a[@ng-click=\"confirmPrompt(); hideConfirmationBox()\"]");
 
+	}
+	public void Estimate_InvoiceSchedule_MakeNewOption() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		click("//span[text()='Invoice schedule']");
+		Thread.sleep(2000);
+	}
+	public void Estimate_InvoiceSchedule_Deposite_MakeNewOption() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		dclick("(//span[@class='value-cell'])[2]");
+		clear("//input[@id='time0row0associated_rows01']");
+		type("//input[@id='time0row0associated_rows01']", "200");
+		Thread.sleep(2000);
+		typeenter("//input[@id='time0row0associated_rows01']");
+		//		Actions builder = new Actions(driver);        
+		//		builder.sendKeys(Keys.ENTER);
+		Thread.sleep(3000);
+	}
+	public void Estimate_InvoiceSchedule_Completion_MakeNewOption() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		dclick("(//span[@class='value-cell'])[5]");
+		clear("//input[@id='time1row0associated_rows01']");
+		type("//input[@id='time1row0associated_rows01']", "200");
+		Thread.sleep(2000);
+		typeenter("//input[@id='time1row0associated_rows01']");
+		//		Actions builder = new Actions(driver);        
+		//		builder.sendKeys(Keys.ENTER);
+		Thread.sleep(3000);
+	}
+	public void Estimate_InvoiceSchedule_Retention_MakeNewOption() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		dclick("(//span[@class='value-cell'])[8]");
+		clear("//input[@id='time2row0associated_rows01']");
+		type("//input[@id='time2row0associated_rows01']", "200");
+		Thread.sleep(2000);
+		typeenter("//input[@id='time2row0associated_rows01']");
+		//		Actions builder = new Actions(driver);        
+		//		builder.sendKeys(Keys.ENTER);
+		Thread.sleep(3000);
+	}
+	public void AdditionalOption_breadcrum()throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("//a[text()='Additional options']");
+
+	}
+	public void Estimate_Clone()throws InterruptedException
+	{
+		Thread.sleep(1000);
+		click("//a[@id='quickLinks']");
+		click("(//a[text()='Add additional option'])[1]");
+		Thread.sleep(2000);
+		click("//input[@ng-click=\"cloneOption('clone')\"]");
+		Thread.sleep(1000);
+		click("//a[@class='btn btn-primary ng-scope']");
+
+	}
+	public void Estimate_Accept2() throws InterruptedException
+	{
+		click("//li[@id='estimate-accept-step']");
+		Thread.sleep(2000);
+		click("(//input[@ng-checked='option.estimate_option_allow_check === true'])[1]");
+		click("(//input[@ng-checked='option.estimate_option_allow_check === true'])[2]");
+		click("//button[text()='Accept']");
+		Thread.sleep(3000);
+		type("//input[@id='confirm_delete_input']", "ACCEPT");
+		Thread.sleep(1000);
+		click("//button[@id='delete-button']");
+	}
+	public void Estimate_Price_BreakdownByCategory() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		click("//a[@ng-click='categoryBreakdown()']");
+		Thread.sleep(3000);
+		Thread.sleep(1000);
+		dclick("(//td[@class='overflow_handsontable'])[1]");
+		Thread.sleep(3000);
+		clear("//textarea[@class='handsontableInput']");
+		type("//textarea[@class='handsontableInput']", "300");
+		Thread.sleep(3000);
+		typeenter("//textarea[@class='handsontableInput']");
+		Thread.sleep(3000);
+		dclick("(//td[@class='overflow_handsontable'])[1]");
+		Thread.sleep(3000);
+		clear("//textarea[@class='handsontableInput']");
+		type("//textarea[@class='handsontableInput']", "300");
+		Thread.sleep(2000);
+		typeenter("//textarea[@class='handsontableInput']");
+		Thread.sleep(1000);
+		//click("//td[@class='overflow_handsontable']");
+
+	}
+	public void Estimate_Price_FullBreakdown() throws InterruptedException
+	{
+
+		Thread.sleep(3000);
+		click("//a[@ng-click='fullBreakdown()']");
+		Thread.sleep(3000);
+		Thread.sleep(1000);
+		//Description
+		dclick("//td[@class='afterHiddenColumn firstVisibleColumn']");
+		Thread.sleep(3000);
+		clear("//textarea[@class='handsontableInput']");
+		type("//textarea[@class='handsontableInput']", "Full Breakdown");
+		//Quantity
+		Thread.sleep(3000);
+		dclick("(//td[@class='overflow_handsontable'])[1]");
+		Thread.sleep(1000);
+		clear("(//textarea[@class='handsontableInput'])[2]");
+		type("(//textarea[@class='handsontableInput'])[2]", "1");
+		//Price
+		Thread.sleep(5000);
+		click("(//td[@class='overflow_handsontable'])[1]");
+		Thread.sleep(2000);
+		dclick("//td[@class='overflow_handsontable current highlight']");
+		Thread.sleep(1000);
+		clear("(//textarea[@class='handsontableInput'])[2]");
+		Thread.sleep(1000);
+		type("(//textarea[@class='handsontableInput'])[2]", "600");
+		Thread.sleep(2000);
+		typeenter("(//textarea[@class='handsontableInput'])[2]");
+		Thread.sleep(2000);
+		click("(//td[@class=\"overflow_handsontable\"])[2]");
+		Thread.sleep(1000);		
+	}
+	public void Estimate_Price_FullBreakdownByCategory() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("//span[text()='Add invoice item category']");
+		Thread.sleep(2000);
+		selectdropdownvalue("//select[@id='input-pricing-category-name']", "1");
+		click("//a[text()='Save invoice item category']");
+
+		Thread.sleep(3000);
+		//Description
+		dclick("//td[@class='afterHiddenColumn firstVisibleColumn']");
+		Thread.sleep(3000);
+		clear("//textarea[@class='handsontableInput']");
+		type("//textarea[@class='handsontableInput']", "Full Breakdown By Category");
+
+		//Quantity
+		Thread.sleep(3000);
+		dclick("(//td[@class='overflow_handsontable'])[1]");
+		Thread.sleep(3000);
+		clear("(//textarea[@class='handsontableInput'])[2]");
+		type("(//textarea[@class='handsontableInput'])[2]", "1");
+		//Price
+		Thread.sleep(5000);
+		click("(//td[@class='overflow_handsontable'])[1]");
+		Thread.sleep(2000);
+		dclick("//td[@class='overflow_handsontable current highlight']");
+		Thread.sleep(1000);
+		clear("(//textarea[@class='handsontableInput'])[2]");
+		Thread.sleep(2000);
+		type("(//textarea[@class='handsontableInput'])[2]", "600");
+		Thread.sleep(2000);
+		typeenter("(//textarea[@class='handsontableInput'])[2]");
+		Thread.sleep(2000);
+		click("(//td[@class=\"overflow_handsontable\"])[2]");
+		Thread.sleep(1000);	
+	}
+	
+	public void Estimate_Add_To_Reserve_List() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("//a[@id='quickLinks']");
+		Thread.sleep(1000);
+		click("(//a[text()='Add to reserve list'])[1]");
+		Thread.sleep(1000);
+	//	click("//input[@id='s2id_autogen1']");
+		type("//input[@class='select2-input select2-default']", "Ezhil");
+		click("(//div[@class='select2-result-label'])[1]");
+		//Thread.sleep(1000);
+		//selectdropdownvalue("(//ul[@class='select2-results'])[2]", "1");
+		Thread.sleep(1000);
+		click("//span[@class='add-on']");
+		Thread.sleep(1000);
+		click("(//a[@class='daterange-day ng-binding'])[2]");
+		Thread.sleep(1000);
+		
+		type("//input[@id='reservelist_description']", "Estimate reserve desc");
+		type("//textarea[@id='reservelist_engineernote']", "Estimate reserve notes");
+		Thread.sleep(2000);
+		click("//button[@type='submit']");
+			}
+	public void Estimate_Clone_Estimate() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("//a[@id='quickLinks']");
+		Thread.sleep(1000);
+		click("//a[text()='Clone estimate']");
+		Thread.sleep(1000);		
+		type("//input[@id='confirm_delete_input']","Clone");
+		Thread.sleep(1000);
+		click("//a[@class='btn btn-primary']");
+		
+	}
+	
+	
+	
+	
+	
+
+
+	public void Estimate_parts() throws InterruptedException
+	{
+		Thread.sleep(1000);
+		click("//a[@id='partsTab']");
+		Thread.sleep(10000);
+		click("//button[text()='Add part list']");
+		//Part list name
+		Thread.sleep(1000);
+		clear("//input[@placeholder='Name']");
+		type("//input[@placeholder='Name']", "Part name ");
+		//Supplier
+		Thread.sleep(3000);
+		click("//div[@class='Select-multi-value-wrapper']");
+		Thread.sleep(3000);
+		type("//*[@id=\"react-select-2--value\"]/div[3]","Aravind");
+		selectdropdownvalue("//input[@aria-activedescendant='react-select-2--option-1']", "Aravind");
+		//click("//[@class='Select-input']/aria-activedescendant='react-select-2--value']");
+
+		//*[@id="react-select-2--value"]/div[3]
+		//input[@aria-activedescendant='react-select-2--option-1']
+		//click("//div[@class='Select-multi-value-wrapper']");
+		//Thread.sleep(3000);
+		//selectdropdownvalue("//input[@aria-activedescendant='react-select-2--option-1']", "Aravind");
+		//type("//*[@id='react-select-2--value']/div[3]/input]","Aravind");
+
+		Thread.sleep(3000);
+		//click("//div[@class='Select-multi-value-wrapper']");
+		//Thread.sleep(3000);
+		//		click("//div[@class=\"Select-clear-zone\"]");
+		//		type("//div[@class='Select-multi-value-wrapper']","Aravind");
+		//clear("//div[@class='Select-multi-value-wrapper']");
+		//Thread.sleep(3000);
+		//	type("//div[@class=\"Select is-clearable is-focused is-open is-searchable Select--multi\"]","Aravind");
+		//type("//div[@class='Select-input']","Part");
+		//click("//span[@class=\"Select-arrow-zone\"]");
+		//	Thread.sleep(2000);
+		//	type("//div[@class='Select-input']","Part");
+		//	click("//input[@aria-activedescendant='react-select-2--option-1']");
+		//	clear("//div[@class='Select-multi-value-wrapper']");
+
+		//Thread.sleep(5000);
+		//type("//div[@class=\"Select is-clearable is-focused is-open is-searchable Select--multi\"]","Part");
+		//Thread.sleep(2000);
+		//click("(//div[@class='Select-menu-outer'])[2]");
+		click("//button[text() = 'Save']");
+
+	}
+	public static  void selectOption(WebDriver driver, String optionName) throws InterruptedException {
+		Thread.sleep(2000);
+		java.util.List<WebElement> options = driver.findElements(By.xpath("//*[@id=\"react-select-2--value\"]/div[3]/input]"));
+		options.forEach(option -> {
+			if (option.getAttribute("Aravind").equals(optionName)) {
+				Actions actions = new Actions(driver);
+				actions.moveToElement(option).click().build().perform();
+			}
+		});
+	}
 }

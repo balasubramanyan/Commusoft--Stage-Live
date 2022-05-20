@@ -1,5 +1,7 @@
 package lable;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
@@ -23,6 +25,7 @@ String interiminvoiceurl;
 String Prefinalinvoice;
 String Finalinvoiceurl;
 String retention;
+public String invoicenumber;
 
 	@Test(priority = 1)
 	public void add_invoice() throws InterruptedException
@@ -542,6 +545,8 @@ String retention;
 	    adding_invoice.unitprice_FullBreakdown_ByCategory_Parts1("789.05");
 	    adding_invoice.save_invoice1();
 	    payment= driver.getCurrentUrl();
+	    invoicenumber=gettext("(//span[@class='ng-scope ng-binding'])[2]");
+	    System.out.println(invoicenumber);
     }
 	@Test(priority=20)
 	public void Draftinvoice_to_invoice() throws InterruptedException
@@ -886,4 +891,15 @@ String retention;
 		invoice2.invoice_Category();
 		invoice2.save_invoice1();
     }
-	}
+    @Test(priority=34)
+    public void Searchinvoice()
+    {
+    	driver.get(homepage);
+    	type("#search-input",invoicenumber);
+    	typeenter("#search-input");
+    	click("(//span[@class='ss-layout icon'])[1]");
+    	click("(//a[text()='"+invoicenumber+"'])[2]");
+    }
+  
+   }
+	

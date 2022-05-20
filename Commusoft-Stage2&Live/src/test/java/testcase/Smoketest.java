@@ -34,6 +34,12 @@ public class Smoketest extends Baseclass {
 	public String jobURL;
 	public String WA;
 	public String Supplierhomepage;
+	public String invoicepage;
+	public String jobpage; 
+	public String payment;
+	public String Prefinalinvoice;
+	public String retention;
+	public String invoicenumber;
 
 //manually edited
 
@@ -335,6 +341,301 @@ public class Smoketest extends Baseclass {
 		Thread.sleep(6000);
 	}
 	@Test(priority = 16)
+	public void add_invoice() throws InterruptedException
+	{
+		driver.get(homepage);
+		Customer invoice =new Customer (driver);
+		invoice.Customer_create();
+		invoice.Customer_title();
+		invoice.Customer_Name();
+		invoice.Customer_SurName();
+		invoice.Customer_email();
+		invoice.Customer_Landline();
+	    invoice.Customer_Mobile();
+	    invoice.Customer_AddressLine1();
+	    invoice.Customer_AddressLine2();
+	    invoice.Customer_AddressLine3();
+	    invoice.Customer_town();
+	    invoice.Customer_Save();
+	    Thread.sleep(4000);
+	    customerpage=driver.getCurrentUrl();
+	    driver.get(customerpage);
+		Thread.sleep(4000);
+		CreateJob job = new CreateJob(driver);
+		job.addjob();
+		job.JobDescription("INVOICE");
+	    Invoice adding_invoice =new Invoice(driver);
+	    adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Final_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_Category();
+	    adding_invoice.invoice_UserGroup();
+	    adding_invoice.sub_total("150.84");
+	    adding_invoice.save_invoice();
+	    invoicepage=driver.getCurrentUrl();
+	}
+	@Test(priority=17)
+	public void edit_invoice() throws InterruptedException
+	{
+	    Invoice Edit_invoice =new Invoice(driver);
+        //driver.get(editpage);
+        Edit_invoice.editinvoice();
+        Edit_invoice.Interim_invoice();
+        Edit_invoice.clear_invoice_description();
+        Edit_invoice.edit_invoice_description("Edited invoice");
+        Edit_invoice.invoice_notes();
+        //Edit_invoice.customerreference();
+        Edit_invoice.editinvoice_Category();
+        Edit_invoice.editinvoice_UserGroup();
+        Edit_invoice.Invoice_Breakdown_Breakdown_by_category();
+        Edit_invoice.Confirm_box();
+        Edit_invoice.BreakdownByCategory_des("Parts");
+        Edit_invoice.unitprice("100");
+        Edit_invoice.save_invoice();  
+	}
+	@Test(priority=18)
+	public void delete_invoice()	
+	{
+		Invoice Delete_invoice =new Invoice(driver);
+		Delete_invoice.delete_inv();	
+	}
+	@Test(priority=19)
+	public void adding_additional_invoice_nobreakdown() throws InterruptedException
+	{
+		driver.get(homepage);
+		Customer invoice =new Customer (driver);
+		invoice.Customer_create();
+		invoice.Customer_title();
+		invoice.Customer_Name();
+		invoice.Customer_SurName();
+		invoice.Customer_email();
+		invoice.Customer_Landline();
+	    invoice.Customer_Mobile();
+	    invoice.Customer_AddressLine1();
+	    invoice.Customer_AddressLine2();
+	    invoice.Customer_AddressLine3();
+	    invoice.Customer_town();
+	    invoice.Customer_Save();
+	    Thread.sleep(4000);
+	    customerpage=driver.getCurrentUrl();
+	    driver.get(customerpage);
+		Thread.sleep(4000);
+		CreateJob job = new CreateJob(driver);
+		job.addjob();
+		job.JobDescription("PreFinal");
+		jobpage=driver.getCurrentUrl();
+	    Invoice adding_invoice =new Invoice(driver);
+	    adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Additional_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_notes1("No breakdown additional invoice");
+	    //adding_invoice.customerreference("No breakdown");
+	    adding_invoice.invoice_Category();
+	    adding_invoice.invoice_UserGroup();
+	    adding_invoice.sub_total("800.96");
+	    adding_invoice.save_invoice();
+	}
+
+	@Test(priority=20)
+	public void adding_additional_invoice_breakdownbycategory() throws InterruptedException
+	{
+		driver.get(jobpage);
+		Invoice adding_invoice =new Invoice(driver);
+		adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Additional_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_notes1("Breakdownbycategory additional invoice");
+	    //adding_invoice.customerreference("breakdown by category");
+	    adding_invoice.invoice_Category();
+	    adding_invoice.invoice_UserGroup();
+	    adding_invoice.Invoice_Breakdown_Breakdown_by_category();
+	    adding_invoice.BreakdownByCategory_des("Labour");
+	    adding_invoice.unitprice("1000");
+	    adding_invoice.save_invoice();	    
+	}
+	@Test(priority=21)
+	public void adding_interiminvoice_Fullbreakdown() throws InterruptedException
+	{
+		driver.get(jobpage);
+		Invoice adding_invoice =new Invoice(driver);
+		adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Interim_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_notes1("Fullbreakdown interim invoice");
+	    //adding_invoice.customerreference("breakdown by category");
+	    adding_invoice.invoice_Category();
+	    adding_invoice.invoice_UserGroup();
+	    adding_invoice.Invoice_Breakdown_Full_breakdown();
+	    adding_invoice.Full_Breakdown_des("Test1");
+	    adding_invoice.unitprice_fullbreakdown("2000.653");
+	    adding_invoice.save_invoice();
+	    
+	    
+	}	
+
+	@Test(priority=22)
+	public void adding_prefinalinvoice_Fullbreakdownbycategory() throws InterruptedException
+	{
+		driver.get(homepage);
+		Customer invoice =new Customer (driver);
+		invoice.Customer_create();
+		invoice.Customer_title();
+		invoice.Customer_Name();
+		invoice.Customer_SurName();
+		invoice.Customer_email();
+		invoice.Customer_Landline();
+	    invoice.Customer_Mobile();
+	    invoice.Customer_AddressLine1();
+	    invoice.Customer_AddressLine2();
+	    invoice.Customer_AddressLine3();
+	    invoice.Customer_town();
+	    invoice.Customer_Save();
+	    Thread.sleep(4000);
+	    customerpage=driver.getCurrentUrl();
+	    driver.get(customerpage);
+		Thread.sleep(4000);
+		CreateJob job = new CreateJob(driver);
+		job.addjob();
+		job.JobDescription("PreFinal");
+		Invoice adding_invoice =new Invoice(driver);
+		adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Pre_Final_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_notes1("Fullbreakdownbycategory prefinal invoice");
+	    //adding_invoice.customerreference("breakdown by category");
+	    adding_invoice.invoice_Category();
+	    adding_invoice.invoice_UserGroup();
+	    adding_invoice.Invoice_Breakdown_Full_breakdown_by_category();
+	    adding_invoice.Full_Breakdown_ByCategory_Labour_Description("Azarudeen");
+	    adding_invoice.unitprice_FullBreakdown_ByCategory_Labour("1111");
+	    adding_invoice.Full_Breakdown_ByCategory_Parts_Description("parts test");
+	    adding_invoice.unitprice_FullBreakdown_ByCategory_Parts1("789.05");
+	    adding_invoice.save_invoice1();
+	    Prefinalinvoice=driver.getCurrentUrl();
+    }
+	
+	@Test(priority=23)
+	public void adding_finalinvoice_Fullbreakdownbycategory() throws InterruptedException
+	{
+		driver.get(homepage);
+		Customer invoice =new Customer (driver);
+		invoice.Customer_create();
+		invoice.Customer_title();
+		invoice.Customer_Name();
+		invoice.Customer_SurName();
+		invoice.Customer_email();
+		invoice.Customer_Landline();
+	    invoice.Customer_Mobile();
+	    invoice.Customer_AddressLine1();
+	    invoice.Customer_AddressLine2();
+	    invoice.Customer_AddressLine3();
+	    invoice.Customer_town();
+	    invoice.Customer_Save();
+	    Thread.sleep(4000);
+	    customerpage=driver.getCurrentUrl();
+	    driver.get(customerpage);
+		Thread.sleep(4000);
+		CreateJob job = new CreateJob(driver);
+		job.addjob();
+		job.JobDescription("PreFinal");
+		Invoice adding_invoice =new Invoice(driver);
+		adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Final_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_notes1("Fullbreakdownbycategory final invoice");
+	    //adding_invoice.customerreference("breakdown by category");
+	    adding_invoice.invoice_Category();
+	    adding_invoice.invoice_UserGroup();
+	    adding_invoice.Invoice_Breakdown_Full_breakdown_by_category();
+	    adding_invoice.Full_Breakdown_ByCategory_Labour_Description("Azarudeen");
+	    adding_invoice.unitprice_FullBreakdown_ByCategory_Labour("1111");
+	    adding_invoice.Full_Breakdown_ByCategory_Parts_Description("parts test");
+	    adding_invoice.unitprice_FullBreakdown_ByCategory_Parts1("789.05");
+	    adding_invoice.save_invoice1();
+	    payment= driver.getCurrentUrl();
+	    invoicenumber=gettext("(//span[@class='ng-scope ng-binding'])[2]");
+	    System.out.println(invoicenumber);
+	}
+    	
+    @Test(priority=24)
+    public void Minus_deposit_retention_interim_invoices_on_finalinvoice() throws InterruptedException 
+    {
+    	driver.get(homepage);
+		Customer invoice =new Customer (driver);
+		invoice.Customer_create();
+		invoice.Customer_title();
+		invoice.Customer_Name();
+		invoice.Customer_SurName();
+		invoice.Customer_email();
+		invoice.Customer_Landline();
+	    invoice.Customer_Mobile();
+	    invoice.Customer_AddressLine1();
+	    invoice.Customer_AddressLine2();
+	    invoice.Customer_AddressLine3();
+	    invoice.Customer_town();
+	    invoice.Customer_Save();
+	    Thread.sleep(4000);
+	    customerpage=driver.getCurrentUrl();
+	    driver.get(customerpage);
+	    Estimate invoice1=new Estimate(driver);
+	    invoice1.Estimate_AddNew();
+	    invoice1.choose_description();
+	    invoice1.Estimate_Notes();
+	    invoice1.Estimate_CustomerReference();
+	    invoice1.Estimate_user_group();
+	    invoice1.Estimate_AddEstimate();
+		Thread.sleep(3000);
+		invoice1.Estimate_Price_tab();
+		Thread.sleep(3000);
+		invoice1.Estimate_Price_NoBreakdown();
+		Thread.sleep(3000);
+		invoice1.Estimate_Price_NoBreakdown_PartsTotal();
+		Thread.sleep(3000);
+		invoice1.Estimate_InvoiceSchedule();
+		Thread.sleep(3000);
+		invoice1.Estimate_InvoiceSchedule_Deposite();
+		Thread.sleep(3000);
+		invoice1.Estimate_InvoiceSchedule_Completion();
+		Thread.sleep(3000);
+		invoice1.Estimate_InvoiceSchedule_Retention();
+		Thread.sleep(3000);
+		invoice1.Estimate_SendtoCustomer();
+		invoice1.Estimate_Accept();
+		Invoice invoice2=new Invoice(driver);
+		invoice2.InvoiceTab();
+		retention=driver.getCurrentUrl();
+		invoice2.addinvoice();
+		invoice2.Interim_invoice();
+		invoice2.invoice_description();
+		invoice2.invoice_notes();
+		invoice2.invoice_Category();
+		invoice2.Invoice_Breakdown_No_Breakdown();
+		invoice2.sub_total("100");
+		invoice2.save_invoice1();   
+		driver.get(retention);
+		invoice2.addinvoice();
+		invoice2.Final_invoice();
+		invoice2.invoice_description();
+		invoice2.invoice_notes();
+		invoice2.invoice_Category();
+		invoice2.save_invoice1();
+    }
+    @Test(priority=25)
+    public void Searchinvoice()
+    {
+    	driver.get(homepage);
+    	type("#search-input",invoicenumber);
+    	typeenter("#search-input");
+    	click("(//span[@class='ss-layout icon'])[1]");
+    	click("(//a[text()='"+invoicenumber+"'])[2]");
+    }
+	@Test(priority = 26)
 	public void Diary_Estimate() throws InterruptedException
 	{
 		Thread.sleep(6000);
@@ -349,7 +650,7 @@ public class Smoketest extends Baseclass {
 		diary.Diary_Estimate_EventDescription();
 		diary.Diary_Save();
 	}
-	@Test(priority = 17)
+	@Test(priority = 27)
 	public void Diary_Job() throws InterruptedException
 	{
 		Thread.sleep(6000);
@@ -364,7 +665,7 @@ public class Smoketest extends Baseclass {
 		diary.Diary_Job_EventDescription();
 		diary.Diary_Save();
 	}
-	@Test(priority = 18)
+	@Test(priority = 28)
 	public void Diary_Normal() throws InterruptedException
 	{
 		Thread.sleep(6000);
@@ -376,7 +677,7 @@ public class Smoketest extends Baseclass {
 		diary.Diary_Normal_EvenDescription();
 		diary.Diary_Save();
 	}
-	@Test(priority = 19)
+	@Test(priority = 29)
 	public void Addcustomer_job() throws InterruptedException
 	{
 		Thread.sleep(6000);
@@ -398,7 +699,7 @@ public class Smoketest extends Baseclass {
 		diary.Diary_Job_EventDescription();
 		diary.Diary_Save();
 	}
-	@Test(priority =20)
+	@Test(priority =30)
 	public void diaryutility() throws InterruptedException
 	{
 		Thread.sleep(3000);
@@ -408,7 +709,7 @@ public class Smoketest extends Baseclass {
 		diary.Diary_PrintJobSheet();
 		diary.Diary_PrintSummarySheet();
 	}
-	@Test(priority =21)
+	@Test(priority =31)
 	public void Supplier_Create() throws InterruptedException
 	{
 		Supplier supplier = new Supplier(driver);
@@ -423,7 +724,7 @@ public class Smoketest extends Baseclass {
 		Supplierhomepage = driver.getCurrentUrl();
 	}
 
-	@Test(priority=22)
+	@Test(priority=32)
 	public void Supplier_PO() throws InterruptedException
 	{
 		click("//a[text()='Add new purchase order']");
@@ -436,7 +737,7 @@ public class Smoketest extends Baseclass {
 		Job.save_po();
 
 	}
-	@Test(priority=23)
+	@Test(priority=33)
 	public void Supplier_Invoice() throws InterruptedException, IOException
 	{
 		driver.get(Supplierhomepage);
@@ -457,7 +758,7 @@ public class Smoketest extends Baseclass {
 		supplierinv.itemnominalcode();		
 		supplierinv.savesupplierbutton();
 	}
-	@Test(priority = 24)
+	@Test(priority = 34)
 	public  void Customer_Createcontact() throws InterruptedException
 	{
 		driver.get(customerpage);
@@ -482,7 +783,7 @@ public class Smoketest extends Baseclass {
 		click("//span[text()='Add contact']");
 
 	}
-	@Test (priority=25)
+	@Test (priority=35)
 	public void CustomerReports() throws InterruptedException
 	{
 		 //driver.get(homepage);
@@ -499,7 +800,7 @@ public class Smoketest extends Baseclass {
 				Report.View_customer();
 		
 	}
-	@Test (priority=26)
+	@Test (priority=36)
 	public void ServiceRemindersReports() throws InterruptedException
 	{
 		//driver.get(homepage);
@@ -511,7 +812,7 @@ public class Smoketest extends Baseclass {
 		Report.Service_Reminders_Report();
 		Report.ServiceReminder1_Assertion();
 	}
-	@Test (priority = 27)
+	@Test (priority = 37)
 	public void SupplierReports() throws InterruptedException
 	{
 		//driver.get(homepage);
@@ -523,7 +824,7 @@ public class Smoketest extends Baseclass {
 		Report.Suppliers_Report();
 		Report.Supplier1_Assertion();
 	}
-	@Test (priority=28)
+	@Test (priority=38)
 	public void EstimateReport() throws InterruptedException
 	{
 		Reporting Report = new Reporting(driver); 
@@ -538,7 +839,7 @@ public class Smoketest extends Baseclass {
 		Report.First_Plus_button();
 		Report.click_viewestimate();
 	}
-	@Test(priority=29)
+	@Test(priority=39)
 	public void JobReport() throws InterruptedException
 	{
 		Reporting Report = new Reporting(driver); 
@@ -553,7 +854,7 @@ public class Smoketest extends Baseclass {
 		Report.First_Plus_button();
 		Report.click_viewestimate();
 	}
-	@Test (priority=30)
+	@Test (priority=40)
 	public void Work_address_Reports() throws InterruptedException
 	{
 		Reporting Report = new Reporting(driver); 
@@ -568,7 +869,7 @@ public class Smoketest extends Baseclass {
 		Report.First_Plus_button();
 		Report.Click_View_workaddres();
 	}
-	@Test(priority=31)
+	@Test(priority=41)
     public void customersreportdownload_print() throws InterruptedException
     {
 	  Reporting customerreport=new Reporting (driver);
@@ -589,7 +890,7 @@ public class Smoketest extends Baseclass {
   	  //customerprint.notifications();
   	  //customerprint.assertion_salesrepexcel();
     }
-    @Test(priority=32)
+    @Test(priority=42)
     public void jobreportdownload_print() throws InterruptedException
     {
       Reporting jobsreport= new Reporting(driver);
@@ -612,7 +913,7 @@ public class Smoketest extends Baseclass {
       jobreportprintanddownload.notifications();
       jobreportprintanddownload.assertion_jobrepoexcel();*/
     }
-    @Test(priority=33)
+    @Test(priority=43)
     public void timesheetreport() throws InterruptedException
     {
     	Reporting timesheet=new Reporting(driver);
@@ -625,7 +926,7 @@ public class Smoketest extends Baseclass {
     	timesheetreportprintanddownload.closeprint();
     	timesheetreportprintanddownload.downloadexcel();
     }
-	 @Test(priority=34)
+	 @Test(priority=44)
 	    public void salesreport() throws InterruptedException 
 	    {
 	    	Reporting salereport = new Reporting(driver);
@@ -647,7 +948,7 @@ public class Smoketest extends Baseclass {
 		
 	
 	//stata
-	@Test(priority=35)
+	@Test(priority=45)
 	public void changesinvoicetype() throws InterruptedException
 	{
 		driver.get(customerpage);
@@ -659,7 +960,7 @@ public class Smoketest extends Baseclass {
 		changeinvoices.addfinalinvoice();
 		changeinvoices.editinvoicetype();
 	}
-	@Test(priority=36)
+	@Test(priority=46)
 	public void ser_remainder() throws InterruptedException
 	{
 		driver.get(homepage);
@@ -672,7 +973,7 @@ public class Smoketest extends Baseclass {
 		Service_remainder.assertion_serviceremain();
 		
 	}
-	@Test(priority = 37)
+	@Test(priority = 47)
 	public  void SolarSearch_pageresponse() throws InterruptedException, IOException
 	{
 		type("#search-input","ranjit");
@@ -685,7 +986,7 @@ public class Smoketest extends Baseclass {
 		System.out.println("Status:- " +a);
 		Assert.assertEquals(a, 200);
 	}
-	//	@Test(priority = 30)
+	//	@Test(priority = 72)
 	void get_InvoiceNumber_API()
 	{
 		RestAssured.baseURI="https://stage2.commusoft.net/webservice_dev.php/api/v1";
@@ -699,7 +1000,7 @@ public class Smoketest extends Baseclass {
 		Assert.assertEquals(statuscode, 200);
 		
 	}
-	@Test(priority=38)
+	@Test(priority=48)
 	public void Estimate_Accepted_In_Portal_With_Payment() throws InterruptedException{
 		
 		driver.get(homepage);
@@ -738,7 +1039,7 @@ public class Smoketest extends Baseclass {
 		estimate.Estimate_Portal_Accept();
 		estimate.Estimate_Portal_Accept_Verification();			
 	}
-	@Test(priority=39)
+	@Test(priority=49)
 	public void Estimate_Accepted_In_Portal_Without_Payment() throws InterruptedException
 	{
 		driver.get(homepage);

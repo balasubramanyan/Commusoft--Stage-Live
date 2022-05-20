@@ -502,9 +502,9 @@ public class Customer extends Wrapper {
 		click("//a[@class=\"btn btn-primary make-default-btn save_btn\"]");
 
 		if(driver.findElement(By.xpath("//td[@class=\"ng-binding\" and contains(text(),'"+Karna[8]+"')]")).isDisplayed()) {
-			System.out.println("Primary contact changed as per the code flow");	
+			log4j.info("Primary contact changed as per the code flow");
 		}else {
-			System.out.println("Primary contact Error in changing");		
+			log4j.info("Primary contact Error in changing");		
 		}
 	}
 	public void Add_Branch() throws InterruptedException

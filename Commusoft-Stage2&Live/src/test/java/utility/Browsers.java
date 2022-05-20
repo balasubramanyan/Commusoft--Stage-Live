@@ -1,6 +1,7 @@
 package utility;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -15,7 +16,10 @@ import org.openqa.selenium.edge.EdgeDriver;
 //import io.testproject.sdk.internal.exceptions.ObsoleteVersionException;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.testproject.sdk.internal.exceptions.AgentConnectException;
 import io.testproject.sdk.internal.exceptions.InvalidTokenException;
 import io.testproject.sdk.internal.exceptions.ObsoleteVersionException;
@@ -29,8 +33,14 @@ public class Browsers {
 		{
 //			WebDriverManager.chromiumdriver().setup();
 //			driver = new ChromeDriver("ADyTKoTTMsKCn689r5CRlRkeBTXfyI9o_bvsCufZOfQ1",new ChromeOptions(),ReportType.CLOUD_AND_LOCAL);
-		System.setProperty("webdriver.chrome.driver","./Drivers/chromedriver.exe");
-		driver = new ChromeDriver();
+
+//		System.setProperty("webdriver.chrome.driver","./Drivers/chromedriver.exe");
+//		driver = new ChromeDriver();
+		
+		//linux
+		
+			 driver = WebDriverManager.chromedriver().create();
+		
 		}else
 			if(browser.contains("firefox"))
 			{

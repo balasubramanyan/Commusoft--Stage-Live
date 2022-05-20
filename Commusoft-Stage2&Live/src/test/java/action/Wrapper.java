@@ -14,6 +14,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -38,6 +41,7 @@ public class Wrapper {
 	 public String WAAccountNumber;
 	 public String CustomerName;
 	 public String AccountNumber;
+	 public static final Logger log4j = LogManager.getLogger(Baseclass.class);
 	 
 	 
 	public void type(String xpath, String value)

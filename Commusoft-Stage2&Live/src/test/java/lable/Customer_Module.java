@@ -12,7 +12,7 @@ import pages.Customer;
 
 public class Customer_Module extends Baseclass{
 	
-	@Test(priority=0)
+	@Test(priority=0)	
 	public void Add_Edit_Delete_Customer() throws InterruptedException
 	{
 		Customer customer = new Customer(driver);

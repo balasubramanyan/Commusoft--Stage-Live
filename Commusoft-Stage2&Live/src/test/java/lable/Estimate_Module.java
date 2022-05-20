@@ -1,5 +1,7 @@
 package lable;
 
+import java.awt.AWTException;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
@@ -30,21 +32,13 @@ public class Estimate_Module extends Baseclass {
 		estimate.Estimate_AddEstimate();
 		estimate.Intro();
 		estimate.Estimate_body();
-		Thread.sleep(3000);
 		estimate.Estimate_Price_tab();
-		Thread.sleep(3000);
 		estimate.Estimate_Price_NoBreakdown();
-		Thread.sleep(3000);
 		estimate.Estimate_Price_NoBreakdown_PartsTotal();
-		Thread.sleep(3000);
 		estimate.Estimate_InvoiceSchedule();
-		Thread.sleep(3000);
 		estimate.Estimate_InvoiceSchedule_Deposite();
-		Thread.sleep(3000);
 		estimate.Estimate_InvoiceSchedule_Completion();
-		Thread.sleep(3000);
 		estimate.Estimate_InvoiceSchedule_Retention();
-		Thread.sleep(3000);
 		estimate.Estimate_SendtoCustomer();
 		estimate.Estimate_Accept();
 	}
@@ -61,21 +55,13 @@ public class Estimate_Module extends Baseclass {
 		estimate.Estimate_user_group();
 		estimate.Estimate_AddEstimate();
 		estimate.Estimate_Survey_Edit();
-		Thread.sleep(3000);
 		estimate.Estimate_Price_tab();
-		Thread.sleep(3000);
 		estimate.Estimate_Price_NoBreakdown();
-		Thread.sleep(3000);
 		estimate.Estimate_Price_NoBreakdown_PartsTotal();
-		Thread.sleep(3000);
 		estimate.Estimate_InvoiceSchedule();
-		Thread.sleep(3000);
 		estimate.Estimate_InvoiceSchedule_Deposite();
-		Thread.sleep(3000);
 		estimate.Estimate_InvoiceSchedule_Completion();
-		Thread.sleep(3000);
 		estimate.Estimate_InvoiceSchedule_Retention();
-		Thread.sleep(3000);
 		estimate.Estimate_SendtoCustomer();
 		estimate.Estimate_Accept();
 	}
@@ -92,23 +78,18 @@ public class Estimate_Module extends Baseclass {
 		estimate.Estimate_user_group();
 		estimate.Estimate_AddEstimate();
 		estimate.Estimate_Survey_Edit();
-		Thread.sleep(2000);
 		estimate.Estimate_Price_tab();
-		Thread.sleep(3000);
 		estimate.Estimate_Price_NoBreakdown();
-		Thread.sleep(3000);
 		estimate.Estimate_Price_NoBreakdown_PartsTotal();
-		Thread.sleep(3000);
 		estimate.Estimate_InvoiceSchedule();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Deposite();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Completion();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Retention();
-		Thread.sleep(1000);
+
 		estimate.Estimate_SendtoCustomer();
-		Thread.sleep(2000);
 		estimate.Estimate_Delete();
 
 	}
@@ -124,23 +105,23 @@ public class Estimate_Module extends Baseclass {
 		estimate.Estimate_user_group();
 		estimate.Estimate_AddEstimate();
 		estimate.Estimate_Survey_Edit();
-		Thread.sleep(1000);
+
 		estimate.Estimate_Price_tab();
-		Thread.sleep(1000);
+
 		estimate.Estimate_Price_NoBreakdown();
-		Thread.sleep(1000);
+
 		estimate.Estimate_Price_NoBreakdown_PartsTotal();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Deposite();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Completion();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Retention();
-		Thread.sleep(1000);
+
 		estimate.Estimate_SendtoCustomer();
-		Thread.sleep(1000);
+
 		estimate.Estimate_Reject();
 
 
@@ -160,36 +141,36 @@ public class Estimate_Module extends Baseclass {
 		estimate.Estimate_CustomerReference();
 		estimate.Estimate_user_group();
 		estimate.Estimate_AddEstimate();
-		Thread.sleep(1000);
+
 		estimate.Estimate_Price_tab();
-		Thread.sleep(1000);
+
 		estimate.Estimate_Price_NoBreakdown();
-		Thread.sleep(1000);
+
 		estimate.Estimate_Price_NoBreakdown_PartsTotal();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Deposite();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Completion();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Retention();
-		Thread.sleep(1000);
+
 		estimate.MakeNewOption();
-		Thread.sleep(1000);
+
 		estimate.Estimate_Price_NoBreakdown();
-		Thread.sleep(1000);
+
 		estimate.Estimate_Price_NoBreakdown_PartsTotal();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_MakeNewOption();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Deposite_MakeNewOption();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Completion_MakeNewOption();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Retention_MakeNewOption();
 		estimate.AdditionalOption_breadcrum();		
-		Thread.sleep(1000);
+
 		estimate.Estimate_SendtoCustomer();
 		estimate.Estimate_Accept();
 
@@ -209,21 +190,21 @@ public class Estimate_Module extends Baseclass {
 		estimate.Estimate_CustomerReference();
 		estimate.Estimate_user_group();
 		estimate.Estimate_AddEstimate();
-		Thread.sleep(1000);
+
 		estimate.Estimate_Price_tab();
-		Thread.sleep(1000);
+
 		estimate.Estimate_Price_NoBreakdown();
-		Thread.sleep(1000);
+
 		estimate.Estimate_Price_NoBreakdown_PartsTotal();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Deposite();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Completion();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Retention();
-		Thread.sleep(1000);
+
 		estimate.Estimate_Clone();
 		estimate.Estimate_SendtoCustomer();
 		estimate.Estimate_Accept2();
@@ -243,19 +224,19 @@ public class Estimate_Module extends Baseclass {
 		estimate.Estimate_CustomerReference();
 		estimate.Estimate_user_group();
 		estimate.Estimate_AddEstimate();
-		Thread.sleep(1000);
+
 		estimate.Estimate_Price_tab();
-		Thread.sleep(1000);
+
 		estimate.Estimate_Price_BreakdownByCategory();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Deposite();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Completion();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Retention();
-		Thread.sleep(1000);
+
 		estimate.Estimate_SendtoCustomer();
 		estimate.Estimate_Accept();
 	}
@@ -274,24 +255,24 @@ public class Estimate_Module extends Baseclass {
 		estimate.Estimate_CustomerReference();
 		estimate.Estimate_user_group();
 		estimate.Estimate_AddEstimate();
-		Thread.sleep(1000);
+
 		estimate.Estimate_Price_tab();
-		Thread.sleep(1000);
+
 		//driver.navigate().refresh();
 		estimate.Estimate_Price_FullBreakdown();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Deposite();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Completion();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Retention();
-		Thread.sleep(1000);
+
 		estimate.Estimate_SendtoCustomer();
 		estimate.Estimate_Accept();
 	}
-	
+
 	@Test(priority = 9)
 	public void Estimate_Full_Breakdown_By_Category() throws InterruptedException
 	{
@@ -307,24 +288,17 @@ public class Estimate_Module extends Baseclass {
 		estimate.Estimate_CustomerReference();
 		estimate.Estimate_user_group();
 		estimate.Estimate_AddEstimate();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		estimate.Estimate_Price_tab();
-		Thread.sleep(1000);
-		driver.navigate().refresh();
 		estimate.Estimate_Price_FullBreakdownByCategory();
-		Thread.sleep(1000);
 		estimate.Estimate_InvoiceSchedule();
-		Thread.sleep(1000);
 		estimate.Estimate_InvoiceSchedule_Deposite();
-		Thread.sleep(1000);
 		estimate.Estimate_InvoiceSchedule_Completion();
-		Thread.sleep(1000);
 		estimate.Estimate_InvoiceSchedule_Retention();
-		Thread.sleep(1000);
 		estimate.Estimate_SendtoCustomer();
 		estimate.Estimate_Accept();
 	}
-	
+
 	@Test(priority = 10)
 	public void Estimate_AddToReserveList() throws InterruptedException
 	{
@@ -340,28 +314,28 @@ public class Estimate_Module extends Baseclass {
 		estimate.Estimate_CustomerReference();
 		estimate.Estimate_user_group();
 		estimate.Estimate_AddEstimate();
-		Thread.sleep(1000);
+
 		estimate.Estimate_Add_To_Reserve_List();
 		estimate.Estimate_Price_tab();
-		Thread.sleep(1000);
+
 		estimate.Estimate_Price_NoBreakdown();
-		Thread.sleep(1000);
+
 		estimate.Estimate_Price_NoBreakdown_PartsTotal();
-		
-		Thread.sleep(1000);
+
+
 		estimate.Estimate_InvoiceSchedule();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Deposite();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Completion();
-		Thread.sleep(1000);
+
 		estimate.Estimate_InvoiceSchedule_Retention();
-		Thread.sleep(1000);
+
 		estimate.Estimate_SendtoCustomer();
 		estimate.Estimate_Accept();
 
 	}
-	
+
 	@Test(priority = 11)
 	public void Estimate_CLoneEstimate() throws InterruptedException
 	{
@@ -377,54 +351,77 @@ public class Estimate_Module extends Baseclass {
 		estimate.Estimate_CustomerReference();
 		estimate.Estimate_user_group();
 		estimate.Estimate_AddEstimate();
-		Thread.sleep(1000);
 		estimate.Estimate_Price_tab();
-		Thread.sleep(1000);
 		estimate.Estimate_Price_NoBreakdown();
-		Thread.sleep(1000);
 		estimate.Estimate_Price_NoBreakdown_PartsTotal();
-		Thread.sleep(1000);
 		estimate.Estimate_InvoiceSchedule();
-		Thread.sleep(1000);
 		estimate.Estimate_InvoiceSchedule_Deposite();
-		Thread.sleep(1000);
 		estimate.Estimate_InvoiceSchedule_Completion();
-		Thread.sleep(1000);
 		estimate.Estimate_InvoiceSchedule_Retention();
-		Thread.sleep(1000);
+		estimate.Estimate_SendtoCustomer();
+		estimate.Estimate_Clone_Estimate();
+		estimate.Estimate_Accept();
+
+	}
+	@Test(priority = 12)
+	public void Estimate_TransferEstimate() throws InterruptedException
+	{
+		CreateJob job = new CreateJob(driver);
+		//job.customer_jobmodule();
+		Thread.sleep(2000);
+		driver.navigate().refresh();
+		job.customer_breadcrum();
+		Estimate estimate = new Estimate(driver);		
+		estimate.Estimate_AddNew();
+		estimate.choose_description();
+		estimate.Estimate_Notes();
+		estimate.Estimate_CustomerReference();
+		estimate.Estimate_user_group();
+		estimate.Estimate_AddEstimate();
+		estimate.Estimate_Price_tab();
+		estimate.Estimate_Price_NoBreakdown();
+		estimate.Estimate_Price_NoBreakdown_PartsTotal();
+		estimate.Estimate_InvoiceSchedule();
+		estimate.Estimate_InvoiceSchedule_Deposite();
+		estimate.Estimate_InvoiceSchedule_Completion();
+		estimate.Estimate_InvoiceSchedule_Retention();
 		estimate.Estimate_SendtoCustomer();
 		Thread.sleep(1000);
-		estimate.Estimate_Clone_Estimate();
-		Thread.sleep(1000);
-		estimate.Estimate_Accept();
-	
+		estimate.Estimate_Transfer_Estimate();
+
 	}
-	
-	
-	
-//	@Test(priority = 11)
-//	public void Estimate_Parts() throws InterruptedException
-//	{
-//		CreateJob job = new CreateJob(driver);
-//		job.customer_jobmodule();
-//		Thread.sleep(2000);
-//		//driver.navigate().refresh();
-//		//job.customer_breadcrum();
-//		Estimate estimate = new Estimate(driver);		
-//		estimate.Estimate_AddNew();
-//		estimate.choose_description();
-//		estimate.Estimate_Notes();
-//		estimate.Estimate_CustomerReference();
-//		estimate.Estimate_user_group();
-//		estimate.Estimate_AddEstimate();
-//		Thread.sleep(1000);
-//		estimate.Estimate_parts();
-//		
-//		
-//		
-//		
-//	}
-	
+
+
+	@Test(priority = 13)
+	public void Estimate_Parts() throws InterruptedException, AWTException
+	{
+		//CreateJob job = new CreateJob(driver);
+		//job.customer_jobmodule();
+		driver.navigate().refresh();
+		//job.customer_breadcrum();
+		Thread.sleep(2000);
+		Estimate estimate = new Estimate(driver);		
+		estimate.Estimate_AddNew();
+		Thread.sleep(1000);
+		estimate.choose_description();
+		estimate.Estimate_Notes();
+		estimate.Estimate_CustomerReference();
+		estimate.Estimate_user_group();
+		estimate.Estimate_AddEstimate();
+		//driver.navigate().refresh();
+		estimate.Estimate_parts();
+
+		estimate.Estimate_Price_tab();
+
+		estimate.Estimate_Price_NoBreakdown();
+
+		estimate.Estimate_priceTab_Lineitemestimate();
+		estimate.Estimate_InvoiceSchedule();
+		estimate.Estimate_SendtoCustomer();
+		estimate.Estimate_Accept();
+
+	}
+
 }
-	
+
 

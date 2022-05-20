@@ -7,6 +7,9 @@ import java.net.UnknownHostException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.ITestResult;
@@ -40,6 +43,7 @@ public class Baseclass extends Wrapper {
 	public ExtentReports report;
 	public ExtentTest logger;
 	public String homepage;
+	//public static final Logger log4j = LogManager.getLogger(Baseclass.class);
 	
 	
 //	public static ExtentHtmlReporter htmlReporter;
@@ -59,6 +63,7 @@ public class Baseclass extends Wrapper {
 		logger = report.createTest("Smoke Test");
 		sheet = new Excelsheetdata();
 		config = new Config();
+		PropertyConfigurator.configure("log4j.properties");
 		
 		
 //		htmlReporter = new ExtentHtmlReporter(new File("./Reports/Live_SmokeTest_Result " +System.currentTimeMillis()+  ".html"));
@@ -94,7 +99,8 @@ public class Baseclass extends Wrapper {
 		
 		LoginPage loginpage = PageFactory.initElements(driver, LoginPage.class);
 		loginpage.login(sheet.sheetIN("Login",0, 1),sheet.sheetIN("Login",1, 1),sheet.sheetIN("Login", 2, 1));
-		Thread.sleep(1000);
+		Thread.sleep(10000);
+		log4j.info("Successfully Logged In");
 		homepage = driver.getCurrentUrl();
 		
 		
@@ -107,7 +113,8 @@ public class Baseclass extends Wrapper {
 		if(result.getStatus()==ITestResult.SUCCESS)
 		{
 			logger.log(Status.PASS, "Method Been Executed Sucessfully:-" +result.getName());
-			System.out.println( "Method Been Executed Sucessfully:-" +result.getName());
+			//System.out.println( "Method Been Executed Sucessfully:-" +result.getName());
+			log4j.info( "Method Been Executed Sucessfully:-" +result.getName());
 			Sysout("Method Been Executed Sucessfully:-" +result.getName());
 			Systemout("Method Been Executed Sucessfully:-" +result.getName());
 //			SlackCommusoftstatus("Method Been Executed Sucessfully:-" +result.getName());
@@ -117,7 +124,8 @@ public class Baseclass extends Wrapper {
 				logger.log(Status.FAIL, "Method Been Failed:-" +result.getName());
 		//		logger.log(Status.FAIL,logger.addScreenCaptureFromPath(Screenshot.capture(driver))+result.getName());
 				logger.fail("Test Failed :- " +result.getName(), MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(driver)).build());
-				System.out.println( "Method Been Failed:-" +result.getName());
+				//System.out.println( "Method Been Failed:-" +result.getName());
+				log4j.info( "Method Been Failed:-" +result.getName());
 				Sysout("Method Been Failed:-" +result.getName());
 				Systemout("Method Been Failed:-" +result.getName());
 //				SlackCommusoftstatus("Method Been Failed:-" +result.getName());

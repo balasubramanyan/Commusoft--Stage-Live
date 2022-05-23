@@ -3,6 +3,7 @@ package pages_US;
 import org.openqa.selenium.WebDriver;
 
 import action_US.Wrapper_US;
+import pages.searchengine;
 
 public class CreateJob_US extends Wrapper_US {
 	
@@ -329,7 +330,19 @@ public class CreateJob_US extends Wrapper_US {
 		Thread.sleep(2000);
 		click("//button[@class=\"btn btn-primary primary-button ng-binding\"]");
 	}
-	
+	public void JobDescription1(String a) throws InterruptedException
+    {
+        searchengine search = new searchengine(driver);
+        search.searchbox_jobDescription(a);
+        //selectdropdownvalue("$servicereminderinstance", "3");
+        type("$quotedamount", "2000");
+        type("$ponumber", "Customer reference");
+        selectdropdown("$job[priority]", "Important");
+        selectdropdownvalue("$job[usergroupsid]","1");
+        selectdropdownvalue("$job[invoicecategoryid]", "1");
+        Thread.sleep(3000);
+        click("//button[@type='submit']");
+    }
 
 }
 

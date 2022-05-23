@@ -46,10 +46,16 @@ import utility_US.PageloadResponse_US;
 
 public class Smoketest_US extends Baseclass_US {
 
-	public String homepage;
-	public String jobURL;
-	public String WA;
-	public String Supplierhomepage;
+	    public String homepage;
+		public String jobURL;
+		public String WA;
+		public String Supplierhomepage;
+		public String invoicepage;
+		public String jobpage; 
+		public String payment;
+		public String Prefinalinvoice;
+		public String retention;
+		public String invoicenumber;
 //change made oin UK
 //manually edited
 
@@ -62,378 +68,669 @@ public class Smoketest_US extends Baseclass_US {
 		homepage = driver.getCurrentUrl();
 		Thread.sleep(3000);
 	}
-//	@Test(priority = 1)
-//	public void Add_Customer() throws InterruptedException
-//	{
-//		Customer_US customer = new Customer_US(driver);
-//		customer.Customer_create();
-//		customer.Customer_title();
-//		customer.Customer_Name();
-//		customer.Customer_SurName();
-//		customer.Customer_Mobile();
-//		customer.Customer_email();
-//		customer.Customer_AddressLine1();
-//		customer.Customer_Save();
-//		Thread.sleep(20000);
-//		customerpage = driver.getCurrentUrl();
-//	}
-//	
-//
-//	@Test(priority = 2)
-//	public void Edit_Customer() throws InterruptedException
-//	{
-//
-//		driver.get(customerpage);
-//		Thread.sleep(3000);
-//		Editcustomer_workaddress_US editcustomer = new Editcustomer_workaddress_US(driver);
-//		editcustomer.Editcustomer_link();
-//		editcustomer.Editcustomer_title();
-//		editcustomer.Editcustomer_Name();
-//		editcustomer.Editcustomer_SurName();
-//		editcustomer.Editcustomer_Mobile();
-//		editcustomer.Editcustomer_email();
-//		editcustomer.Editcustomer_AddressLine1();
-//		editcustomer.Editcustomer_Save();
-//	}
-//
-//	@Test(priority = 3)
-//	public void Add_job_Prefinal() throws InterruptedException
-//	{
-//		Thread.sleep(4000);
-//		CreateJob_US job = new CreateJob_US(driver);
-//		job.addjob();
-//		job.JobDescription("PreFinal");
-//		//job.createjob();
-//	}
-//	@Test(priority = 4)
-//	public void Add_job_Final_Complete() throws InterruptedException
-//	{
-//		driver.get(customerpage);
-//		Thread.sleep(6000);
-//		CreateJob_US job = new CreateJob_US(driver);
-//		job.addjob();
-//		job.JobDescription("AutoFinal");
-//		//job.createjob();
-//		Thread.sleep(6000);
-//		job.edit_job();
-//		Thread.sleep(3000);
-//		job.complete_job();
-//	}
-//	@Test(priority = 5)
-//	public void Addjob_NoRules() throws InterruptedException
-//	{
-//		driver.get(customerpage);
-//		Thread.sleep(4000);
-//		CreateJob_US job = new CreateJob_US(driver);
-//		job.addjob();
-//		job.JobDescription("No Rules");
-//		//job.createjob();
-//		Thread.sleep(3000);
-//		Invoice_US invoice = new Invoice_US(driver);
-//		invoice.InvoiceTab();
-//		invoice.addinvoice();
-//		invoice.Final_invoice();
-//		invoice.invoice_description();
-//		invoice.invoice_UserGroup();
-//		invoice.invoice_Category();
-//		invoice.sub_total("500");
-//		invoice.save_invoice();
-//	}
-//	@Test(priority = 6)
-//	public void Addjob_NoRules_Adddtional() throws InterruptedException
-//	{
-//		driver.get(customerpage);
-//		Thread.sleep(4000);
-//		CreateJob_US job = new CreateJob_US(driver);
-//		job.addjob();
-//		job.JobDescription("No Rules");
-//		//job.createjob();
-//		Thread.sleep(3000);
-//		Invoice_US invoice = new Invoice_US(driver);
-//		invoice.InvoiceTab();
-//		invoice.addinvoice();
-//		invoice.Additional_invoice();
-//		invoice.invoice_UserGroup();
-//		invoice.invoice_Category();
-//		invoice.Invoice_Breakdown_Full_breakdown_by_category();
-//		invoice.invoice_description();
-//		invoice.Full_Breakdown_ByCategory_Labour_Description("labour");
-//		invoice.unitprice_FullBreakdown_ByCategory_Labour("300");
-//		invoice.Full_Breakdown_ByCategory_Parts_Description("parts");
-//		invoice.save_invoice();
-//	}	
-//	@Test(priority = 7)
-//	public void Estimate_Accept() throws InterruptedException
-//	{
-//		driver.get(customerpage);
-//		Thread.sleep(5000);
-//		Estimate_US estimate = new Estimate_US(driver);
-//		estimate.Estimate_AddNew();
-//		estimate.choose_description();
-//		estimate.Estimate_Notes();
-//		estimate.Estimate_CustomerReference();
-//		estimate.Estimate_user_group();
-//		estimate.Estimate_AddEstimate();
-//		Thread.sleep(3000);
-//		estimate.Estimate_Price_tab();
-//		Thread.sleep(3000);
-//		estimate.Estimate_Price_NoBreakdown();
-//		Thread.sleep(3000);
-//		estimate.Estimate_Price_NoBreakdown_PartsTotal();
-//		Thread.sleep(3000);
-//		estimate.Estimate_InvoiceSchedule();
-//		Thread.sleep(3000);
-//		estimate.Estimate_InvoiceSchedule_Deposite();
-//		Thread.sleep(3000);
-//		estimate.Estimate_InvoiceSchedule_Completion();
-//		Thread.sleep(3000);
-//		estimate.Estimate_InvoiceSchedule_Retention();
-//		Thread.sleep(3000);
-//		estimate.Estimate_SendtoCustomer();
-//		estimate.Estimate_Accept();
-//	}
-//	@Test(priority = 8)
-//	public void Estimate_Reject() throws InterruptedException
-//	{
-//		driver.get(customerpage);
-//		Thread.sleep(5000);
-//		Estimate_US estimate = new Estimate_US(driver);
-//		estimate.Estimate_AddNew();
-//		estimate.choose_description();
-//		estimate.Estimate_Notes();
-//		estimate.Estimate_CustomerReference();
-//		estimate.Estimate_user_group();
-//		estimate.Estimate_AddEstimate();
-//		estimate.Estimate_Price_tab();
-//		estimate.Estimate_Price_NoBreakdown();
-//		estimate.Estimate_Price_NoBreakdown_PartsTotal();
-//		estimate.Estimate_InvoiceSchedule();
-//		estimate.Estimate_InvoiceSchedule_Deposite();
-//		estimate.Estimate_InvoiceSchedule_Completion();
-//		estimate.Estimate_InvoiceSchedule_Retention();
-//		estimate.Estimate_SendtoCustomer();
-//		estimate.Estimate_Reject();
-//	}
-//	@Test(priority = 9)
-//	public void Addjob_NoRules_DiaryEvent() throws InterruptedException
-//	{
-//		driver.get(customerpage);
-//		Thread.sleep(4000);
-//		CreateJob_US job = new CreateJob_US(driver);
-//		job.addjob();
-//		job.JobDescription("No Rules");
-//		//job.createjob();
-//		Thread.sleep(4000);
-//		job.Add_new_appointment();
-//		Diary_US diary = new Diary_US(driver);
-//		diary.Diary_Daily();
-//		diary.Diary_Today();
-//		diary.Diary_Timing3();
-//		diary.Diary_EventFromJob();
-//	}
-//	@Test(priority = 10)
-//	public void Addpayment_job() throws InterruptedException
-//	{
-//		driver.get(customerpage);
-//		Thread.sleep(4000);
-//		CreateJob_US job = new CreateJob_US(driver);
-//		job.addjob();
-//		job.JobDescription("No Rules");
-//		//job.createjob();
-//		Thread.sleep(4000);
-//		Invoice_US invoice = new Invoice_US(driver);
-//		invoice.InvoiceTab();
-//		invoice.addinvoice();
-//		invoice.Pre_Final_invoice();
-//		invoice.Invoice_Breakdown_Full_breakdown();
-//		invoice.invoice_description();
-//		invoice.Full_Breakdown_des("Pricing One");
-//		invoice.invoice_UserGroup();
-//		invoice.invoice_Category();
-//		invoice.save_invoice();
-//		NotesandCommunication_US communication = new NotesandCommunication_US(driver);
-//		communication.emailinvoice();
-//		communication.printinvoice();
-//		invoice.invoice_AddnewPayment();
-//		invoice.invoice_payment_AddDescription();
-//		invoice.invoice_payment_method();
-//		invoice.invoice_payment_nominalcode();
-//		invoice.invoice_payment_amount();
-//		invoice.invoice_paymeny_save();
-//	}
-//	@Test(priority = 11)
-//	public void Workaddress_Add() throws InterruptedException
-//	{
-//		driver.get(customerpage);
-//		Thread.sleep(5000);
-//		Customer_US customer = new Customer_US(driver);
-//		customer.workaddress_tab();
-//		customer.workaddress_addnewWorkaddress();
-//		customer.Workaddress_create();
-//		Thread.sleep(6000);
-//		WA = driver.getCurrentUrl();
-//
-//	}
-//
-//	@Test(priority = 12)	
-//	public void  Work_Address_Edit() throws InterruptedException
-//	{
-//		driver.get(WA);
-//		Thread.sleep(4000);
-//		Editcustomer_workaddress_US editworkaddress = new Editcustomer_workaddress_US(driver);
-//		//editworkaddress.EditWorkaddress_view();
-//		editworkaddress.Edit_workaddress();
-//		editworkaddress.Edit_WAtitle();
-//		editworkaddress.Edit_waname();
-//		editworkaddress.Edit_wasurname();
-//		editworkaddress.Edit_walandline();
-//		editworkaddress.Edit_wamobile();
-//		editworkaddress.Edit_waemail();
-//		editworkaddress.Edit_waaddress1();
-//		editworkaddress.Edit_wasavebutton();
-//
-//	}
-//
-//	@Test(priority = 13)
-//	public void WA_Add_job_Prefinal() throws InterruptedException
-//	{
-//		driver.get(WA);
-//		Thread.sleep(4000);
-//		CreateJob_US job = new CreateJob_US(driver);
-//		job.addjob();
-//		job.JobDescription("PreFinal");
-//		//job.createjob();
-//	}
-//	@Test(priority = 14)
-//	public void WA_Addpayment_job() throws InterruptedException
-//	{
-//		driver.get(WA);
-//		Thread.sleep(4000);
-//		CreateJob_US job = new CreateJob_US(driver);
-//		job.addjob();
-//		job.JobDescription("No Rules");
-//		//job.createjob();
-//		Thread.sleep(4000);
-//		Invoice_US invoice = new Invoice_US(driver);
-//		invoice.InvoiceTab();
-//		invoice.addinvoice();
-//		invoice.Pre_Final_invoice();
-//		invoice.Invoice_Breakdown_Full_breakdown();
-//		invoice.invoice_description();
-//		invoice.Full_Breakdown_des("Pricing One");
-//		invoice.invoice_UserGroup();
-//		invoice.invoice_Category();
-//		invoice.save_invoice();
-//		NotesandCommunication_US communication = new NotesandCommunication_US(driver);
-//		communication.emailinvoice();
-//		communication.printinvoice();
-//		invoice.invoice_AddnewPayment();
-//		invoice.invoice_payment_AddDescription();
-//		invoice.invoice_payment_method();
-//		invoice.invoice_payment_nominalcode();
-//		invoice.invoice_payment_amount();
-//		invoice.invoice_paymeny_save();
-//	}
-//	@Test(priority = 15)
-//	public void WA_Estimate_Accept() throws InterruptedException
-//	{
-//		driver.get(WA);
-//		Thread.sleep(5000);
-//		Estimate_US estimate = new Estimate_US(driver);
-//		estimate.Estimate_AddNew();
-//		estimate.choose_description();
-//		estimate.Estimate_Notes();
-//		estimate.Estimate_CustomerReference();
-//		estimate.Estimate_user_group();
-//		estimate.Estimate_AddEstimate();
-//		Thread.sleep(3000);
-//		estimate.Estimate_Price_tab();
-//		Thread.sleep(3000);
-//		estimate.Estimate_Price_NoBreakdown();
-//		estimate.Estimate_Price_NoBreakdown_PartsTotal();
-//		estimate.Estimate_InvoiceSchedule();
-//		estimate.Estimate_InvoiceSchedule_Deposite();
-//		estimate.Estimate_InvoiceSchedule_Completion();
-//		estimate.Estimate_InvoiceSchedule_Retention();
-//		estimate.Estimate_SendtoCustomer();
-//		estimate.Estimate_Accept();
-//		Thread.sleep(6000);
-//	}
-//	@Test(priority = 16)
-//	public void Diary_Estimate() throws InterruptedException
-//	{
-//		Thread.sleep(6000);
-//		Diary_US diary = new Diary_US(driver);
-//		diary.Diary_Module();
-//		diary.Diary_Daily();
-//		diary.Diary_Today();
-//		diary.Diary_PM();
-//		diary.Diary_Estimate();
-//		diary.Diary_propertysearch();
-//		Thread.sleep(3000);
-//		diary.Diary_Estimate_EventDescription();
-//		diary.Diary_Save();
-//	}
-//	@Test(priority = 17)
-//	public void Diary_Job() throws InterruptedException
-//	{
-//		Thread.sleep(6000);
-//		Diary_US diary = new Diary_US(driver);
-//		diary.Diary_Module();
-//		diary.Diary_Daily();
-//		diary.Diary_Today();
-//		diary.Diary_Timing();
-//		diary.Diary_job();
-//		diary.Diary_propertysearch();
-//		Thread.sleep(5000);
-//		diary.Diary_Job_EventDescription();
-//		diary.Diary_Save();
-//	}
-//	@Test(priority = 18)
-//	public void Diary_Normal() throws InterruptedException
-//	{
-//		Thread.sleep(6000);
-//		Diary_US diary = new Diary_US(driver);
-//		diary.Diary_Module();
-//		diary.Diary_Daily();
-//		diary.Diary_Today();
-//		diary.Diary_Timing1();
-//		diary.Diary_Normal_EvenDescription();
-//		diary.Diary_Save();
-//	}
-//	@Test(priority = 19)
-//	public void Addcustomer_job() throws InterruptedException
-//	{
-//		Thread.sleep(6000);
-//		Diary_US diary = new Diary_US(driver);
-//		diary.Diary_Module();
-//		diary.Diary_Daily();
-//		diary.Diary_Today();
-//		diary.Diary_Timing2();
-//		diary.Diary_job();
-//		diary.Diary_job_AddProperty();
-//		diary.Diary_TypesOfProperty();
-//		diary.Diary_TypesOfCustomer();
-//		diary.Diary_AddProperty_CustomerName();
-//		diary.Diary_AddProperty_CustomerSurName();
-//		diary.Diary_AddProperty_CustomerEmail();
-//		diary.Diary_AddProperty_CustomerAdd1();
-//		diary.Diary_AddProperty_CustomerSave();
-//		//	diary.Diary_currentdate_datepicker();
-//		diary.Diary_Job_EventDescription();
-//		diary.Diary_Save();
-//	}
-//	@Test(priority =20)
-//	public void diaryutility() throws InterruptedException
-//	{
-//		Thread.sleep(3000);
-//		Diary_US diary = new Diary_US(driver);
-//		diary.Diary_Module();
-//		Thread.sleep(6000);
-//		diary.Diary_PrintJobSheet();
-//		diary.Diary_PrintSummarySheet();
-//	}
-	@Test(priority =21)
+	@Test(priority = 1)
+	public void Add_Customer() throws InterruptedException
+	{
+		Customer_US customer = new Customer_US(driver);
+		customer.Customer_create();
+		customer.Customer_title();
+		customer.Customer_Name();
+		customer.Customer_SurName();
+		customer.Customer_Mobile();
+		customer.Customer_email();
+		customer.Customer_AddressLine1();
+		customer.Customer_Save();
+		Thread.sleep(20000);
+		customerpage = driver.getCurrentUrl();
+	}
+	
+
+	@Test(priority = 2)
+	public void Edit_Customer() throws InterruptedException
+	{
+
+		driver.get(customerpage);
+		Thread.sleep(3000);
+		Editcustomer_workaddress_US editcustomer = new Editcustomer_workaddress_US(driver);
+		editcustomer.Editcustomer_link();
+		editcustomer.Editcustomer_title();
+		editcustomer.Editcustomer_Name();
+		editcustomer.Editcustomer_SurName();
+		editcustomer.Editcustomer_Mobile();
+		editcustomer.Editcustomer_email();
+		editcustomer.Editcustomer_AddressLine1();
+		editcustomer.Editcustomer_Save();
+	}
+
+	@Test(priority = 3)
+	public void Add_job_Prefinal() throws InterruptedException
+	{
+		Thread.sleep(4000);
+		CreateJob_US job = new CreateJob_US(driver);
+		job.addjob();
+		job.JobDescription("PreFinal");
+		//job.createjob();
+	}
+	@Test(priority = 4)
+	public void Add_job_Final_Complete() throws InterruptedException
+	{
+		driver.get(customerpage);
+		Thread.sleep(6000);
+		CreateJob_US job = new CreateJob_US(driver);
+		job.addjob();
+		job.JobDescription("AutoFinal");
+		//job.createjob();
+		Thread.sleep(6000);
+		job.edit_job();
+		Thread.sleep(3000);
+		job.complete_job();
+	}
+	@Test(priority = 5)
+	public void Addjob_NoRules() throws InterruptedException
+	{
+		driver.get(customerpage);
+		Thread.sleep(4000);
+		CreateJob_US job = new CreateJob_US(driver);
+		job.addjob();
+		job.JobDescription("No Rules");
+		//job.createjob();
+		Thread.sleep(3000);
+		Invoice_US invoice = new Invoice_US(driver);
+		invoice.InvoiceTab();
+		invoice.addinvoice();
+		invoice.Final_invoice();
+		invoice.invoice_description();
+		invoice.invoice_UserGroup();
+		invoice.invoice_Category();
+		invoice.sub_total("500");
+		invoice.save_invoice();
+	}
+	@Test(priority = 6)
+	public void Addjob_NoRules_Adddtional() throws InterruptedException
+	{
+		driver.get(customerpage);
+		Thread.sleep(4000);
+		CreateJob_US job = new CreateJob_US(driver);
+		job.addjob();
+		job.JobDescription("No Rules");
+		//job.createjob();
+		Thread.sleep(3000);
+		Invoice_US invoice = new Invoice_US(driver);
+		invoice.InvoiceTab();
+		invoice.addinvoice();
+		invoice.Additional_invoice();
+		invoice.invoice_UserGroup();
+		invoice.invoice_Category();
+		invoice.Invoice_Breakdown_Full_breakdown_by_category();
+		invoice.invoice_description();
+		invoice.Full_Breakdown_ByCategory_Labour_Description("labour");
+		invoice.unitprice_FullBreakdown_ByCategory_Labour("300");
+		invoice.Full_Breakdown_ByCategory_Parts_Description("parts");
+		invoice.save_invoice();
+	}	
+	@Test(priority = 7)
+	public void Estimate_Accept() throws InterruptedException
+	{
+		driver.get(customerpage);
+		Thread.sleep(5000);
+		Estimate_US estimate = new Estimate_US(driver);
+		estimate.Estimate_AddNew();
+		estimate.choose_description();
+		estimate.Estimate_Notes();
+		estimate.Estimate_CustomerReference();
+		estimate.Estimate_user_group();
+		estimate.Estimate_AddEstimate();
+		Thread.sleep(3000);
+		estimate.Estimate_Price_tab();
+		Thread.sleep(3000);
+		estimate.Estimate_Price_NoBreakdown();
+		Thread.sleep(3000);
+		estimate.Estimate_Price_NoBreakdown_PartsTotal();
+		Thread.sleep(3000);
+		estimate.Estimate_InvoiceSchedule();
+		Thread.sleep(3000);
+		estimate.Estimate_InvoiceSchedule_Deposite();
+		Thread.sleep(3000);
+		estimate.Estimate_InvoiceSchedule_Completion();
+		Thread.sleep(3000);
+		estimate.Estimate_InvoiceSchedule_Retention();
+		Thread.sleep(3000);
+		estimate.Estimate_SendtoCustomer();
+		estimate.Estimate_Accept();
+	}
+	@Test(priority = 8)
+	public void Estimate_Reject() throws InterruptedException
+	{
+		driver.get(customerpage);
+		Thread.sleep(5000);
+		Estimate_US estimate = new Estimate_US(driver);
+		estimate.Estimate_AddNew();
+		estimate.choose_description();
+		estimate.Estimate_Notes();
+		estimate.Estimate_CustomerReference();
+		estimate.Estimate_user_group();
+		estimate.Estimate_AddEstimate();
+		estimate.Estimate_Price_tab();
+		estimate.Estimate_Price_NoBreakdown();
+		estimate.Estimate_Price_NoBreakdown_PartsTotal();
+		estimate.Estimate_InvoiceSchedule();
+		estimate.Estimate_InvoiceSchedule_Deposite();
+		estimate.Estimate_InvoiceSchedule_Completion();
+		estimate.Estimate_InvoiceSchedule_Retention();
+		estimate.Estimate_SendtoCustomer();
+		estimate.Estimate_Reject();
+	}
+	@Test(priority = 9)
+	public void Addjob_NoRules_DiaryEvent() throws InterruptedException
+	{
+		driver.get(customerpage);
+		Thread.sleep(4000);
+		CreateJob_US job = new CreateJob_US(driver);
+		job.addjob();
+		job.JobDescription("No Rules");
+		//job.createjob();
+		Thread.sleep(4000);
+		job.Add_new_appointment();
+		Diary_US diary = new Diary_US(driver);
+		diary.Diary_Daily();
+		diary.Diary_Today();
+		diary.Diary_Timing3();
+		diary.Diary_EventFromJob();
+	}
+	@Test(priority = 10)
+	public void Addpayment_job() throws InterruptedException
+	{
+		driver.get(customerpage);
+		Thread.sleep(4000);
+		CreateJob_US job = new CreateJob_US(driver);
+		job.addjob();
+		job.JobDescription("No Rules");
+		//job.createjob();
+		Thread.sleep(4000);
+		Invoice_US invoice = new Invoice_US(driver);
+		invoice.InvoiceTab();
+		invoice.addinvoice();
+		invoice.Pre_Final_invoice();
+		invoice.Invoice_Breakdown_Full_breakdown();
+		invoice.invoice_description();
+		invoice.Full_Breakdown_des("Pricing One");
+		invoice.invoice_UserGroup();
+		invoice.invoice_Category();
+		invoice.save_invoice();
+		NotesandCommunication_US communication = new NotesandCommunication_US(driver);
+		communication.emailinvoice();
+		communication.printinvoice();
+		invoice.invoice_AddnewPayment();
+		invoice.invoice_payment_AddDescription();
+		invoice.invoice_payment_method();
+		invoice.invoice_payment_nominalcode();
+		invoice.invoice_payment_amount();
+		invoice.invoice_paymeny_save();
+	}
+	@Test(priority = 11)
+	public void Workaddress_Add() throws InterruptedException
+	{
+		driver.get(customerpage);
+		Thread.sleep(5000);
+		Customer_US customer = new Customer_US(driver);
+		customer.workaddress_tab();
+		customer.workaddress_addnewWorkaddress();
+		customer.Workaddress_create();
+		Thread.sleep(6000);
+		WA = driver.getCurrentUrl();
+
+	}
+
+	@Test(priority = 12)	
+	public void  Work_Address_Edit() throws InterruptedException
+	{
+		driver.get(WA);
+		Thread.sleep(4000);
+		Editcustomer_workaddress_US editworkaddress = new Editcustomer_workaddress_US(driver);
+		//editworkaddress.EditWorkaddress_view();
+		editworkaddress.Edit_workaddress();
+		editworkaddress.Edit_WAtitle();
+		editworkaddress.Edit_waname();
+		editworkaddress.Edit_wasurname();
+		editworkaddress.Edit_walandline();
+		editworkaddress.Edit_wamobile();
+		editworkaddress.Edit_waemail();
+		editworkaddress.Edit_waaddress1();
+		editworkaddress.Edit_wasavebutton();
+
+	}
+
+	@Test(priority = 13)
+	public void WA_Add_job_Prefinal() throws InterruptedException
+	{
+		driver.get(WA);
+		Thread.sleep(4000);
+		CreateJob_US job = new CreateJob_US(driver);
+		job.addjob();
+		job.JobDescription("PreFinal");
+		//job.createjob();
+	}
+	@Test(priority = 14)
+	public void WA_Addpayment_job() throws InterruptedException
+	{
+		driver.get(WA);
+		Thread.sleep(4000);
+		CreateJob_US job = new CreateJob_US(driver);
+		job.addjob();
+		job.JobDescription("No Rules");
+		//job.createjob();
+		Thread.sleep(4000);
+		Invoice_US invoice = new Invoice_US(driver);
+		invoice.InvoiceTab();
+		invoice.addinvoice();
+		invoice.Pre_Final_invoice();
+		invoice.Invoice_Breakdown_Full_breakdown();
+		invoice.invoice_description();
+		invoice.Full_Breakdown_des("Pricing One");
+		invoice.invoice_UserGroup();
+		invoice.invoice_Category();
+		invoice.save_invoice();
+		NotesandCommunication_US communication = new NotesandCommunication_US(driver);
+		communication.emailinvoice();
+		communication.printinvoice();
+		invoice.invoice_AddnewPayment();
+		invoice.invoice_payment_AddDescription();
+		invoice.invoice_payment_method();
+		invoice.invoice_payment_nominalcode();
+		invoice.invoice_payment_amount();
+		invoice.invoice_paymeny_save();
+	}
+	@Test(priority = 15)
+	public void WA_Estimate_Accept() throws InterruptedException
+	{
+		driver.get(WA);
+		Thread.sleep(5000);
+		Estimate_US estimate = new Estimate_US(driver);
+		estimate.Estimate_AddNew();
+		estimate.choose_description();
+		estimate.Estimate_Notes();
+		estimate.Estimate_CustomerReference();
+		estimate.Estimate_user_group();
+		estimate.Estimate_AddEstimate();
+		Thread.sleep(3000);
+		estimate.Estimate_Price_tab();
+		Thread.sleep(3000);
+		estimate.Estimate_Price_NoBreakdown();
+		estimate.Estimate_Price_NoBreakdown_PartsTotal();
+		estimate.Estimate_InvoiceSchedule();
+		estimate.Estimate_InvoiceSchedule_Deposite();
+		estimate.Estimate_InvoiceSchedule_Completion();
+		estimate.Estimate_InvoiceSchedule_Retention();
+		estimate.Estimate_SendtoCustomer();
+		estimate.Estimate_Accept();
+		Thread.sleep(6000);
+	}
+	@Test(priority = 16)
+	public void add_invoice() throws InterruptedException
+	{
+		driver.get(homepage);
+		Customer_US invoice =new Customer_US (driver);
+		invoice.Customer_create();
+		invoice.Customer_title();
+		invoice.Customer_Name();
+		invoice.Customer_SurName();
+		invoice.Customer_email();
+		invoice.Customer_Landline();
+	    invoice.Customer_Mobile();
+	    invoice.Customer_AddressLine1();
+	    invoice.Customer_AddressLine2();
+	    invoice.Customer_AddressLine3();
+	    invoice.Customer_town();
+	    invoice.Customer_Save();
+	    Thread.sleep(4000);
+	    customerpage=driver.getCurrentUrl();
+	    driver.get(customerpage);
+		Thread.sleep(4000);
+		CreateJob_US job = new CreateJob_US(driver);
+		job.addjob();
+		job.JobDescription("INVOICE");
+		Invoice_US adding_invoice =new Invoice_US(driver);
+	    adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Final_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_Category();
+	    adding_invoice.invoice_UserGroup();
+	    adding_invoice.sub_total("150.84");
+	    adding_invoice.save_invoice();
+	    invoicepage=driver.getCurrentUrl();
+	}
+	@Test(priority=17)
+	public void edit_invoice() throws InterruptedException
+	{
+	    Invoice_US Edit_invoice =new Invoice_US(driver);
+        //driver.get(editpage);
+        Edit_invoice.editinvoice();
+        Edit_invoice.Interim_invoice();
+        Edit_invoice.clear_invoice_description();
+        Edit_invoice.edit_invoice_description("Edited invoice");
+        Edit_invoice.invoice_notes();
+        //Edit_invoice.customerreference();
+        Edit_invoice.editinvoice_Category();
+        Edit_invoice.editinvoice_UserGroup();
+        Edit_invoice.Invoice_Breakdown_Breakdown_by_category();
+        Edit_invoice.Confirm_box();
+        Edit_invoice.BreakdownByCategory_des("Parts");
+        Edit_invoice.unitprice("100");
+        Edit_invoice.save_invoice();  
+	}
+	@Test(priority=18)
+	public void delete_invoice()	
+	{
+		Invoice_US Delete_invoice =new Invoice_US(driver);
+		Delete_invoice.delete_inv();	
+	}
+	@Test(priority=19)
+	public void adding_additional_invoice_nobreakdown() throws InterruptedException
+	{
+		driver.get(homepage);
+		Customer_US invoice =new Customer_US (driver);
+		invoice.Customer_create();
+		invoice.Customer_title();
+		invoice.Customer_Name();
+		invoice.Customer_SurName();
+		invoice.Customer_email();
+		invoice.Customer_Landline();
+	    invoice.Customer_Mobile();
+	    invoice.Customer_AddressLine1();
+	    invoice.Customer_AddressLine2();
+	    invoice.Customer_AddressLine3();
+	    invoice.Customer_town();
+	    invoice.Customer_Save();
+	    Thread.sleep(4000);
+	    customerpage=driver.getCurrentUrl();
+	    driver.get(customerpage);
+		Thread.sleep(4000);
+		CreateJob_US job = new CreateJob_US(driver);
+		job.addjob();
+		job.JobDescription("PreFinal");
+		jobpage=driver.getCurrentUrl();
+		Invoice_US adding_invoice =new Invoice_US(driver);
+	    adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Additional_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_notes1("No breakdown additional invoice");
+	    //adding_invoice.customerreference("No breakdown");
+	    adding_invoice.invoice_Category();
+	    adding_invoice.invoice_UserGroup();
+	    adding_invoice.sub_total("800.96");
+	    adding_invoice.save_invoice();
+	}
+	@Test(priority=20)
+	public void adding_additional_invoice_breakdownbycategory() throws InterruptedException
+	{
+		driver.get(jobpage);
+		Invoice_US adding_invoice =new Invoice_US(driver);
+		adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Additional_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_notes1("Breakdownbycategory additional invoice");
+	    //adding_invoice.customerreference("breakdown by category");
+	    adding_invoice.invoice_Category();
+	    adding_invoice.invoice_UserGroup();
+	    adding_invoice.Invoice_Breakdown_Breakdown_by_category();
+	    adding_invoice.BreakdownByCategory_des("Labour");
+	    adding_invoice.unitprice("1000");
+	    adding_invoice.save_invoice();	    
+	}
+	@Test(priority=21)
+	public void adding_interiminvoice_Fullbreakdown() throws InterruptedException
+	{
+		driver.get(jobpage);
+		Invoice_US adding_invoice =new Invoice_US(driver);
+		adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Interim_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_notes1("Fullbreakdown interim invoice");
+	    //adding_invoice.customerreference("breakdown by category");
+	    adding_invoice.invoice_Category();
+	    adding_invoice.invoice_UserGroup();
+	    adding_invoice.Invoice_Breakdown_Full_breakdown();
+	    adding_invoice.Full_Breakdown_des("Test1");
+	    adding_invoice.unitprice_fullbreakdown("2000.653");
+	    adding_invoice.save_invoice();
+	    
+	    
+	}
+	@Test(priority=22)
+	public void adding_prefinalinvoice_Fullbreakdownbycategory() throws InterruptedException
+	{
+		driver.get(homepage);
+		Customer_US invoice =new Customer_US (driver);
+		invoice.Customer_create();
+		invoice.Customer_title();
+		invoice.Customer_Name();
+		invoice.Customer_SurName();
+		invoice.Customer_email();
+		invoice.Customer_Landline();
+	    invoice.Customer_Mobile();
+	    invoice.Customer_AddressLine1();
+	    invoice.Customer_AddressLine2();
+	    invoice.Customer_AddressLine3();
+	    invoice.Customer_town();
+	    invoice.Customer_Save();
+	    Thread.sleep(4000);
+	    customerpage=driver.getCurrentUrl();
+	    driver.get(customerpage);
+		Thread.sleep(4000);
+		CreateJob_US job = new CreateJob_US(driver);
+		job.addjob();
+		job.JobDescription("PreFinal");
+		Invoice_US adding_invoice =new Invoice_US(driver);
+		adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Pre_Final_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_notes1("Fullbreakdownbycategory prefinal invoice");
+	    //adding_invoice.customerreference("breakdown by category");
+	    adding_invoice.invoice_Category();
+	    adding_invoice.invoice_UserGroup();
+	    adding_invoice.Invoice_Breakdown_Full_breakdown_by_category();
+	    adding_invoice.Full_Breakdown_ByCategory_Labour_Description("Azarudeen");
+	    adding_invoice.unitprice_FullBreakdown_ByCategory_Labour("1111");
+	    adding_invoice.Full_Breakdown_ByCategory_Parts_Description("parts test");
+	    adding_invoice.unitprice_FullBreakdown_ByCategory_Parts1("789.05");
+	    adding_invoice.save_invoice1();
+	    Prefinalinvoice=driver.getCurrentUrl();
+    }
+	@Test(priority=23)
+	public void adding_finalinvoice_Fullbreakdownbycategory() throws InterruptedException
+	{
+		driver.get(homepage);
+		Customer_US invoice =new Customer_US (driver);
+		invoice.Customer_create();
+		invoice.Customer_title();
+		invoice.Customer_Name();
+		invoice.Customer_SurName();
+		invoice.Customer_email();
+		invoice.Customer_Landline();
+	    invoice.Customer_Mobile();
+	    invoice.Customer_AddressLine1();
+	    invoice.Customer_AddressLine2();
+	    invoice.Customer_AddressLine3();
+	    invoice.Customer_town();
+	    invoice.Customer_Save();
+	    Thread.sleep(4000);
+	    customerpage=driver.getCurrentUrl();
+	    driver.get(customerpage);
+		Thread.sleep(4000);
+		CreateJob_US job = new CreateJob_US(driver);
+		job.addjob();
+		job.JobDescription("PreFinal");
+		Invoice_US adding_invoice =new Invoice_US(driver);
+		adding_invoice.InvoiceTab();
+	    adding_invoice.addinvoice();
+	    adding_invoice.Final_invoice();
+	    adding_invoice.invoice_description();
+	    adding_invoice.invoice_notes1("Fullbreakdownbycategory final invoice");
+	    //adding_invoice.customerreference("breakdown by category");
+	    adding_invoice.invoice_Category();
+	    adding_invoice.invoice_UserGroup();
+	    adding_invoice.Invoice_Breakdown_Full_breakdown_by_category();
+	    adding_invoice.Full_Breakdown_ByCategory_Labour_Description("Azarudeen");
+	    adding_invoice.unitprice_FullBreakdown_ByCategory_Labour("1111");
+	    adding_invoice.Full_Breakdown_ByCategory_Parts_Description("parts test");
+	    adding_invoice.unitprice_FullBreakdown_ByCategory_Parts1("789.05");
+	    adding_invoice.save_invoice1();
+	    payment= driver.getCurrentUrl();
+	    invoicenumber=gettext("(//span[@class='ng-scope ng-binding'])[2]");
+	    System.out.println(invoicenumber);
+    }
+	 @Test(priority=24)
+	    public void Minus_deposit_retention_interim_invoices_on_finalinvoice() throws InterruptedException 
+	    {
+	    	driver.get(homepage);
+			Customer_US invoice =new Customer_US (driver);
+			invoice.Customer_create();
+			invoice.Customer_title();
+			invoice.Customer_Name();
+			invoice.Customer_SurName();
+			invoice.Customer_email();
+			invoice.Customer_Landline();
+		    invoice.Customer_Mobile();
+		    invoice.Customer_AddressLine1();
+		    invoice.Customer_AddressLine2();
+		    invoice.Customer_AddressLine3();
+		    invoice.Customer_town();
+		    invoice.Customer_Save();
+		    Thread.sleep(4000);
+		    customerpage=driver.getCurrentUrl();
+		    driver.get(customerpage);
+		    Estimate_US invoice1=new Estimate_US(driver);
+		    invoice1.Estimate_AddNew();
+		    invoice1.choose_description();
+		    invoice1.Estimate_Notes();
+		    invoice1.Estimate_CustomerReference();
+		    invoice1.Estimate_user_group();
+		    invoice1.Estimate_AddEstimate();
+			Thread.sleep(3000);
+			invoice1.Estimate_Price_tab();
+			Thread.sleep(3000);
+			invoice1.Estimate_Price_NoBreakdown();
+			Thread.sleep(3000);
+			invoice1.Estimate_Price_NoBreakdown_PartsTotal();
+			Thread.sleep(3000);
+			invoice1.Estimate_InvoiceSchedule();
+			Thread.sleep(3000);
+			invoice1.Estimate_InvoiceSchedule_Deposite();
+			Thread.sleep(3000);
+			invoice1.Estimate_InvoiceSchedule_Completion();
+			Thread.sleep(3000);
+			invoice1.Estimate_InvoiceSchedule_Retention();
+			Thread.sleep(3000);
+			invoice1.Estimate_SendtoCustomer();
+			invoice1.Estimate_Accept();
+			Invoice_US invoice2=new Invoice_US(driver);
+			invoice2.InvoiceTab();
+			retention=driver.getCurrentUrl();
+			invoice2.addinvoice();
+			invoice2.Interim_invoice();
+			invoice2.invoice_description();
+			invoice2.invoice_notes();
+			invoice2.invoice_Category();
+			invoice2.Invoice_Breakdown_No_Breakdown();
+			invoice2.sub_total("100");
+			invoice2.save_invoice1();   
+			driver.get(retention);
+			invoice2.addinvoice();
+			invoice2.Final_invoice();
+			invoice2.invoice_description();
+			invoice2.invoice_notes();
+			invoice2.invoice_Category();
+			invoice2.save_invoice1();
+	    }
+	  @Test(priority=25)
+	    public void Searchinvoice()
+	    {
+	    	driver.get(homepage);
+	    	type("#search-input",invoicenumber);
+	    	typeenter("#search-input");
+	    	click("(//span[@class='ss-layout icon'])[1]");
+	    	click("(//a[text()='"+invoicenumber+"'])[2]");
+	    }
+	@Test(priority = 26)
+	public void Diary_Estimate() throws InterruptedException
+	{
+		Thread.sleep(6000);
+		Diary_US diary = new Diary_US(driver);
+		diary.Diary_Module();
+		diary.Diary_Daily();
+		diary.Diary_Today();
+		diary.Diary_PM();
+		diary.Diary_Estimate();
+		diary.Diary_propertysearch();
+		Thread.sleep(3000);
+		diary.Diary_Estimate_EventDescription();
+		diary.Diary_Save();
+	}
+	@Test(priority = 27)
+	public void Diary_Job() throws InterruptedException
+	{
+		Thread.sleep(6000);
+		Diary_US diary = new Diary_US(driver);
+		diary.Diary_Module();
+		diary.Diary_Daily();
+		diary.Diary_Today();
+		diary.Diary_Timing();
+		diary.Diary_job();
+		diary.Diary_propertysearch();
+		Thread.sleep(5000);
+		diary.Diary_Job_EventDescription();
+		diary.Diary_Save();
+	}
+	@Test(priority = 28)
+	public void Diary_Normal() throws InterruptedException
+	{
+		Thread.sleep(6000);
+		Diary_US diary = new Diary_US(driver);
+		diary.Diary_Module();
+		diary.Diary_Daily();
+		diary.Diary_Today();
+		diary.Diary_Timing1();
+		diary.Diary_Normal_EvenDescription();
+		diary.Diary_Save();
+	}
+	@Test(priority = 29)
+	public void Addcustomer_job() throws InterruptedException
+	{
+		Thread.sleep(6000);
+		Diary_US diary = new Diary_US(driver);
+		diary.Diary_Module();
+		diary.Diary_Daily();
+		diary.Diary_Today();
+		diary.Diary_Timing2();
+		diary.Diary_job();
+		diary.Diary_job_AddProperty();
+		diary.Diary_TypesOfProperty();
+		diary.Diary_TypesOfCustomer();
+		diary.Diary_AddProperty_CustomerName();
+		diary.Diary_AddProperty_CustomerSurName();
+		diary.Diary_AddProperty_CustomerEmail();
+		diary.Diary_AddProperty_CustomerAdd1();
+		diary.Diary_AddProperty_CustomerSave();
+		//	diary.Diary_currentdate_datepicker();
+		diary.Diary_Job_EventDescription();
+		diary.Diary_Save();
+	}
+	@Test(priority =30)
+	public void diaryutility() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		Diary_US diary = new Diary_US(driver);
+		diary.Diary_Module();
+		Thread.sleep(6000);
+		diary.Diary_PrintJobSheet();
+		diary.Diary_PrintSummarySheet();
+	}
+	@Test(priority =31)
 	public void Supplier_Create() throws InterruptedException
 	{
 		Supplier_US supplier = new Supplier_US(driver);
@@ -448,7 +745,7 @@ public class Smoketest_US extends Baseclass_US {
 		Supplierhomepage = driver.getCurrentUrl();
 	}
 
-	@Test(priority=22)
+	@Test(priority=32)
 	public void Supplier_PO() throws InterruptedException
 	{
 		click("//a[text()='Add new purchase order']");
@@ -461,7 +758,7 @@ public class Smoketest_US extends Baseclass_US {
 		Job.save_po();
 
 	}
-	@Test(priority=23)
+	@Test(priority=33)
 	public void Supplier_Invoice() throws InterruptedException, IOException
 	{
 		driver.get(Supplierhomepage);
@@ -482,7 +779,7 @@ public class Smoketest_US extends Baseclass_US {
 		supplierinv.itemnominalcode();		
 		supplierinv.savesupplierbutton();
 	}
-	@Test(priority = 24)
+	@Test(priority = 34)
 	public  void Customer_Createcontact() throws InterruptedException
 	{
 		driver.get(customerpage);
@@ -507,7 +804,7 @@ public class Smoketest_US extends Baseclass_US {
 		click("//span[text()='Add contact']");
 
 	}
-	@Test (priority=25)
+	@Test (priority=35)
 	public void CustomerReports() throws InterruptedException
 	{
 		//driver.get(homepage);
@@ -524,7 +821,7 @@ public class Smoketest_US extends Baseclass_US {
 				Report.View_customer();
 		
 	}
-	@Test (priority=26)
+	@Test (priority=36)
 	public void ServiceRemindersReports() throws InterruptedException
 	{
 		driver.get(homepage);
@@ -536,7 +833,7 @@ public class Smoketest_US extends Baseclass_US {
 		Report.Service_Reminders_Report();
 		Report.ServiceReminder1_Assertion();
 	}
-	@Test (priority = 27)
+	@Test (priority = 37)
 	public void SupplierReports() throws InterruptedException
 	{
 		driver.get(homepage);
@@ -548,7 +845,7 @@ public class Smoketest_US extends Baseclass_US {
 		Report.Suppliers_Report();
 		Report.Supplier1_Assertion();
 	}
-	@Test (priority=28)
+	@Test (priority=38)
 	public void EstimateReport() throws InterruptedException
 	{
 		Reporting_US Report = new Reporting_US(driver); 
@@ -563,7 +860,7 @@ public class Smoketest_US extends Baseclass_US {
 		Report.First_Plus_button();
 		Report.click_viewestimate();
 	}
-	@Test(priority=29)
+	@Test(priority=39)
 	public void JobReport() throws InterruptedException
 	{
 		Reporting_US Report = new Reporting_US(driver); 
@@ -578,7 +875,7 @@ public class Smoketest_US extends Baseclass_US {
 		Report.First_Plus_button();
 		Report.click_viewestimate();
 	}
-	@Test (priority=30)
+	@Test (priority=40)
 	public void Work_address_Reports() throws InterruptedException
 	{
 		Reporting_US Report = new Reporting_US(driver); 
@@ -593,7 +890,7 @@ public class Smoketest_US extends Baseclass_US {
 		Report.First_Plus_button();
 		Report.Click_View_workaddres();
 	}
-	@Test(priority=31)
+	@Test(priority=41)
     public void customersreportdownload_print() throws InterruptedException
     {
 	  Reporting_US customerreport=new Reporting_US (driver);
@@ -607,7 +904,7 @@ public class Smoketest_US extends Baseclass_US {
 	  customerprint.print_customer();
 	  customerprint.closeprint();
     }
-    @Test(priority=32)
+    @Test(priority=42)
     public void jobreportdownload_print() throws InterruptedException
     {
       Reporting_US jobsreport= new Reporting_US(driver);
@@ -630,7 +927,7 @@ public class Smoketest_US extends Baseclass_US {
       jobreportprintanddownload.notifications();
       jobreportprintanddownload.assertion_jobrepoexcel();*/
     }
-    @Test(priority=33)
+    @Test(priority=43)
     public void timesheetreport() throws InterruptedException
     {
     	Reporting_US timesheet=new Reporting_US(driver);
@@ -643,7 +940,7 @@ public class Smoketest_US extends Baseclass_US {
     	timesheetreportprintanddownload.closeprint();
     	timesheetreportprintanddownload.downloadexcel2();
     }
-    @Test(priority=34)
+    @Test(priority=44)
     public void salesreport() throws InterruptedException 
     {
     	Reporting_US salereport = new Reporting_US(driver);
@@ -664,19 +961,19 @@ public class Smoketest_US extends Baseclass_US {
     }
 	
 	//stata
-	@Test(priority=35)
+	@Test(priority=45)
 	public void changesinvoicetype() throws InterruptedException
 	{
-		driver.get(customerpage);
+		//driver.get(customerpage);
 		Changeinvoice_US changeinvoices=new Changeinvoice_US(driver);
-		//changeinvoices.addcustomer();
+		changeinvoices.addcustomer();
 		changeinvoices.addjob();
 		changeinvoices.adddiary();
 		changeinvoices.add_additionalinvoice();
 		changeinvoices.addfinalinvoice();
 		changeinvoices.editinvoicetype();
 	}
-	@Test(priority=36)
+	@Test(priority=46)
 	public void ser_remainder() throws InterruptedException
 	{
 		driver.get(homepage);
@@ -689,7 +986,7 @@ public class Smoketest_US extends Baseclass_US {
 		Service_remainder.assertion_serviceremain();
 		
 	}
-	@Test(priority = 37)
+	@Test(priority = 47)
 	public  void SolarSearch_pageresponse() throws InterruptedException, IOException
 	{
 		type("#search-input","Azar");
@@ -716,7 +1013,7 @@ public class Smoketest_US extends Baseclass_US {
 //		Assert.assertEquals(statuscode, 200);
 //		
 //	}
-	@Test(priority=38)
+	@Test(priority=48)
 	public void Estimate_Accepted_In_Portal_With_Payment() throws InterruptedException{
 		
 		driver.get(homepage);
@@ -755,7 +1052,7 @@ public class Smoketest_US extends Baseclass_US {
 		estimate.Estimate_Portal_Accept();
 		estimate.Estimate_Portal_Accept_Verification();			
 	}
-	@Test(priority=39)
+	@Test(priority=49)
 	public void Estimate_Accepted_In_Portal_Without_Payment() throws InterruptedException
 	{
 		driver.get(homepage);

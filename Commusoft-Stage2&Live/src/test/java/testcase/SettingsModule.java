@@ -17,15 +17,7 @@ import pages.searchengine;
 public class SettingsModule extends Baseclass{
 	public String homepage;
 	
-	@Test(priority = 0)
-	public void login() throws InterruptedException
-	{
-		LoginPage loginpage = PageFactory.initElements(driver, LoginPage.class);
-		loginpage.login(sheet.sheetIN("Login",0, 1),sheet.sheetIN("Login",1, 1),sheet.sheetIN("Login", 2, 1));
-		Thread.sleep(1000);
-		homepage = driver.getCurrentUrl();
-		
-	}
+
 	@Test(priority=1)
 	public void Setting() throws InterruptedException {
 		Settings setting=new Settings(driver);
@@ -33,9 +25,9 @@ public class SettingsModule extends Baseclass{
 		setting.Click_Systemsetting();
 		setting.Diary_setting();
 		setting.Location();
-		setting.First_jobnumber("20405");
+		//setting.First_jobnumber("20405");
 		setting.Customer_jobconformation();
-		setting.First_estimate_number("1400");
+		//setting.First_estimate_number("1400");
 		setting.work_addressestimate_conformation();
 		setting.customer_estimateconformation();
 		setting.Invoice_number();
@@ -44,15 +36,10 @@ public class SettingsModule extends Baseclass{
 		setting.Service_reminder();
 		setting.Fule_type("white fuel");
 		setting.Abort_reason("customer cancelled");
-		setting.Appliences_group("cooker");
+		setting.Appliances_group("cooker");
 		setting.Click_Setting();
 		setting.Click_Companysetting();
-		setting.Company_details();
-		
-		
-		 
-		
-		
+		setting.Company_details();		
 		
 	}
 

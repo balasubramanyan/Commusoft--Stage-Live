@@ -2,7 +2,6 @@ package testcase;
 
 import java.io.IOException;
 
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -17,16 +16,18 @@ import pages.Customer;
 import pages.Diary;
 import pages.Download_excel_print_reports;
 import pages.Editcustomer_workaddress;
+import pages.Email_setup;
 import pages.Estimate;
 import pages.Invoice;
-import pages.LoginPage;
 import pages.NotesandCommunication;
 import pages.QA62_Serviceremainder;
 import pages.Reporting;
+import pages.Settings;
 import pages.Supplier;
 import pages.Supplierinvoice;
 import pages.searchengine;
 import utility.PageloadResponse;
+
 
 public class Smoketest extends Baseclass {
 
@@ -236,10 +237,10 @@ public class Smoketest extends Baseclass {
 		communication.emailinvoice();
 		communication.printinvoice();
 		invoice.invoice_AddnewPayment();
-		invoice.invoice_payment_AddDescription();
+		invoice.invoice_payment_AddDescription("Job payments");
 		invoice.invoice_payment_method();
 		invoice.invoice_payment_nominalcode();
-		invoice.invoice_payment_amount();
+		invoice.invoice_payment_amount("250.22");
 		invoice.invoice_paymeny_save();
 	}
 	@Test(priority = 11)
@@ -309,10 +310,10 @@ public class Smoketest extends Baseclass {
 		communication.emailinvoice();
 		communication.printinvoice();
 		invoice.invoice_AddnewPayment();
-		invoice.invoice_payment_AddDescription();
+		invoice.invoice_payment_AddDescription("WA payment");
 		invoice.invoice_payment_method();
 		invoice.invoice_payment_nominalcode();
-		invoice.invoice_payment_amount();
+		invoice.invoice_payment_amount("450");
 		invoice.invoice_paymeny_save();
 	}
 	@Test(priority = 15)
@@ -906,12 +907,12 @@ public class Smoketest extends Baseclass {
       jobreportprintanddownload.print();
       jobreportprintanddownload.closeprint();
       jobreportprintanddownload.downloadexcel();
-     /* jobreportprintanddownload.jobsreportprint();
-      jobreportprintanddownload.notifications();
-      jobreportprintanddownload.assertion_jobrep();
-      jobreportprintanddownload.jobsreportdownloadexcel();
-      jobreportprintanddownload.notifications();
-      jobreportprintanddownload.assertion_jobrepoexcel();*/
+//      jobreportprintanddownload.jobsreportprint();
+//      jobreportprintanddownload.notifications();
+//      jobreportprintanddownload.assertion_jobrep();
+//      jobreportprintanddownload.jobsreportdownloadexcel();
+//      jobreportprintanddownload.notifications();
+//      jobreportprintanddownload.assertion_jobrepoexcel();
     }
     @Test(priority=43)
     public void timesheetreport() throws InterruptedException
@@ -1000,7 +1001,7 @@ public class Smoketest extends Baseclass {
 		Assert.assertEquals(statuscode, 200);
 		
 	}
-	@Test(priority=48)
+	//@Test(priority=48)
 	public void Estimate_Accepted_In_Portal_With_Payment() throws InterruptedException{
 		
 		driver.get(homepage);
@@ -1039,7 +1040,8 @@ public class Smoketest extends Baseclass {
 		estimate.Estimate_Portal_Accept();
 		estimate.Estimate_Portal_Accept_Verification();			
 	}
-	@Test(priority=49)
+	
+	//@Test(priority=49)
 	public void Estimate_Accepted_In_Portal_Without_Payment() throws InterruptedException
 	{
 		driver.get(homepage);
@@ -1075,6 +1077,17 @@ public class Smoketest extends Baseclass {
 		estimate.Estimate_Portal_Accept();
 		estimate.Estimate_Portal_Accept_Verification();	
 	}
-	
-
+	@Test(priority=50)
+	public void outlook() throws IOException, InterruptedException
+	{
+		driver.get(homepage);
+		Settings setting=new Settings(driver);
+		setting.Click_Setting();
+		setting.Click_Companysetting();
+		Email_setup outlook  =new Email_setup(driver);
+		outlook.setupemail();
+		outlook.outlookbutton();
+		outlook.outlookusername_password();	
+		outlook.outpassword();
+	}
 }

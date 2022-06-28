@@ -1,5 +1,7 @@
 package pages;
 
+import static org.testng.Assert.assertEquals;
+
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
@@ -16,7 +18,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import action.Wrapper;
 
+
+
+
 public class Estimate extends Wrapper {
+	public String quoteamount;
 
 	public Estimate(WebDriver ldriver)
 	{
@@ -68,8 +74,9 @@ public class Estimate extends Wrapper {
 		type("//textarea[@class='handsontableInput']", "600");
 		Thread.sleep(2000);
 		typeenter("//textarea[@class='handsontableInput']");
-		Thread.sleep(3000);
-		click("//td[contains(@class,'afterHiddenColumn firstVisibleColumn')]");
+		Thread.sleep(2000);
+		click("//td[contains(@class,'afterHiddenColumn firstVisibleColumn')]");		
+		
 	}
 	public void Estimate_InvoiceSchedule() throws InterruptedException
 	{
@@ -634,6 +641,19 @@ public class Estimate extends Wrapper {
 		Thread.sleep(1000);
 		click("//a[@class='btn btn-primary ng-scope']");
 
+	}
+	public void estimatequoteamonut () throws InterruptedException
+	
+	{
+		Thread.sleep(2000);
+		quoteamount=gettext("//td[@class=\"afterHiddenColumn firstVisibleColumn current highlight\"]");
+		Thread.sleep(3000);
+		System.out.println(quoteamount);
+	}
+	public void verify_jobestimate_quoteamount()
+	{
+		String jobquote=gettext("(//span[@class=\"ng-binding\"])[11]");
+		assertEquals(jobquote, quoteamount);
 	}
 
 }

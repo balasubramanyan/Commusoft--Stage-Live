@@ -41,7 +41,7 @@ public class Wrapper {
 	 public String WAAccountNumber;
 	 public String CustomerName;
 	 public String AccountNumber;
-	 public static final Logger log4j = LogManager.getLogger(Baseclass.class);
+	 public final Logger log4j = LogManager.getLogger(Baseclass.class);
 	 
 	 
 	public void type(String xpath, String value)

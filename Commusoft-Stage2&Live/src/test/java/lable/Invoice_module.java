@@ -1,5 +1,10 @@
 package lable;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -16,7 +21,7 @@ public class Invoice_module extends Baseclass
 {
 String invoicepage;
 String editpage; //="https://app.commusoft.co.uk/customers/customer/1635/jobs/1669/invoices/537/view";
-String jobpage; //="https://app.commusoft.co.uk/customers/customer_list/1726/jobs/1733/details/view";
+String jobpage="https://app.commusoft.co.uk/customers/customer_list/1726/jobs/1733/details/view";
 String customerpage;//="https://app.commusoft.co.uk/customers/customer/1922/view/property/view";
 String payment;
 String editpay; //= "https://app.commusoft.co.uk/customers/customer_list/2082/jobs/2274/invoices/1084/payment/142/edit";
@@ -26,8 +31,11 @@ String Prefinalinvoice;
 String Finalinvoiceurl;
 String retention;
 public String invoicenumber;
+String Amountpaid;
+String Grandtotal;
+String Remainderamountpay;
 
-	@Test(priority = 1)
+	/*@Test(priority = 1)
 	public void add_invoice() throws InterruptedException
 	{
 		Customer invoice =new Customer (driver);
@@ -159,7 +167,7 @@ public String invoicenumber;
 	    adding_invoice.unitprice_fullbreakdown("1000.653");
 	    adding_invoice.save_invoice();
 	    
-	}	
+	}
 	@Test(priority=7)
 	public void adding_additional_invoice_Fullbreakdownbycategory() throws InterruptedException
 	{
@@ -178,7 +186,7 @@ public String invoicenumber;
 	    adding_invoice.unitprice_FullBreakdown_ByCategory_Labour("1111");
 	    adding_invoice.Full_Breakdown_ByCategory_Parts_Description("parts test");
 	    adding_invoice.unitprice_FullBreakdown_ByCategory_Parts1("789.05");
-	    adding_invoice.save_invoice1();
+	    adding_invoice.save_invoice1();	
 	    additionalinvoiceurl=driver.getCurrentUrl();
 	    
 	}
@@ -690,12 +698,12 @@ public String invoicenumber;
     	driver.get(payment);
     	Invoice addpayment=new Invoice(driver);
     	addpayment.invoice_AddnewPayment();
-    	addpayment.invoice_payment_AddDescription();
-    	addpayment.payment_reference();
+    	addpayment.invoice_payment_AddDescription("Partial payment");
+    	addpayment.payment_reference("azarudeen-payment");
     	addpayment.invoice_payment_method();
     	addpayment.invoice_payment_nominalcode();
-    	addpayment.invoice_payment_amount();
-    	addpayment.invoice_paymeny_save();		
+    	addpayment.invoice_payment_amount("985.83");
+    	addpayment.invoice_paymeny_save();			
     	Thread.sleep(2000);
     }
     @Test(priority=25)
@@ -900,6 +908,173 @@ public String invoicenumber;
     	click("(//span[@class='ss-layout icon'])[1]");
     	click("(//a[text()='"+invoicenumber+"'])[2]");
     }
+    @Test(priority=35)
+    public void partialpayment_to_invoice() throws InterruptedException
+    
+    	{
+    		driver.get(homepage);
+    		Customer invoice =new Customer (driver);
+    		invoice.Customer_create();
+    		invoice.Customer_title();
+    		invoice.Customer_Name();
+    		invoice.Customer_SurName();
+    		invoice.Customer_email();
+    		invoice.Customer_Landline();
+    	    invoice.Customer_Mobile();
+    	    invoice.Customer_AddressLine1();
+    	    invoice.Customer_AddressLine2();
+    	    invoice.Customer_AddressLine3();
+    	    invoice.Customer_town();
+    	    invoice.Customer_Save();
+    	    Thread.sleep(4000);
+    	    customerpage=driver.getCurrentUrl();
+    	    driver.get(customerpage);
+    		Thread.sleep(4000);
+    		CreateJob job = new CreateJob(driver);
+    		job.addjob();
+    		job.JobDescription("PreFinal");		
+    	    Invoice adding_invoice =new Invoice(driver);
+    		adding_invoice.InvoiceTab();
+    	    adding_invoice.addinvoice();
+    	    adding_invoice.Final_invoice();
+    	    adding_invoice.invoice_description();
+    	    adding_invoice.invoice_notes1("Fullbreakdown final invoice");
+    	    //adding_invoice.customerreference("breakdown by category");
+    	    adding_invoice.invoice_Category();
+    	    adding_invoice.invoice_UserGroup();
+    	    adding_invoice.Invoice_Breakdown_Full_breakdown();
+    	    adding_invoice.Full_Breakdown_des1("Test1");
+    	    adding_invoice.unitprice_fullbreakdown("1592.55");
+    	    adding_invoice.save_invoice();
+    	    Invoice addpayment=new Invoice(driver);
+        	addpayment.invoice_AddnewPayment();
+        	addpayment.invoice_payment_AddDescription("Partial payment");
+        	addpayment.payment_reference("azarudeen-partial");
+        	addpayment.invoice_payment_method();
+        	addpayment.invoice_payment_nominalcode();
+        	addpayment.invoice_payment_amount("985");
+        	addpayment.invoice_paymeny_save();		
+        	Thread.sleep(2000);
+        	Grandtotal=gettext("(//span[@class='ng-binding'])[25]");
+        	Grandtotal= Grandtotal.replace("£","");
+        	Grandtotal= Grandtotal.replace(",","");
+            Amountpaid= gettext("(//span[@class='ng-binding'])[34]");
+            Amountpaid= Amountpaid.replace("£","");
+            System.out.println("partial Amountpaid : " + Amountpaid);
+            double remaindertopay= Double.parseDouble(Grandtotal) - Double.parseDouble(Amountpaid);
+            System.out.println("Remainder amount to be paid : " + remaindertopay);
+            Remainderamountpay=gettext("(//span[@class='ng-binding'])[35]");
+            Remainderamountpay= Remainderamountpay.replace("£","");
+            double Remainingamount= Double.parseDouble(Remainderamountpay);
+            assertEquals(remaindertopay, Remainingamount);
+    	}
+                
+    	
+           @Test(priority=36)
+    	    public void Fullpayment_to_invoice() throws InterruptedException
+    	    
+    	    	{
+    	    		driver.get(homepage);
+    	    		Customer invoice =new Customer (driver);
+    	    		invoice.Customer_create();
+    	    		invoice.Customer_title();
+    	    		invoice.Customer_Name();
+    	    		invoice.Customer_SurName();
+    	    		invoice.Customer_email();
+    	    		invoice.Customer_Landline();
+    	    	    invoice.Customer_Mobile();
+    	    	    invoice.Customer_AddressLine1();
+    	    	    invoice.Customer_AddressLine2();
+    	    	    invoice.Customer_AddressLine3();
+    	    	    invoice.Customer_town();
+    	    	    invoice.Customer_Save();
+    	    	    Thread.sleep(4000);
+    	    	    customerpage=driver.getCurrentUrl();
+    	    	    driver.get(customerpage);
+    	    		Thread.sleep(4000);
+    	    		CreateJob job = new CreateJob(driver);
+    	    		job.addjob();
+    	    		job.JobDescription("PreFinal");		
+    	    	    Invoice adding_invoice =new Invoice(driver);
+    	    		adding_invoice.InvoiceTab();
+    	    	    adding_invoice.addinvoice();
+    	    	    adding_invoice.Final_invoice();
+    	    	    adding_invoice.invoice_description();
+    	    	    adding_invoice.invoice_notes1("Fullbreakdown final invoice");
+    	    	    //adding_invoice.customerreference("breakdown by category");
+    	    	    adding_invoice.invoice_Category();
+    	    	    adding_invoice.invoice_UserGroup();
+    	    	    adding_invoice.Invoice_Breakdown_Full_breakdown();
+    	    	    adding_invoice.Full_Breakdown_des1("Test1");
+    	    	    adding_invoice.unitprice_fullbreakdown("1592.55");
+    	    	    adding_invoice.save_invoice();
+    	    	    Grandtotal=gettext("(//span[@class='ng-binding'])[25]");
+    	        	Grandtotal= Grandtotal.replace("£","");
+    	        	Grandtotal= Grandtotal.replace(",","");
+    	    	    Invoice addpayment=new Invoice(driver);
+    	        	addpayment.invoice_AddnewPayment();
+    	        	addpayment.invoice_payment_AddDescription("Full payment");
+    	        	addpayment.payment_reference("azarudeen-FUllpayment");
+    	        	addpayment.invoice_payment_method();
+    	        	addpayment.invoice_payment_nominalcode();
+    	        	addpayment.invoice_payment_amount(Grandtotal);
+    	        	addpayment.invoice_paymeny_save();		
+    	        	Thread.sleep(2000);
+    	            Amountpaid= gettext("(//span[@class='ng-binding'])[34]");
+    	            Amountpaid= Amountpaid.replace("£","");
+    	            Amountpaid= Amountpaid.replace(",","");
+    	            System.out.println("partial Amountpaid : " + Amountpaid);
+    	            double remaindertopay= Double.parseDouble(Grandtotal) - Double.parseDouble(Amountpaid);
+    	            System.out.println("Remainder amount to be paid : " + remaindertopay);
+    	            Remainderamountpay=gettext("(//span[@class='ng-binding'])[35]");
+    	            Remainderamountpay= Remainderamountpay.replace("£","");
+    	            double Remainingamount= Double.parseDouble(Remainderamountpay);
+    	            assertEquals(remaindertopay, Remainingamount);        
+    	    	}*/
+
+           @Test(priority=37)
+    	    public void Estimatequotedamount_to_takeinfinalinvoice() throws InterruptedException
+    	    {
+        	driver.get(homepage);
+       		Customer invoice =new Customer (driver);
+       		invoice.Customer_create();
+       		invoice.Customer_title();
+       		invoice.Customer_Name();
+       		invoice.Customer_SurName();
+       		invoice.Customer_email();
+       		invoice.Customer_Landline();
+       	    invoice.Customer_Mobile();
+       	    invoice.Customer_AddressLine1();
+       	    invoice.Customer_AddressLine2();
+       	    invoice.Customer_AddressLine3();
+       	    invoice.Customer_town();
+       	    invoice.Customer_Save();
+       	    Thread.sleep(4000);
+       	    customerpage=driver.getCurrentUrl();
+       	    driver.get(customerpage);
+       	    Estimate invoice1=new Estimate(driver);
+       	    invoice1.Estimate_AddNew();
+       	    invoice1.choose_description();
+       	    invoice1.Estimate_Notes();
+       	    invoice1.Estimate_CustomerReference();
+       	    invoice1.Estimate_user_group();
+       	    invoice1.Estimate_AddEstimate();
+       		Thread.sleep(3000);
+       		invoice1.Estimate_Price_tab();
+       		Thread.sleep(3000);
+       		invoice1.Estimate_Price_NoBreakdown();
+       		Thread.sleep(3000);
+       		invoice1.Estimate_Price_NoBreakdown_PartsTotal();
+       		Thread.sleep(3000);
+       		invoice1.estimatequoteamonut();
+       		Thread.sleep(2000);  
+       		invoice1.Estimate_InvoiceSchedule();
+       		Thread.sleep(3000);
+       		invoice1.Estimate_Accept();
+       		Thread.sleep(3000);
+       		invoice1.verify_jobestimate_quoteamount();
+       		
+    	    }
   
    }
 	

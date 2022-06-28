@@ -30,4 +30,8 @@ public class Config {
 	{
 		return pro.getProperty("URL2");
 	}
+	public String URL3()
+	{
+		return pro.getProperty("URL3");
+	}
 }

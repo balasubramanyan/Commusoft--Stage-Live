@@ -1,4 +1,6 @@
 package pages;
+import static org.testng.Assert.assertEquals;
+
 import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
@@ -64,8 +66,9 @@ public class Invoice extends Wrapper {
     {
         Thread.sleep(2000);
         dclick("(//td[contains(@class,'overflow_handsontable select_icon')])[1]");
+        Thread.sleep(2000);
         type("//input[contains(@class,'select2-input select')]", a);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         typeenter("//input[contains(@class,'select2-input select')]");
         Thread.sleep(1000);
         click("(//td[contains(@class,'overflow_handsontable select_icon')])[1]");
@@ -100,9 +103,9 @@ public class Invoice extends Wrapper {
     {
         dclick("(//td[contains(@class,'overflow_handsontable select_icon')])[1]");
         type("//input[contains(@class,'select2-input select')]", a);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         typeenter("//input[contains(@class,'select2-input select')]");
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         click("(//td[contains(@class,'overflow_handsontable select_icon')])[1]");
     }
     public void Full_Breakdown_des1(String a) throws InterruptedException
@@ -122,23 +125,24 @@ public class Invoice extends Wrapper {
     {
         dclick("(//td[contains(@class,'overflow_handsontable select_icon')])[1]");
         type("//input[contains(@class,'select2-input select')]", a);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         typeenter("//input[contains(@class,'select2-input select')]");
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         click("(//td[contains(@class,'overflow_handsontable select_icon')])[1]");
     }
     public void Full_Breakdown_ByCategory_Labour_Description2(String a) throws InterruptedException
     {
         dclick("(//td[contains(@class,'overflow_handsontable select_icon')])[1]");
         type("(//input[contains(@class,'select2-input')])[6]", a);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         typeenter("(//input[contains(@class,'select2-input')])[6]");
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         click("(//td[contains(@class,'overflow_handsontable select_icon')])[1]");
     }
     public void Full_Breakdown_ByCategory_Parts_Description(String a) throws InterruptedException
     {
         dclick("(//td[contains(@class,'overflow_handsontable select_icon')])[7]");
+        Thread.sleep(2000);
         type("//input[contains(@class,'select2-input select')]", a);
         Thread.sleep(1000);
         typeenter("//input[contains(@class,'select2-input select')]");
@@ -326,9 +330,9 @@ public class Invoice extends Wrapper {
     {
         click("//a[@class='btn btn-small btn-primary action-btn']");
     }
-    public void invoice_payment_AddDescription()
+    public void invoice_payment_AddDescription(String a)
     {
-        type("//textarea[@ng-model='description']","Enter the Description");
+        type("//textarea[@ng-model='description']",a);
     }
     public void invoice_payment_method()
     {
@@ -338,18 +342,18 @@ public class Invoice extends Wrapper {
     {
         selectdropdown("//select[@name='nominalAccount']","Bank");
     }
-    public void invoice_payment_amount()
+    public void invoice_payment_amount(String c)
     {
         clear("//input[@name='amount']");
-        type("//input[@name='amount']","100");
+        type("//input[@name='amount']",c);
     }
     public void invoice_paymeny_save()
     {
         click("//button[@type='submit']");
     }
-    public void payment_reference()
+    public void payment_reference(String b)
     {
-    	type("(//input[@class='ng-pristine ng-valid'])[4]", "AZII");
+    	type("(//input[@class='ng-pristine ng-valid'])[4]", b);
     }
     public void view_payment ()
     {
@@ -417,9 +421,16 @@ public class Invoice extends Wrapper {
 		Thread.sleep(1000);
 		click("(//a[@ng-click='sendEmail()'])[2]");
 		Thread.sleep(2000);
-    }
+		click("//span[text()='Notes & communications']");
+		String emailverify= gettext("//span[@class=\"label label-processed\"]");
+		String two="Sent";
+		Thread.sleep(2000);
+		assertEquals(emailverify, two);
+		}
+    
     public void invoice_communication_print() throws InterruptedException 
     {
+    click("//*[@id=\"main\"]/div[2]/div/ng-container/div[2]/div/div[1]/div/div[1]/ul/li[1]");
     click("//a[@ng-click='showPrintInvoice()']");
 	Thread.sleep(2000);
 	click("//button[@ng-click='print()']");

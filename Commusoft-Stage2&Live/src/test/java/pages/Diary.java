@@ -26,6 +26,7 @@ public class Diary extends Wrapper {
     
     public void Diary_Daily()
     {
+    	
         try
         {
         click("//button[text()='Daily']");
@@ -51,6 +52,7 @@ public class Diary extends Wrapper {
             click("//a[text()='Today']");
             Thread.sleep(3000);
         }
+        driver.navigate().refresh();
     }
     public void Diary_PM()  
     {

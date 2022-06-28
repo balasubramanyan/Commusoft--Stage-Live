@@ -11,16 +11,18 @@ import pages.CreateJob;
 import pages.Customer;
 import pages.Diary;
 import pages.Download_excel_print_reports;
+import pages.Email_setup;
 import pages.Estimate;
 import pages.Invoice;
 import pages.LoginPage;
 import pages.NotesandCommunication;
 import pages.Reporting;
+import pages.Settings;
 
 public class Checking extends Baseclass {
 	
 	String homepage;
-	String customerpage ="https://stage2.commusoft.net/customers/customer/1980/view/property/view";
+	String customerpage ="https://app.commusoft.co.uk/customers/customer/2702/view/property/view";
    String Customersreport ;
 	
 	
@@ -32,7 +34,7 @@ public class Checking extends Baseclass {
 //		Thread.sleep(1000);
 //		homepage = driver.getCurrentUrl();
 //	}
-   @Test(priority=35)
+   /* @Test(priority=35)
 	public void changesinvoicetype() throws InterruptedException
 	{
 		driver.get(customerpage);
@@ -43,7 +45,37 @@ public class Checking extends Baseclass {
 		changeinvoices.add_additionalinvoice();
 		changeinvoices.addfinalinvoice();
 		changeinvoices.editinvoicetype();
-	}	
+	}
+	@Test(priority = 9)
+	public void Addjob_NoRules_DiaryEvent() throws InterruptedException
+	{
+		driver.get(customerpage);
+		Thread.sleep(4000);
+		CreateJob job = new CreateJob(driver);
+		job.addjob();
+		job.JobDescription("No Rules");
+		//job.createjob();
+		Thread.sleep(4000);
+		job.Add_new_diaryEvent();
+		Diary diary = new Diary(driver);
+		diary.Diary_Daily();
+		diary.Diary_Today();
+		diary.Diary_Timing3();
+		diary.Diary_EventFromJob();
+	}*/
+   @Test(priority=50)
+	public void outlook() throws IOException, InterruptedException
+	{
+		//driver.get(homepage);
+		Settings setting=new Settings(driver);
+		setting.Click_Setting();
+		setting.Click_Companysetting();
+		Email_setup outlook  =new Email_setup(driver);
+		outlook.setupemail();
+		outlook.outlookbutton();
+		outlook.outlookusername_password();	
+		outlook.outpassword();
+	}
 }
 
 
